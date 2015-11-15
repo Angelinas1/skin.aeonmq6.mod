@@ -2493,14 +2493,6 @@
 							<visible>System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
 						</item>
 						<item>
-							<!-- Seriados tendencias -->
-							<icon>-</icon>
-							<label>$LOCALIZE[31005] - $LOCALIZE[31964] ( Trakt.tv)</label>
-							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onclick>
-							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.trendingtvshows)</onclick>
-							<visible>System.HasAddon(script.extendedinfo)</visible>
-						</item>
-						<item>
 							<!-- Concertos recentes -->
 							<icon>-</icon>
 							<label>$LOCALIZE[31013] - $LOCALIZE[31583]</label>
@@ -2783,23 +2775,9 @@
 						<item>
 							<icon>-</icon>
 							<!-- ? Trakt.tv -->
-							<label>SimilarMovies (Trakt.tv)</label>
-							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onclick>
-							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.similarmoviestrakt)</onclick>
-						</item>
-						<item>
-							<icon>-</icon>
-							<!-- ? Trakt.tv -->
 							<label>TrendingShows (Trakt.tv)</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.trendingshows)</onclick>
-						</item>
-						<item>
-							<icon>-</icon>
-							<!-- ? LastFM -->
-							<label>TopArtists (LastFM)</label>
-							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras1)</onclick>
-							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.topartists)</onclick>
 						</item>
 						<item>
 							<icon>-</icon>

@@ -37,7 +37,7 @@
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
-	<visible>StringCompare(skin.string(fullscreen_icon),noicon) | IsEmpty(Player.Art(clearlogo))</visible>
+	<visible>StringCompare(skin.string(fullscreen_icon),noicon) | VideoPlayer.Content(movies) + IsEmpty(Player.Art(clearlogo)) | VideoPlayer.Content(episodes) + IsEmpty(Player.Art(tvshow.clearlogo))</visible>
 	</control>
 	<control type="label">
 	<left>30</left>

@@ -4090,7 +4090,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.topratedtvshows)">plugin://script.extendedinfo?info=topratedtvshows</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.onairtvshows)">plugin://script.extendedinfo?info=onairtvshows</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.airingtodaytvshows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingtvshows)">plugin://script.extendedinfo?info=trendingtvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingtvshows)">plugin://script.extendedinfo?info=similartvshowstrakt</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.incinemas)">plugin://script.extendedinfo?info=incinemas</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.intheaters)">plugin://script.extendedinfo?info=intheaters</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.upcoming)">plugin://script.extendedinfo?info=upcoming</value>
@@ -4104,9 +4104,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.popularmovies)">plugin://script.extendedinfo?info=popularmovies</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.premiereshows)">plugin://script.extendedinfo?info=premiereshows</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingshows)">plugin://script.extendedinfo?info=trendingshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.similarmoviestrakt)">plugin://script.extendedinfo?info=similarmoviestrakt</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.populartvshows)">plugin://script.extendedinfo?info=populartvshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.topartists)">plugin://script.extendedinfo?info=topartists</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.hypedartists)">plugin://script.extendedinfo?info=hypedartists</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.mostplayedroms)">plugin://script.extendedinfo?info=youtubeplaylist&amp;&amp;id=rEnWoR732-BHrPp_Pm8_VleD68f9s14-</value>
 	</variable>
@@ -4244,18 +4242,16 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.airingtodaytvshows)">$LOCALIZE[31981] (The MovieDB)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.newdvdreleases)">$LOCALIZE[31963] (Rotten Tomatoes)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingmovies)">$LOCALIZE[31003] - $LOCALIZE[31964] ( Trakt.tv)</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingtvshows)">$LOCALIZE[31005] - $LOCALIZE[31964] ( Trakt.tv)</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.nearevents)">$LOCALIZE[31545] (LastFM)</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingtvshows)">Trending Shows ( Trakt.tv)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.boxoffice)">$LOCALIZE[31982] (Rotten Tomatoes)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.opening)">$LOCALIZE[31980] (Rotten Tomatoes)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.toprentals)">$LOCALIZE[31996] (Rotten Tomatoes)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.currentdvdreleases)">$LOCALIZE[31960] (Rotten Tomatoes)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.upcomingdvds)">$LOCALIZE[31957] (Rotten Tomatoes)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.popularmovies)">$LOCALIZE[31003] - $LOCALIZE[31958] (The MovieDB)</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.premiereshows)">$LOCALIZE[31013] - $LOCALIZE[31980] (Trakt.tv)</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingshows)">$LOCALIZE[31013] - $LOCALIZE[31980] (Trakt.tv)</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.premiereshows)">Premiere Shows (Trakt.tv)</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.trendingshows)">Trending Shows ( Trakt.tv)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.populartvshows)">$LOCALIZE[31005] - $LOCALIZE[31964] (Trakt.tv)</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.topartists)">$LOCALIZE[31037] - $LOCALIZE[31995] (LastFM)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.hypedartists)">$LOCALIZE[31037] - $LOCALIZE[31995] (LastFM)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.mostplayedroms)">$LOCALIZE[31953] (YouTube)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.popularpeople)">Popular People (The MovieDB)</value>
