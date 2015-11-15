@@ -2907,6 +2907,13 @@
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.favouritemedia)</onclick>
 						</item>
 						<item>
+							<icon>-</icon>
+							<!-- inprogressmedia -->
+							<label>helper.inprogressmedia</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.inprogressmedia)</onclick>
+						</item>
+						<item>
 							<!-- Playlist de video 1 - Recentes -->
 							<icon>-</icon>
 							<label>$LOCALIZE[31072] ($VAR[value_menu1.label])</label>

@@ -4112,10 +4112,10 @@ SubString(ListItem.Filenameandpath,web)
 	</variable>
 	<variable name="value_widgetshelper">
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmovies)">plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=100&reload=$INFO[Window(Home).Property(widgetreload)]</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmedia)">plugin://script.skin.helper.service/?action=recommendedmedia&amp;limit=100</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recentmedia)">plugin://script.skin.helper.service/?action=recentmedia&amp;limit=100</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.inprogressandrecommendedmedia)">plugin://script.skin.helper.service/?action=inprogressandrecommendedmedia&amp;limit=100</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.nextepisodes)">plugin://script.skin.helper.service/?action=nextepisodes&limit=20&reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmedia)">plugin://script.skin.helper.service/?action=recommendedmedia&amp;limit=100&reload=$INFO[Window(Home).Property(widgetreload2)]</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recentmedia)">plugin://script.skin.helper.service/?action=recentmedia&amp;limit=100&reload=$INFO[Window(Home).Property(widgetreload2)]</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.inprogressandrecommendedmedia)">plugin://script.skin.helper.service/?action=inprogressandrecommendedmedia&amp;limit=100&reload=$INFO[Window(Home).Property(widgetreload2)]</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.nextepisodes)">plugin://script.skin.helper.service/?action=nextepisodes&limit=50&reload=$INFO[Window(Home).Property(widgetreload)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recentalbums)">plugin://script.skin.helper.service/?action=recentalbums&limit=50&reload=$INFO[Window(Home).Property(widgetreloadmusic)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recommendedalbums)">plugin://script.skin.helper.service/?action=recommendedalbums&limit=50&reload=$INFO[Window(Home).Property(widgetreloadmusic)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.recentsongs)">plugin://script.skin.helper.service/?action=recentsongs&limit=50&reload=$INFO[Window(Home).Property(widgetreloadmusic)]</value>
@@ -4124,7 +4124,8 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.moviesforgenre)">plugin://script.skin.helper.service/?action=moviesforgenre&limit=50&reload=$INFO[Window(Home).Property(widgetreload2)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.showsforgenre)">plugin://script.skin.helper.service/?action=showsforgenre&limit=50&reload=$INFO[Window(Home).Property(widgetreload2)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.favouritemedia)">plugin://script.skin.helper.service/?action=favouritemedia&limit=50&reload=$INFO[Window(Home).Property(widgetreload2)]</value>
-	</variable>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.inprogressmedia)">plugin://script.skin.helper.service/?action=inprogressmedia&limit=50&reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		</variable>
 	<variable name="value_widgetsextras2">
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras2.mostplayedroms)">plugin://script.extendedinfo?info=youtubeplaylist&amp;&amp;id=rEnWoR732-BHrPp_Pm8_VleD68f9s14-</value>
 	</variable>
@@ -4272,7 +4273,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.moviesforgenre)">Movies for Genre (Script.helper)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.showsforgenre)">TVShows for Genre (Script.helper)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.favouritemedia)">Favourite Media (Script.helper)</value>
-
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.inprogressmedia)">InProgress Media (Script.helper)</value>
 
 
 
