@@ -1,0 +1,2735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes><!-- Aeon MQ 6 -->
+	<!--##################################################################################   VISTA CoveerandBack - ID 78   ##################################################################################-->
+	<include name="CoverFlowThumb">
+	<left>20</left>
+	<top>55</top>
+	<width>260</width>
+	<height>370</height>
+	<aspectratio>stretch</aspectratio>
+	</include>
+	<include name="CoverFlowThumbReflect">
+	<left>20</left>
+	<top>430</top>
+	<width>260</width>
+	<height>300</height>
+	<aspectratio>stretch</aspectratio>
+	</include>
+	<include name="CoverFlowThumbCase">
+	<left>20</left>
+	<top>72</top>
+	<width>260</width>
+	<height>357</height>
+	<aspectratio>stretch</aspectratio>
+	</include>
+	<include name="CoverFlowThumbCaseReflect">
+	<left>20</left>
+	<top>455</top>
+	<width>260</width>
+	<height>300</height>
+	<aspectratio>stretch</aspectratio>
+	</include>
+	<include name="CoverFlowCaseReflect">
+	<left>-3</left>
+	<top>418</top>
+	<width>322</width>
+	<height>452</height>
+	<include>Animation_CaseGlass</include>
+	</include>
+	<include name="CoverFlowCase">
+	<left>-3</left>
+	<top>13</top>
+	<width>322</width>
+	<height>452</height>
+	<include>Animation_CaseGlass</include>
+	</include>
+	<include name="CoverFlowCodec">
+	<left>125</left>
+	<top>23</top>
+	<width>65</width>
+	<height>65</height>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	</include>
+	<include name="CoverFlowAudioCodec">
+	<left>190</left>
+	<top>-30</top>
+	<width>45</width>
+	<height>35</height>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	</include>
+	<include name="WatchedCoverFlow">
+	<left>226</left>
+	<top>70</top>
+	<width>55</width>
+	<height>55</height>
+	<aspectratio>keep</aspectratio>
+	<texture>$VAR[value_watchedstyle]</texture>
+	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+	<animation effect="slide" start="0,0" end="4,-19" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+	<visible>!Skin.HasSetting(nooverlays)</visible>
+	</include>
+	<include name="CoverFlowMusicThumb">
+	<left>34</left>
+	<top>5</top>
+	<width>318</width>
+	<height>318</height>
+	</include>
+	<include name="CoverFlowMusicThumbReflect">
+	<left>34</left>
+	<top>327</top>
+	<width>318</width>
+	<height>318</height>
+	</include>
+	<include name="CoverFlowMusicThumbCase">
+	<left>44</left>
+	<top>0</top>
+	<width>320</width>
+	<height>320</height>
+	</include>
+	<include name="CoverFlowMusicThumbCaseReflect">
+	<left>44</left>
+	<top>332</top>
+	<width>320</width>
+	<height>320</height>
+	</include>
+	<include name="CoverFlowBackMusicCase">
+	<left>35</left>
+	<top>-36</top>
+	<width>350</width>
+	<height>370</height>
+	</include>
+	<include name="CoverFlowBackMusicCaseReflect">
+	<left>35</left>
+	<top>322</top>
+	<width>350</width>
+	<height>355</height>
+	</include>
+	<include name="ViewCoverandBackVideo">
+	<control type="group"><!-- default group -->
+	<left>-200</left>
+	<animation effect="fade" time="400">VisibleChange</animation>
+	<visible>Control.IsVisible(78)</visible>
+	<control type="group" id="7001">
+	<animation effect="slide" start="0,0" end="0,-20" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+	<top>200</top>
+	<visible>Container.OnNext</visible>
+	<animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+	<control type="group"><!-- fixed to load poster 5-->
+	<left>1200</left>
+	<visible>!Container.OnNext</visible>
+	<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+	<animation effect="rotatey" center="1520" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster mode - !mediacase -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>1100</left>
+	<visible>!Container.OnNext</visible>
+	<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+	<animation effect="rotatey" center="1420" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(4).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(4).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>1000</left>
+	<visible>!Container.OnNext</visible>
+	<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+	<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(3).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(3).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>900</left>
+	<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(2).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(2).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>800</left>
+	<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(1).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(1).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<visible>Container.OnNext</visible>
+	<animation effect="slide" end="-110,0" time="250" reversible="false">Hidden</animation>
+	<control type="group">
+	<left>700</left>
+	<visible>Container.OnNext</visible>
+	<animation effect="rotatey" center="1020" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(0).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(0).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>490</left>
+	<visible>Container.OnNext</visible>
+	<animation effect="rotatey" center="470" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase-1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase-1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec-1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(-1).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(-1).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	</control>
+	</control>
+	<control type="group" id="7002">
+	<animation effect="slide" start="0,0" end="0,-20" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(nocoverflowvideocase)">Conditional</animation>
+	<top>200</top>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+	<control type="group">
+	<left>1000</left>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(5).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(5).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>900</left>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(4).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(4).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>800</left>
+	<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(3).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(3).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>700</left>
+	<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(2).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(2).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<visible>Container.OnPrevious</visible>
+	<animation effect="slide" end="110,0" time="250" reversible="false">Hidden</animation>
+	<control type="group">
+	<left>280</left>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="rotatey" center="260" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(0).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(0).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>490</left>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="rotatey" center="810" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets)] </visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets)] </visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets)] </visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets)] </visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(1).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(1).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	</control>
+	</control>
+	<control type="group" id="7000"><!-- Poster on Focus -->
+	<animation effect="slide" start="0,0" end="0,-20" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(nocoverflowvideocase)">Conditional</animation>
+	<top>200</top>
+	<visible>!Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+	<control type="group">
+	<left>1000</left>
+	<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(4).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(4).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>900</left>
+	<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(3).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(3).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>800</left>
+	<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(2).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(2).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>700</left>
+	<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(1).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(1).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group"><!--central case-->
+	<left>490</left>
+	<animation type="conditional" reversible="false" condition="Control.HasFocus(78) + System.IdleTime(2) + !Container.OnNext">
+	<effect type="rotatey" center="490" start="0" end="-10" time="1500" tween="quadratic" easing="out"/>
+	</animation>
+	
+	<control type="group"><!-- CDART VIDEO -->
+	<visible>!IsEmpty(ListItem.Art(poster))</visible>
+	<animation type="WindowOpen">
+	<effect type="fade" start="0" end="100" time="500" delay="500"/>
+	</animation>
+	<animation type="Visible">
+	<effect type="slide" start="0,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+	<effect type="fade" start="0" end="100" time="500" delay="500"/>
+	</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation type="Hidden">
+	<effect type="fade" start="100" end="0" time="200"/>
+	</animation>
+	<animation effect="slide" time="200" start="0,0" end="100,0" tween="cubic" easing="out" condition="!Skin.HasSetting(nolowlistvideocase)">Conditional</animation>
+	<control type="image">
+	<left>107</left>
+	<top>280</top>
+	<width>150</width>
+	<height>150</height>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</control>
+	<control type="image">
+	<left>107</left>
+	<top>280</top>
+	<width>150</width>
+	<height>150</height>
+	<visible>IsEmpty(ListItem.Art(discart)) + !Container.Content(artists)</visible>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="top">stretch</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	<visible>!SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+	</control>
+
+	<control type="grouplist">
+	<left>108</left>
+	<top>80</top>
+	<orientation>vertical</orientation>
+	<itemgap>-92</itemgap>
+	<animation type="WindowOpen">
+	<effect type="slide" start="-100,0" end="0,0" time="500" delay="700" tween="cubic" easing="out"/>
+	<effect type="fade" start="0" end="100" time="500" delay="700"/>
+	</animation>
+	<animation type="Visible">
+	<effect type="slide" start="-100,0" end="0,0" time="500" delay="700" tween="cubic" easing="out"/>
+	<effect type="fade" start="0" end="100" time="500" delay="700"/>
+	</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation type="Hidden">
+	<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
+	<effect type="fade" start="100" end="0" time="200"/>
+	</animation>
+	<control type="image">
+	<include>PLDisc</include>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="1000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.1.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<include>PLDisc</include>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="2000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.2.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<include>PLDisc</include>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="3000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.3.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<include>PLDisc</include>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="4000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.4.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<include>PLDisc</include>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.5.Art(discart))]</texture>
+	</control>
+	<visible>SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+	</control>	
+	</control>
+	<control type="image"><!-- Poster Reflexo -->
+	<include>CoverFlowThumbReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster -->
+	<include>CoverFlowThumb</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo Reflexo -->
+	<include>CoverFlowThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Poster + Estojo -->
+	<include>CoverFlowThumbCase</include>
+	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowCase</include>
+	<texture>$VAR[value_videocase0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$VAR[value_videocodec0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	</control>
+	<control type="textbox"><!-- Studio Label Case-->
+	<left>9</left>
+	<top>35</top>
+	<width>300</width>
+	<height>42</height>
+	<align>center</align>
+	<font>Font_30</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<label>$INFO[ListItem(0).Studio]</label>
+	<visible>!Skin.HasSetting(nocoverflowvideocase) + Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+	<control type="image">
+	<include>WatchedCoverFlow</include>
+	<visible>StringCompare(ListItem(0).Overlay,OverlayWatched.png)</visible>
+	</control>
+	</control>
+	<control type="group"><!--Side case-->
+	<visible>!IsEmpty(ListItem.Art(poster))</visible>
+	<control type="image"><!-- Poster Reflexo -->
+	<left>484</left>
+	<top>446</top>
+	<width>42</width>
+	<height>300</height>
+	<texture>shelf_case_contra_reflect.png</texture>
+	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+	<include>Animation_CaseGlass</include>
+	</control>
+	<control type="image"><!-- Poster -->
+	<left>484</left>
+	<top>35</top>
+	<width>42</width>
+	<height>404</height>
+	<texture>shelf_case_contra.png</texture>
+	<colordiffuse>black</colordiffuse>
+	<include>Animation_CaseGlass</include>
+	</control>
+	<control type="image"><!-- VideoCodec side -->
+	<left>490</left>
+	<top>70</top>
+	<height>25</height>
+	<width>25</width>
+	<animation type="conditional" reversible="false" condition="true">
+	<effect type="rotatey" center="485" start="0" end="25" time="0" tween="quadratic" easing="out"/>
+	</animation>
+	<aspectratio align="center">keep</aspectratio>
+	<texture>$VAR[value_videocodec]</texture>
+	<visible>!IsEmpty(Control.GetLabel(557))</visible>
+	</control>
+	<control type="image"><!-- Estudio side-->
+	<left>490</left>
+	<top>380</top>
+	<height>20</height>
+	<width>25</width>
+	<animation type="conditional" reversible="false" condition="true">
+	<effect type="rotatey" center="485" start="0" end="15" time="0" tween="quadratic" easing="out"/>
+	</animation>
+	<aspectratio align="center">keep</aspectratio>
+	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<visible>!IsEmpty(Control.GetLabel(557))</visible>
+	</control>
+	<control type="image"><!-- Back side title -->
+	<left>490</left>
+	<top>100</top>
+	<height>270</height>
+	<width>22</width>
+	<animation type="conditional" reversible="false" condition="true">
+	<effect type="rotatey" center="500" start="0" end="25" time="5000" tween="quadratic" easing="out"/>
+	</animation>
+	<include>Animation_CaseGlass</include>
+	<texture flipy="false">shell_side.png</texture>
+	</control>
+	<control type="label"><!-- Title side-->
+	<left>500</left>
+	<top>110</top>
+	<width min="15" max="270">auto</width>
+	<height min="18" max="20">auto</height>
+	<wrapmultiline>true</wrapmultiline>
+	<textcolor>FFFFFAF0</textcolor>
+	<shadowcolor>grey</shadowcolor>
+	<angle>-90</angle>
+	<align>top</align>
+	<aligny>center</aligny>
+	<font>Font_16</font>
+	<label>[B]$VAR[value_videotitle][/B]</label>
+	<scroll>false</scroll>
+	<scrollout>false</scrollout>
+	</control>
+	</control>
+	<control type="group"><!--central case back-->
+	<left>485</left>
+	<animation type="conditional" reversible="false" condition="Control.HasFocus(78) + System.IdleTime(2) + !Container.OnNext">
+	<effect type="rotatey" delay="2000" center="485" start="0" end="15" time="2000" tween="quadratic" easing="out"/>
+	</animation>
+	<visible>!IsEmpty(ListItem.Art(poster))</visible>
+	<control type="image"><!-- Back Reflexo -->
+	<left>-250</left>
+	<top>440</top>
+	<width>260</width>
+	<height>300</height>
+	<include>Animation_CaseGlass</include>
+	<texture flipy="true" diffuse="thumb_shelf_reflect.png">black.png</texture>
+	</control>
+	<control type="image"><!-- Back -->
+	<left>-245</left>
+	<top>75</top>
+	<width>250</width>
+	<height>355</height>
+	<texture>black.png</texture>
+	</control>
+	<control type="group"><!-- Back images-->
+	<left>-250</left>
+	<top>65</top>
+	<control type="image"><!-- Fanart -->
+	<height>150</height>
+	<width>250</width>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+	</control>
+	<control type="textbox">
+	<left>10</left>
+	<top>140</top>
+	<width>460</width>
+	<height>140</height>
+	<font>Font_18</font>
+	<label>$VAR[value_plot]</label>
+	<textcolor>white</textcolor>
+	<animation effect="zoom" start="100" end="45" time="0" condition="true" center="40,160">Conditional</animation>
+	<colordiffuse>$VAR[value_texturecolorfocus]</colordiffuse>
+	</control>
+	<control type="image"><!-- Fanart -->
+	<top>225</top>
+	<height>40</height>
+	<width>250</width>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$INFO[ListItem.Art(banner)]</texture>
+	</control>
+	<control type="image"><!-- Fanart -->
+	<top>225</top>
+	<height>40</height>
+	<width>250</width>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.Banner)]</texture>
+	</control>
+	<control type="image"><!-- MPA -->
+	<top>265</top>
+	<left>7</left>
+	<height>40</height>
+	<width>60</width>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$VAR[value_mpaa]</texture>
+	</control>
+	<control type="label"><!-- Count -->
+	<top>275</top>
+	<left>27</left>
+	<height>40</height>
+	<width>60</width>
+	<font>Font_40</font>
+	<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.Count)]</label>
+	<textcolor>white</textcolor>
+	<colordiffuse>$VAR[value_texturecolorfocus]</colordiffuse>
+	</control>
+	<control type="image"><!-- thumb 2 -->
+	<left>60</left>
+	<top>265</top>
+	<width>80</width>
+	<height>50</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+	<bordertexture border="-2" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
+	<animation effect="fade" time="200">Focus</animation>
+	</control>
+	<control type="image"><!-- thumb 3 -->
+	<left>145</left>
+	<top>265</top>
+	<width>80</width>
+	<height>50</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
+	<bordertexture border="-2" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
+	<animation effect="fade" time="200">Focus</animation>
+	</control>
+	<control type="image"><!-- thumb 2 -->
+	<left>60</left>
+	<top>265</top>
+	<width>80</width>
+	<height>50</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.FanArt)]</texture>
+	<bordertexture border="-2" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
+	<animation effect="fade" time="200">Focus</animation>
+	</control>
+	<control type="image"><!-- thumb 3 -->
+	<left>145</left>
+	<top>265</top>
+	<width>80</width>
+	<height>50</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.1.FanArt)]</texture>
+	<bordertexture border="-2" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
+	<animation effect="fade" time="200">Focus</animation>
+	</control>
+	<control type="grouplist"><!-- Etiquetas -->
+	<left>17</left>
+	<top>340</top>
+	<width>250</width>
+	<orientation>horizontal</orientation>
+	<itemgap>4</itemgap>
+	<control type="image"><!-- Estudio -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<visible>!IsEmpty(Control.GetLabel(557))</visible>
+	</control>
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_videocodec]</texture>
+	<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+	</control>
+	<control type="image"><!-- Resolucao -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_videoresolution]</texture>
+	<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+	</control>
+	<control type="label"><!-- Aspecto -->
+	<height>20</height>
+	<width>35</width>
+	<label>$INFO[ListItem.VideoAspect]:1</label>
+	<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+	</control>
+	<control type="image"><!-- Codec de audio -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+	<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+	</control>
+	<control type="image"><!-- Canais -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_audiochannels]</texture>
+	<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+	</control>
+	</control>
+	<control type="grouplist"><!-- Etiquetas -->
+	<left>17</left>
+	<top>340</top>
+	<width>250</width>
+	<orientation>horizontal</orientation>
+	<itemgap>4</itemgap>
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio),flags/studios/,.png]</texture>
+	</control>
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_kvideocodec0]</texture>
+	</control>
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_kvideoresolution0]</texture>
+	</control>	
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_kvideocodec1]</texture>
+	</control>
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_kvideoresolution1]</texture>
+	</control>
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_kvideocodec2]</texture>
+	</control>
+	</control>
+	</control>
+	<control type="group"><!-- Back images Case-->
+	<left>-265</left>
+	<top>35</top>
+	<control type="image"><!-- Estojo Reflexo -->
+	<top>393</top>
+	<width>300</width>
+	<height>300</height>
+	<include>Animation_CaseGlass</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">$VAR[value_videocase0]</texture>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<top>-20</top>
+	<width>300</width>
+	<height>450</height>
+	<include>Animation_CaseGlass</include>
+	<texture>$VAR[value_videocase0]</texture>
+	</control>
+	<control type="image"><!-- Logo -->
+	<top>5</top>
+	<width>300</width>
+	<height>35</height>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+	</control>
+	</control>
+	</control>
+	</control>
+	<control type="wraplist" id="78">
+	<viewtype label="CowerFlowandBack">icon</viewtype>
+	<left>-410</left>
+	<top>230</top>
+	<width>2100</width>
+	<height>428</height>
+	<onleft>78</onleft>
+	<onright>78</onright>
+	<onup>9900</onup>
+	<ondown>80</ondown>
+	<pagecontrol>80</pagecontrol>
+	<orientation>horizontal</orientation>
+	<scrolltime>250</scrolltime>
+	<focusposition>3</focusposition>
+	<preloaditems>2</preloaditems>
+	<hitrect x="510" y="300" w="260" h="380"/>
+	<animation effect="slide" start="0,0" end="0,-20" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(nocoverflowvideocase)">Conditional</animation>
+	<visible>![Container.Content(episodes) | Container.Content(years) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios)]</visible>
+	<itemlayout width="300" height="440"/>
+	<focusedlayout width="300" height="440">
+	</focusedlayout>
+	</control>
+	<control type="scrollbar" id="80">
+	<include>ScrollBar_Horizontal</include>
+	<left>305</left>
+	<top>613</top>
+	<width>670</width>
+	<height>41</height>
+	<onup>78</onup>
+	<ondown>9920</ondown>
+	<include>Animation_Fade</include>
+	<visible allowhiddenfocus="true">Control.IsVisible(78) + Control.HasFocus(80)</visible>
+	</control>
+	</control>
+	</include>
+	<include name="ViewCoverFlowBackAudio">
+	<control type="group"><!-- default group -->
+	<visible>Control.IsVisible(78)</visible>
+	<control type="image">
+	<left>0</left>
+	<top>506</top>
+	<width>1280</width>
+	<height>30</height>
+	<texture>shadow_h.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>650</top>
+	<width>1280</width>
+	<height>30</height>
+	<texture flipy="true">shadow_h.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>535</top>
+	<width>1280</width>
+	<height>115</height>
+	<texture>black.png</texture>
+	<colordiffuse>E1FFFFFF</colordiffuse>
+	</control>
+	<control type="group" id="7001">
+	<left>2</left>
+	<top>300</top>
+	<visible>Container.OnNext</visible>
+	<animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+	<animation effect="slide" start="0,0" end="-19,0" time="0" condition="Container.Content(Artists)">Conditional</animation>
+	<control type="group">
+	<left>1000</left>
+	<visible>!Container.OnNext</visible>
+	<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+	<animation effect="rotatey" center="1380" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowCodec</include>
+	<texture>$INFO[ListItem.Property(Album_Label),flags/recordlabel/,.png]</texture>
+	</control>
+	</control>
+	<control type="group">
+	<left>900</left>
+	<animation effect="rotatey" center="1280" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>800</left>
+	<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>700</left>
+	<visible>Container.OnNext</visible>
+	<animation effect="rotatey" center="1080" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>600</left>
+	<visible>Container.OnNext</visible>
+	<animation effect="rotatey" center="980" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	<animation effect="rotatey" center="980" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>500</left>
+	<visible>Container.OnNext</visible>
+	<animation effect="rotatey" center="880" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	<animation effect="rotatey" center="880" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<visible>Container.OnNext</visible>
+	<animation effect="slide" end="-140,0" time="250" reversible="false">Hidden</animation>
+	<control type="group">
+	<left>400</left>
+	<visible>Container.OnNext</visible>
+	<animation effect="rotatey" center="780" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	<animation effect="rotatey" center="780" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>260</left>
+	<visible>Container.OnNext</visible>
+	<animation effect="rotatey" center="450" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	</control>
+	</control>
+	<control type="group" id="7002">
+	<left>2</left>
+	<top>300</top>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="slide" start="0,0" end="-19,0" time="0" condition="Container.Content(Artists)">Conditional</animation>
+	<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+	<control type="group">
+	<left>900</left>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	<animation effect="rotatey" center="1280" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster7]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster7]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster7]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster7]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>800</left>
+	<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>700</left>
+	<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>600</left>
+	<animation effect="rotatey" center="980" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>500</left>
+	<animation effect="rotatey" center="880" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>400</left>
+	<animation effect="rotatey" center="780" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<visible>Container.OnPrevious</visible>
+	<animation effect="slide" end="140,0" time="250" reversible="false">Hidden</animation>
+	<control type="group">
+	<left>20</left>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="rotatey" center="-40" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+	<animation effect="rotatey" center="-40" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>260</left>
+	<visible>Container.OnPrevious</visible>
+	<animation effect="rotatey" center="640" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	</control>
+	</control>
+	<control type="group" id="7000">
+	<left>2</left>
+	<top>300</top>
+	<animation effect="slide" start="0,0" end="-19,0" time="0" condition="Container.Content(Artists)">Conditional</animation>
+	<visible>!Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+	<control type="group">
+	<left>900</left>
+	<animation effect="rotatey" center="1280" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster6]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>800</left>
+	<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster5]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>700</left>
+	<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>600</left>
+	<animation effect="rotatey" center="980" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>500</left>
+	<animation effect="rotatey" center="880" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group">
+	<left>400</left>
+	<animation effect="rotatey" center="780" start="65" end="65" time="0" condition="true">Conditional</animation>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	</control>
+	<control type="group"><!--Center Case-->
+	<left>260</left>
+	<control type="image"><!-- Miniatura Reflexo -->
+	<include>CoverFlowMusicThumb</include>
+	<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura -->
+	<include>CoverFlowMusicThumb</include>
+	<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura + Estojo Reflexo -->
+	<include>CoverFlowMusicThumbCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Miniatura Estojo -->
+	<include>CoverFlowMusicThumbCase</include>
+	<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo Reflexo -->
+	<include>CoverFlowBackMusicCaseReflect</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<include>CoverFlowBackMusicCase</include>
+	<texture>case_music.png</texture>
+	<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
+	</control>
+	<control type="image"><!-- Codec -->
+	<include>CoverFlowAudioCodec</include>
+	<texture>$INFO[ListItem.Property(Album_Label),flags/recordlabel/,.png]</texture>
+	</control>
+	</control>
+	<control type="group"><!--Side case-->
+<!-- 	<visible>!IsEmpty(ListItem.Art(poster))</visible>-->
+	<control type="image"><!-- Poster Reflexo -->
+	<left>274</left>
+	<top>330</top>
+	<width>42</width>
+	<height>250</height>
+	<texture>shelf_case_contra_reflect.png</texture>
+	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+	<include>Animation_CaseGlass</include>
+	</control>
+	<control type="image"><!-- Poster -->
+	<left>274</left>
+	<top>-28</top>
+	<width>42</width>
+	<height>352</height>
+	<texture>shelf_case_contra.png</texture>
+	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+	<include>Animation_CaseGlass</include>
+	</control>
+	<control type="image"><!-- VideoCodec side -->
+	<left>254</left>
+	<top>0</top>
+	<height>25</height>
+	<width>25</width>
+	<animation type="conditional" reversible="false" condition="true">
+	<effect type="rotatey" center="485" start="0" end="25" time="0" tween="quadratic" easing="out"/>
+	</animation>
+	<aspectratio align="center">keep</aspectratio>
+	<texture>$VAR[value_videocodec]</texture>
+	<visible>!IsEmpty(Control.GetLabel(557))</visible>
+	</control>
+	<control type="image"><!-- Estudio side-->
+	<left>274</left>
+	<top>310</top>
+	<height>20</height>
+	<width>25</width>
+	<animation type="conditional" reversible="false" condition="true">
+	<effect type="rotatey" center="485" start="0" end="15" time="0" tween="quadratic" easing="out"/>
+	</animation>
+	<aspectratio align="center">keep</aspectratio>
+	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<visible>!IsEmpty(Control.GetLabel(557))</visible>
+	</control>
+	<control type="image"><!-- Back side title -->
+	<left>238</left>
+	<top>30</top>
+	<height>270</height>
+	<width>22</width>
+	<animation type="conditional" reversible="false" condition="true">
+	<effect type="rotatey" center="500" start="0" end="15" time="5000" tween="quadratic" easing="out"/>
+	</animation>
+	<include>Animation_CaseGlass</include>
+	<texture flipy="false">shell_side.png</texture>
+	</control>
+	<control type="label"><!-- Title side-->
+	<left>290</left>
+	<top>35</top>
+	<width min="15" max="280">auto</width>
+	<height min="18" max="20">auto</height>
+	<wrapmultiline>true</wrapmultiline>
+	<textcolor>FFFFFAF0</textcolor>
+	<shadowcolor>grey</shadowcolor>
+	<angle>-90</angle>
+	<align>top</align>
+	<aligny>center</aligny>
+	<font>Font_16</font>
+	<label>[B]$VAR[value_videotitle][/B]</label>
+	<scroll>false</scroll>
+	<scrollout>false</scrollout>
+	</control>
+	</control>
+	<control type="group"><!--central case back-->
+	<left>250</left>
+	<animation type="conditional" reversible="false" condition="true">
+	<effect type="rotatey" delay="2000" center="250" start="0" end="15" time="2000" tween="quadratic" easing="out"/>
+	</animation>
+<!-- <visible>!IsEmpty(ListItem.Art(poster))</visible>-->
+	<control type="image"><!-- Back Reflexo -->
+	<left>-250</left>
+	<top>337</top>
+	<width>290</width>
+	<height>220</height>
+	<include>Animation_CaseGlass</include>
+	<texture flipy="true" diffuse="thumb_shelf_reflect.png">black.png</texture>
+	</control>
+	<control type="image"><!-- Back -->
+	<left>-250</left>
+	<top>0</top>
+	<width>290</width>
+	<height>315</height>
+	<texture>black.png</texture>
+	</control>
+	<control type="group"><!-- Back images-->
+	<left>-250</left>
+	<top>5</top>
+	<control type="image"><!-- Fanart -->
+	<height>150</height>
+	<width>275</width>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+	</control>
+	<control type="textbox">
+	<left>10</left>
+	<top>180</top>
+	<width>520</width>
+	<height>140</height>
+	<font>Font_18</font>
+	<label>$VAR[value_plot]</label>
+	<textcolor>white</textcolor>
+	<animation effect="zoom" start="100" end="45" time="0" condition="true" center="40,160">Conditional</animation>
+	<colordiffuse>$VAR[value_texturecolorfocus]</colordiffuse>
+	</control>
+	<control type="image"><!-- Fanart -->
+	<top>225</top>
+	<height>40</height>
+	<width>250</width>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Banner)]</texture>
+	</control>
+
+	<control type="image"><!-- Fanart -->
+	<top>265</top>
+	<left>7</left>
+	<height>40</height>
+	<width>60</width>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$VAR[value_mpaa]</texture>
+	</control>
+	<control type="grouplist"><!-- set discs -->
+	<left>30</left>
+	<top>285</top>
+	<orientation>horizontal</orientation>
+	<itemgap>-45</itemgap>
+	<visible>SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+	<control type="image">
+	<width>65</width>
+	<height>65</height>
+	<aligny>center</aligny>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.1.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<width>65</width>
+	<height>65</height>
+	<aligny>center</aligny>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.2.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<width>65</width>
+	<height>65</height>
+	<aligny>center</aligny>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.3.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<width>65</width>
+	<height>65</height>
+	<aligny>center</aligny>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.4.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<width>65</width>
+	<height>65</height>
+	<aligny>center</aligny>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.5.Art(discart))]</texture>
+	</control>
+	<control type="image">
+	<width>65</width>
+	<height>65</height>
+	<aligny>center</aligny>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.6.Art(discart))]</texture>
+	</control>
+
+	</control>
+	<control type="image"><!-- thumb 2 -->
+	<left>60</left>
+	<top>265</top>
+	<width>80</width>
+	<height>50</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+	<bordertexture border="-2" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
+	<animation effect="fade" time="200">Focus</animation>
+	</control>
+	<control type="image"><!-- thumb 3 -->
+	<left>145</left>
+	<top>265</top>
+	<width>80</width>
+	<height>50</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
+	<bordertexture border="-2" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
+	<animation effect="fade" time="200">Focus</animation>
+	</control>
+	<control type="grouplist"><!-- Etiquetas -->
+	<left>17</left>
+	<top>340</top>
+	<width>250</width>
+	<orientation>horizontal</orientation>
+	<itemgap>4</itemgap>
+	<control type="image"><!-- Estudio -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<visible>!IsEmpty(Control.GetLabel(557))</visible>
+	</control>
+	<control type="image"><!-- Codec de video -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_videocodec]</texture>
+	<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+	</control>
+	<control type="image"><!-- Resolucao -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_videoresolution]</texture>
+	<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+	</control>
+	<control type="label"><!-- Aspecto -->
+	<height>20</height>
+	<width>35</width>
+	<label>$INFO[ListItem.VideoAspect]:1</label>
+	<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+	</control>
+	<control type="image"><!-- Codec de audio -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+	<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+	</control>
+	<control type="image"><!-- Canais -->
+	<height>20</height>
+	<width>35</width>
+	<texture>$VAR[value_audiochannels]</texture>
+	<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+	</control>
+	</control>
+	</control>
+	<control type="group"><!-- Back images Case-->
+	<left>-255</left>
+	<top>-20</top>
+	<control type="image"><!-- Estojo Reflexo -->
+	<top>342</top>
+	<width>300</width>
+	<height>240</height>
+	<include>Animation_CaseGlass</include>
+	<texture flipy="true" diffuse="thumb_box_reflect.png">case_music.png</texture>
+	</control>
+	<control type="image"><!-- Estojo -->
+	<top>-15</top>
+	<width>300</width>
+	<height>365</height>
+	<include>Animation_CaseGlass</include>
+	<texture>case_music.png</texture>
+	</control>
+	<control type="image"><!-- Logo -->
+	<top>5</top>
+	<width>300</width>
+	<height>35</height>
+	<aspectratio align="center">keep</aspectratio>
+	<texture diffuse="thumb_shelf_diffuse.png" background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+	</control>
+	</control>
+	</control>
+	</control>
+	<control type="wraplist" id="78">
+	<viewtype label="CowerFlow Back">icon</viewtype>
+	<left>-473</left>
+	<top>300</top>
+	<width>2226</width>
+	<height>318</height>
+	<onleft>78</onleft>
+	<onright>78</onright>
+	<onup>9900</onup>
+	<ondown>80</ondown>
+	<pagecontrol>80</pagecontrol>
+	<orientation>horizontal</orientation>
+	<scrolltime>250</scrolltime>
+	<focusposition>3</focusposition>
+	<preloaditems>2</preloaditems>
+	<hitrect x="490" y="370" w="318" h="318"/>
+	<animation effect="slide" start="0,0" end="0,-20" time="300" tween="sine" easing="out" condition="Control.HasFocus(80)">Conditional</animation>
+	<visible>![Container.Content(episodes) | Container.Content(years) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios)]</visible>
+	<itemlayout width="318" height="318"/>
+	<focusedlayout width="318" height="318">
+	<control type="image">
+	<left>34</left>
+	<top>28</top>
+	<width>318</width>
+	<height>318</height>
+	<texture></texture>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="scrollbar" id="80">
+	<include>ScrollBar_Horizontal</include>
+	<left>305</left>
+	<top>613</top>
+	<width>670</width>
+	<height>41</height>
+	<onup>78</onup>
+	<ondown>9920</ondown>
+	<include>Animation_Fade</include>
+	<visible allowhiddenfocus="true">Control.IsVisible(78) + Control.HasFocus(80)</visible>
+	</control>
+	</control>
+	</include>
+
+	</includes>

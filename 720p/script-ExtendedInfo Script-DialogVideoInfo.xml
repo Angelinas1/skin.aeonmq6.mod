@@ -1,0 +1,2943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="6030" type="dialog">
+<zorder>0</zorder>
+	<defaultcontrol always="true">149</defaultcontrol>
+	<onload>Skin.SetString(sextend_list,1000)</onload>
+	<controls>
+	<control type="group"><!-- default group -->
+	<include>Animation_Window</include>
+	<animation effect="fade" start="100" end="0" time="300">Conditional</animation>
+	<control type="multiimage"><!-- Multi Fanart -->
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>720</height>
+	<timeperimage>6000</timeperimage>
+	<randomize>true</randomize>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_panscanw)">Conditional</animation>
+	<animation effect="slide" start="-10,-10" end="10,10" time="5000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_panscanw)">Conditional</animation>
+	<imagepath background="true">$INFO[Container(1350).ListItem.Icon()]</imagepath>
+	</control>
+	<include>LiveBG</include>
+          <control type="image">
+            <height>720</height>
+            <width>3280</width>
+            <texture>colors_pulse.png</texture>
+            <animation type="Conditional" condition="true" loop="true" reversible="false">
+	            <effect type="slide" start="0,0" end="-2000,0" time="20350" />
+	            <effect type="slide" start="0,0" end="2000,0" time="20350" delay="20350"/>
+            </animation>
+			<visible>!Skin.HasSetting(HomeMenuAnimation)</visible>
+          </control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>720</height>
+	<texture>black.png</texture>
+	<colordiffuse>A5FFFFFF</colordiffuse>
+	<include>Animation_Fade</include>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<height>150</height>
+	<width>1280</width>
+	<texture flipy="true">shadow_mask.png</texture>
+	<colordiffuse>75000000</colordiffuse>
+	</control>
+	<control type="label"><!-- Title -->
+	<left>30</left>
+	<top>8</top>
+	<width>1100</width>
+	<height>40</height>
+	<font>Font_40</font>
+	<label>$INFO[Window.Property(movie.Title)]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="label"><!-- Title -->
+	<left>650</left>
+	<top>10</top>
+	<width min="29" max="180">auto</width>
+	<height min="20" max="70">auto</height>
+	<wrapmultiline>true</wrapmultiline>
+	<font>Font_101</font>
+	<label>[B]$INFO[Window.Property(movie.Title)][/B]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	</control>
+	<control type="label">
+	<left>30</left>
+	<top>50</top>
+	<width>1100</width>
+	<height>25</height>
+	<font>Font_21</font>
+	<label>$INFO[Window.Property(movie.tagline)]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="group"><!-- CDART VIDEO -->
+	<left>1020</left>
+	<top>0</top>
+	<animation type="WindowOpen">
+	<effect type="slide" start="0,100" end="0,0" time="1500" delay="500" tween="cubic" easing="out"/>
+	<effect type="fade" start="0" end="100" time="500" delay="500"/>
+	</animation>
+	<animation type="Visible">
+	<effect type="slide" start="0,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+	<effect type="fade" start="0" end="100" time="500" delay="500"/>
+	</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation type="Hidden">
+	<effect type="slide" start="0,0" end="0,100" time="300" tween="cubic" easing="out"/>
+	<effect type="fade" start="100" end="0" time="200"/>
+	</animation>
+	<animation effect="slide" time="200" start="0,0" end="-20,0" tween="cubic" easing="out" condition="!Skin.HasSetting(nolowlistvideocase)">Conditional</animation>
+	<control type="image">
+	<width>234</width>
+	<height>234</height>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(movie.discart)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</control>
+	<control type="image">
+	<width>234</width>
+	<height>234</height>
+	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Window.Property(movie.Title)]&type=discart</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	<visible>IsEmpty(Window.Property(movie.discart)) + !Skin.HasSetting(sextendsett_fakedisc)</visible>
+	</control>
+	<control type="image">
+	<visible>Skin.HasSetting(sextendsett_fakedisc)</visible>
+	<width>234</width>
+	<height>234</height>
+	<visible>IsEmpty(Window.Property(movie.discart))</visible>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(movie.Poster)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="top">stretch</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</control>
+	</control>	
+	<control type="image"><!-- Star -->
+	<left>919</left>
+	<top>5</top>
+	<width>73</width>
+	<height>73</height>
+	<align>center</align>
+	<aligny>center</aligny>
+	<texture>star.png</texture>
+	<colordiffuse>FFFFFAF0</colordiffuse>
+	</control>
+	<control type="label">
+	<left>925</left>
+	<top>15</top>
+	<width>60</width>
+	<height>60</height>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_18A</font>
+	<label>[B]$INFO[Window.Property(movie.rating)][/B]</label>
+	<textcolor>FF101010</textcolor>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>80</top>
+	<width>1280</width>
+	<height>386</height>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass</include>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>80</height>
+	<texture>gradient_small.png</texture>
+	<colordiffuse>80FFFAF0</colordiffuse>
+	</control>
+	<control type="image"><!-- Certification -->
+	<left>30</left>
+	<top>69</top>
+	<height>80</height>
+	<width>158</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Container(650).ListItem.Property(certification),flags/mpaa/,.png]</texture>
+	</control>
+	<control type="image"><!-- Characterart -->
+	<left>10</left>
+	<top>190</top>
+	<height>105</height>
+	<width>120</width>
+	<aspectratio align="bottom">keep</aspectratio>
+	<texture>$INFO[Window.Property(movie.Characterart)]</texture>
+	</control>
+	<control type="image"><!-- Country -->
+	<left>0</left>
+	<top>91</top>
+	<height>40</height>
+	<width>79</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Container(650).ListItem.Property(iso_3166_1),flags/language/,.png]</texture>
+	</control>
+	<control type="image"><!-- Logo -->
+	<left>755</left>
+	<top>70</top>
+	<height>145</height>
+	<width>190</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Window.Property(movie.Logo)]</texture>
+	</control>
+	<control type="radiobutton" id="445">
+	<left>65</left>
+	<top>85</top>
+	<width>70</width>
+	<height>50</height>
+	<textoffsetx>80</textoffsetx>
+	<align>left</align>
+	<font>font13</font>
+	<textcolor>FF999999</textcolor>
+	<focusedcolor>FFFAFAFA</focusedcolor>
+	<aligny>top</aligny>
+	<textoffsety>30</textoffsety>
+	<radioposx>10</radioposx>
+	<radioposy>0</radioposy>
+	<radiowidth>44</radiowidth>
+	<radioheight>44</radioheight>
+	<textureradioonfocus colordiffuse="FFFAFAFA">dialogs_busy.png</textureradioonfocus>
+	<textureradioofffocus colordiffuse="FFFAFAFA">dialogs_busy.png</textureradioofffocus>
+	<textureradiooffnofocus colordiffuse="FF999999">dialogs_busy.png</textureradiooffnofocus>
+	<textureradioonnofocus colordiffuse="FF999999">dialogs_busy.png</textureradioonnofocus>
+	<label>$ADDON[script.extendedinfo 32133]</label>
+	</control>             
+	<control type="image"><!-- Clearart -->
+	<left>755</left>
+	<top>70</top>
+	<height>145</height>
+	<width>190</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Window.Property(movie.Fanart)]</texture>
+	<visible>!Skin.HasSetting(sextendsett_artlogo)</visible>
+	</control>
+	<control type="image"><!-- Studio -->
+	<left>755</left>
+	<top>70</top>
+	<height>145</height>
+	<width>190</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
+	<visible>IsEmpty(Window.Property(movie.Logo)) + Skin.HasSetting(sextendsett_artlogo)</visible>
+	</control>
+	<control type="image"><!-- Logo -->
+	<left>550</left>
+	<top>239</top>
+	<height>80</height>
+	<width>160</width>
+	<aspectratio>keep</aspectratio>
+	<texture background="true">$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(movie.Logo)) | !Skin.HasSetting(sextendsett_artlogo)</visible>
+	</control>
+	<control type="image"><!-- Banner -->
+	<left>735</left>
+	<top>370</top>
+	<height>130</height>
+	<width>240</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Window.Property(movie.banner)]</texture>
+	</control>
+	<control type="image"><!-- ClearArt -->
+	<left>765</left>
+	<top>290</top>
+	<height>145</height>
+	<width>160</width>
+	<aspectratio align="bottom">keep</aspectratio>
+	<texture>$INFO[Window.Property(movie.Clearart)]</texture>
+	</control>
+	<control type="image"><!-- ClearArt -->
+	<left>765</left>
+	<top>290</top>
+	<height>145</height>
+	<width>160</width>
+	<aspectratio align="bottom">keep</aspectratio>
+	<texture>$INFO[Window.Property(tvhow.Clearart)]</texture>
+	</control>
+	<control type="label"><!-- Year -->
+	<left>220</left>
+	<top>80</top>
+	<height>40</height>
+	<width>110</width>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>Font_24A</font>
+	<label>$INFO[Window.Property(movie.year)]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	</control>
+	<control type="label"><!-- OMDB -->
+	<left>290</left>
+	<top>80</top>
+	<height>40</height>
+	<width>430</width>
+	<align>left</align>
+	<aligny>center</aligny>
+	<scroll>true</scroll>
+	<font>Font_18A</font>
+	<label>$INFO[Window.Property(movie.omdb.tomatoConsensus)]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	</control>
+	<control type="label"><!-- Genre -->
+	<left>220</left>
+	<top>103</top>
+	<height>40</height>
+	<width>490</width>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>Font_18A</font>
+	<label>$INFO[Window.Property(movie.Genre)]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	<scrollout>false</scrollout>
+	</control>
+	<control type="list" id="49"><!-- Lista de botoes/info -->
+	<left>20</left>
+	<top>145</top>
+	<width>740</width>
+	<height>330</height>
+	<onleft>149</onleft>
+	<onright>149</onright>
+	<onup>149</onup>
+	<ondown>149</ondown>
+	<itemgap>0</itemgap>
+	<pagecontrol>-</pagecontrol>
+	<scrolltime>200</scrolltime>
+	<itemlayout height="20">
+	<control type="label">
+	<left>-28</left>
+	<top>0</top>
+	<width>200</width>
+	<height>20</height>
+	<align>right</align>
+	<aligny>center</aligny>
+	<font>Font_18A</font>
+	<textcolor>$VAR[value_headercolor]</textcolor>
+	<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+	<label>$INFO[ListItem.Label]</label>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>200</left>
+	<top>0</top>
+	<width>490</width>
+	<height>20</height>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>Font_18A</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<selectedcolor>E4101010</selectedcolor>
+	<label>$INFO[ListItem.Label2]</label>
+	<scroll>true</scroll>
+	</control>
+	</itemlayout>
+	<focusedlayout height="20">
+	<control type="image">
+	<left>190</left>
+	<top>0</top>
+	<width>510</width>
+	<height>20</height>
+	<texture>settings_button_focus.png</texture>
+	<visible>Control.HasFocus(49)</visible>
+	</control>
+	<control type="label">
+	<left>-28</left>
+	<top>0</top>
+	<width>200</width>
+	<height>20</height>
+	<align>right</align>
+	<aligny>center</aligny>
+	<font>Font_18A</font>
+	<textcolor>$VAR[value_headercolor]</textcolor>
+	<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+	<label>$INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+	<left>200</left>
+	<top>0</top>
+	<width>490</width>
+	<height>20</height>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>Font_18A</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+	<label>$INFO[ListItem.Label2]</label>
+	<visible>!Control.HasFocus(49)</visible>
+	</control>
+	<control type="label">
+	<left>200</left>
+	<top>0</top>
+	<width>490</width>
+	<height>20</height>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>Font_18A</font>
+	<textcolor>E4101010</textcolor>
+	<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+	<label>$INFO[ListItem.Label2]</label>
+	<visible>Control.HasFocus(49)</visible>
+	</control>
+	</focusedlayout>
+	<content>
+	<item>
+	<label>Path: </label><!-- Path -->
+	<label2>$INFO[Window.Property(movie.file)]</label2>
+	<visible>!IsEmpty(Window.Property(movie.file))</visible>
+	<onclick>PlayMedia($ESCINFO[Window.Property(movie.file)])</onclick>
+	</item>
+	<item>
+	<label>IMDB/TMDB Number </label><!-- IMDB Number -->
+	<label2>$INFO[Window.Property(movie.imdb_id)] / $INFO[Window.Property(movie.ID)]</label2>
+	<onclick>RunScript(script.cinemavision,movieids=$INFO[Window.Property(movie.imdb_id)])</onclick>
+	</item>
+	<item>
+	<label>$LOCALIZE[20339]/$LOCALIZE[20417]</label><!-- Director/Written -->
+	<label2>$INFO[Window.Property(movie.director)]/$INFO[Window.Property(movie.writer)]</label2>
+	<onclick>SetFocus(149,5)</onclick>
+	<visible>!IsEmpty(Window.Property(movie.director))</visible>
+	</item>
+	<item>
+	<label>Awards: </label><!-- Awards -->
+	<label2>$INFO[Window.Property(movie.omdb.Awards),,[CR]]$INFO[Window.Property(movie.omdb.tomatoConsensus),,[CR]]</label2>
+	<onclick>noop</onclick>
+	<visible>!IsEmpty(Window.Property(movie.omdb.Awards))</visible>
+	</item>
+	<item>
+	<label>$LOCALIZE[572]</label><!-- Studios -->
+	<label2>$INFO[Container(550).ListItem(0).label]</label2>
+	<onclick>SetFocus(149,8)</onclick>
+	</item>
+	<item>
+	<label>$LOCALIZE[180]</label><!-- Duration -->
+	<label2>$INFO[Window.Property(movie.Duration)] min</label2>
+	<onclick>SetFocus(149,11)</onclick>
+	</item>
+	<item>
+	<label>Status</label><!-- Status -->
+	<label2>$INFO[Window.Property(movie.Status)]  $INFO[Window.Property(movie.release_date)]</label2>
+	<onclick>noop</onclick>
+	<visible>!IsEmpty(Window.Property(movie.Status))</visible>
+	</item>
+	<item>
+	<label>Top250: </label><!-- Top250 -->
+	<label2>$INFO[Window.Property(movie.Top250)]</label2>
+	<visible>!IsEmpty(Window.Property(movie.Top250))</visible>
+	<onclick>noop</onclick>
+	</item>
+	<item>
+	<label>Budget/Revenue: </label><!-- Budget -->
+	<label2>$INFO[Window.Property(movie.Budget)] $ / $INFO[Window.Property(movie.Revenue)] $</label2>
+	<onclick>noop</onclick>
+	<visible>!IsEmpty(Window.Property(movie.Budget))</visible>
+	</item>
+	</content>
+	</control>
+	<control type="image">
+	<left>205</left>
+	<top>80</top>
+	<height>230</height>
+	<width>2</width>
+	<texture>separator_v.png</texture>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>136</top>
+	<height>2</height>
+	<width>720</width>
+	<texture>separator.png</texture>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>310</top>
+	<height>2</height>
+	<width>987</width>
+	<texture>separator.png</texture>
+	</control>
+	<control type="textbox"><!-- Plot -->
+	<left>30</left>
+	<top>320</top>
+	<width>935</width>
+	<height>133</height>
+	<align>justify</align>
+	<font>Font_18A</font>
+	<label>$INFO[Window.Property(movie.Plot)]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
+	<visible>IsEmpty(Window.Property(movie.banner))</visible>
+	</control>
+	<control type="textbox"><!-- Plot -->
+	<left>30</left>
+	<top>320</top>
+	<width>685</width>
+	<height>133</height>
+	<align>justify</align>
+	<font>Font_18A</font>
+	<label>$INFO[Window.Property(movie.Plot)]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
+	<visible>!IsEmpty(Window.Property(movie.banner))</visible>
+	</control>
+	<control type="image">
+	<left>720</left>
+	<top>80</top>
+	<width>2</width>
+	<height>230</height>
+	<texture>separator_v.png</texture>
+	</control>
+	<control type="image"><!-- ClearArt -->
+	<left>755</left>
+	<top>174</top>
+	<height>165</height>
+	<width>190</width>
+	<aspectratio align="bottom">keep</aspectratio>
+	<texture background="true">$INFO[Container(1350).ListItem(1).Icon]</texture>
+	</control>
+	<control type="image"><!-- Thumb -->
+	<left>987</left>
+	<top>82</top>
+	<width>523</width>
+	<height>382</height>
+	<aspectratio align="left">keep</aspectratio>
+	<texture background="true">$INFO[Window.Property(movie.Poster)]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	<visible>!Skin.HasSetting(sextendsett_case)</visible>
+	</control>
+	<control type="group"><!-- DVD Case -->
+	<visible>Skin.HasSetting(sextendsett_case)</visible>
+	<control type="image"><!-- Thumb -->
+	<left>1000</left>
+	<top>115</top>
+	<width>238</width>
+	<height>340</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true">$INFO[Window.Property(movie.Poster)]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	</control>
+	<control type="image"><!-- Case -->
+	<left>978</left>
+	<top>60</top>
+	<width>288</width>
+	<height>429</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<texture>$VAR[value_videocase0]</texture>
+	<include>Animation_CaseGlass</include>
+	</control>
+	<control type="image"><!-- Codec -->
+	<left>978</left>
+	<top>77</top>
+	<width>288</width>
+	<height>40</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio scalediffuse="true">keep</aspectratio>
+	<texture>$INFO[Window.Property(movie.VideoCodec),flags/casecodec/,.png]</texture>
+	</control>
+	<control type="label"><!-- Logo DB extended script -->
+	<left>978</left>
+	<top>80</top>
+	<width>288</width>
+	<height>40</height>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(850).ListItem.Title]</label>
+	<visible>IsEmpty(Window.Property(movie.VideoCodec))</visible>
+	</control>
+	</control>
+	<control type="image">
+	<left>986</left>
+	<top>80</top>
+	<width>2</width>
+	<height>384</height>
+	<texture>separator_v.png</texture>
+	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>80</top>
+	<height>2</height>
+	<width>1280</width>
+	<texture>separator.png</texture>
+	</control>
+	<control type="image"><!-- Fundo do rodape -->
+	<left>0</left>
+	<top>650</top>
+	<width>1280</width>
+	<height>70</height>
+	<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+	<texture>shadow_mask.png</texture>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>494</top>
+	<height>186</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_floorcolor]</colordiffuse>
+	<include>Animation_DefaultGlass</include>
+	</control>
+	<control type="image"><!-- Fundo do rodape -->
+	<left>0</left>
+	<top>650</top>
+	<width>1280</width>
+	<height>70</height>
+	<orientation>horizontal</orientation>
+	<itemgap>22</itemgap>
+	<animation effect="slide" start="0,300" end="0,0" time="900" tween="sine" easing="out">WindowOpen</animation>
+	<animation effect="slide" start="0,300" end="0,0" time="900" tween="sine" easing="out">Visible</animation>
+	<animation effect="slide" start="0,0" end="0,300" time="900" tween="sine" easing="in">Hidden</animation>
+	<visible>Control.HasFocus(149)</visible>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_floorcolor]</colordiffuse>	
+	<include>Animation_FloorGlass</include>
+	</control>
+	<control type="grouplist"><!-- Etiquetas -->
+	<left>20</left>
+	<top>677</top>
+	<orientation>horizontal</orientation>
+	<itemgap>22</itemgap>
+	<animation effect="slide" start="0,300" end="0,0" time="900" tween="sine" easing="out">WindowOpen</animation>
+	<animation effect="slide" start="0,300" end="0,0" time="900" tween="sine" easing="out">Visible</animation>
+	<animation effect="slide" start="0,0" end="0,300" time="900" tween="sine" easing="in">Hidden</animation>
+	<visible>Control.HasFocus(149)</visible>
+	<control type="image"><!-- Studio  -->
+	<height>45</height>
+	<include>FlagImage</include>
+	<texture>$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(movie.Studio))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.Studio))</visible>
+	</control>
+	<control type="image"><!-- Mpaa  -->
+	<include>FlagImage</include>
+	<texture>$VAR[value_mpaa_sextra]</texture>
+	<visible>!IsEmpty(Window.Property(movie.mpaa))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.mpaa))</visible>
+	</control>	
+	<control type="image"><!-- Codec de video  -->
+	<include>FlagImage</include>
+	<texture>$INFO[Window.Property(movie.VideoCodec),flags/casecodec/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(movie.VideoCodec))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.VideoCodec))</visible>
+	</control>
+	<control type="image"><!-- Resolucao  -->
+	<include>FlagImage</include>
+	<texture>$INFO[Window.Property(movie.VideoResolution),flags/resolution/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(movie.VideoResolution))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.VideoResolution))</visible>
+	</control>
+	<control type="image"><!-- Codec de audio  -->
+	<include>FlagImage</include>
+	<texture>$INFO[Window.Property(movie.AudioCodec),flags/audiocodec/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(movie.AudioCodec))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.AudioCodec))</visible>
+	</control>
+	<control type="image"><!-- Aspecto  -->
+	<include>FlagLabel</include>
+	<texture>$INFO[Window.Property(movie.VideoAspect),flags/aspectratio/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(movie.VideoAspect))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.VideoAspect))</visible>
+	</control>
+    <control type="image"><!-- Channels -->
+    <include>FlagImage</include>
+    <texture>$INFO[Window.Property(movie.AudioChannels),flags/audiochannels/,.png]</texture>
+    <visible>!IsEmpty(Window.Property(movie.AudioChannels))</visible>
+    </control>
+	<control type="image">
+	<include>FlagSeparator</include>
+    <visible>!IsEmpty(Window.Property(movie.AudioChannels))</visible>
+	</control>
+	<control type="label"><!-- language  -->
+	<width>45</width>
+	<height>45</height>
+	<top>-10</top>
+	<font>Font_18</font>
+	<label>$INFO[Window.Property(movie.AudioLanguage.1)]</label>
+	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.1))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.1))</visible>
+	</control>
+	<control type="label"><!-- language 2 -->
+	<width>45</width>
+	<height>45</height>
+	<top>-10</top>
+	<font>Font_18</font>
+	<label>$INFO[Window.Property(movie.AudioLanguage.2)]</label>
+	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.2))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.2))</visible>
+	</control>
+	<control type="label"><!-- SubtitleLanguage  -->
+	<width>45</width>
+	<height>45</height>
+	<top>-10</top>
+	<font>Font_18</font>
+	<label>$INFO[Window.Property(movie.SubtitleLanguage.1)]</label>
+	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.1))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.1))</visible>
+	</control>
+	<control type="label"><!-- SubtitleLanguage 2 -->
+	<width>45</width>
+	<height>45</height>
+	<top>-10</top>
+	<font>Font_18</font>
+	<label>$INFO[Window.Property(movie.SubtitleLanguage.2)]</label>
+	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.2))</visible>
+	</control>
+	<control type="image">
+	<include>FlagSeparator</include>
+	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.2))</visible>
+	</control>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>680</top>
+	<height>43</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>494</top>
+	<height>186</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass</include>
+	</control>
+	<control type="group"><!-- Icon Name bar -->
+	<animation effect="slide" start="0,300" end="0,0" time="900" tween="sine" easing="out">WindowOpen</animation>
+	<animation effect="slide" start="0,300" end="0,0" time="900" tween="sine" easing="out">Visible</animation>
+	<animation effect="slide" start="0,0" end="0,300" time="900" tween="sine" easing="in">Hidden</animation>
+	<visible>!Control.HasFocus(149)</visible>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>[COLOR red][B]$INFO[Container(1000).ListItem.Label][/B][/COLOR] as :  [B]$INFO[Container(1000).ListItem.Property(character)][/B]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),1000)</visible>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(150).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),150)</visible>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(250).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),250)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(350).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),350)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(450).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),450)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(550).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),550)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(650).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),650)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(750).ListItem.Property(department)] : [COLOR red][B]$INFO[Container(750).ListItem.Label][/B][/COLOR]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),750)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(850).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),850)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(950).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),950)</visible>
+	<scroll>true</scroll>
+	</control>	
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(1050).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),1050)</visible>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(1151).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),1151)</visible>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(1251).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),1251)</visible>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(1351).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),1351)</visible>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(1451).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),1451)</visible>
+	<scroll>true</scroll>
+	</control>
+	<control type="label">
+	<left>115</left>
+	<top>689</top>
+	<width>1050</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_24</font>
+	<label>$INFO[Container(2000).ListItem.Label]</label>
+	<textcolor>FF101010</textcolor>
+	 <visible>SubString(skin.string(sextend_list),2000)</visible>
+	<scroll>true</scroll>
+	</control>
+	</control>
+	<control type="group" id="900">
+	<control type="list" id="1000"><!---- Actors 160 --->
+	 <visible>SubString(skin.string(sextend_list),1000)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown  condition="SubString(skin.string(sextend_list),1000)">SetFocus(160)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(1000)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(1000)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="150"><!---- Similar 162 --->
+	 <visible>SubString(skin.string(sextend_list),150)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(162)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<visible>!Skin.HasSetting(sextendsett_case)</visible>
+	</control>
+	<control type="group"><!-- DVD Case -->
+	<visible>Skin.HasSetting(sextendsett_case)</visible>
+	<control type="image">
+	<left>0</left>
+	<top>20</top>
+	<width>105</width>
+	<height>160</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>stretch</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	<control type="image"><!-- Case -->
+	<left>-10</left>
+	<top>-5</top>
+	<width>130</width>
+	<height>200</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<texture>$VAR[value_videocase0]</texture>
+	<include>Animation_CaseGlass</include>
+	</control>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="group"><!-- DVD CaseFocus -->
+	<visible>!Skin.HasSetting(sextendsett_case)</visible>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(150)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(150)</visible>
+	</control>
+	</control>
+	<control type="group"><!-- DVD Case -->
+	<visible>Skin.HasSetting(sextendsett_case)</visible>
+	<control type="image">
+	<left>0</left>
+	<top>20</top>
+	<width>105</width>
+	<height>160</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>stretch</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>20</top>
+	<width>105</width>
+	<height>160</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>stretch</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<visible>Control.HasFocus(150)</visible>
+	</control>
+	<control type="image"><!-- Case -->
+	<left>-10</left>
+	<top>-5</top>
+	<width>130</width>
+	<height>200</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<texture>$VAR[value_videocase0]</texture>
+	<include>Animation_CaseGlass</include>
+	</control>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="250"><!---- Sets 163 --->
+	 <visible>SubString(skin.string(sextend_list),250)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(163)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<visible>!Skin.HasSetting(sextendsett_case)</visible>
+	</control>
+	<control type="group"><!-- DVD Case -->
+	<visible>Skin.HasSetting(sextendsett_case)</visible>
+	<control type="image">
+	<left>0</left>
+	<top>20</top>
+	<width>105</width>
+	<height>160</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>stretch</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	<control type="image"><!-- Case -->
+	<left>-10</left>
+	<top>-5</top>
+	<width>130</width>
+	<height>200</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<texture>$VAR[value_videocase0]</texture>
+	<include>Animation_CaseGlass</include>
+	</control>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="group"><!-- DVD CaseFocus -->
+	<visible>!Skin.HasSetting(sextendsett_case)</visible>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(250)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(250)</visible>
+	</control>
+	</control>
+	<control type="group"><!-- DVD Case -->
+	<visible>Skin.HasSetting(sextendsett_case)</visible>
+	<control type="image">
+	<left>0</left>
+	<top>20</top>
+	<width>105</width>
+	<height>160</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>stretch</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>20</top>
+	<width>105</width>
+	<height>160</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>stretch</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<visible>Control.HasFocus(250)</visible>
+	</control>
+	<control type="image"><!-- Case -->
+	<left>-10</left>
+	<top>-5</top>
+	<width>130</width>
+	<height>200</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<texture>$VAR[value_videocase0]</texture>
+	<include>Animation_CaseGlass</include>
+	</control>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="350"><!---- YouTube --->
+	 <visible>SubString(skin.string(sextend_list),350)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>noop</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(350)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(350)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="450"><!---- Lists 164--->
+	 <visible>SubString(skin.string(sextend_list),450)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(164)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(450)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(450)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="550"><!---- Studios --->
+	 <visible>SubString(skin.string(sextend_list),550)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>noop</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(550)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(550)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="650"><!---- Releases --->
+	 <visible>SubString(skin.string(sextend_list),650)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>noop</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[ListItem.Property(iso_3166_1),flags/language/,.png]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[ListItem.Property(iso_3166_1),flags/language/,.png]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(650)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[ListItem.Property(iso_3166_1),flags/language/,.png]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(650)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="750"><!---- Crew 165--->
+	 <visible>SubString(skin.string(sextend_list),750)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(165)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(750)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(750)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="850"><!---- Ganres 166 --->
+	 <visible>SubString(skin.string(sextend_list),850)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(166)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,genres/video/,.jpg]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,genres/video/,.jpg]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(850)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,genres/video/,.jpg]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(850)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="950"><!---- Keeywords --->
+	 <visible>SubString(skin.string(sextend_list),950)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>noop</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(950)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(950)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="1050"><!---- Reviews --->
+	 <visible>SubString(skin.string(sextend_list),1051)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>noop</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(1050)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(1050)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="1150"><!---- Vidos --->
+	 <visible>SubString(skin.string(sextend_list),1151)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>noop</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(1150)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(1150)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="1250"><!---- Images 161--->
+	 <visible>SubString(skin.string(sextend_list),1251)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(161)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(1250)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(1250)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="1350"><!---- Backdrops 167 --->
+	 <visible>SubString(skin.string(sextend_list),1351)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(167)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(1350)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(1350)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="1450"><!---- Networks --->
+	 <visible>SubString(skin.string(sextend_list),1451)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(160)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="170" width="181">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(1450)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>130</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(1450)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="list" id="2000"><!---- Episodes --->
+	 <visible>SubString(skin.string(sextend_list),2000)</visible>
+	<viewtype label="List">List Info</viewtype>
+	<left>30</left>
+	<top>492</top>
+	<width>1220</width>
+	<height>220</height>
+	<onup>149</onup>
+	<ondown>Skin.Reset(coverzoom)</ondown>
+	<ondown>SetFocus(168)</ondown>
+	<ondown>Skin.SetBool(artistzoom)</ondown>
+	<orientation>horizontal</orientation>
+	<scrolltime>400</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	</control>
+	</itemlayout>
+	<focusedlayout height="200" width="250">
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	<colordiffuse>FF909090</colordiffuse>
+	<include>Animation_Fade</include>
+	<visible>!Control.HasFocus(2000)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>5</top>
+	<width>230</width>
+	<height>180</height>
+	<aligny>center</aligny>
+	<align>center</align>
+	<aspectratio>keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	<include>Animation_Fade</include>
+	<visible>Control.HasFocus(2000)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	</control>
+	<control type="group"><!-- Menu bar -->
+	<left>0</left>
+	<top>465</top>
+	<control type="image">
+	<left>0</left>
+	<top>-30</top>
+	<width>1280</width>
+	<height>30</height>
+	<texture>shadow_h.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>29</top>
+	<width>1280</width>
+	<height>30</height>
+	<texture flipy="true">shadow_h.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>30</height>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="list" id="149"><!---- Middle menu --->
+	<left>0</left>
+	<top>3</top>
+	<width>1280</width>
+	<height>25</height>
+	<onup>SetFocus(161)</onup>
+	<ondown>SetFocus(900,1)</ondown>
+	<orientation>horizontal</orientation>
+	<pagecontrol>-</pagecontrol>
+	<scrolltime>300</scrolltime>
+	<focusposition>3</focusposition>
+	<itemlayout height="25" width="182.5">
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1</width>
+	<height>25</height>
+	<texture>separator_v.png</texture>
+	</control>
+	<control type="label">
+	<left>10</left>
+	<top>1</top>
+	<height>25</height>
+	<width>162</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_18</font>
+	<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+	<textcolor>80FFFAF0</textcolor>
+	</control>
+	</itemlayout>
+	<focusedlayout height="25" width="182.5">
+	<control type="image">
+	<left>0</left>
+	<top>-1</top>
+	<width>182</width>
+	<height>27</height>
+	<texture>settings_button_focus.png</texture>
+	<visible>Control.Hasfocus(149)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1</width>
+	<height>25</height>
+	<texture>separator_v.png</texture>
+	</control>
+	<control type="label">
+	<left>10</left>
+	<top>1</top>
+	<height>25</height>
+	<width>162</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_18</font>
+	<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+	<textcolor>FF101010</textcolor>
+	<visible>Control.Hasfocus(149)</visible>
+	</control>
+	<control type="label">
+	<left>10</left>
+	<top>1</top>
+	<height>25</height>
+	<width>162</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<font>Font_18</font>
+	<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+	<textcolor>80FFFAF0</textcolor>
+	<visible>!Control.Hasfocus(149)</visible>
+	</control>
+	</focusedlayout>
+	<content>
+	<item id="11"><!-- Cast -->
+	<label>31045</label>
+	<onclick>Skin.SetString(sextend_list,1000)</onclick>
+	<visible>!Skin.HasSetting(kioskininfo)</visible>
+	</item>
+	<item id="23"><!-- Play Media -->
+	<label>31700</label>
+	<onclick>PlayMedia($INFO[Window.Property(movie.file)])</onclick>
+	<onclick>Dialog.Close(all,true)</onclick>
+	<visible>!IsEmpty(Window.Property(movie.file))</visible>
+	</item>
+	<item id="24"><!-- Settings -->
+	<label>Settings</label>
+	<onclick>SetFocus(445)</onclick>
+	</item>
+	<item id="25"><!-- CouchPotato -->
+	<label>CouchPotato</label>
+	<onclick>RunPlugin(plugin://plugin.video.couchpotato_manager/movies/add?imdb_id=$INFO[Window.Property(movie.imdb_id)])</onclick>
+	</item>
+	<item id="12"><!-- Sets -->
+	<label>31820</label>
+	<onclick>Skin.SetString(sextend_list,250)</onclick>
+	<visible>IntegerGreaterThan(Container(250).NumItems,0)</visible>
+	</item>
+	<item id="13"><!-- Trailers -->
+	<label>31065</label>
+	<onclick>Skin.SetString(sextend_list,1151)</onclick>
+	<visible>IntegerGreaterThan(Container(1150).NumItems,0)</visible>
+	</item>
+	<item id="14"><!-- Youtube -->
+	<label>31949</label>	
+	<onclick>Skin.SetString(sextend_list,350)</onclick>
+	<visible>IntegerGreaterThan(Container(350).NumItems,0)</visible>
+	</item>
+	<item id="15"><!-- Artwork/Fanart -->
+	<label>Artwork/Fanart</label>
+	<onclick>Skin.SetString(sextend_list,1251)</onclick>
+	<onclick condition="SubString(skin.string(sextend_list),1251)">Skin.SetString(sextend_list,1351)</onclick>
+	</item>
+	<item id="16"><!-- Simular -->
+	<label>Simular</label>
+	<onclick>Skin.SetString(sextend_list,150)</onclick>
+	<visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
+	</item>
+	<item id="17"><!-- Crew -->
+	<label>Crew</label>
+	<onclick>Skin.SetString(sextend_list,750)</onclick>
+	<visible>IntegerGreaterThan(Container(750).NumItems,0)</visible>
+	</item>
+	<item id="18"><!-- Lists From TMB -->
+	<label>Recommended From TMB</label>
+	<onclick>Skin.SetString(sextend_list,450)</onclick>
+	<visible>IntegerGreaterThan(Container(450).NumItems,0)</visible>
+	</item>
+	<item id="19"><!-- Studios -->
+	<label>31047</label>
+	<onclick>Skin.SetString(sextend_list,550)</onclick>
+	<visible>IntegerGreaterThan(Container(550).NumItems,0)</visible>
+	</item>
+	<item id="20"><!-- Certific -->
+	<label>Certific</label>
+	<onclick>Skin.SetString(sextend_list,650)</onclick>
+	<visible>IntegerGreaterThan(Container(650).NumItems,0)</visible>
+	</item>
+	<item id="21"><!-- Genre -->
+	<label>31091</label>
+	<onclick>Skin.SetString(sextend_list,850)</onclick>
+	<visible>IntegerGreaterThan(Container(850).NumItems,0)</visible>
+	</item>
+	<item id="22"><!-- Keywords -->
+	<label>Keywords</label>
+	<onclick>Skin.SetString(sextend_list,950)</onclick>
+	<visible>IntegerGreaterThan(Container(950).NumItems,0)</visible>
+	</item>
+	<item id="18"><!-- Networks -->
+	<label>Networks</label>
+	<onclick>Skin.SetString(sextend_list,1451)</onclick>
+	<visible>IntegerGreaterThan(Container(1450).NumItems,0)</visible>
+	</item>
+	<item id="24"><!-- Episodes -->
+	<label>Episodes</label>
+	<onclick>Skin.SetString(sextend_list,2000)</onclick>
+	<visible>IntegerGreaterThan(Container(2000).NumItems,0)</visible>
+	</item>
+	<item id="19"><!-- TopMenu -->
+	<label>TopMenu</label>
+	<onclick>SetFocus(9103,1)</onclick>
+	</item>
+	</content>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>30</height>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>720</height>
+	<texture>darkgrey.png</texture>
+	<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+	<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+	<visible>Control.HasFocus(160) | Control.HasFocus(161) | Control.HasFocus(162) | Control.HasFocus(163) | Control.HasFocus(164) | Control.HasFocus(165) | Control.HasFocus(166) | Control.HasFocus(167) | Control.HasFocus(168)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>720</height>
+	<texture>hive_back.png</texture>
+	<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+	<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+	<visible>Control.HasFocus(160) | Control.HasFocus(161) | Control.HasFocus(162) | Control.HasFocus(163) | Control.HasFocus(164) | Control.HasFocus(165) | Control.HasFocus(166) | Control.HasFocus(167) | Control.HasFocus(168)</visible>
+	</control>
+	<control type="group"><!---- Images for Button 160 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-4.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(160)">Conditional</animation>
+	<visible>Control.HasFocus(160) + [Skin.HasSetting(artistzoom) | Control.HasFocus(160) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>430</left>
+	<top>32</top>
+	<width>425</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(1000).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>-1240</left>
+	<top>47</top>
+	<width>1200</width>
+	<height>640</height>
+	<texture background="true">$INFO[Container(1000).ListItem.fanart]</texture>
+	<aspectratio>keep</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
+	<visible>Skin.HasSetting(coverzoom)</visible>
+	</control>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+    <control type="group"><!---- Images for Button 161 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(161)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(161)">Conditional</animation>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(161)">Conditional</animation>
+	<visible>Control.HasFocus(161) + [Skin.HasSetting(artistzoom) | Control.HasFocus(161) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>430</left>
+	<top>32</top>
+	<width>425</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(1250).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+    <control type="group"><!---- Images for Button 162 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(162)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(162)">Conditional</animation>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(162)">Conditional</animation>
+	<visible>Control.HasFocus(162) + [Skin.HasSetting(artistzoom) | Control.HasFocus(162) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>430</left>
+	<top>32</top>
+	<width>425</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(150).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+    <control type="group"><!---- Images for Button 163 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(163)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(163)">Conditional</animation>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(163)">Conditional</animation>
+	<visible>Control.HasFocus(163) + [Skin.HasSetting(artistzoom) | Control.HasFocus(163) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>430</left>
+	<top>32</top>
+	<width>425</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(250).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+    <control type="group"><!---- Images for Button 164 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(164)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(164)">Conditional</animation>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(164)">Conditional</animation>
+	<visible>Control.HasFocus(164) + [Skin.HasSetting(artistzoom) | Control.HasFocus(164) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>430</left>
+	<top>32</top>
+	<width>425</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(450).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+    <control type="group"><!---- Images for Button 165 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(165)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(165)">Conditional</animation>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(165)">Conditional</animation>
+	<visible>Control.HasFocus(165) + [Skin.HasSetting(artistzoom) | Control.HasFocus(165) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>430</left>
+	<top>32</top>
+	<width>425</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(750).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>400</left>
+	<top>0</top>
+	<width>480</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+    <control type="group"><!---- Images for Button 166 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(166)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(166)">Conditional</animation>
+	<control type="image">
+	<left>160</left>
+	<top>0</top>
+	<width>980</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(166)">Conditional</animation>
+	<visible>Control.HasFocus(166) + [Skin.HasSetting(artistzoom) | Control.HasFocus(166) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>190</left>
+	<top>32</top>
+	<width>895</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(850).ListItem.Label,genres/video/,.jpg]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>150</left>
+	<top>0</top>
+	<width>980</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+    <control type="group"><!---- Images for Button 167 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(167)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(167)">Conditional</animation>
+	<control type="image">
+	<left>160</left>
+	<top>0</top>
+	<width>980</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(166)">Conditional</animation>
+	<visible>Control.HasFocus(167) + [Skin.HasSetting(artistzoom) | Control.HasFocus(167) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>190</left>
+	<top>32</top>
+	<width>895</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(1350).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>150</left>
+	<top>0</top>
+	<width>980</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>	
+    <control type="group"><!---- Images for Button 168 --->
+	<left>-1280</left>
+	<top>15</top>
+	<animation effect="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(168)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-25" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(168)">Conditional</animation>
+	<control type="image">
+	<left>160</left>
+	<top>0</top>
+	<width>980</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(168)">Conditional</animation>
+	<visible>Control.HasFocus(168) + [Skin.HasSetting(artistzoom) | Control.HasFocus(1668) + Skin.HasSetting(actorzoom)]</visible>
+	</control>
+	<control type="image">
+	<left>190</left>
+	<top>32</top>
+	<width>895</width>
+	<height>640</height>
+	<aspectratio>scale</aspectratio>
+	<texture background="true">$INFO[Container(2000).ListItem.Icon]</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	<control type="image">
+	<left>150</left>
+	<top>0</top>
+	<width>980</width>
+	<height>700</height>
+	<align>center</align>
+	<texture>actor_border.png</texture>
+	<visible>Skin.HasSetting(artistzoom)</visible>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 160 --->
+	<visible>Control.HasFocus(160)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(1000).ListItem.Title]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 161 --->
+	<visible>Control.HasFocus(161)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(161)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Window.Property(movie.Title)]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 162 --->
+	<visible>Control.HasFocus(162)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(162)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(150).ListItem.Title]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 163 --->
+	<visible>Control.HasFocus(163)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(163)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 164 --->
+	<visible>Control.HasFocus(164)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(164)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(450).ListItem.Title]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 165 --->
+	<visible>Control.HasFocus(165)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(165)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(750).ListItem.Title]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 166 --->
+	<visible>Control.HasFocus(166)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(166)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(850).ListItem.Title]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 167 --->
+	<visible>Control.HasFocus(167)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(167)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Window.Property(movie.Title)]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="group"><!---- Text ZoomImages 168 --->
+	<visible>Control.HasFocus(168)</visible>
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(168)">Conditional</animation>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass2</include>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(2000).ListItem.Title]</label>
+	<font>Font_24</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>760</top>
+	<height>40</height>
+	<width>1280</width>
+	<texture>gradient_small.png</texture>
+	</control>
+	</control>
+	<control type="button" id="160">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(160) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>
+	<control type="button" id="161">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(161) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>
+	<control type="button" id="162">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(162) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>
+	<control type="button" id="163">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(163) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>	
+	<control type="button" id="164">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(164) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>	
+	<control type="button" id="165">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(165) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>	
+	<control type="button" id="166">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(166) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>	
+	<control type="button" id="167">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(167) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(250).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>	
+	<control type="button" id="168">
+	<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(167) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(artistzoom)">Conditional</animation>
+	<top>760</top>
+	<width>300</width>
+	<include>SettingsBottomButton</include>	
+	<label>$INFO[Container(2000).ListItem.Title]</label>
+	<onup>SetFocus(149)</onup>
+	<ondown>SetFocus(149)</ondown>
+	<onleft>SetFocus(149)</onleft>
+	<onright>SetFocus(149)</onright>
+	</control>		
+	<include>BGBlack</include>
+	<include>TrailerWindow</include>
+	<include>TopMenu_W</include>
+	</control>
+	</controls>
+	</window>

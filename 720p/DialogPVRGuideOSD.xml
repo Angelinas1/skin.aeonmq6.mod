@@ -1,0 +1,282 @@
+<window><!-- Aeon MQ 6 -->
+<defaultcontrol always="true">11</defaultcontrol>
+<coordinates>
+<left>100</left>
+<top>45</top>
+</coordinates>
+<controls>
+<control type="group">
+<include>Animation_DialogPopup</include>
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>155</width>
+<height>540</height>
+<texture flipx="true">shadow.png</texture>
+<colordiffuse>C3FFFFFF</colordiffuse>
+</control>
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>1080</width>
+<height>540</height>
+<texture>darkgrey.png</texture>
+<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+<include>Animation_DefaultGlass</include>
+</control>
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>1080</width>
+<height>80</height>
+<texture>black.png</texture>
+<colordiffuse>90FFFFFF</colordiffuse>
+</control>
+<control type="label">
+<posx>0</posx>
+<posy>23</posy>
+<width>1080</width>
+<height>30</height>
+<label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
+<font>Font_30</font>
+<textcolor>FFFFFAF0</textcolor>
+<align>center</align>
+<aligny>center</aligny>
+<include>Animation_Fade</include>
+</control>
+<control type="label"><!-- Date -->
+<posx>0</posx>
+<posy>53</posy>
+<width>1080</width>
+<height>25</height>
+<align>center</align>
+<aligny>center</aligny>
+<font>Font_18A</font>
+<textcolor>$VAR[value_headercolor]</textcolor>
+<label>[COLOR=FFFFFAF0]$INFO[Container(11).ListItem.StartDate][/COLOR]</label>
+</control>
+</control>
+<control type="list" id="11">
+<viewtype>list</viewtype>
+<posx>0</posx>
+<posy>90</posy>
+<width>725</width>
+<height>440</height>
+<onup>11</onup>
+<ondown>11</ondown>
+<onleft>71</onleft>
+<onright>71</onright>
+<pagecontrol>71</pagecontrol>
+<scrolltime>350</scrolltime>
+<itemlayout height="40" width="730">
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>600</width>
+<height>3</height>
+<texture>divider.png</texture>
+<colordiffuse>90FFFFFF</colordiffuse>
+</control>
+<control type="image">
+<posx>0</posx>
+<posy>1</posy>
+<width>630</width>
+<height>38</height>
+<aspectratio>stretch</aspectratio>
+<colordiffuse>50FFFAF0</colordiffuse>
+<texture>settings_button_focus.png</texture>
+</control>
+<control type="label">
+<posx>10</posx>
+<posy>0</posy>
+<width>140</width>
+<height>40</height>
+<align>center</align>
+<aligny>center</aligny>
+<font>Font_20</font>
+<include>listcolor</include>
+<info>ListItem.Date</info>
+</control>
+<control type="label">
+<posx>190</posx>
+<posy>1</posy>
+<width>370</width>
+<height>38</height>
+<align>left</align>
+<aligny>center</aligny>
+<font>Font_18A</font>
+<include>listcolor</include>
+<info>ListItem.Label</info>
+</control>
+<control type="image">
+<posx>510</posx>
+<posy>10</posy>
+<width>30</width>
+<height>20</height>
+<texture>pvr_isrecording.png</texture>
+<visible>ListItem.IsRecording</visible>
+</control>
+<control type="label">
+<posx>550</posx>
+<posy>1</posy>
+<width>110</width>
+<height>38</height>
+<align>left</align>
+<aligny>center</aligny>
+<font>Font_18A</font>
+<include>listcolor</include>
+<label>19043</label>
+<visible>ListItem.IsRecording</visible>
+</control>
+<control type="label">
+<posx>540</posx>
+<posy>1</posy>
+<width>110</width>
+<height>38</height>
+<align>left</align>
+<aligny>center</aligny>
+<font>Font_18A</font>
+<include>listcolor</include>
+<label>31149</label>
+<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+</control>
+</itemlayout>
+<focusedlayout height="40" width="730">
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>625</width>
+<height>40</height>
+<texture>settings_button.png</texture>
+<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(15)">conditional</animation>
+</control>
+<control type="image">
+<posx>0</posx>
+<posy>1</posy>
+<width>630</width>
+<height>38</height>
+<aspectratio>stretch</aspectratio>
+<colordiffuse>FFFFFAF0</colordiffuse>
+<texture>settings_button_focus.png</texture>
+</control>
+<control type="label">
+<posx>10</posx>
+<posy>0</posy>
+<width>140</width>
+<height>40</height>
+<align>center</align>
+<aligny>center</aligny>
+<font>Font_20</font>
+<textcolor>$VAR[value_headercolor]</textcolor>
+<info>ListItem.Date</info>
+</control>
+<control type="label">
+<posx>190</posx>
+<posy>1</posy>
+<width>370</width>
+<height>38</height>
+<align>left</align>
+<aligny>center</aligny>
+<font>Font_18A</font>
+<include>listcolorfocus</include>
+<info>ListItem.Label</info>
+</control>
+<control type="image">
+<posx>510</posx>
+<posy>10</posy>
+<width>30</width>
+<height>20</height>
+<texture>pvr_isrecording.png</texture>
+<visible>ListItem.IsRecording</visible>
+</control>
+<control type="label">
+<posx>550</posx>
+<posy>1</posy>
+<width>110</width>
+<height>38</height>
+<align>left</align>
+<aligny>center</aligny>
+<font>Font_18A</font>
+<include>listcolorfocus</include>
+<label>19043</label>
+<visible>ListItem.IsRecording</visible>
+</control>
+<control type="label">
+<posx>540</posx>
+<posy>1</posy>
+<width>110</width>
+<height>38</height>
+<align>left</align>
+<aligny>center</aligny>
+<font>Font_18A</font>
+<include>listcolorfocus</include>
+<label>31149</label>
+<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+</control>
+</focusedlayout>
+</control>
+<control type="group">
+<posx>640</posx>
+<posy>90</posy>
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>430</width>
+<height>440</height>
+<aspectratio>stretch</aspectratio>
+<colordiffuse>50FFFAF0</colordiffuse>
+<texture>settings_button_focus.png</texture>
+</control>
+<control type="image"><!-- Icon -->
+<posx>20</posx>
+<posy>28</posy>
+<width>370</width>
+<height>230</height>
+<texture fallback="DefaultVideoCover.png" background="true">$INFO[Container(11).ListItem.Icon]</texture>
+<bordertexture border="-5">darkgrey.png</bordertexture>
+<fadetime>FanartCrossFadeTime</fadetime>
+<aspectratio>keep</aspectratio>
+</control>
+<control type="image"><!-- Icon -->
+<posx>20</posx>
+<posy>28</posy>
+<width>370</width>
+<height>230</height>
+<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(11).ListItem.Title]&amp;type=fanart</texture>
+<bordertexture border="-5">darkgrey.png</bordertexture>
+<fadetime>FanartCrossFadeTime</fadetime>
+<aspectratio>stretch</aspectratio>
+</control>
+<control type="textbox"><!-- Title -->
+<left>0</left>
+<top>0</top>
+<width>420</width>
+<height>65</height>
+<font>Font_20</font>
+<align>center</align>
+<label>$INFO[Container(11).ListItem.Title]</label>
+<textcolor>FFFFFAF0</textcolor>
+</control>
+<control type="textbox"><!-- Plot -->
+<left>5</left>
+<top>260</top>
+<width>420</width>
+<height>175</height>
+<font>Font_18A</font>
+<label>$INFO[Container(11).ListItem.Plot]</label>
+<textcolor>FFFFFAF0</textcolor>
+<autoscroll delay="20000" time="4000" repeat="15000">true</autoscroll>
+</control>
+</control>
+<control type="scrollbar" id="71">
+<include>ScrollBar_Vertical</include>
+<posx>620</posx>
+<posy>80</posy>
+<height>460</height>
+<onleft>11</onleft>
+<onright>11</onright>
+<ondown>71</ondown>
+<onup>71</onup>
+</control>
+</controls>
+</window>
