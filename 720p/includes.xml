@@ -1085,7 +1085,8 @@
 			<include>FlagSeparator</include>
 			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
-		<control type="image"><!-- Aspecto -->
+		<control type="image">
+			<!-- Aspecto -->
 			<include>FlagImage</include>
 			<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
 			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
@@ -1114,7 +1115,8 @@
 			<include>FlagSeparator</include>
 			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
-		<control type="image"><!-- Trailer -->
+		<control type="image">
+			<!-- Trailer -->
 			<include>FlagImage</include>
 			<texture>flags/trailer.png</texture>
 			<visible>!IsEmpty(ListItem.Trailer)</visible>
@@ -1328,7 +1330,11 @@
 		</control>
 		<control type="image">
 			<include>FlagSeparator</include>
-			<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.Codec))</visible>
+			<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.Codec))</visible>
+		</control>
+		<control type="image">
+			<include>FlagSeparator</include>
+			<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.Codec))</visible>
 		</control>
 		<control type="image">
 			<!-- Codec de video -->

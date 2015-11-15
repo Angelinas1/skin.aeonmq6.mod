@@ -315,7 +315,6 @@
 				<top>50</top>
 				<width>99</width>
 				<height>99</height>
-				>
 				<texture fallback="DefaultPicture.png" diffuse="cdart_diffuse.png" background="true">$VAR[value_widgetsposter]</texture>
 				<colordiffuse>FF333333</colordiffuse>
 				<visible>IsEmpty(ListItem.Art(discart))</visible>

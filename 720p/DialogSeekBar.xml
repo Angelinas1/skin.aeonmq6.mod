@@ -18,7 +18,7 @@
 	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 	<animation effect="fade" end="85" condition="true">Conditional</animation>
 	</control>
-	<control type="image"><!-- Logo e Clearart -->
+	<control type="image" id="82"><!-- Logo e Clearart -->
 	<left>30</left>
 	<top>8</top>
 	<width>260</width>
@@ -37,7 +37,7 @@
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
-	<visible>StringCompare(skin.string(fullscreen_icon),noicon)</visible>
+	<visible>StringCompare(skin.string(fullscreen_icon),noicon) | IsEmpty(Player.Art(clearlogo))</visible>
 	</control>
 	<control type="label">
 	<left>30</left>
@@ -81,15 +81,14 @@
 	<left>1173</left>
 	<top>75</top>
 	<visible>!SubString(VideoPlayer.top250,0,Left) + !IsEmpty(VideoPlayer.top250)</visible>
-	<control type="label"><!-- Top 250 -->
-	<top>-10</top>
-	<font>Font_15</font>
-	<include>FlagLabel</include>
-	<label>$LOCALIZE[31994]</label>
+	<control type="image">
+	<!-- Top 250 -->
+	<include>FlagImage</include>
+	<texture>flags/imdb_250.png</texture>
 	</control>
 	<control type="label"><!-- Top 250 info -->
 	<top>6</top>
-	<font>Font_23</font>
+	<font>Font_20</font>
 	<include>FlagLabel</include>
 	<label>$INFO[VideoPlayer.Top250]</label>
 	</control>

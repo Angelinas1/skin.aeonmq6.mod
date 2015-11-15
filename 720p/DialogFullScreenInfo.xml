@@ -26,14 +26,6 @@
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
 	</control>
-	<control type="image">
-	<left>30</left>
-	<top>8</top>
-	<width>120</width>
-	<height>80</height>
-	<imagepath>http://localhost:52307/getpvrthumb&title=$INFO[VideoPlayer.Title]&amp;type=clearlogo</imagepath> 
-	<aspectratio align="center" aligny="center">keep</aspectratio>
-	</control>
 	<control type="label">
 	<visible>!Skin.HasSetting(pvrdialoginfo)</visible>
 	<left>30</left>
