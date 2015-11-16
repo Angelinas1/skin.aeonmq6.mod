@@ -752,7 +752,17 @@
 					<colordiffuse>E4101010</colordiffuse>
 				</control>
 				<control type="image">
-					<left>96</left>
+					<left>6</left>
+					<top>635</top>
+					<width>80</width>
+					<height>80</height>
+					<aligny>center</aligny>
+					<texture fallback="DefaultVideoCover.png" background="true">$VAR[value_pvrcurrenticon]</texture>
+					<bordertexture border="-7">musicframe.png</bordertexture>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+				</control>
+				<control type="image">
+					<left>74</left>
 					<top>635</top>
 					<width>15</width>
 					<height>15</height>
@@ -761,7 +771,7 @@
 					<visible>PVR.HasNonRecordingTimer + !PVR.IsRecording</visible>
 				</control>
 				<control type="image">
-					<left>96</left>
+					<left>74</left>
 					<top>635</top>
 					<width>20</width>
 					<height>15</height>
@@ -780,16 +790,6 @@
 					<textcolor>FFFFFAF0</textcolor>
 					<label>$VAR[value_pvrstatushome]</label>
 					<scroll>true</scroll>
-				</control>
-				<control type="image">
-					<left>6</left>
-					<top>635</top>
-					<width>80</width>
-					<height>80</height>
-					<aligny>center</aligny>
-					<texture fallback="DefaultVideoCover.png" background="true">$VAR[value_pvrcurrenticon]</texture>
-					<bordertexture border="-7">musicframe.png</bordertexture>
-					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				</control>
 			</control>
 			<control type="group" id="604">
