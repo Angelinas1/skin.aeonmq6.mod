@@ -124,8 +124,8 @@
 	</control>
 	<control type="image"><!-- Certification -->
 	<left>30</left>
-	<top>69</top>
-	<height>80</height>
+	<top>79</top>
+	<height>55</height>
 	<width>158</width>
 	<align>center</align>
 	<aligny>center</aligny>
