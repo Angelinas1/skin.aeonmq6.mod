@@ -6621,4 +6621,9 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/addons.jpg</value>
 		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,addons]</value>
 	</variable>
+		<variable name="SeekLabel">
+        <value condition="!IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[32000][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekStepSize][/COLOR]</value>
+		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">$LOCALIZE[32000][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekOffset][/COLOR]</value>
+		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[32000]</value>
+	</variable>
 </includes>
