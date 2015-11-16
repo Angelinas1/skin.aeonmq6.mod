@@ -128,8 +128,8 @@
 	<visible>!Player.Seeking</visible>
 	</control>
 	<control type="label">
-	<left>500</left>
-	<top>620</top>
+	<left>30</left>
+	<top>680</top>
 	<width>230</width>
 	<height>25</height>
 	<font>Font_23</font>
@@ -139,8 +139,8 @@
 	<visible>Player.Seeking</visible>
 	</control>
 	<control type="label">
-	<left>500</left>
-	<top>570</top>
+	<left>200</left>
+	<top>680</top>
 	<width>230</width>
 	<height>25</height>
 	<font>Font_23</font>
