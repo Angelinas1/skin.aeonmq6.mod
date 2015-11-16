@@ -282,6 +282,7 @@
 	<texture>$VAR[value_watchedstyle]</texture>
 	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	<aspectratio>keep</aspectratio> 
 	</control>
 	</itemlayout>
 	<focusedlayout height="40">
@@ -322,6 +323,7 @@
 	<texture>$VAR[value_watchedstyle]</texture>
 	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	<aspectratio>keep</aspectratio> 
 	</control>
 	</focusedlayout>
 	</control>

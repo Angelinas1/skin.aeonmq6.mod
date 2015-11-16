@@ -4809,7 +4809,7 @@ SubString(ListItem.Filenameandpath,web)
 	<variable name="value_pvrnumitems">
 		<value condition="Control.IsVisible(11)">$INFO[Container(11).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</value>
 		<value condition="Control.IsVisible(12)">$INFO[Container(12).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(12).CurrentPage]/$INFO[Container(12).NumPages]</value>
-		<value condition="Control.IsVisible(13) | Control.IsVisible(14) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17)">$INFO[Container.NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</value>
+		<value condition="Control.IsVisible(13) | Control.IsVisible(14) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17) | Control.IsVisible(50)">$INFO[Container.NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</value>
 	</variable>
 	<variable name="value_pvrchannelicon">
 		<value condition="Control.IsVisible(10)">$INFO[Container(10).ListItem.Icon]</value>
@@ -4820,6 +4820,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Control.IsVisible(15)">$INFO[VideoPlayer.Cover]</value>
 		<value condition="Control.IsVisible(16)">$INFO[Container(16).ListItem.Icon]</value>
 		<value condition="Control.IsVisible(17)">$INFO[Container(17).ListItem.Icon]</value>
+		<value condition="Control.IsVisible(50)">$INFO[Container(50).ListItem.Icon]</value>
 	</variable>
 	<variable name="value_musicrating">
 		<value condition="SubString(ListItem.Rating,1)">rating1.png</value>
