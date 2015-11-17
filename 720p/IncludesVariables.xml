@@ -4481,9 +4481,11 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(skin.string(extra_panel_layout),panel_layout_shelf)">Shelf</value>
 	</variable>
 	<variable name="value_widgets_epg_thumb">
-		<value condition="!IsEmpty(Container(510).ListItem.Title)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Title]</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras)">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=fanart</value>
-	</variable>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.tv)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.group)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Label]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.radio)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Label] radio</value>
+		</variable>
 	<variable name="value_widgets_cast">
 		<value>plugin://script.skin.helper.service/?action=getcast&movie=$INFO[Container(510).ListItem.Title]</value>
 	</variable>	

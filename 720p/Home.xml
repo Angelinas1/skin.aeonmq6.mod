@@ -1727,7 +1727,7 @@
 						<visible>!IsEmpty(Container(510).ListItem.Director)</visible>
 					</control>
 					<control type="multiimage">
-						<visible>Control.IsVisible(8003) + [StringCompare(Container(9000).ListItem.Property(target),plus_epg) | StringCompare(Container(9000).ListItem.Property(target),plus_poster) | StringCompare(Container(9000).ListItem.Property(target),plus)]</visible>
+						<visible>Control.IsVisible(8003) + [StringCompare(Container(9000).ListItem.Property(widgets),channel.tv) | StringCompare(Container(9000).ListItem.Property(widgets),channel.epg) | StringCompare(Container(9000).ListItem.Property(widgets),channel.group) | StringCompare(Container(9000).ListItem.Property(widgets),channel.radio)]</visible>
 						<left>570</left>
 						<top>134</top>
 						<height>240</height>
@@ -1738,7 +1738,7 @@
 						<fadetime>FanartCrossFadeTime</fadetime>
 					</control>
 					<control type="image" id="6077">
-						<visible>Control.IsVisible(8003) + StringCompare(Container(9000).ListItem.Property(target),extras)</visible>
+						<visible>Control.IsVisible(8003) + [StringCompare(Container(9000).ListItem.Property(widgets),channel.tv) | StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)</visible>
 						<left>570</left>
 						<top>134</top>
 						<width>360</width>
