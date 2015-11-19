@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="6913"><!-- Aeon MQ 6 -->
+	<defaultcontrol always="true">9030</defaultcontrol>
+	<controls>
+	<control type="multiimage">
+	<include>WindowBG</include>
+	<imagepath background="true">$VAR[value_menutheme_settings]</imagepath>
+	</control>
+	<control type="group">
+	<include>Animation_DialogPopup</include>
+	<control type="image">
+	<left>110</left>
+	<top>0</top>
+	<width>30</width>
+	<height>720</height>
+	<texture flipx="true">shadow.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>1140</left>
+	<top>0</top>
+	<width>30</width>
+	<height>720</height>
+	<texture>shadow.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>140</left>
+	<top>0</top>
+	<width>1000</width>
+	<height>720</height>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass</include>
+	</control>
+	<control type="image">
+	<left>140</left>
+	<top>0</top>
+	<width>1000</width>
+	<height>80</height>
+	<texture>black.png</texture>
+	<colordiffuse>90FFFFFF</colordiffuse>
+	</control>
+	<control type="label">
+	<left>215</left>
+	<top>5</top>
+	<width>852</width>
+	<height>30</height>
+	<align>center</align>
+	<aligny>top</aligny>
+	<label>31479</label>
+	<font>Font_32</font>
+	<textcolor>FFFFFAF0</textcolor>
+	</control>
+	<control type="label">
+	<left>215</left>
+	<top>45</top>
+	<width>852</width>
+	<height>30</height>
+	<align>center</align>
+	<aligny>top</aligny>
+	<label>31140</label>
+	<font>Font_18A</font>
+	<textcolor>FFFFFAF0</textcolor>
+	</control>
+	<control type="grouplist" id="9030">
+	<left>140</left>
+	<top>100</top>
+	<width>1000</width>
+	<height>600</height>
+	<itemgap>0</itemgap>
+	<onleft>back</onleft>
+	<onright>9031</onright>
+	<onup>9030</onup>
+	<ondown>9030</ondown>
+	<pagecontrol>9031</pagecontrol>
+	<scrolltime>200</scrolltime>	
+	<control type="radiobutton" id="29299"><!-- Clicar e Ativar -->
+	<radioposx>894</radioposx>
+	<label>31496</label>
+	<onclick>Skin.ToggleSetting(clickactivateview_video)</onclick>
+	<selected>Skin.HasSetting(clickactivateview_video)</selected>
+	</control>
+	<control type="radiobutton" id="29252"><!-- RightList --><!-- 51 -->
+	<radioposx>894</radioposx>
+	<label>31822</label>
+	<onclick>Skin.ToggleSetting(viewrightlist_pvrecordings)</onclick>
+	<onclick condition="!Skin.HasSetting(viewrightlist_pvrecordings)">Skin.SetString(setviewpvrecordings,51)</onclick>
+	<onclick condition="!Skin.HasSetting(viewrightlist_pvrecordings) + Skin.HasSetting(clickactivateview_video)">back</onclick>
+	<selected>Skin.HasSetting(viewrightlist_pvrecordings)</selected>
+	</control>
+	<control type="radiobutton" id="29253"><!-- LowList --><!-- 55 -->
+	<radioposx>894</radioposx>
+	<label>31807</label>
+	<onclick>Skin.ToggleSetting(viewlowlist_pvrecordings)</onclick>
+	<onclick condition="!Skin.HasSetting(viewlowlist_pvrecordings)">Skin.SetString(setviewpvrecordings,55)</onclick>
+	<onclick condition="!Skin.HasSetting(viewlowlist_pvrecordings) + Skin.HasSetting(clickactivateview_video)">back</onclick>
+	<selected>Skin.HasSetting(viewlowlist_pvrecordings)</selected>
+	</control>
+	<!-- Glass View --><!-- 57 --><!--
+	<control type="radiobutton" id="29254">
+	<radioposx>894</radioposx>
+	<label>31821</label>
+	<onclick>Skin.ToggleSetting(viewglasslist_pvrecordings)</onclick>
+	<onclick condition="!Skin.HasSetting(viewglasslist_pvrecordings)">Skin.SetString(setviewpvrecordings,57)</onclick>
+	<onclick condition="!Skin.HasSetting(viewglasslist_pvrecordings) + Skin.HasSetting(clickactivateview_video)">back</onclick>
+	<selected>Skin.HasSetting(viewglasslist_pvrecordings)</selected>
+	</control> -->
+	<control type="radiobutton" id="29255"><!-- Wide View --><!-- 59 -->
+	<radioposx>894</radioposx>
+	<label>31813</label>
+	<onclick>Skin.ToggleSetting(viewwide_pvrecordings)</onclick>
+	<onclick condition="!Skin.HasSetting(viewwide_pvrecordings)">Skin.SetString(setviewpvrecordings,59)</onclick>
+	<onclick condition="!Skin.HasSetting(viewwide_pvrecordings) + Skin.HasSetting(clickactivateview_video)">back</onclick>
+	<selected>Skin.HasSetting(viewwide_pvrecordings)</selected>
+	</control>
+	</control>
+	<control type="scrollbar" id="9031">
+	<include>ScrollBar_Vertical</include>
+	<left>1160</left>
+	<top>100</top>
+	<width>65</width>
+	<height>600</height>
+	<onleft>9030</onleft>
+	<onright>9030</onright>
+	</control>
+	</control>
+	</controls>
+</window>
