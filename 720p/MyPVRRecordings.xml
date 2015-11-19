@@ -2,12 +2,12 @@
 <window><!-- Aeon MQ 6 -->
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50</views>
+	<views>50,51,55,59</views>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<controls>
 	<control type="multiimage"><!-- Fanart -->
 	<include>WindowBG</include>
-	<imagepath background="true">$VAR[value_menutheme_livetv]</imagepath>
+	<imagepath background="true">$VAR[value_livetvfanart]</imagepath>
 	</control>
 	<control type="group"><!-- Visualizacao de fundo -->
 	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
@@ -58,25 +58,26 @@
 
     <control type="group"><!-- Grupo ocultar flags ou fanart -->
 	<top>30</top>
-	<visible>Control.IsVisible(50)</visible>
 	<include>Animation_HiddenView</include>
+	<control type="image">
+	<left>0</left>
+	<top>510</top>
+	<width>1280</width>
+	<height>180</height>
+	<texture diffuse="shadow_mask.png">darkgrey.png</texture>
+	<colordiffuse>$VAR[value_floorcolor]</colordiffuse>
+	<include>Animation_FloorGlass</include>
+	<visible>!Control.IsVisible(70)</visible>
+	</control>
 	<control type="image"><!-- Barra do rodape -->
 	<left>0</left>
 	<top>510</top>
 	<width>1280</width>
 	<height>180</height>
 	<texture>shadow_mask.png</texture>
-	<colordiffuse>$VAR[value_floorcolor]</colordiffuse>
+	<colordiffuse>$VAR[value_floorcolor]</colordiffuse>	
 	<include>Animation_FloorGlass</include>
-	</control>
-	<control type="image">
-	<left>0</left>
-	<top>510</top>
-	<width>1280</width>
-	<height>180</height>
-	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-	<texture diffuse="shadow_mask.png">shadow_spot.png</texture>
-	<animation effect="fade" end="85" condition="true">Conditional</animation>
+	<visible>!Control.IsVisible(70)</visible>
 	</control>
 	<control type="group">
 	<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">WindowOpen</animation>
@@ -99,6 +100,11 @@
 	</control>
 	<control type="group"><!-- Rating -->
 	<visible>!IsEmpty(ListItem.Rating)</visible>
+	<control type="image">
+	<left>5</left>
+	<include>FlagImage</include>
+	<texture>flags/rating.png</texture>
+	</control>
 	<control type="label">
 	<left>15</left>
 	<top>1.5</top>
@@ -108,6 +114,7 @@
 	<aligny>center</aligny>
 	<font>Font_23b</font>
 	<textcolor>$VAR[value_flagscolor]</textcolor>
+	<fadetime>FanartCrossFadeTime</fadetime>
 	<label>$INFO[ListItem.Rating]</label>
 	</control>
 	<control type="image">
@@ -153,12 +160,17 @@
 	</control>
 	<control type="image"><!-- Channels -->
 	<include>FlagImage</include>
-	<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
+	<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,.png]</texture>
 	<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
 	<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+	</control>
+	<control type="image"><!-- Trailer -->
+	<include>FlagImage</include>
+	<texture>flags/trailer.png</texture>
+	<visible>!IsEmpty(ListItem.Trailer)</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
@@ -176,6 +188,30 @@
 	<label>$INFO[ListItem.PercentPlayed]%</label>
 	<visible>!StringCompare(ListItem.PercentPlayed,0)</visible>
 	</control>
+	<control type="group"><!-- recording disk space right -->
+					<control type="label">
+					<description>Disk usage text</description>
+					<left>32</left>
+					<top>10</top>
+					<width>290</width>
+					<height>20</height>
+					<label>[UPPERCASE]$INFO[PVR.backenddiskspace][/UPPERCASE]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+				</control>
+				<control type="progress">
+					<description>Disk usage bar</description>
+					<left>32</left>
+					<top>30</top>
+					<width>290</width>
+					<height>12</height>>
+				<info>PVR.backenddiskspaceprogr</info>
+				<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+			</control>
+		</control>
 	</control>
 	<control type="image">
 	<left>0</left>
@@ -426,6 +462,16 @@
 	</control>
 	</control>
 	</control>
+	</control>
+	
+	<control type="group"><!-- Grupo vistas -->
+	<top>30</top>
+	<include>Animation_HiddenView</include>
+	<!-- ViewTypes -->
+	<include condition="Skin.HasSetting(viewrightlist_pvrecordings)">ViewRightList</include><!-- 51 -->
+	<include condition="Skin.HasSetting(viewlowlist_pvrecordings)">ViewLowList</include><!-- 55 -->
+	<!-- <include condition="Skin.HasSetting(viewglasslist_pvrecordings)">ViewGlassList</include> --><!-- 57 -->
+	<include condition="Skin.HasSetting(viewwide_pvrecordings)">ViewWide</include><!-- 59 -->
 	</control>
 	
 	<!-- Furniture -->
