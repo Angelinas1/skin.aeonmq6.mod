@@ -661,7 +661,7 @@
 
 	<control type="group"><!-- CDART VIDEO -->
 	<animation type="WindowOpen">
-	<effect type="slide" start="-100,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+	<effect type="slide" start="0,100" end="0,0" time="1200" delay="500" tween="cubic" easing="out"/>
 	<effect type="fade" start="0" end="100" time="500" delay="500"/>
 	</animation>
 	<animation type="Visible">
@@ -670,7 +670,7 @@
 	</animation>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	<animation type="Hidden">
-	<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
+	<effect type="slide" start="0,0" end="0,100" time="300" tween="cubic" easing="out"/>
 	<effect type="fade" start="100" end="0" time="200"/>
 	</animation>
 	<animation effect="slide" time="200" start="0,0" end="-20,0" tween="cubic" easing="out" condition="!Skin.HasSetting(nolowlistvideocase)">Conditional</animation>
@@ -684,13 +684,26 @@
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 	<include>Animation_ViewsCDart</include>
+	<visible>!Skin.HasSetting(nolowlistvideocase)</visible>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>-55</top>
+	<width>235</width>
+	<height>235</height>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	<visible>Skin.HasSetting(nolowlistvideocase)</visible>
 	</control>
 		<control type="image">
 	<left>17</left>
 	<top>-60</top>
 	<width>245</width>
 	<height>245</height>
-	<visible>IsEmpty(ListItem.Art(discart)) + !Container.Content(artists)</visible>
+	<visible>IsEmpty(ListItem.Art(discart)) + !Container.Content(artists) + !IsEmpty(ListItem.Title)</visible>
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="top">stretch</aspectratio>

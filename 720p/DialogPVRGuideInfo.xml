@@ -53,10 +53,10 @@
 	<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.ClearLogo)]</texture>
 	</control>
 	<control type="image">
-	<left>435</left>
-	<top>-25</top>
-	<height>130</height>
-	<width>370</width>
+	<left>380</left>
+	<top>-32</top>
+	<height>144</height>
+	<width>384</width>
 	<aligny>top</aligny>
 	<aspectratio>keep</aspectratio>
 	<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.Banner)]</texture>
@@ -143,7 +143,7 @@
 	<scrollout>false</scrollout>
 	</control>
 	<control type="image">
-	<left>650</left>
+	<left>610</left>
 	<top>200</top>
 	<height>120</height>
 	<width>160</width>
@@ -748,7 +748,7 @@
 	<onright>SetFocus(159)</onright>
 	</control>
 	<control type="image"><!-- Thumb -->
-	<left>810</left>
+	<left>770</left>
 	<top>0</top>
 	<width>523</width>
 	<height>720</height>

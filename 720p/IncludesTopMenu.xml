@@ -3942,12 +3942,6 @@
 					<ondown>SetFocus(50)</ondown>
 					<visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible>
 				</control>
-				<control type="button" id="28">
-					<!-- Grupo de canais -->
-					<include>TopMenuButton</include>
-					<label>-</label>
-					<ondown>SetFocus(50)</ondown>
-				</control>
 			</control>
 			<control type="grouplist" id="9301">
 				<!-- Canais -->

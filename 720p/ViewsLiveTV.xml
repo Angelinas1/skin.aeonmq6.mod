@@ -957,6 +957,7 @@
 	<texture fallback="DefaultVideoCover.png" background="true">$VAR[value_pvrchannelicon]</texture>
 	<bordertexture border="-12">musicframe.png</bordertexture>
 	<fadetime>FanartCrossFadeTime</fadetime>
+	<visible>!Control.IsVisible(50)</visible>
 	<aspectratio>keep</aspectratio>
 	</control>
 	<control type="label"><!-- Title -->

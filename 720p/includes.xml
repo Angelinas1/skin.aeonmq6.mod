@@ -1333,10 +1333,6 @@
 			<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.Codec))</visible>
 		</control>
 		<control type="image">
-			<include>FlagSeparator</include>
-			<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.Codec))</visible>
-		</control>
-		<control type="image">
 			<!-- Codec de video -->
 			<include>FlagImageHelper</include>
 			<texture>$VAR[value_kvideocodec3]</texture>

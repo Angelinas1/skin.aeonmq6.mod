@@ -348,6 +348,12 @@
 					<onclick>Skin.ToggleSetting(extra_extra)</onclick>
 					<selected>Skin.HasSetting(extra_extra)</selected>
 				</control>
+				<control type="radiobutton" id="1158">
+					<!-- Art dos Widgets cast -->
+					<label>Cast for widget</label>
+					<onclick>Skin.ToggleSetting(widget_cast)</onclick>
+					<selected>Skin.HasSetting(widget_cast)</selected>
+				</control>
 			</control>
 			<!--#######################################################################   MOBILIA   #######################################################################-->
 			<control type="group" id="9007">
@@ -2059,7 +2065,7 @@
 					<onup>9100</onup>
 					<ondown>SetFocus($INFO[skin.string(idcolorflags)])</ondown>
 					<itemgap>0</itemgap>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<control type="button" id="1222">
 						<!-- resetar -->
 						<label>$LOCALIZE[31687] - $LOCALIZE[31599]</label>
@@ -2073,11 +2079,21 @@
 						<onclick>SetFocus(9100)</onclick>
 						<onclick>Notification($LOCALIZE[31656],$LOCALIZE[31237])</onclick>
 					</control>
+					<control type="button" id="1223">
+						<left>240</left>
+						<top>140</top>
+						<width>1040</width>
+						<height>20</height>
+						<label>Set: Studio Custom Path</label>
+						<onclick condition="Skin.String(CustomStudioImagesPath)">Skin.Reset(CustomStudioImagesPath)</onclick>
+						<onclick condition="!Skin.String(CustomStudioImagesPath)">Skin.SetPath(CustomStudioImagesPath)</onclick>
+						<selected>Skin.String(CustomStudioImagesPath)</selected>
+					</control>
 				</control>
 				<control type="group">
 					<!-- Grupo das cores -->
 					<left>240</left>
-					<top>140</top>
+					<top>180</top>
 					<include>SelectorBack</include>
 					<control type="label">
 						<!-- Nome da cor -->
@@ -2355,7 +2371,7 @@
 				<control type="group">
 					<!-- Grupo das cores -->
 					<left>240</left>
-					<top>230</top>
+					<top>270</top>
 					<include>SelectorBack</include>
 					<control type="label">
 						<!-- Nome da cor -->
@@ -2622,7 +2638,7 @@
 				<control type="group">
 					<!-- Grupo da transparencia -->
 					<left>240</left>
-					<top>320</top>
+					<top>360</top>
 					<include>SelectorBack</include>
 					<control type="label">
 						<!-- Nome da transparencia -->
