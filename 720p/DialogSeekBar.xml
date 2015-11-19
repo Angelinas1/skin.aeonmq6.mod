@@ -12,7 +12,7 @@
 	<control type="image">
 	<left>0</left>
 	<top>0</top>
-	<height>250</height>
+	<height>150</height>
 	<width>1280</width>
 	<texture flipy="true" diffuse="shadow_mask.png">darkgrey.png</texture>
 	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>

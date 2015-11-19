@@ -66,7 +66,7 @@
 					<texture background="true">$VAR[value_logoandclearart]</texture>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>Window.IsActive(25) + !Skin.HasSetting(noartrightlistvideo)</visible>
+					<visible>Window.IsActive(25) + !Skin.HasSetting(noartrightlistvideo) | Window.IsActive(TVRecordings) + !Skin.HasSetting(noartrightlistvideo)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>

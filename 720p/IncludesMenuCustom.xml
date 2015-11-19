@@ -5167,6 +5167,13 @@
 	<selected>Skin.HasSetting(randommusicbg)</selected>
 	<visible>StringCompare(Container(9000).ListItem.Property(id),music)</visible>
 	</control>
+	<control type="radiobutton" id="225"><!-- Fundo da Colecao -->
+	<include>CustomMenuRadioButton</include>
+	<label>$LOCALIZE[31537]</label>
+	<onclick>Skin.ToggleSetting(randomlivetvbg)</onclick>
+	<selected>Skin.HasSetting(randomlivetvbg)</selected>
+	<visible>StringCompare(Container(9000).ListItem.Property(id),livetv)</visible>
+	</control>
 	<control type="button" id="126"><!-- Criar ou atualizar Colecao -->
 	<include>CustomMenuButton</include>
 	<label>$VAR[value_addon4]</label>

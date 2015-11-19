@@ -4560,6 +4560,19 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Skin.HasSetting(weathericons) + !Skin.HasSetting(weathericons_external)">$INFO[Skin.String(extrapack)]/icons_weather/</value>
 		<value condition="Skin.HasSetting(weathericons) + Skin.HasSetting(weathericons_external)">$INFO[Skin.String(CustomAnimatedIconFolder)]</value>
 	</variable>
+	<variable name="value_livetvfanart">
+		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart))">$INFO[Window(home).Property(SkinHelper.PVR.ExtraFanart)]</value>
+		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart))">$INFO[Window(home).Property(SkinHelper.PVR.Fanart)]</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),colors)]">special://skin/backgrounds/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),reddish)]">$INFO[Skin.String(extrapack)]backgrounds_reddish/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),modern)]">$INFO[Skin.String(extrapack)]backgrounds_modern/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),future)]">$INFO[Skin.String(extrapack)]backgrounds_future/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),cold)]">$INFO[Skin.String(extrapack)]backgrounds_cold/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),warm)]">$INFO[Skin.String(extrapack)]backgrounds_warm/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),darkness)]">$INFO[Skin.String(extrapack)]backgrounds_darkness/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),digitalart)]">$INFO[Skin.String(extrapack)]backgrounds_digitalart/livetv.jpg</value>
+		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),mytheme)]">$INFO[Skin.String(CustomMyTheme),,livetv]</value>
+		</variable>
 	<variable name="value_videofanart">
 		<value condition="Container.Content(movies) + SubString(skin.string(moviesfanart),fallback)">$INFO[Skin.String(CustomFallbackMoviesBG)]</value>
 		<value condition="Container.Content(movies) + SubString(skin.string(moviesfanart),curtains)">special://skin/backgrounds/extras/curtains.jpg</value>
@@ -5047,7 +5060,8 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$LOCALIZE[31772]</value>
 		<!-- Lancamento -->
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[24051]</value>
-		<!-- Versao -->
+		<!-- Recorded TV ChannelName -->
+		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[19148]</value>
 	</variable>
 	<variable name="value_ground1_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + !SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Country]</value>
@@ -5059,6 +5073,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Container.Content(songs) + SubString(ListItem.Duration,min)">$INFO[ListItem.Duration]</value>
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$INFO[ListItem.Premiered]</value>
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$INFO[ListItem.Property(Addon.Version)]</value>
+		<value condition="Window.IsActive(TVRecordings)">$INFO[ListItem.ChannelName]</value>
 	</variable>
 	<variable name="value_ground2_label">
 		<!-- Para vistas que nao sejam lista -->
@@ -5183,6 +5198,7 @@ SubString(ListItem.Filenameandpath,web)
 		<!-- Genero -->
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[126]</value>
 		<!-- Estatus -->
+		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[180]</value>
 	</variable>
 	<variable name="value_ground12_value">
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(albums)">$INFO[ListItem.Genre]$INFO[Window(0).Property(Set.Movies.Genre)]</value>
@@ -5194,6 +5210,7 @@ SubString(ListItem.Filenameandpath,web)
 		<!-- Duracao -->
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$INFO[ListItem.Genre]</value>
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$INFO[ListItem.Property(Addon.Status)]$INFO[ListItem.Property(Addon.Broken), | ]</value>
+		<value condition="Window.IsActive(TVRecordings)">$INFO[Window(Home).Property(SkinHelper.ListItemDuration)]</value>
 	</variable>
 	<variable name="value_ground13_label">
 		<!-- Para vistas que sejam lista -->
@@ -5205,6 +5222,7 @@ SubString(ListItem.Filenameandpath,web)
 		<!-- Desenvolvedor -->
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[21863]</value>
 		<!-- Criador -->
+		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[515]</value>
 	</variable>
 	<variable name="value_ground13_value">
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Studio]$INFO[Window(0).Property(Set.Movies.Studio)]</value>
@@ -5213,6 +5231,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Mood)]</value>
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$INFO[ListItem.Studio]</value>
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Window.IsActive(TVRecordings)">$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="value_ground14_label">
 		<!-- Para vistas que nao sejam lista -->
@@ -5293,14 +5312,25 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_YearsActive)]$INFO[ListItem.Property(Artist_Instrument), / ]</value>
 	</variable>
 	<variable name="value_logoandclearart">
+		<value condition="![Container.Content(seasons) | Container.Content(episodes)] + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo)) | !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$VAR[value_pvrclearart]</value>
 		<value condition="![Container.Content(seasons) | Container.Content(episodes)]">$VAR[value_moviesart]</value>
 		<value condition="Container.Content(seasons) | Container.Content(episodes)">$VAR[value_tvshowsart]</value>
 	</variable>
+		<variable name="value_pvrclearart">
+		<value condition="Skin.HasSetting(nopreferclearart) + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo))">$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</value>
+		<value condition="Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
+		<value condition="!Skin.HasSetting(nopreferclearart) + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
+		<value condition="!Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</value>
+		</variable>
 	<variable name="value_moviesart">
 		<value condition="Skin.HasSetting(nopreferclearart) + !IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="Skin.HasSetting(nopreferclearart) + IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!Skin.HasSetting(nopreferclearart) + !IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!Skin.HasSetting(nopreferclearart) + IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value condition="Skin.HasSetting(nopreferclearart) + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo))">$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</value>
+		<value condition="Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
+		<value condition="!Skin.HasSetting(nopreferclearart) + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
+		<value condition="!Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</value>
 	</variable>
 	<variable name="value_tvshowsart">
 		<value condition="Skin.HasSetting(nopreferclearart) + !IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
@@ -6407,7 +6437,16 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/livetv.jpg</value>
 		<value condition="SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/livetv.jpg</value>
 		<value condition="SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),colors)">special://skin/backgrounds/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),reddish)">$INFO[Skin.String(extrapack)]backgrounds_reddish/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),modern)">$INFO[Skin.String(extrapack)]backgrounds_modern/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),future)">$INFO[Skin.String(extrapack)]backgrounds_future/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),cold)">$INFO[Skin.String(extrapack)]backgrounds_cold/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/livetv.jpg</value>
 		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,livetv]</value>
+		<value condition="Skin.HasSetting(randomlivetvbg)">$INFO[Window(Home).Property(SkinHelper.PvrBackground)]</value>
 	</variable>
 	<variable name="value_menutheme_radio">
 		<value condition="SubString(skin.string(theme),colors)">special://skin/backgrounds/radio.jpg</value>

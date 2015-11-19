@@ -117,6 +117,7 @@
 				<animation effect="fade" start="20" end="40" time="700" condition="true" pulse="true">Conditional</animation>
 				<onleft>SetFocus(9940)</onleft>
 				<onright>SetFocus(9940)</onright>
+				<onup condition="Window.IsActive(TVRecordings)">ActivateWindow(6913)</onup>
 				<onup condition="Window.IsActive(PVRChannels)">ActivateWindow(651)</onup>
 				<onup condition="Window.IsActive(TVGuide)">ActivateWindow(1101)</onup>
 				<onclick condition="Window.IsActive(25)">ActivateWindow(6625)</onclick>
@@ -195,6 +196,7 @@
 				<include>InvisibleButton</include>
 				<onleft>SetFocus(9941)</onleft>
 				<onright>SetFocus(9942)</onright>
+				<onup condition="Window.IsActive(TVRecordings)">ActivateWindow(6913)</onup>
 				<onup condition="Window.IsActive(TVChannels)">ActivateWindow(651)</onup>
 				<onup condition="Window.IsActive(TVGuide)">ActivateWindow(1101)</onup>
 				<onup condition="Window.IsActive(25)">ActivateWindow(6625)</onup>
