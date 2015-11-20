@@ -889,7 +889,7 @@
 					<top>100</top>
 					<width>110</width>
 					<height>60</height>
-					<aspectratio align="center">stretch</aspectratio>
+					<aspectratio align="center">keep</aspectratio>
 					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$INFO[MusicPlayer.Title]&amp;type=clearlogo,banner,discart</texture>
 				</control>
 				<control type="videowindow" id="8">
@@ -1287,7 +1287,8 @@
 						<top>338</top>
 						<align>left</align>
 						<onup condition="![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio">SetFocus(603)</onup>
-						<onup condition="[IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | !Player.HasAudio">9000</onup>
+						<onup condition="![Skin.HasSetting(widget_cast) + SubString(Container(9000).ListItem.Property(id),movies)] + [IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | ![Skin.HasSetting(widget_cast) + SubString(Container(9000).ListItem.Property(id),movies)] + !Player.HasAudio">9000</onup>
+						<onup condition="Skin.HasSetting(widget_cast) + SubString(Container(9000).ListItem.Property(id),movies)">1000</onup>
 						<ondown>9000</ondown>
 						<onleft>9000</onleft>
 						<onright>9000</onright>
@@ -3718,17 +3719,38 @@
 				<animation effect="fade" start="100" end="0" time="300" condition="Skin.HasSetting(submode)">Conditional</animation>
 				<visible>Control.HasFocus(9000) + [SubString(Container(9000).ListItem.Property(id),movie) + Library.HasContent(Movies) 
 
+
+
+
 | SubString(Container(9000).ListItem.Property(id),tvshow) + Library.HasContent(TVShows) | SubString(Container(9000).ListItem.Property(id),concert) 
+
+
+
 
 + Library.HasContent(MusicVideos) | SubString(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) 
 
+
+
+
 | SubString(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) 
+
+
+
 
 | SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)] 
 
+
+
+
 + ![Player.HasMedia + [System.IdleTime(8) |  Skin.HasSetting(highermainmenu)] |  Skin.HasSetting(nohometotals) 
 
+
+
+
 | Skin.HasSetting(highertotals) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo 
+
+
+
 
 | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
 				<control type="image">
@@ -4134,7 +4156,7 @@
 						<label>$VAR[value_mainmenu_label]</label>
 						<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 						<animation effect="fade" start="100" end="0" time="750" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
-						<visible>Control.HasFocus(510) | Control.HasFocus(2517) | Control.HasFocus(2518) | Control.HasFocus(2510) | Control.HasFocus(2511) | Control.HasFocus(2512) | Control.HasFocus(2513) | Control.HasFocus(2514) | Control.HasFocus(2515) | Control.HasFocus(2516)</visible>
+						<visible>Control.HasFocus(510) | Control.HasFocus(2517) | Control.HasFocus(2518) | Control.HasFocus(2510) | Control.HasFocus(2511) | Control.HasFocus(2512) | Control.HasFocus(2513) | Control.HasFocus(2514) | Control.HasFocus(2515) | Control.HasFocus(2516) | Control.HasFocus(1000)</visible>
 					</control>
 					<control type="label">
 						<!-- Titulo dos controles -->
@@ -4201,9 +4223,9 @@
 				<visible>SubString(Container(9000).ListItem.Property(subid),movies) + Skin.HasSetting(widget_cast)</visible>
 				<left>285</left>
 				<top>600</top>
-				<include condition="Control.HasFocus(510) + Container.Content(movies)">Animation_HomePanel_Cast</include>
-				<animation effect="slide" start="0,150" end="0,0" condition="Control.HasFocus(510)">Conditional</animation>
-				<visible>Control.HasFocus(510)</visible>
+				<include condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000)">Animation_HomePanel_Cast</include>
+				<animation effect="slide" start="0,150" end="0,0" condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000">Conditional</animation>
+				<visible>Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000</visible>
 				<control type="list" id="1000">
 					<content>$VAR[value_widgets_cast]</content>
 					<viewtype label="List">List Info</viewtype>
@@ -4211,6 +4233,11 @@
 					<left>0</left>
 					<width>700</width>
 					<height>220</height>
+					<onleft>1000</onleft>
+					<onright>1000</onright>
+					<onup>SetFocus(9000)</onup>
+					<ondown>SetFocus(9000)</ondown>
+					<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(1000).ListItem.Label])</onclick>
 					<orientation>horizontal</orientation>
 					<scrolltime>400</scrolltime>
 					<focusposition>3</focusposition>

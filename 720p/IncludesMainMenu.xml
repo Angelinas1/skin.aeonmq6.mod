@@ -59,7 +59,7 @@
 		</animation>
 		<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
 		<animation effect="fade" start="100" end="0" time="750" condition="[Player.HasMedia + System.IdleTime(8)] + !Window.IsVisible(6000)">Conditional</animation>
-		<animation effect="fade" start="100" end="0" time="300" condition="Control.HasFocus(510) | Control.HasFocus(600) | Skin.HasSetting(extra_extra) + [Control.HasFocus(2518) | Control.HasFocus(2510) |  Control.HasFocus(2511) |  Control.HasFocus(2512) | Control.HasFocus(2513) | Control.HasFocus(2514) | Control.HasFocus(2515) | Control.HasFocus(2516) | Control.HasFocus(2517)]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300" condition="Control.HasFocus(510) | Control.HasFocus(600) | Skin.HasSetting(extra_extra) + [Control.HasFocus(2518) | Control.HasFocus(2510) |  Control.HasFocus(2511) |  Control.HasFocus(2512) | Control.HasFocus(2513) | Control.HasFocus(2514) | Control.HasFocus(2515) | Control.HasFocus(2516) | Control.HasFocus(2517) | Control.HasFocus(1000)]">Conditional</animation>
 		<left>0</left>
 		<top>545</top>
 		<width>1280</width>
