@@ -3126,6 +3126,13 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(ListItem.Mpaa,France:-12) | SubString(ListItem.Mpaa,Rated 12)">flags/mpaa/CSA_-12_FR.png</value>
 		<value condition="SubString(ListItem.Mpaa,France:-16) | SubString(ListItem.Mpaa,Rated 16)">flags/mpaa/CSA_-16_FR.png</value>
 		<value condition="SubString(ListItem.Mpaa,France:-18) | SubString(ListItem.Mpaa,Rated 18)">flags/mpaa/CSA_-18_FR.png</value>
+		<value condition="SubString(ListItem.Mpaa,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="SubString(ListItem.Mpaa,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="SubString(ListItem.Mpaa,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="SubString(listitem.mpaa,Australia:M) + !SubString(listitem.mpaa,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="SubString(ListItem.Mpaa,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="SubString(ListItem.Mpaa,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="SubString(ListItem.Mpaa,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 	</variable>
 	<variable name="value_mpaa_sextra">
 		<value condition="SubString(Window.Property(movie.mpaa),Rated NR) | SubString(Window.Property(movie.mpaa,Rated: NR) | StringCompare(Window.Property(movie.mpaa),NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
@@ -3164,56 +3171,126 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(Window.Property(movie.mpaa),France:-12) | SubString(Window.Property(movie.mpaa),Rated 12)">flags/mpaa/CSA_-12_FR.png</value>
 		<value condition="SubString(Window.Property(movie.mpaa),France:-16) | SubString(Window.Property(movie.mpaa),Rated 16)">flags/mpaa/CSA_-16_FR.png</value>
 		<value condition="SubString(Window.Property(movie.mpaa),France:-18) | SubString(Window.Property(movie.mpaa),Rated 18)">flags/mpaa/CSA_-18_FR.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Australia:M) + !SubString(Window.Property(movie.mpaa),Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 	</variable>
 	<variable name="value_mpaa_gallery">
+		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Australia:M) + !SubString(Container(2518).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Rated NR) | SubString(Container(2518).ListItem.MPAA,Rated: NR) | StringCompare(Container(2518).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Rated G) | SubString(Container(2518).ListItem.MPAA,Rated: G) | StringCompare(Container(2518).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2518) + [SubString(Container(2518).ListItem.MPAA,Rated PG) | SubString(Container(2518).ListItem.MPAA,Rated: PG) | StringCompare(Container(2518).ListItem.MPAA,PG)] + ![SubString(Container(2518).ListItem.MPAA,Rated PG-13) | SubString(Container(2518).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Rated PG-13) | SubString(Container(2518).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2518).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Rated R) | SubString(Container(2518).ListItem.MPAA,Rated: R) | StringCompare(Container(2518).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2518) + SubString(Container(2518).ListItem.MPAA,Rated NC-17) | SubString(Container(2518).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2518).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Australia:M) + !SubString(Container(2518).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Rated NR) | SubString(Container(2510).ListItem.MPAA,Rated: NR) | StringCompare(Container(2510).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Rated G) | SubString(Container(2510).ListItem.MPAA,Rated: G) | StringCompare(Container(2510).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2510) + [SubString(Container(2510).ListItem.MPAA,Rated PG) | SubString(Container(2510).ListItem.MPAA,Rated: PG) | StringCompare(Container(2510).ListItem.MPAA,PG)] + ![SubString(Container(2510).ListItem.MPAA,Rated PG-13) | SubString(Container(2510).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Rated PG-13) | SubString(Container(2510).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2510).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Rated R) | SubString(Container(2510).ListItem.MPAA,Rated: R) | StringCompare(Container(2510).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2510) + SubString(Container(2510).ListItem.MPAA,Rated NC-17) | SubString(Container(2510).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2510).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Australia:M) + !SubString(Container(2518).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Rated NR) | SubString(Container(2511).ListItem.MPAA,Rated: NR) | StringCompare(Container(2511).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Rated G) | SubString(Container(2511).ListItem.MPAA,Rated: G) | StringCompare(Container(2511).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2511) + [SubString(Container(2511).ListItem.MPAA,Rated PG) | SubString(Container(2511).ListItem.MPAA,Rated: PG) | StringCompare(Container(2511).ListItem.MPAA,PG)] + ![SubString(Container(2511).ListItem.MPAA,Rated PG-13) | SubString(Container(2511).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Rated PG-13) | SubString(Container(2511).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2511).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Rated R) | SubString(Container(2511).ListItem.MPAA,Rated: R) | StringCompare(Container(2511).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2511) + SubString(Container(2511).ListItem.MPAA,Rated NC-17) | SubString(Container(2511).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2511).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Australia:M) + !SubString(Container(2512).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Rated NR) | SubString(Container(2512).ListItem.MPAA,Rated: NR) | StringCompare(Container(2512).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Rated G) | SubString(Container(2512).ListItem.MPAA,Rated: G) | StringCompare(Container(2512).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2512) + [SubString(Container(2512).ListItem.MPAA,Rated PG) | SubString(Container(2512).ListItem.MPAA,Rated: PG) | StringCompare(Container(2512).ListItem.MPAA,PG)] + ![SubString(Container(2512).ListItem.MPAA,Rated PG-13) | SubString(Container(2512).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Rated PG-13) | SubString(Container(2512).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2512).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Rated R) | SubString(Container(2512).ListItem.MPAA,Rated: R) | StringCompare(Container(2512).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2512) + SubString(Container(2512).ListItem.MPAA,Rated NC-17) | SubString(Container(2512).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2512).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Australia:M) + !SubString(Container(2513).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Rated NR) | SubString(Container(2513).ListItem.MPAA,Rated: NR) | StringCompare(Container(2513).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Rated G) | SubString(Container(2513).ListItem.MPAA,Rated: G) | StringCompare(Container(2513).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2513) + [SubString(Container(2513).ListItem.MPAA,Rated PG) | SubString(Container(2513).ListItem.MPAA,Rated: PG) | StringCompare(Container(2513).ListItem.MPAA,PG)] + ![SubString(Container(2513).ListItem.MPAA,Rated PG-13) | SubString(Container(2513).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Rated PG-13) | SubString(Container(2513).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2513).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Rated R) | SubString(Container(2513).ListItem.MPAA,Rated: R) | StringCompare(Container(2513).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2513) + SubString(Container(2513).ListItem.MPAA,Rated NC-17) | SubString(Container(2513).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2513).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Australia:M) + !SubString(Container(2514).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>	
 		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Rated NR) | SubString(Container(2514).ListItem.MPAA,Rated: NR) | StringCompare(Container(2514).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Rated G) | SubString(Container(2514).ListItem.MPAA,Rated: G) | StringCompare(Container(2514).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2514) + [SubString(Container(2514).ListItem.MPAA,Rated PG) | SubString(Container(2514).ListItem.MPAA,Rated: PG) | StringCompare(Container(2514).ListItem.MPAA,PG)] + ![SubString(Container(2514).ListItem.MPAA,Rated PG-13) | SubString(Container(2514).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Rated PG-13) | SubString(Container(2514).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2514).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Rated R) | SubString(Container(2514).ListItem.MPAA,Rated: R) | StringCompare(Container(2514).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2514) + SubString(Container(2514).ListItem.MPAA,Rated NC-17) | SubString(Container(2514).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2514).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Australia:M) + !SubString(Container(2515).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Rated NR) | SubString(Container(2515).ListItem.MPAA,Rated: NR) | StringCompare(Container(2515).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Rated G) | SubString(Container(2515).ListItem.MPAA,Rated: G) | StringCompare(Container(2515).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2515) + [SubString(Container(2515).ListItem.MPAA,Rated PG) | SubString(Container(2515).ListItem.MPAA,Rated: PG) | StringCompare(Container(2515).ListItem.MPAA,PG)] + ![SubString(Container(2515).ListItem.MPAA,Rated PG-13) | SubString(Container(2515).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Rated PG-13) | SubString(Container(2515).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2515).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Rated R) | SubString(Container(2515).ListItem.MPAA,Rated: R) | StringCompare(Container(2515).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2515) + SubString(Container(2515).ListItem.MPAA,Rated NC-17) | SubString(Container(2515).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2515).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Australia:M) + !SubString(Container(2516).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Rated NR) | SubString(Container(2516).ListItem.MPAA,Rated: NR) | StringCompare(Container(2516).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Rated G) | SubString(Container(2516).ListItem.MPAA,Rated: G) | StringCompare(Container(2516).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2516) + [SubString(Container(2516).ListItem.MPAA,Rated PG) | SubString(Container(2516).ListItem.MPAA,Rated: PG) | StringCompare(Container(2516).ListItem.MPAA,PG)] + ![SubString(Container(2516).ListItem.MPAA,Rated PG-13) | SubString(Container(2516).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Rated PG-13) | SubString(Container(2516).ListItem.MPAA,Rated: PG-13) | StringCompare(Container(2516).ListItem.MPAA,PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Rated R) | SubString(Container(2516).ListItem.MPAA,Rated: R) | StringCompare(Container(2516).ListItem.MPAA,R)">flags/mpaa/MPAA_R_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2516) + SubString(Container(2516).ListItem.MPAA,Rated NC-17) | SubString(Container(2516).ListItem.MPAA,Rated: NC-17) | StringCompare(Container(2516).ListItem.MPAA,NC-17)">flags/mpaa/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Australia:M) + !SubString(Container(2517).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Rated NR) | SubString(Container(2517).ListItem.MPAA,Rated: NR) | StringCompare(Container(2517).ListItem.MPAA,NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2517) + SubString(Container(2517).ListItem.MPAA,Rated G) | SubString(Container(2517).ListItem.MPAA,Rated: G) | StringCompare(Container(2517).ListItem.MPAA,G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="Control.HasFocus(2517) + [SubString(Container(2517).ListItem.MPAA,Rated PG) | SubString(Container(2517).ListItem.MPAA,Rated: PG) | StringCompare(Container(2517).ListItem.MPAA,PG)] + ![SubString(Container(2517).ListItem.MPAA,Rated PG-13) | SubString(Container(2517).ListItem.MPAA,Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
@@ -3259,6 +3336,13 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(Videoplayer.Mpaa,France:-12) | SubString(Videoplayer.Mpaa,Rated 12)">flags/mpaa/CSA_-12_FR.png</value>
 		<value condition="SubString(Videoplayer.Mpaa,France:-16) | SubString(Videoplayer.Mpaa,Rated 16)">flags/mpaa/CSA_-16_FR.png</value>
 		<value condition="SubString(Videoplayer.Mpaa,France:-18) | SubString(Videoplayer.Mpaa,Rated 18)">flags/mpaa/CSA_-18_FR.png</value>
+		<value condition="SubString(VideoPlayer.Mpaa,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="SubString(VideoPlayer.Mpaa,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="SubString(VideoPlayer.Mpaa,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="SubString(VideoPlayer.Mpaa,Australia:M) + !SubString(VideoPlayer.Mpaa,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="SubString(VideoPlayer.Mpaa,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="SubString(VideoPlayer.Mpaa,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="SubString(VideoPlayer.Mpaa,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 	</variable>
 	<!-- ######################################################################### Variable Mpaa Flags Menu Principal ######################################################################### -->
 	<variable name="value_widgetsmpaa">
@@ -3298,6 +3382,13 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(Container(510).ListItem.Mpaa,France:-12) | SubString(Container(510).ListItem.Mpaa,Rated 12)">flags/mpaa/CSA_-12_FR.png</value>
 		<value condition="SubString(Container(510).ListItem.Mpaa,France:-16) | SubString(Container(510).ListItem.Mpaa,Rated 16)">flags/mpaa/CSA_-16_FR.png</value>
 		<value condition="SubString(Container(510).ListItem.Mpaa,France:-18) | SubString(Container(510).ListItem.Mpaa,Rated 18)">flags/mpaa/CSA_-18_FR.png</value>
+		<value condition="SubString(Container(510).ListItem.Mpaa,Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="SubString(Container(510).ListItem.Mpaa,Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="SubString(Container(510).ListItem.Mpaa,Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="SubString(Container(510).ListItem.Mpaa,Australia:M) + !SubString(Container(510).ListItem.Mpaa,Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="SubString(Container(510).ListItem.Mpaa,Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="SubString(Container(510).ListItem.Mpaa,Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="SubString(Container(510).ListItem.Mpaa,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated NR) | SubString(Container(510).ListItem.Property(Mpaa),Rated: NR) | StringCompare(Container(510).ListItem.Property(Mpaa),NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated G) | SubString(Container(510).ListItem.Property(Mpaa),Rated: G) | StringCompare(Container(510).ListItem.Property(Mpaa),G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="[SubString(Container(510).ListItem.Property(Mpaa),Rated PG) | SubString(Container(510).ListItem.Property(Mpaa),Rated: PG) | StringCompare(Container(510).ListItem.Property(Mpaa),PG)] + ![SubString(Container(510).ListItem.Property(Mpaa),Rated PG-13) | SubString(Container(510).ListItem.Property(Mpaa),Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
@@ -3334,6 +3425,13 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:-12) | SubString(Container(510).ListItem.Property(Mpaa),Rated 12)">flags/mpaa/CSA_-12_FR.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:-16) | SubString(Container(510).ListItem.Property(Mpaa),Rated 16)">flags/mpaa/CSA_-16_FR.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),France:-18) | SubString(Container(510).ListItem.Property(Mpaa),Rated 18)">flags/mpaa/CSA_-18_FR.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:M)] + !SubString(Container(510).ListItem.Property(Mpaa),Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 	</variable>
 	<variable name="value_widgetsaudiocodec">
 		<value condition="SubString(Container(510).ListItem.Filename,.aac)">flags/musiccodec/aac.png</value>
@@ -4441,7 +4539,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="StringCompare(skin.string(fullscreen_icon),characterart) + VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.characterart))">$INFO[Player.Art(tvshow.characterart)]</value>
 		<value condition="StringCompare(skin.string(fullscreen_icon),characterart) + VideoPlayer.Content(episodes) + IsEmpty(Player.Art(tvshow.characterart))">$INFO[Player.Art(tvshow.clearlogo)]</value>
 		<value condition="StringCompare(skin.string(fullscreen_icon),characterart) + !VideoPlayer.Content(episodes))">$INFO[Player.Art(clearlogo)]</value>
-		</variable>
+	</variable>
 	<variable name="value_buttonmenu_video">
 		<value condition="Skin.HasSetting(homevisvideo)">$LOCALIZE[31740]: $LOCALIZE[31743]</value>
 		<value condition="!Skin.HasSetting(homevisvideo)">$LOCALIZE[31740]: $LOCALIZE[31711]</value>
@@ -4489,7 +4587,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Title]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.group)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.radio)">http://localhost:52307/getthumb&title=$INFO[Container(510).ListItem.Label] radio</value>
-		</variable>
+	</variable>
 	<variable name="value_widgets_cast">
 		<value>plugin://script.skin.helper.service/?action=getcast&movie=$INFO[Container(510).ListItem.Title]</value>
 	</variable>	
@@ -4560,19 +4658,19 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Skin.HasSetting(weathericons) + !Skin.HasSetting(weathericons_external)">$INFO[Skin.String(extrapack)]/icons_weather/</value>
 		<value condition="Skin.HasSetting(weathericons) + Skin.HasSetting(weathericons_external)">$INFO[Skin.String(CustomAnimatedIconFolder)]</value>
 	</variable>
-	<variable name="value_livetvfanart">
-		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart))">$INFO[Window(home).Property(SkinHelper.PVR.ExtraFanart)]</value>
-		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart))">$INFO[Window(home).Property(SkinHelper.PVR.Fanart)]</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),colors)]">special://skin/backgrounds/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),reddish)]">$INFO[Skin.String(extrapack)]backgrounds_reddish/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),modern)]">$INFO[Skin.String(extrapack)]backgrounds_modern/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),future)]">$INFO[Skin.String(extrapack)]backgrounds_future/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),cold)]">$INFO[Skin.String(extrapack)]backgrounds_cold/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),warm)]">$INFO[Skin.String(extrapack)]backgrounds_warm/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),darkness)]">$INFO[Skin.String(extrapack)]backgrounds_darkness/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),digitalart)]">$INFO[Skin.String(extrapack)]backgrounds_digitalart/livetv.jpg</value>
-		<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),mytheme)]">$INFO[Skin.String(CustomMyTheme),,livetv]</value>
-		</variable>
+		<variable name="value_livetvfanart">
+	<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart))">$INFO[Window(home).Property(SkinHelper.PVR.ExtraFanart)]</value>
+	<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart))">$INFO[Window(home).Property(SkinHelper.PVR.Fanart)]</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),colors)]">special://skin/backgrounds/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),reddish)]">$INFO[Skin.String(extrapack)]backgrounds_reddish/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),modern)]">$INFO[Skin.String(extrapack)]backgrounds_modern/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),future)]">$INFO[Skin.String(extrapack)]backgrounds_future/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),cold)]">$INFO[Skin.String(extrapack)]backgrounds_cold/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),warm)]">$INFO[Skin.String(extrapack)]backgrounds_warm/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),darkness)]">$INFO[Skin.String(extrapack)]backgrounds_darkness/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),digitalart)]">$INFO[Skin.String(extrapack)]backgrounds_digitalart/livetv.jpg</value>
+	<value condition="[IsEmpty(Window(home).Property(SkinHelper.PVR.Fanart)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart)) + SubString(skin.string(theme),mytheme)]">$INFO[Skin.String(CustomMyTheme),,livetv]</value>
+	</variable>
 	<variable name="value_videofanart">
 		<value condition="Container.Content(movies) + SubString(skin.string(moviesfanart),fallback)">$INFO[Skin.String(CustomFallbackMoviesBG)]</value>
 		<value condition="Container.Content(movies) + SubString(skin.string(moviesfanart),curtains)">special://skin/backgrounds/extras/curtains.jpg</value>
@@ -5060,6 +5158,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$LOCALIZE[31772]</value>
 		<!-- Lancamento -->
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[24051]</value>
+		<!-- Versao -->
 		<!-- Recorded TV ChannelName -->
 		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[19148]</value>
 	</variable>
@@ -5173,6 +5272,8 @@ SubString(ListItem.Filenameandpath,web)
 		<!-- Lancamento -->
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[24051]</value>
 		<!-- Versao-->
+		<!-- Recorded TV ChannelName -->
+		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[19148]</value>
 	</variable>
 	<variable name="value_ground11_value">
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$INFO[ListItem.Country]$INFO[Window(0).Property(Set.Movies.Country)]</value>
@@ -5183,17 +5284,18 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Container.Content(songs)">$VAR[value_songinfo_track]</value>
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$INFO[ListItem.Premiered]</value>
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$INFO[ListItem.Property(Addon.Version)]</value>
+		<value condition="Window.IsActive(TVRecordings)">$INFO[ListItem.ChannelName]</value>
 	</variable>
 	<variable name="value_ground12_label">
 		<!-- Para vistas que sejam lista -->
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(albums)">$LOCALIZE[515]</value>
-		<!-- Genero -->
+		<!-- Genero/Genre -->
 		<value condition="Container.Content(episodes)">$LOCALIZE[20339]</value>
-		<!-- Diretor -->
+		<!-- Diretor/Director -->
 		<value condition="Container.Content(artists)">$LOCALIZE[515]</value>
 		<!-- Genero Artistas -->
 		<value condition="Container.Content(songs)">$LOCALIZE[180]</value>
-		<!-- Duracao -->
+		<!-- Duracao/Duration -->
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$LOCALIZE[515]</value>
 		<!-- Genero -->
 		<value condition="Window.IsActive(1) + Container.Content(Addons)">$LOCALIZE[126]</value>
@@ -5321,16 +5423,12 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
 		<value condition="!Skin.HasSetting(nopreferclearart) + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
 		<value condition="!Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</value>
-		</variable>
+	</variable>
 	<variable name="value_moviesart">
 		<value condition="Skin.HasSetting(nopreferclearart) + !IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="Skin.HasSetting(nopreferclearart) + IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!Skin.HasSetting(nopreferclearart) + !IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!Skin.HasSetting(nopreferclearart) + IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearlogo)]</value>
-		<value condition="Skin.HasSetting(nopreferclearart) + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo))">$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</value>
-		<value condition="Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
-		<value condition="!Skin.HasSetting(nopreferclearart) + !IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</value>
-		<value condition="!Skin.HasSetting(nopreferclearart) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt))">$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</value>
 	</variable>
 	<variable name="value_tvshowsart">
 		<value condition="Skin.HasSetting(nopreferclearart) + !IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
@@ -5416,6 +5514,7 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="!IsEmpty(ListItem.Art(tvshow.clearlogo)) + SubString(skin.string(tv_panel_layout),panel_layout_clearlogo)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 	</variable>
 	<variable name="value_poster">
+		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.Poster))">$INFO[Window(home).Property(SkinHelper.PVR.Poster)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="![IsEmpty(ListItem.Art(tvshow.poster)) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster)) + ![Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(years) | Container.Content(episodes)] | Container.Content(episodes)">$INFO[ListItem.Icon]</value>
@@ -6263,19 +6362,7 @@ SubString(ListItem.Filenameandpath,web)
 	</variable>
 	<variable name="value_songinfo_plot">
 		<value condition="!Player.HasAudio">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="Player.HasAudio + !IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31940]: 
-
-
-[/COLOR]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarName)]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarName), 
-
-
-/ ]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarName), / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarName), 
-
-
-/ ]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarName), / ][CR]$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography), 
-
-
-- ]</value>
+		<value condition="Player.HasAudio + !IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31940]:[/COLOR]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarName)]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarName),/ ]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarName), / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarName), / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarName), / ][CR]$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography)]</value>
 		<value condition="Player.HasAudio + IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">$INFO[MusicPlayer.Property(Artist_Description)]</value>
 	</variable>
 	<variable name="value_songinfo_codec">
@@ -6429,14 +6516,6 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="Skin.HasSetting(randommusicbg)">special://userdata/addon_data/script.artworkorganizer/ArtistFanart</value>
 	</variable>
 	<variable name="value_menutheme_livetv">
-		<value condition="SubString(skin.string(theme),colors)">special://skin/backgrounds/livetv.jpg</value>
-		<value condition="SubString(skin.string(theme),reddish)">$INFO[Skin.String(extrapack)]backgrounds_reddish/livetv.jpg</value>
-		<value condition="SubString(skin.string(theme),modern)">$INFO[Skin.String(extrapack)]backgrounds_modern/livetv.jpg</value>
-		<value condition="SubString(skin.string(theme),future)">$INFO[Skin.String(extrapack)]backgrounds_future/livetv.jpg</value>
-		<value condition="SubString(skin.string(theme),cold)">$INFO[Skin.String(extrapack)]backgrounds_cold/livetv.jpg</value>
-		<value condition="SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/livetv.jpg</value>
-		<value condition="SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/livetv.jpg</value>
-		<value condition="SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/livetv.jpg</value>
 		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),colors)">special://skin/backgrounds/livetv.jpg</value>
 		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),reddish)">$INFO[Skin.String(extrapack)]backgrounds_reddish/livetv.jpg</value>
 		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),modern)">$INFO[Skin.String(extrapack)]backgrounds_modern/livetv.jpg</value>
@@ -6668,8 +6747,8 @@ SubString(ListItem.Filenameandpath,web)
 		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,addons]</value>
 	</variable>
 		<variable name="SeekLabel">
-        <value condition="!IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[32000][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekStepSize][/COLOR]</value>
-		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">$LOCALIZE[32000][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekOffset][/COLOR]</value>
-		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[32000]</value>
+        <value condition="!IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">Seeking:[COLOR=$VAR[value_headercolor]] $INFO[Player.SeekStepSize][/COLOR]</value>
+		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">Seeking:[COLOR=$VAR[value_headercolor]] $INFO[Player.SeekOffset][/COLOR]</value>
+		<value condition="!Player.DisplayAfterSeek + Player.Seeking">Seeking:</value>
 	</variable>
 </includes>
