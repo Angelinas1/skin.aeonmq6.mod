@@ -2094,25 +2094,14 @@
 		<value condition="SubString(ListItem(-7).Path,videodb://movies/sets,left)">$VAR[value_codecset-7]</value>
 		<value condition="SubString(ListItem(-7).Filenameandpath,4k)">$VAR[value_codec4k-7]</value>
 		<value condition="![SubString(ListItem(-7).Filenameandpath,bluray) | SubString(ListItem(-7).Filenameandpath,blu-ray) 
-
-
-
-| SubString(ListItem(-7).Filenameandpath,bdrip) | SubString(ListItem(-7).Filenameandpath,hdtv) | SubString(ListItem(-7).Filenameandpath,web) 
-
-
-
-| SubString(ListItem(-7).Filenameandpath,dvd) | SubString(ListItem(-7).Filenameandpath,.3dbd.) | SubString(ListItem(-7).Filenameandpath,.3d.) 
-
-
-
-| SubString(ListItem(-7).Filenameandpath,.iso,Right) | SubString(ListItem(-7).Filenameandpath,.ifo,Right) 
-
-
-
-| SubString(ListItem(-7).Filenameandpath,web) | SubString(ListItem(-7).Path,videodb://movies/sets,left) 
-
-
-
+| SubString(ListItem(-7).Filenameandpath,bdrip) | SubString(ListItem(-7).Filenameandpath,hdtv) | 
+SubString(ListItem(-7).Filenameandpath,web) 
+| SubString(ListItem(-7).Filenameandpath,dvd) | SubString(ListItem(-7).Filenameandpath,.3dbd.) 
+| SubString(ListItem(-7).Filenameandpath,.3d.) 
+| SubString(ListItem(-7).Filenameandpath,.iso,Right) 
+| SubString(ListItem(-7).Filenameandpath,.ifo,Right) 
+| SubString(ListItem(-7).Filenameandpath,web) 
+| SubString(ListItem(-7).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-7).Filenameandpath,4k)]">$VAR[value_codecdefault-7]</value>
 	</variable>
 	<variable name="value_videocodec-6">
@@ -2124,25 +2113,14 @@
 		<value condition="SubString(ListItem(-6).Path,videodb://movies/sets,left)">$VAR[value_codecset-6]</value>
 		<value condition="SubString(ListItem(-6).Filenameandpath,4k)">$VAR[value_codec4k-6]</value>
 		<value condition="![SubString(ListItem(-6).Filenameandpath,bluray) | SubString(ListItem(-6).Filenameandpath,blu-ray) 
-
-
-
-| SubString(ListItem(-6).Filenameandpath,bdrip) | SubString(ListItem(-6).Filenameandpath,hdtv) | SubString(ListItem(-6).Filenameandpath,web) 
-
-
-
-| SubString(ListItem(-6).Filenameandpath,dvd) | SubString(ListItem(-6).Filenameandpath,.3dbd.) | SubString(ListItem(-6).Filenameandpath,.3d.) 
-
-
-
-| SubString(ListItem(-6).Filenameandpath,.iso,Right) | SubString(ListItem(-6).Filenameandpath,.ifo,Right) 
-
-
-
-| SubString(ListItem(-6).Filenameandpath,web) | SubString(ListItem(-6).Path,videodb://movies/sets,left) 
-
-
-
+| SubString(ListItem(-6).Filenameandpath,bdrip) | SubString(ListItem(-6).Filenameandpath,hdtv) | 
+SubString(ListItem(-6).Filenameandpath,web) 
+| SubString(ListItem(-6).Filenameandpath,dvd) | SubString(ListItem(-6).Filenameandpath,.3dbd.) 
+| SubString(ListItem(-6).Filenameandpath,.3d.) 
+| SubString(ListItem(-6).Filenameandpath,.iso,Right) 
+| SubString(ListItem(-6).Filenameandpath,.ifo,Right) 
+| SubString(ListItem(-6).Filenameandpath,web) 
+| SubString(ListItem(-6).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-6).Filenameandpath,4k)]">$VAR[value_codecdefault-6]</value>
 	</variable>
 	<variable name="value_videocodec-5">
@@ -2154,25 +2132,14 @@
 		<value condition="SubString(ListItem(-5).Path,videodb://movies/sets,left)">$VAR[value_codecset-5]</value>
 		<value condition="SubString(ListItem(-5).Filenameandpath,4k)">$VAR[value_codec4k-5]</value>
 		<value condition="![SubString(ListItem(-5).Filenameandpath,bluray) | SubString(ListItem(-5).Filenameandpath,blu-ray) 
-
-
-
-| SubString(ListItem(-5).Filenameandpath,bdrip) | SubString(ListItem(-5).Filenameandpath,hdtv) | SubString(ListItem(-5).Filenameandpath,web) 
-
-
-
-| SubString(ListItem(-5).Filenameandpath,dvd) | SubString(ListItem(-5).Filenameandpath,.3dbd.) | SubString(ListItem(-5).Filenameandpath,.3d.) 
-
-
-
-| SubString(ListItem(-5).Filenameandpath,.iso,Right) | SubString(ListItem(-5).Filenameandpath,.ifo,Right) 
-
-
-
-| SubString(ListItem(-5).Filenameandpath,web) | SubString(ListItem(-5).Path,videodb://movies/sets,left) 
-
-
-
+| SubString(ListItem(-5).Filenameandpath,bdrip) | SubString(ListItem(-5).Filenameandpath,hdtv) | 
+SubString(ListItem(-5).Filenameandpath,web) 
+| SubString(ListItem(-5).Filenameandpath,dvd) | SubString(ListItem(-5).Filenameandpath,.3dbd.) 
+| SubString(ListItem(-5).Filenameandpath,.3d.) 
+| SubString(ListItem(-5).Filenameandpath,.iso,Right) 
+| SubString(ListItem(-5).Filenameandpath,.ifo,Right) 
+| SubString(ListItem(-5).Filenameandpath,web) 
+| SubString(ListItem(-5).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-5).Filenameandpath,4k)]">$VAR[value_codecdefault-5]</value>
 	</variable>
 	<variable name="value_videocodec-4">
@@ -2184,25 +2151,14 @@
 		<value condition="SubString(ListItem(-4).Path,videodb://movies/sets,left)">$VAR[value_codecset-4]</value>
 		<value condition="SubString(ListItem(-4).Filenameandpath,4k)">$VAR[value_codec4k-4]</value>
 		<value condition="![SubString(ListItem(-4).Filenameandpath,bluray) | SubString(ListItem(-4).Filenameandpath,blu-ray) 
-
-
-
-| SubString(ListItem(-4).Filenameandpath,bdrip) | SubString(ListItem(-4).Filenameandpath,hdtv) | SubString(ListItem(-4).Filenameandpath,web) 
-
-
-
-| SubString(ListItem(-4).Filenameandpath,dvd) | SubString(ListItem(-4).Filenameandpath,.3dbd.) | SubString(ListItem(-4).Filenameandpath,.3d.) 
-
-
-
-| SubString(ListItem(-4).Filenameandpath,.iso,Right) | SubString(ListItem(-4).Filenameandpath,.ifo,Right) 
-
-
-
-| SubString(ListItem(-4).Filenameandpath,web) | SubString(ListItem(-4).Path,videodb://movies/sets,left) 
-
-
-
+| SubString(ListItem(-4).Filenameandpath,bdrip) | SubString(ListItem(-4).Filenameandpath,hdtv) | 
+SubString(ListItem(-4).Filenameandpath,web) 
+| SubString(ListItem(-4).Filenameandpath,dvd) | SubString(ListItem(-4).Filenameandpath,.3dbd.) 
+| SubString(ListItem(-4).Filenameandpath,.3d.) 
+| SubString(ListItem(-4).Filenameandpath,.iso,Right) 
+| SubString(ListItem(-4).Filenameandpath,.ifo,Right) 
+| SubString(ListItem(-4).Filenameandpath,web) 
+| SubString(ListItem(-4).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-4).Filenameandpath,4k)]">$VAR[value_codecdefault-4]</value>
 	</variable>
 	<variable name="value_videocodec-3">
@@ -2214,25 +2170,14 @@
 		<value condition="SubString(ListItem(-3).Path,videodb://movies/sets,left)">$VAR[value_codecset-3]</value>
 		<value condition="SubString(ListItem(-3).Filenameandpath,4k)">$VAR[value_codec4k-3]</value>
 		<value condition="![SubString(ListItem(-3).Filenameandpath,bluray) | SubString(ListItem(-3).Filenameandpath,blu-ray) 
-
-
-
-| SubString(ListItem(-3).Filenameandpath,bdrip) | SubString(ListItem(-3).Filenameandpath,hdtv) | SubString(ListItem(-3).Filenameandpath,web) 
-
-
-
-| SubString(ListItem(-3).Filenameandpath,dvd) | SubString(ListItem(-3).Filenameandpath,.3dbd.) | SubString(ListItem(-3).Filenameandpath,.3d.) 
-
-
-
-| SubString(ListItem(-3).Filenameandpath,.iso,Right) | SubString(ListItem(-3).Filenameandpath,.ifo,Right) 
-
-
-
-| SubString(ListItem(-3).Filenameandpath,web) | SubString(ListItem(-3).Path,videodb://movies/sets,left) 
-
-
-
+| SubString(ListItem(-3).Filenameandpath,bdrip) | SubString(ListItem(-3).Filenameandpath,hdtv) | 
+SubString(ListItem(-3).Filenameandpath,web) 
+| SubString(ListItem(-3).Filenameandpath,dvd) | SubString(ListItem(-3).Filenameandpath,.3dbd.) 
+| SubString(ListItem(-3).Filenameandpath,.3d.) 
+| SubString(ListItem(-3).Filenameandpath,.iso,Right) 
+| SubString(ListItem(-3).Filenameandpath,.ifo,Right) 
+| SubString(ListItem(-3).Filenameandpath,web) 
+| SubString(ListItem(-3).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-3).Filenameandpath,4k)]">$VAR[value_codecdefault-3]</value>
 	</variable>
 	<variable name="value_videocodec-2">
@@ -2244,25 +2189,14 @@
 		<value condition="SubString(ListItem(-2).Path,videodb://movies/sets,left)">$VAR[value_codecset-2]</value>
 		<value condition="SubString(ListItem(-2).Filenameandpath,4k)">$VAR[value_codec4k-2]</value>
 		<value condition="![SubString(ListItem(-2).Filenameandpath,bluray) | SubString(ListItem(-2).Filenameandpath,blu-ray) 
-
-
-
-| SubString(ListItem(-2).Filenameandpath,bdrip) | SubString(ListItem(-2).Filenameandpath,hdtv) | SubString(ListItem(-2).Filenameandpath,web) 
-
-
-
-| SubString(ListItem(-2).Filenameandpath,dvd) | SubString(ListItem(-2).Filenameandpath,.3dbd.) | SubString(ListItem(-2).Filenameandpath,.3d.) 
-
-
-
-| SubString(ListItem(-2).Filenameandpath,.iso,Right) | SubString(ListItem(-2).Filenameandpath,.ifo,Right) 
-
-
-
-| SubString(ListItem(-2).Filenameandpath,web) | SubString(ListItem(-2).Path,videodb://movies/sets,left) 
-
-
-
+| SubString(ListItem(-2).Filenameandpath,bdrip) | SubString(ListItem(-2).Filenameandpath,hdtv) | 
+SubString(ListItem(-2).Filenameandpath,web) 
+| SubString(ListItem(-2).Filenameandpath,dvd) | SubString(ListItem(-2).Filenameandpath,.3dbd.) 
+| SubString(ListItem(-2).Filenameandpath,.3d.) 
+| SubString(ListItem(-2).Filenameandpath,.iso,Right) 
+| SubString(ListItem(-2).Filenameandpath,.ifo,Right) 
+| SubString(ListItem(-2).Filenameandpath,web) 
+| SubString(ListItem(-2).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-2).Filenameandpath,4k)]">$VAR[value_codecdefault-2]</value>
 	</variable>
 	<variable name="value_videocodec-1">
@@ -2274,25 +2208,14 @@
 		<value condition="SubString(ListItem(-1).Path,videodb://movies/sets,left)">$VAR[value_codecset-1]</value>
 		<value condition="SubString(ListItem(-1).Filenameandpath,4k)">$VAR[value_codec4k-1]</value>
 		<value condition="![SubString(ListItem(-1).Filenameandpath,bluray) | SubString(ListItem(-1).Filenameandpath,blu-ray) 
-
-
-
-| SubString(ListItem(-1).Filenameandpath,bdrip) | SubString(ListItem(-1).Filenameandpath,hdtv) | SubString(ListItem(-1).Filenameandpath,web) 
-
-
-
-| SubString(ListItem(-1).Filenameandpath,dvd) | SubString(ListItem(-1).Filenameandpath,.3dbd.) | SubString(ListItem(-1).Filenameandpath,.3d.) 
-
-
-
-| SubString(ListItem(-1).Filenameandpath,.iso,Right) | SubString(ListItem(-1).Filenameandpath,.ifo,Right) 
-
-
-
-| SubString(ListItem(-1).Filenameandpath,web) | SubString(ListItem(-1).Path,videodb://movies/sets,left) 
-
-
-
+| SubString(ListItem(-1).Filenameandpath,bdrip) | SubString(ListItem(-1).Filenameandpath,hdtv) | 
+SubString(ListItem(-1).Filenameandpath,web) 
+| SubString(ListItem(-1).Filenameandpath,dvd) | SubString(ListItem(-1).Filenameandpath,.3dbd.) 
+| SubString(ListItem(-1).Filenameandpath,.3d.) 
+| SubString(ListItem(-1).Filenameandpath,.iso,Right) 
+| SubString(ListItem(-1).Filenameandpath,.ifo,Right) 
+| SubString(ListItem(-1).Filenameandpath,web) 
+| SubString(ListItem(-1).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-1).Filenameandpath,4k)]">$VAR[value_codecdefault-1]</value>
 	</variable>
 	<variable name="value_videocodec0">
@@ -2304,25 +2227,10 @@
 		<value condition="SubString(ListItem(0).Path,videodb://movies/sets,left)">$VAR[value_codecset0]</value>
 		<value condition="SubString(ListItem(0).Filenameandpath,4k)">$VAR[value_codec4k0]</value>
 		<value condition="![SubString(ListItem(0).Filenameandpath,bluray) | SubString(ListItem(0).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,bdrip) | SubString(ListItem(0).Filenameandpath,hdtv) | SubString(ListItem(0).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,dvd) | SubString(ListItem(0).Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,.iso,Right) | SubString(ListItem(0).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,web) | SubString(ListItem(0).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,4k)]">$VAR[value_codecdefault0]</value>
 	</variable>
 	<variable name="value_videocodec1">
@@ -2334,25 +2242,10 @@
 		<value condition="SubString(ListItem(1).Path,videodb://movies/sets,left)">$VAR[value_codecset1]</value>
 		<value condition="SubString(ListItem(1).Filenameandpath,4k)">$VAR[value_codec4k1]</value>
 		<value condition="![SubString(ListItem(1).Filenameandpath,bluray) | SubString(ListItem(1).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,bdrip) | SubString(ListItem(1).Filenameandpath,hdtv) | SubString(ListItem(1).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,dvd) | SubString(ListItem(1).Filenameandpath,.3dbd.) | SubString(ListItem(1).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,.iso,Right) | SubString(ListItem(1).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,web) | SubString(ListItem(1).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,4k)]">$VAR[value_codecdefault1]</value>
 	</variable>
 	<variable name="value_videocodec2">
@@ -2364,25 +2257,10 @@
 		<value condition="SubString(ListItem(2).Path,videodb://movies/sets,left)">$VAR[value_codecset2]</value>
 		<value condition="SubString(ListItem(2).Filenameandpath,4k)">$VAR[value_codec4k2]</value>
 		<value condition="![SubString(ListItem(2).Filenameandpath,bluray) | SubString(ListItem(2).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,bdrip) | SubString(ListItem(2).Filenameandpath,hdtv) | SubString(ListItem(2).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,dvd) | SubString(ListItem(2).Filenameandpath,.3dbd.) | SubString(ListItem(2).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,.iso,Right) | SubString(ListItem(2).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,web) | SubString(ListItem(2).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,4k)]">$VAR[value_codecdefault2]</value>
 	</variable>
 	<variable name="value_videocodec3">
@@ -2394,25 +2272,10 @@
 		<value condition="SubString(ListItem(3).Path,videodb://movies/sets,left)">$VAR[value_codecset3]</value>
 		<value condition="SubString(ListItem(3).Filenameandpath,4k)">$VAR[value_codec4k3]</value>
 		<value condition="![SubString(ListItem(3).Filenameandpath,bluray) | SubString(ListItem(3).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,bdrip) | SubString(ListItem(3).Filenameandpath,hdtv) | SubString(ListItem(3).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,dvd) | SubString(ListItem(3).Filenameandpath,.3dbd.) | SubString(ListItem(3).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,.iso,Right) | SubString(ListItem(3).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,web) | SubString(ListItem(3).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,4k)]">$VAR[value_codecdefault3]</value>
 	</variable>
 	<variable name="value_videocodec4">
@@ -2423,21 +2286,9 @@
 		<value condition="SubString(ListItem(4).Filenameandpath,.3dbd.) | SubString(ListItem(4).Filenameandpath,.3d.)">$VAR[value_codec3dbd4]</value>
 		<value condition="SubString(ListItem(4).Path,videodb://movies/sets,left)">$VAR[value_codecset4]</value>
 		<value condition="![SubString(ListItem(4).Filenameandpath,bluray) | SubString(ListItem(4).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(4).Filenameandpath,bdrip) | SubString(ListItem(4).Filenameandpath,hdtv) | SubString(ListItem(4).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(4).Filenameandpath,dvd) | SubString(ListItem(4).Filenameandpath,.3dbd.) | SubString(ListItem(4).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(4).Filenameandpath,.iso,Right) | SubString(ListItem(4).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(4).Filenameandpath,web) | SubString(ListItem(4).Path,videodb://movies/sets,left)]">$VAR[value_codecdefault4]</value>
 	</variable>
 	<variable name="value_videocodec5">
@@ -2449,25 +2300,10 @@
 		<value condition="SubString(ListItem(5).Path,videodb://movies/sets,left)">$VAR[value_codecset5]</value>
 		<value condition="SubString(ListItem(5).Filenameandpath,4k)">$VAR[value_codec4k5]</value>
 		<value condition="![SubString(ListItem(5).Filenameandpath,bluray) | SubString(ListItem(5).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,bdrip) | SubString(ListItem(5).Filenameandpath,hdtv) | SubString(ListItem(5).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,dvd) | SubString(ListItem(5).Filenameandpath,.3dbd.) | SubString(ListItem(5).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,.iso,Right) | SubString(ListItem(5).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,web) | SubString(ListItem(5).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,4k)]">$VAR[value_codecdefault5]</value>
 	</variable>
 	<variable name="value_videocodec6">
@@ -2479,25 +2315,10 @@
 		<value condition="SubString(ListItem(6).Path,videodb://movies/sets,left)">$VAR[value_codecset6]</value>
 		<value condition="SubString(ListItem(6).Filenameandpath,4k)">$VAR[value_codec4k6]</value>
 		<value condition="![SubString(ListItem(6).Filenameandpath,bluray) | SubString(ListItem(6).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,bdrip) | SubString(ListItem(6).Filenameandpath,hdtv) | SubString(ListItem(6).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,dvd) | SubString(ListItem(6).Filenameandpath,.3dbd.) | SubString(ListItem(6).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,.iso,Right) | SubString(ListItem(6).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,web) | SubString(ListItem(6).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,4k)]">$VAR[value_codecdefault6]</value>
 	</variable>
 	<variable name="value_videocodec7">
@@ -2509,25 +2330,10 @@
 		<value condition="SubString(ListItem(7).Path,videodb://movies/sets,left)">$VAR[value_codecset7]</value>
 		<value condition="SubString(ListItem(7).Filenameandpath,4k)">$VAR[value_codec4k7]</value>
 		<value condition="![SubString(ListItem(7).Filenameandpath,bluray) | SubString(ListItem(7).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,bdrip) | SubString(ListItem(7).Filenameandpath,hdtv) | SubString(ListItem(7).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,dvd) | SubString(ListItem(7).Filenameandpath,.3dbd.) | SubString(ListItem(7).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,.iso,Right) | SubString(ListItem(7).Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,web) | SubString(ListItem(7).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,4k)]">$VAR[value_codecdefault7]</value>
 	</variable>
 	<!-- ######################################################################### Variable Boxes Collection ######################################################################### -->
@@ -2540,21 +2346,13 @@
 		<value condition="SubString(ListItem(-7).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(-7).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(-7).Filenameandpath,bluray) | SubString(ListItem(-7).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(-7).Filenameandpath,bdrip) | SubString(ListItem(-7).Filenameandpath,hddvd) | 
 SubString(ListItem(-7).Filenameandpath,dvd) 
-
-
-| SubString(ListItem(-7).Filenameandpath,.ifo,Right) | 
+| SubString(ListItem(-7).Filenameandpath,.ifo,Right) 
+| 
 SubString(ListItem(-7).Filenameandpath,.iso,Right) 
-
-
 | SubString(ListItem(-7).Filenameandpath,.3dbd.) 
 | SubString(ListItem(-7).Filenameandpath,.3d.) | SubString(ListItem(-7).Filenameandpath,web) 
-
-
 | SubString(ListItem(-7).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-7).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2567,21 +2365,13 @@ SubString(ListItem(-7).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(-6).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(-6).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(-6).Filenameandpath,bluray) | SubString(ListItem(-6).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(-6).Filenameandpath,bdrip) | SubString(ListItem(-6).Filenameandpath,hddvd) | 
 SubString(ListItem(-6).Filenameandpath,dvd) 
-
-
-| SubString(ListItem(-6).Filenameandpath,.ifo,Right) | 
+| SubString(ListItem(-6).Filenameandpath,.ifo,Right) 
+| 
 SubString(ListItem(-6).Filenameandpath,.iso,Right) 
-
-
 | SubString(ListItem(-6).Filenameandpath,.3dbd.) 
 | SubString(ListItem(-6).Filenameandpath,.3d.) | SubString(ListItem(-6).Filenameandpath,web) 
-
-
 | SubString(ListItem(-6).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-6).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2594,21 +2384,13 @@ SubString(ListItem(-6).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(-5).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(-5).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(-5).Filenameandpath,bluray) | SubString(ListItem(-5).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(-5).Filenameandpath,bdrip) | SubString(ListItem(-5).Filenameandpath,hddvd) | 
 SubString(ListItem(-5).Filenameandpath,dvd) 
-
-
-| SubString(ListItem(-5).Filenameandpath,.ifo,Right) | 
+| SubString(ListItem(-5).Filenameandpath,.ifo,Right) 
+| 
 SubString(ListItem(-5).Filenameandpath,.iso,Right) 
-
-
 | SubString(ListItem(-5).Filenameandpath,.3dbd.) 
 | SubString(ListItem(-5).Filenameandpath,.3d.) | SubString(ListItem(-5).Filenameandpath,web) 
-
-
 | SubString(ListItem(-5).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-5).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2621,21 +2403,13 @@ SubString(ListItem(-5).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(-4).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(-4).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(-4).Filenameandpath,bluray) | SubString(ListItem(-4).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(-4).Filenameandpath,bdrip) | SubString(ListItem(-4).Filenameandpath,hddvd) | 
 SubString(ListItem(-4).Filenameandpath,dvd) 
-
-
-| SubString(ListItem(-4).Filenameandpath,.ifo,Right) | 
+| SubString(ListItem(-4).Filenameandpath,.ifo,Right) 
+| 
 SubString(ListItem(-4).Filenameandpath,.iso,Right) 
-
-
 | SubString(ListItem(-4).Filenameandpath,.3dbd.) 
 | SubString(ListItem(-4).Filenameandpath,.3d.) | SubString(ListItem(-4).Filenameandpath,web) 
-
-
 | SubString(ListItem(-4).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-4).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2648,21 +2422,13 @@ SubString(ListItem(-4).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(-3).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(-3).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(-3).Filenameandpath,bluray) | SubString(ListItem(-3).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(-3).Filenameandpath,bdrip) | SubString(ListItem(-3).Filenameandpath,hddvd) | 
 SubString(ListItem(-3).Filenameandpath,dvd) 
-
-
-| SubString(ListItem(-3).Filenameandpath,.ifo,Right) | 
+| SubString(ListItem(-3).Filenameandpath,.ifo,Right) 
+| 
 SubString(ListItem(-3).Filenameandpath,.iso,Right) 
-
-
 | SubString(ListItem(-3).Filenameandpath,.3dbd.) 
 | SubString(ListItem(-3).Filenameandpath,.3d.) | SubString(ListItem(-3).Filenameandpath,web) 
-
-
 | SubString(ListItem(-3).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-3).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2675,21 +2441,13 @@ SubString(ListItem(-3).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(-2).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(-2).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(-2).Filenameandpath,bluray) | SubString(ListItem(-2).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(-2).Filenameandpath,bdrip) | SubString(ListItem(-2).Filenameandpath,hddvd) | 
 SubString(ListItem(-2).Filenameandpath,dvd) 
-
-
-| SubString(ListItem(-2).Filenameandpath,.ifo,Right) | 
+| SubString(ListItem(-2).Filenameandpath,.ifo,Right) 
+| 
 SubString(ListItem(-2).Filenameandpath,.iso,Right) 
-
-
 | SubString(ListItem(-2).Filenameandpath,.3dbd.) 
 | SubString(ListItem(-2).Filenameandpath,.3d.) | SubString(ListItem(-2).Filenameandpath,web) 
-
-
 | SubString(ListItem(-2).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-2).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2702,21 +2460,13 @@ SubString(ListItem(-2).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(-1).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(-1).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(-1).Filenameandpath,bluray) | SubString(ListItem(-1).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(-1).Filenameandpath,bdrip) | SubString(ListItem(-1).Filenameandpath,hddvd) | 
 SubString(ListItem(-1).Filenameandpath,dvd) 
-
-
-| SubString(ListItem(-1).Filenameandpath,.ifo,Right) | 
+| SubString(ListItem(-1).Filenameandpath,.ifo,Right) 
+| 
 SubString(ListItem(-1).Filenameandpath,.iso,Right) 
-
-
 | SubString(ListItem(-1).Filenameandpath,.3dbd.) 
 | SubString(ListItem(-1).Filenameandpath,.3d.) | SubString(ListItem(-1).Filenameandpath,web) 
-
-
 | SubString(ListItem(-1).Path,videodb://movies/sets,left) 
 | SubString(ListItem(-1).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2729,21 +2479,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(0).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(0).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(0).Filenameandpath,bluray) | SubString(ListItem(0).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,bdrip) | SubString(ListItem(0).Filenameandpath,hddvd) | SubString(ListItem(0).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,.ifo,Right) | SubString(ListItem(0).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(0).Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.) | SubString(ListItem(0).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(0).Path,videodb://movies/sets,left) | SubString(ListItem(0).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 		<value condition="Container.Content(episodes)">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -2756,21 +2494,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(1).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(1).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(1).Filenameandpath,bluray) | SubString(ListItem(1).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,bdrip) | SubString(ListItem(1).Filenameandpath,hddvd) | SubString(ListItem(1).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,.ifo,Right) | SubString(ListItem(1).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(1).Filenameandpath,.3dbd.) | SubString(ListItem(1).Filenameandpath,.3d.) | SubString(ListItem(1).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(1).Path,videodb://movies/sets,left) | SubString(ListItem(1).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
 	<variable name="value_videocase2">
@@ -2782,21 +2508,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(2).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(2).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(2).Filenameandpath,bluray) | SubString(ListItem(2).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,bdrip) | SubString(ListItem(2).Filenameandpath,hddvd) | SubString(ListItem(2).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,.ifo,Right) | SubString(ListItem(2).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(2).Filenameandpath,.3dbd.) | SubString(ListItem(2).Filenameandpath,.3d.) | SubString(ListItem(2).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(2).Path,videodb://movies/sets,left) | SubString(ListItem(2).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
 	<variable name="value_videocase3">
@@ -2808,21 +2522,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(3).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(3).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(3).Filenameandpath,bluray) | SubString(ListItem(3).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,bdrip) | SubString(ListItem(3).Filenameandpath,hddvd) | SubString(ListItem(3).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,.ifo,Right) | SubString(ListItem(3).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(3).Filenameandpath,.3dbd.) | SubString(ListItem(3).Filenameandpath,.3d.) | SubString(ListItem(3).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(3).Path,videodb://movies/sets,left) | SubString(ListItem(3).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
 	<variable name="value_videocase4">
@@ -2834,21 +2536,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(4).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(4).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(4).Filenameandpath,bluray) | SubString(ListItem(4).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(4).Filenameandpath,bdrip) | SubString(ListItem(4).Filenameandpath,hddvd) | SubString(ListItem(4).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(4).Filenameandpath,.ifo,Right) | SubString(ListItem(4).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(4).Filenameandpath,.3dbd.) | SubString(ListItem(4).Filenameandpath,.3d.) | SubString(ListItem(4).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(4).Path,videodb://movies/sets,left) | SubString(ListItem(4).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
 	<variable name="value_videocase5">
@@ -2860,21 +2550,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(5).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(5).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(5).Filenameandpath,bluray) | SubString(ListItem(5).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,bdrip) | SubString(ListItem(5).Filenameandpath,hddvd) | SubString(ListItem(5).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,.ifo,Right) | SubString(ListItem(5).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(5).Filenameandpath,.3dbd.) | SubString(ListItem(5).Filenameandpath,.3d.) | SubString(ListItem(5).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(5).Path,videodb://movies/sets,left) | SubString(ListItem(5).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
 	<variable name="value_videocase6">
@@ -2886,21 +2564,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(6).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(6).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(6).Filenameandpath,bluray) | SubString(ListItem(6).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,bdrip) | SubString(ListItem(6).Filenameandpath,hddvd) | SubString(ListItem(6).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,.ifo,Right) | SubString(ListItem(6).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(6).Filenameandpath,.3dbd.) | SubString(ListItem(6).Filenameandpath,.3d.) | SubString(ListItem(6).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(6).Path,videodb://movies/sets,left) | SubString(ListItem(6).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
 	<variable name="value_videocase7">
@@ -2912,21 +2578,9 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem(7).Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem(7).Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem(7).Filenameandpath,bluray) | SubString(ListItem(7).Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,bdrip) | SubString(ListItem(7).Filenameandpath,hddvd) | SubString(ListItem(7).Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,.ifo,Right) | SubString(ListItem(7).Filenameandpath,.iso,Right) 
-
-
-
 | SubString(ListItem(7).Filenameandpath,.3dbd.) | SubString(ListItem(7).Filenameandpath,.3d.) | SubString(ListItem(7).Filenameandpath,web) 
-
-
-
 | SubString(ListItem(7).Path,videodb://movies/sets,left) | SubString(ListItem(7).Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
 	<variable name="value_videocase8">
@@ -2938,20 +2592,11 @@ SubString(ListItem(-1).Filenameandpath,.iso,Right)
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$VAR[value_colorsetcase]</value>
 		<value condition="SubString(ListItem.Filenameandpath,4k)">$VAR[value_color4kcase]</value>
 		<value condition="![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hddvd) | SubString(ListItem.Filenameandpath,dvd) 
-
-
-
 | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,.iso,Right) 
 | 
-
 SubString(ListItem.Filenameandpath,.3dbd.) 
 | SubString(ListItem.Filenameandpath,.3d.) | SubString(ListItem.Filenameandpath,web) 
-
-
 | SubString(ListItem.Path,videodb://movies/sets,left) 
 | SubString(ListItem.Filenameandpath,4k)]">$VAR[value_colordefaultcase]</value>
 	</variable>
@@ -3146,20 +2791,10 @@ SubString(ListItem.Filenameandpath,.3dbd.)
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">flags/casecodec/set.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) 
-
-
-
 | SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hdtv) | SubString(ListItem.Filenameandpath,web) 
-
-
-
 | SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.) 
-
-
-
 | SubString(ListItem.Filenameandpath,.iso,Right) | SubString(ListItem.Filenameandpath,.ifo,Right) 
 | 
-
 SubString(ListItem.Filenameandpath,web) 
 | SubString(ListItem.Path,videodb://movies/sets,left) | 
 SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
@@ -3172,29 +2807,11 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.)">flags/casecodec/3dbd.png</value>
 		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bluray) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),blu-ray) 
-
-
-
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bdrip) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),hdtv) 
-
-
-
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),web) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),dvd) 
-
-
-
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.) 
-
-
-
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.iso,Right) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.ifo,Right) 
-
-
-
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),web) | SubString(ListItem.Path,videodb://movies/sets,left) 
-
-
-
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),4k)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_videocodechome">
@@ -3206,25 +2823,10 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">flags/casecodec/set.png</value>
 		<value condition="SubString(Container(510).ListItem.Filenameandpath,4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(Container(510).ListItem.Filenameandpath,bluray) | SubString(Container(510).ListItem.Filenameandpath,blu-ray) 
-
-
-
 | SubString(Container(510).ListItem.Filenameandpath,bdrip) | SubString(Container(510).ListItem.Filenameandpath,hdtv) 
-
-
-
 | SubString(Container(510).ListItem.Filenameandpath,web) | SubString(Container(510).ListItem.Filenameandpath,dvd) 
-
-
-
 | SubString(Container(510).ListItem.Filenameandpath,.3dbd.) | SubString(Container(510).ListItem.Filenameandpath,.3d.) 
-
-
-
 | SubString(Container(510).ListItem.Filenameandpath,.iso,Right) | SubString(Container(510).ListItem.Filenameandpath,.ifo,Right) 
-
-
-
 | SubString(Container(510).ListItem.Filenameandpath,web) | SubString(Container(510).ListItem.Filenameandpath,4k)]">$INFO[Container(510).ListItem.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<!-- ######################################################################### Variable Video Codec em reproducao ###################################################################### -->
@@ -3236,21 +2838,9 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(Player.Filenameandpath,.3dbd.) | SubString(Player.Filenameandpath,.3d.)">flags/casecodec/3dbd.png</value>
 		<value condition="SubString(Player.Filenameandpath,4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(Player.Filenameandpath,bluray) | SubString(Player.Filenameandpath,blu-ray) 
-
-
-
 | SubString(Player.Filenameandpath,bdrip) | SubString(Player.Filenameandpath,hddvd) | SubString(Player.Filenameandpath,dvd) 
-
-
-
 | SubString(Player.Filenameandpath,.ifo,Right) | SubString(Player.Filenameandpath,.iso,Right) | SubString(Player.Filenameandpath,.3dbd.) 
-
-
-
 | SubString(Player.Filenameandpath,.3d.) | SubString(Player.Filenameandpath,web) | SubString(ListItem(0).Path,videodb://movies/sets,left) 
-
-
-
 | SubString(Player.Filenameandpath,4k)]">$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<!-- ######################################################################### Variable Mpaa Flags ######################################################################### -->
@@ -3593,7 +3183,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:E)">flags/mpaa/Australian_OFLC_Es.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:G)">flags/mpaa/Australian_OFLC_Gs.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:PG)">flags/mpaa/Australian_OFLC_PGs.png</value>
-		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:M)] + !SubString(Container(510).ListItem.Property(Mpaa),Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
+		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:M) + !SubString(Container(510).ListItem.Property(Mpaa),Australia:MA)">flags/mpaa/Australian_OFLC_Ms.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:MA)">flags/mpaa/Australian_OFLC_MA15s.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:R)">flags/mpaa/Australian_OFLC_R18s.png</value>
 		<value condition="SubString(Container(510).ListItem.Property(Mpaa),Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
@@ -4572,21 +4162,9 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	<variable name="value_playerplot">
 		<value condition="Player.HasVideo">$INFO[VideoPlayer.Plot]</value>
 		<value condition="Player.HasAudio + !IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtistBiography))">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31940]: 
-
-
-
 [/COLOR][CR]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarName)]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarName), 
-
-
-
 / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarName), / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarName), 
-
-
-
 / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarName), / ][CR]   $INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography), 
-
-
-
 - ]</value>
 		<value condition="Player.HasAudio + IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtistBiography))">$INFO[MusicPlayer.Property(Artist_Description)]</value>
 	</variable>
@@ -4703,7 +4281,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(skin.string(fullscreen_icon),discart) + VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.poster)]</value>
 		<value condition="StringCompare(skin.string(fullscreen_icon),characterart) + VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.characterart))">$INFO[Player.Art(tvshow.characterart)]</value>
 		<value condition="StringCompare(skin.string(fullscreen_icon),characterart) + VideoPlayer.Content(episodes) + IsEmpty(Player.Art(tvshow.characterart))">$INFO[Player.Art(tvshow.clearlogo)]</value>
-		<value condition="StringCompare(skin.string(fullscreen_icon),characterart) + !VideoPlayer.Content(episodes))">$INFO[Player.Art(clearlogo)]</value>
+		<value condition="StringCompare(skin.string(fullscreen_icon),characterart) + !VideoPlayer.Content(episodes)">$INFO[Player.Art(clearlogo)]</value>
 	</variable>
 	<variable name="value_buttonmenu_video">
 		<value condition="Skin.HasSetting(homevisvideo)">$LOCALIZE[31740]: $LOCALIZE[31743]</value>

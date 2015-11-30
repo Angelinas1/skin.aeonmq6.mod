@@ -57,6 +57,17 @@
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
 				</control>
+				<control type="image" id="15103">
+					<!-- Logo -->
+					<left>360</left>
+					<top>440</top>
+					<width>300</width>
+					<height>110</height>
+					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;album=$INFO[Listitem.Album]&amp;type=clearlogo</texture>
+					<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+				</control>
 				<control type="image" id="5104">
 					<!-- clearlogo e clearart -->
 					<left>360</left>

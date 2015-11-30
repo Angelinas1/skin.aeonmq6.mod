@@ -303,6 +303,7 @@
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2511)</onleft>
 					<onright>SetFocus(2513)</onright>
+					<onclick>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.Property(dbid)])</onclick>
 					<top>340</top>
 					<left>260</left>
 					<width>50</width>
@@ -597,6 +598,7 @@
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2514)</onleft>
 					<onright>SetFocus(9000)</onright>
+					<onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(2516).ListItem.Episode])</onclick>
 					<top>321</top>
 					<left>1560</left>
 					<width>53</width>
@@ -1739,7 +1741,7 @@
 						<fadetime>FanartCrossFadeTime</fadetime>
 					</control>
 					<control type="image" id="6077">
-						<visible>Control.IsVisible(8003) + [StringCompare(Container(9000).ListItem.Property(widgets),channel.tv) | StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)</visible>
+						<visible>Control.IsVisible(8003) + [StringCompare(Container(9000).ListItem.Property(widgets),channel.tv) | StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)]</visible>
 						<left>570</left>
 						<top>134</top>
 						<width>360</width>
@@ -1790,24 +1792,24 @@
 				</control>
 				<control type="group">
 					<!-- CD Art Fake -->
-					<animation effect="slide" time="800" start="-55,0" end="0,0" easing="out" tween="cubic" condition="System.IdleTime(4)">Conditional</animation>
-					<animation effect="slide" time="800" start="0,0" end="-55,0" easing="out" tween="cubic" condition="!System.IdleTime(4)">Conditional</animation>
+					<animation effect="slide" time="800" start="-45,0" end="0,0" easing="out" tween="cubic" condition="System.IdleTime(4)">Conditional</animation>
+					<animation effect="slide" time="800" start="0,0" end="-45,0" easing="out" tween="cubic" condition="!System.IdleTime(4)">Conditional</animation>
 					<control type="image">
 						<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="false" condition="System.IdleTime(6)">Conditional</animation>
-						<left>200</left>
-						<top>220</top>
-						<width>110</width>
-						<height>110</height>
-						<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_widgetsinfopanelgallaery]</texture>
+						<left>195</left>
+						<top>225</top>
+						<width>100</width>
+						<height>100</height>
+						<texture diffuse="cdart_diffuse.png">$VAR[value_widgetsinfopanelgallaery]</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 					</control>
 					<control type="image">
 						<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="false" condition="System.IdleTime(6)">Conditional</animation>
-						<left>200</left>
+						<left>190</left>
 						<top>220</top>
 						<width>110</width>
 						<height>110</height>
-						<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_extra_discart]</texture>
+						<texture>$VAR[value_extra_discart]</texture>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 					</control>
 				</control>
@@ -1995,14 +1997,14 @@
 					<control type="textbox">
 						<!-- Plot video menor -->
 						<left>100</left>
-						<top>150</top>
+						<top>170</top>
 						<width>450</width>
 						<height>180</height>
 						<label>$VAR[value_extra_plot]</label>
 						<textcolor>FFFFFAF0</textcolor>
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
-						<animation effect="slide" end="0,-26">Conditional</animation>
+						<animation effect="slide" end="0,-26" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<!-- Thumb -->
@@ -2065,11 +2067,11 @@
 			<control type="image" id="9931">
 				<!-- widgets modo auto -->
 				<include>InvisibleButton</include>
-				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="SubString(skin.string(widgets_seconds),1)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="SubString(skin.string(widgets_seconds),2)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="SubString(skin.string(widgets_seconds),3)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="SubString(skin.string(widgets_seconds),4)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="SubString(skin.string(widgets_seconds),5)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="SubString(skin.string(widgets_seconds),1)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="SubString(skin.string(widgets_seconds),2)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="SubString(skin.string(widgets_seconds),3)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="SubString(skin.string(widgets_seconds),4)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="SubString(skin.string(widgets_seconds),5)">Conditional</animation>
 				<visible>![Container(9000).OnNext | Container(9000).OnPrevious]</visible>
 			</control>
 			<control type="group" id="602">
@@ -3722,7 +3724,9 @@
 
 
 
+
 | SubString(Container(9000).ListItem.Property(id),tvshow) + Library.HasContent(TVShows) | SubString(Container(9000).ListItem.Property(id),concert) 
+
 
 
 
@@ -3732,7 +3736,9 @@
 
 
 
+
 | SubString(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) 
+
 
 
 
@@ -3742,12 +3748,15 @@
 
 
 
+
 + ![Player.HasMedia + [System.IdleTime(8) |  Skin.HasSetting(highermainmenu)] |  Skin.HasSetting(nohometotals) 
 
 
 
 
+
 | Skin.HasSetting(highertotals) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo 
+
 
 
 
@@ -4224,8 +4233,8 @@
 				<left>285</left>
 				<top>600</top>
 				<include condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000)">Animation_HomePanel_Cast</include>
-				<animation effect="slide" start="0,150" end="0,0" condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000">Conditional</animation>
-				<visible>Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000</visible>
+				<animation effect="slide" start="0,150" end="0,0" condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000)">Conditional</animation>
+				<visible>Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(1000)</visible>
 				<control type="list" id="1000">
 					<content>$VAR[value_widgets_cast]</content>
 					<viewtype label="List">List Info</viewtype>
@@ -4237,7 +4246,6 @@
 					<onright>1000</onright>
 					<onup>SetFocus(9000)</onup>
 					<ondown>SetFocus(9000)</ondown>
-					<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(1000).ListItem.Label])</onclick>
 					<orientation>horizontal</orientation>
 					<scrolltime>400</scrolltime>
 					<focusposition>3</focusposition>
