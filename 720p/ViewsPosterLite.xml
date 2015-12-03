@@ -283,8 +283,8 @@
 	<visible>IsEmpty(ListItem.Art(discart))</visible>
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<aspectratio align="center" aligny="top">stretch</aspectratio>
-	<include>Animation_ViewsCDart</include>
+	<aspectratio align="center" aligny="center">stretch</aspectratio>
+
 	</control>
 	<control type="image">
 	<left>15</left>

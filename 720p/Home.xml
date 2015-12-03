@@ -598,7 +598,7 @@
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2514)</onleft>
 					<onright>SetFocus(9000)</onright>
-					<onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(2516).ListItem.Episode])</onclick>
+					<onclick>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.Property(dbid)])</onclick>
 					<top>321</top>
 					<left>1560</left>
 					<width>53</width>
@@ -654,7 +654,7 @@
 					<aspectratio align="center">stretch</aspectratio>
 					<animation effect="fade" start="10" end="100" time="6000">WindowOpen</animation>
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
-					<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog)">conditional</animation>
+					<animation effect="fade" start="60" end="100" time="5000" condition="true">conditional</animation>
 				</control>
 			</control>
 			<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSS</include>
@@ -3720,47 +3720,12 @@
 				<animation effect="slide" start="0,0" end="0,-210" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="300" condition="Skin.HasSetting(submode)">Conditional</animation>
 				<visible>Control.HasFocus(9000) + [SubString(Container(9000).ListItem.Property(id),movie) + Library.HasContent(Movies) 
-
-
-
-
-
 | SubString(Container(9000).ListItem.Property(id),tvshow) + Library.HasContent(TVShows) | SubString(Container(9000).ListItem.Property(id),concert) 
-
-
-
-
-
 + Library.HasContent(MusicVideos) | SubString(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) 
-
-
-
-
-
 | SubString(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) 
-
-
-
-
-
 | SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)] 
-
-
-
-
-
 + ![Player.HasMedia + [System.IdleTime(8) |  Skin.HasSetting(highermainmenu)] |  Skin.HasSetting(nohometotals) 
-
-
-
-
-
 | Skin.HasSetting(highertotals) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo 
-
-
-
-
-
 | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
 				<control type="image">
 					<left>0</left>
