@@ -818,6 +818,55 @@
 	<visible>!IsEmpty(Window(0).Property(Set.Movie.10.Art(discart)))</visible>
 	</control>
 	</control>
+	<control type="group">
+	<left>884</left>
+	<top>-60</top>
+	<control type="image"><!-- Nota -->
+	<left>0</left>
+	<top>0</top>
+	<width>118</width><!-- 302 -->
+	<height>25</height><!-- 64 -->
+	<info>ListItem.StarRating</info>
+	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+	<visible>!IsEmpty(ListItem.Rating)</visible>
+	</control>
+	<control type="label"><!-- Nota -->
+	<left>140</left>
+	<top>2</top>
+	<width>30</width>
+	<height>25</height>
+	<font>Font_23</font>
+	<label>$INFO[ListItem.Rating]</label>
+	<textcolor>FFFFFAF0</textcolor>	
+	<visible>!IsEmpty(ListItem.Rating)</visible>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>25</top>
+	<width>585</width>
+	<height>25</height>
+	<font>Font_21</font>
+	<label>$INFO[ListItem.Tagline]</label>
+	<textcolor>90FFFFFF</textcolor>
+	<scroll>true</scroll>
+	<scrollout>false</scrollout>
+	<shadowcolor>grey</shadowcolor>
+	<visible>![IsEmpty(ListItem.Tagline) | Skin.HasSetting(nomoviestagline)]</visible>
+	</control>
+	<control type="label">
+	<left>0</left>
+	<top>25</top>
+	<width>525</width>
+	<height>25</height>
+	<font>Font_21</font>
+	<label>$VAR[value_videotvshowtag]</label>
+	<textcolor>90FFFFFF</textcolor>
+	<scroll>true</scroll>
+	<scrollout>false</scrollout>
+	<shadowcolor>grey</shadowcolor>
+	<visible>!IsEmpty(Control.GetLabel(558))</visible>
+	</control>
+	</control>
 
 	<control type="group"><!-- VIDEO SEM ESTOJO -->
 	<include>Animation_Fade</include>
