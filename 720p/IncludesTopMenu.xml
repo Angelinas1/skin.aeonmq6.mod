@@ -3970,6 +3970,15 @@
 					<altlabel>$LOCALIZE[584]</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 				</control>
+				<control type="button" id="9145">
+					<include>TopMenuButton</include>
+					<label>Set color in Timeline EPG</label>
+					<label2>$VAR[value_genres_label]</label2>
+					<onclick condition="StringCompare(skin.string(genres_epg),no_color) | IsEmpty(skin.string(genres_epg))">Skin.SetString(genres_epg,number)</onclick>
+					<onclick condition="StringCompare(skin.string(genres_epg),number)">Skin.SetString(genres_epg,label)</onclick>
+					<onclick condition="StringCompare(skin.string(genres_epg),label)">Skin.SetString(genres_epg,no_color)</onclick>
+					<selected>Skin.HasSetting((genres_epg),number)</selected>
+				</control>
 				<control type="radiobutton" id="9231">
 					<include>TopMenuRadioButton</include>
 					<label>EPG Low list</label>

@@ -90,6 +90,7 @@
 	<posy>6</posy>
 	<width>48</width>
 	<height>48</height>
+	<aspectratio>keep</aspectratio>
 	<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 	</control>
 	<control type="image">

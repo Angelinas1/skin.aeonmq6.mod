@@ -105,6 +105,12 @@
 				<onfocus condition="StringCompare(skin.string(cdart_seconds),8000)">Skin.SetString(cdart_seconds,4000)</onfocus>
 				<onfocus condition="StringCompare(skin.string(cdart_seconds),4000)">Skin.SetString(cdart_seconds,2000)</onfocus>
 			</control>
+			<control type="button" id="4201">
+				<include>InvisibleButton</include>
+				<onfocus>SetFocus(1158)</onfocus>
+				<onfocus condition="StringCompare(skin.string(extra_seconds),3600000)">Skin.SetString(extra_seconds,10000)</onfocus>
+				<onfocus condition="StringCompare(skin.string(extra_seconds),10000)">Skin.SetString(extra_seconds,3600000)</onfocus>
+			</control>
 			<!--###############################################################################   BARRAS DE ROLAGEM   ###############################################################################-->
 			<control type="scrollbar" id="80">
 				<include>ScrollBar_Vertical</include>
@@ -302,6 +308,7 @@
 					<onclick>Skin.SetString(m_panel_layout,panel_layout_1)</onclick>
 					<onclick>Skin.SetString(tv_panel_layout,panel_layout_1)</onclick>
 					<onclick>Skin.SetString(extra_panel_layout,panel_layout_1)</onclick>
+					<onclick>Skin.SetString(extra_seconds,10000)</onclick>
 					<onclick>SetFocus(9100)</onclick>
 					<onclick>Notification($LOCALIZE[31656],$LOCALIZE[31237])</onclick>
 				</control>
@@ -348,7 +355,12 @@
 					<onclick>Skin.ToggleSetting(extra_extra)</onclick>
 					<selected>Skin.HasSetting(extra_extra)</selected>
 				</control>
-				<control type="radiobutton" id="1158">
+				<control type="button" id="1158">
+					<!-- Time changes for extra Widgets -->
+					<label>Time changes for extra widget  = $INFO[skin.string(extra_seconds)]</label>
+					<onclick>SetFocus(4201)</onclick>
+				</control>
+				<control type="radiobutton" id="1159">
 					<!-- Art dos Widgets cast -->
 					<label>Cast for widget</label>
 					<onclick>Skin.ToggleSetting(widget_cast)</onclick>

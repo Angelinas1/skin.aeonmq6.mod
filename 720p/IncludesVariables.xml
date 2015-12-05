@@ -5808,6 +5808,16 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Control.HasFocus(2517)">$INFO[Container(2517).ListItem.Plot]$INFO[Container(2517).ListItem.Property(Description)]</value>
 		<value condition="Control.HasFocus(2518)">$INFO[Container(2518).ListItem.Plot]$INFO[Container(2518).ListItem.Property(Description)]</value>
 	</variable>
+	<variable name="value_genres_epg">
+		<value condition="StringCompare(skin.string(genres_epg),number)">genres/$INFO[ListItem.Property(GenreType)].png</value>
+		<value condition="StringCompare(skin.string(genres_epg),label)">genres/$INFO[ListItem.Genre].png</value>
+		<value condition="StringCompare(skin.string(genres_epg),no_color)">genres/0.png</value>
+	</variable>	
+	<variable name="value_genres_label">
+		<value condition="StringCompare(skin.string(genres_epg),number)">PVR</value>
+		<value condition="StringCompare(skin.string(genres_epg),label)">EPG(label)</value>
+		<value condition="StringCompare(skin.string(genres_epg),no_color)">Empty</value>
+	</variable>
 	<variable name="value_weather_date">
 		<value condition="!IsEmpty(Weather.Plugin)">[COLOR=$VAR[value_headercolor]]$INFO[Weather.Temperature][/COLOR][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(Current.Condition)][COLOR=50FFFAF0] | [/COLOR]$INFO[System.Date][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</value>
 		<value condition="IsEmpty(Weather.Plugin)">[COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</value>

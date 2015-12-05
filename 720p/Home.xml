@@ -138,7 +138,7 @@
 					<height>350</height>
 					<orientation>vertical</orientation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2518)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2518)</autoscroll>
 					<scrolltime tween="elastic" easing="inout">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<animation type="fade" reversible="false">
@@ -191,7 +191,7 @@
 					<orientation>vertical</orientation>
 					<animation condition="true" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2510)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2510)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="50" height="360">
@@ -249,7 +249,7 @@
 					<orientation>vertical</orientation>
 					<animation condition="true" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2511)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2511)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="50" height="360">
@@ -311,7 +311,7 @@
 					<orientation>vertical</orientation>
 					<animation condition="true" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2512)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2512)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="50" height="440">
@@ -368,7 +368,7 @@
 					<height>306</height>
 					<orientation>vertical</orientation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2513)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2513)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="85" height="306">
@@ -447,7 +447,7 @@
 					<height>306</height>
 					<orientation>vertical</orientation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2517)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2517)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="85" height="306">
@@ -527,7 +527,7 @@
 					<orientation>vertical</orientation>
 					<animation condition="true" effect="rotatey" center="1010,390" start="-300" end="-300" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2514)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2514)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="53" height="145">
@@ -571,7 +571,7 @@
 					<orientation>vertical</orientation>
 					<animation condition="true" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2515)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2515)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="70" height="233">
@@ -606,7 +606,7 @@
 					<orientation>vertical</orientation>
 					<animation condition="true" effect="rotatey" center="1010,390" start="-300" end="-300" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
-					<autoscroll time="8000">!Control.HasFocus(2516)</autoscroll>
+					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(25168)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemlayout width="53" height="150">
