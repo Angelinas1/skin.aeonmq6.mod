@@ -1488,8 +1488,9 @@
 			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(55)">Conditional</animation>
 			<animation effect="slide" end="-360,-15" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
-			<visible>Control.IsVisible(51) |Control.IsVisible(55) | Control.IsVisible(57)</visible>
-		</control>
+			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(77)">Conditional</animation>
+			<visible>Control.IsVisible(51) |Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(77)</visible>
+		</control>			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 		<control type="image">
 			<left>-650</left>
 			<top>-40</top>

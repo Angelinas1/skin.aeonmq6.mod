@@ -166,7 +166,15 @@
 	<!-- Menu Content -->
 	<include condition="!Skin.HasSetting(videoosdfixedlist)">VideoOSDWrapList</include>
 	<include condition="Skin.HasSetting(videoosdfixedlist)">VideoOSDFixedList</include>
-
+    <control type="progress" id="23">
+    <description>ProgressbarCache</description>
+    <left>30</left>
+    <top>75</top>
+    <width>1220</width>
+    <height>10</height>
+	<info>Player.ProgressCache</info>
+	<midtexture>whitebar.png</midtexture>
+	</control>
 	<control type="progress">
 	<left>30</left>
 	<top>73</top>
@@ -174,6 +182,7 @@
 	<height>25</height>
 	<info>Player.Progress</info>
 	</control>
+
 	<control type="slider" id="888">
 	<left>39</left>
 	<top>75</top>
