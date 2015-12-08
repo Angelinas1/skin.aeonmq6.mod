@@ -48,7 +48,7 @@
 	<width>1100</width>
 	<height>40</height>
 	<font>Font_40</font>
-	<label>$INFO[Window.Property(actor.Title)]</label>
+	<label>$INFO[Window.Property(Title)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	</control>
@@ -58,7 +58,7 @@
 	<width>1100</width>
 	<height>25</height>
 	<font>Font_21</font>
-	<label>$INFO[Window.Property(actor.AlsoKnownAs)]</label>
+	<label>$INFO[Window.Property(AlsoKnownAs)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	</control>
@@ -85,7 +85,7 @@
 	<width>523</width>
 	<height>382</height>
 	<aspectratio align="left">keep</aspectratio>
-	<texture background="true">$INFO[Window.Property(actor.thumb)]</texture>
+	<texture background="true">$INFO[Window.Property(thumb)]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
 	</control>
@@ -96,7 +96,7 @@
 	<width>110</width>
 	<align>left</align>
 	<label>Daid in : </label>
-	<visible>!IsEmpty(Window.Property(actor.Deathday))</visible>
+	<visible>!IsEmpty(Window.Property(Deathday))</visible>
 	</control>
 	<control type="label"><!-- Age -->
 	<left>280</left>
@@ -106,7 +106,7 @@
 	<align>left</align>
 	<aligny>center</aligny>
 	<font>Font_24A</font>
-	<label>$INFO[Window.Property(actor.Age)]</label>
+	<label>$INFO[Window.Property(Age)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	</control>
 	<control type="list" id="49"><!-- Lista de botoes/info -->
@@ -200,33 +200,33 @@
 	<content>
 	<item>
 	<label>Also Known As: </label><!-- AlsoKnownAs -->
-	<label2>$INFO[Window.Property(actor.AlsoKnownAs)]</label2>
+	<label2>$INFO[Window.Property(AlsoKnownAs)]</label2>
 	<onclick>SendClick(2003,13)</onclick>
-	<visible>!IsEmpty(Window.Property(actor.AlsoKnownAs))</visible>
+	<visible>!IsEmpty(Window.Property(AlsoKnownAs))</visible>
 	</item>
 	<item>
 	<label>Birthday: </label><!-- Birthday -->
-	<label2>$INFO[Window.Property(actor.Birthday)]</label2>
+	<label2>$INFO[Window.Property(Birthday)]</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(actor.Birthday))</visible>
+	<visible>!IsEmpty(Window.Property(Birthday))</visible>
 	</item>
 	<item>
 	<label>Age: </label><!-- Age -->
-	<label2>$INFO[Window.Property(actor.Age)]</label2>
+	<label2>$INFO[Window.Property(Age)]</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(actor.Age)) + IsEmpty(Window.Property(actor.Deathday))</visible>
+	<visible>!IsEmpty(Window.Property(Age)) + IsEmpty(Window.Property(Deathday))</visible>
 	</item>
 	<item>
 	<label>NumItems: </label><!-- NumItems -->
 	<label2>$INFO[Container(150).NumItems]</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(actor.NumItems))</visible>
+	<visible>!IsEmpty(Window.Property(NumItems))</visible>
 	</item>
 	<item>
 	<label>Place Of Birth: </label><!-- PlaceOfBirth -->
-	<label2>$INFO[Window.Property(actor.PlaceOfBirth)]</label2>
+	<label2>$INFO[Window.Property(PlaceOfBirth)]</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(actor.PlaceOfBirth))</visible>
+	<visible>!IsEmpty(Window.Property(PlaceOfBirth))</visible>
 	</item>
 	<item>
 	<label>$ADDON[script.extendedinfo 32120]: </label><!-- Movies Role-->
@@ -254,9 +254,9 @@
 	</item>
 	<item>
 	<label>Deathday: </label><!-- Deathday -->
-	<label2>$INFO[Window.Property(actor.Deathday)]</label2>
+	<label2>$INFO[Window.Property(Deathday)]</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(actor.Deathday))</visible>
+	<visible>!IsEmpty(Window.Property(Deathday))</visible>
 	</item>
 
 	</content>
@@ -289,7 +289,7 @@
 	<height>133</height>
 	<align>justify</align>
 	<font>Font_18A</font>
-	<label fallback="No info available">$INFO[Window.Property(actor.Biography)]</label>
+	<label fallback="No info available">$INFO[Window.Property(Biography)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
 	</control>
@@ -1414,9 +1414,9 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<animation effect="rotate" start="0,0" end="-4.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(160)">Conditional</animation>
-	<visible>Control.HasFocus(160) + [Skin.HasSetting(artistzoom) | Control.HasFocus(160) + Skin.HasSetting(actorzoom)]</visible>
+	<visible>Control.HasFocus(160) + [Skin.HasSetting(artistzoom) | Control.HasFocus(160) + Skin.HasSetting(oom)]</visible>
 	</control>
 	<control type="image">
 	<left>430</left>
@@ -1445,7 +1445,7 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<visible>Skin.HasSetting(artistzoom)</visible>
 	</control>
 	</control>
@@ -1460,9 +1460,9 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<animation effect="rotate" start="0,0" end="-4.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(161)">Conditional</animation>
-	<visible>Control.HasFocus(161) + [Skin.HasSetting(artistzoom) | Control.HasFocus(161) + Skin.HasSetting(actorzoom)]</visible>
+	<visible>Control.HasFocus(161) + [Skin.HasSetting(artistzoom) | Control.HasFocus(161) + Skin.HasSetting(oom)]</visible>
 	</control>
 	<control type="image">
 	<left>430</left>
@@ -1491,7 +1491,7 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<visible>Skin.HasSetting(artistzoom)</visible>
 	</control>
 	</control>
@@ -1506,9 +1506,9 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<animation effect="rotate" start="0,0" end="-4.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(162)">Conditional</animation>
-	<visible>Control.HasFocus(162) + [Skin.HasSetting(artistzoom) | Control.HasFocus(162) + Skin.HasSetting(actorzoom)]</visible>
+	<visible>Control.HasFocus(162) + [Skin.HasSetting(artistzoom) | Control.HasFocus(162) + Skin.HasSetting(oom)]</visible>
 	</control>
 	<control type="image">
 	<left>430</left>
@@ -1537,7 +1537,7 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<visible>Skin.HasSetting(artistzoom)</visible>
 	</control>
 	</control>
@@ -1552,9 +1552,9 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<animation effect="rotate" start="0,0" end="-4.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(163)">Conditional</animation>
-	<visible>Control.HasFocus(163) + [Skin.HasSetting(artistzoom) | Control.HasFocus(163) + Skin.HasSetting(actorzoom)]</visible>
+	<visible>Control.HasFocus(163) + [Skin.HasSetting(artistzoom) | Control.HasFocus(163) + Skin.HasSetting(oom)]</visible>
 	</control>
 	<control type="image">
 	<left>430</left>
@@ -1583,7 +1583,7 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<visible>Skin.HasSetting(artistzoom)</visible>
 	</control>
 	</control>
@@ -1598,9 +1598,9 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<animation effect="rotate" start="0,0" end="-4.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(164)">Conditional</animation>
-	<visible>Control.HasFocus(164) + [Skin.HasSetting(artistzoom) | Control.HasFocus(164) + Skin.HasSetting(actorzoom)]</visible>
+	<visible>Control.HasFocus(164) + [Skin.HasSetting(artistzoom) | Control.HasFocus(164) + Skin.HasSetting(oom)]</visible>
 	</control>
 	<control type="image">
 	<left>430</left>
@@ -1629,7 +1629,7 @@
 	<width>480</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<visible>Skin.HasSetting(artistzoom)</visible>
 	</control>
 	</control>
@@ -1644,9 +1644,9 @@
 	<width>980</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<animation effect="rotate" start="0,0" end="-6.0.0" center="auto" delay="1000" easing="out" tween="back" time="600" condition="Control.HasFocus(165)">Conditional</animation>
-	<visible>Control.HasFocus(165) + [Skin.HasSetting(artistzoom) | Control.HasFocus(165) + Skin.HasSetting(actorzoom)]</visible>
+	<visible>Control.HasFocus(165) + [Skin.HasSetting(artistzoom) | Control.HasFocus(165) + Skin.HasSetting(oom)]</visible>
 	</control>
 	<control type="image">
 	<left>190</left>
@@ -1663,7 +1663,7 @@
 	<width>980</width>
 	<height>700</height>
 	<align>center</align>
-	<texture>actor_border.png</texture>
+	<texture>border.png</texture>
 	<visible>Skin.HasSetting(artistzoom)</visible>
 	</control>
 	</control>

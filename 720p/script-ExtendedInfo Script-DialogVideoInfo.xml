@@ -53,7 +53,7 @@
 	<width>1100</width>
 	<height>40</height>
 	<font>Font_40</font>
-	<label>$INFO[Window.Property(movie.Title)]</label>
+	<label>$INFO[Window.Property(Title)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	</control>
@@ -64,7 +64,7 @@
 	<height min="20" max="70">auto</height>
 	<wrapmultiline>true</wrapmultiline>
 	<font>Font_101</font>
-	<label>[B]$INFO[Window.Property(movie.Title)][/B]</label>
+	<label>[B]$INFO[Window.Property(Title)][/B]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	</control>
 	<control type="label">
@@ -73,7 +73,7 @@
 	<width>1100</width>
 	<height>25</height>
 	<font>Font_21</font>
-	<label>$INFO[Window.Property(movie.tagline)]</label>
+	<label>$INFO[Window.Property(tagline)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	</control>
@@ -97,7 +97,7 @@
 	<control type="image">
 	<width>234</width>
 	<height>234</height>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(movie.discart)]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(discart)]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
@@ -106,19 +106,19 @@
 	<control type="image">
 	<width>234</width>
 	<height>234</height>
-	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Window.Property(movie.Title)]&type=discart</texture>
+	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Window.Property(Title)]&type=discart</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 	<include>Animation_ViewsCDart</include>
-	<visible>IsEmpty(Window.Property(movie.discart)) + !Skin.HasSetting(sextendsett_fakedisc)</visible>
+	<visible>IsEmpty(Window.Property(discart)) + !Skin.HasSetting(sextendsett_fakedisc)</visible>
 	</control>
 	<control type="image">
 	<visible>Skin.HasSetting(sextendsett_fakedisc)</visible>
 	<width>234</width>
 	<height>234</height>
-	<visible>IsEmpty(Window.Property(movie.discart))</visible>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(movie.Poster)]</texture>
+	<visible>IsEmpty(Window.Property(discart))</visible>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(Poster)]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="top">stretch</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
@@ -143,7 +143,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<font>Font_18A</font>
-	<label>[B]$INFO[Window.Property(movie.rating)][/B]</label>
+	<label>[B]$INFO[Window.Property(rating)][/B]</label>
 	<textcolor>FF101010</textcolor>
 	</control>
 	<control type="image">
@@ -179,7 +179,7 @@
 	<height>105</height>
 	<width>120</width>
 	<aspectratio align="bottom">keep</aspectratio>
-	<texture>$INFO[Window.Property(movie.Characterart)]</texture>
+	<texture>$INFO[Window.Property(Characterart)]</texture>
 	</control>
 	<control type="image"><!-- Country -->
 	<left>0</left>
@@ -199,7 +199,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
-	<texture>$INFO[Window.Property(movie.Logo)]</texture>
+	<texture>$INFO[Window.Property(Logo)]</texture>
 	</control>
 	<control type="radiobutton" id="445">
 	<left>65</left>
@@ -231,7 +231,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
-	<texture>$INFO[Window.Property(movie.Fanart)]</texture>
+	<texture>$INFO[Window.Property(Fanart)]</texture>
 	<visible>!Skin.HasSetting(sextendsett_artlogo)</visible>
 	</control>
 	<control type="image"><!-- Studio -->
@@ -243,7 +243,7 @@
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
 	<texture>$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
-	<visible>IsEmpty(Window.Property(movie.Logo)) + Skin.HasSetting(sextendsett_artlogo)</visible>
+	<visible>IsEmpty(Window.Property(Logo)) + Skin.HasSetting(sextendsett_artlogo)</visible>
 	</control>
 	<control type="image"><!-- Logo -->
 	<left>550</left>
@@ -252,7 +252,7 @@
 	<width>160</width>
 	<aspectratio>keep</aspectratio>
 	<texture background="true">$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
-	<visible>!IsEmpty(Window.Property(movie.Logo)) | !Skin.HasSetting(sextendsett_artlogo)</visible>
+	<visible>!IsEmpty(Window.Property(Logo)) | !Skin.HasSetting(sextendsett_artlogo)</visible>
 	</control>
 	<control type="image"><!-- Banner -->
 	<left>735</left>
@@ -262,7 +262,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
-	<texture>$INFO[Window.Property(movie.banner)]</texture>
+	<texture>$INFO[Window.Property(banner)]</texture>
 	</control>
 	<control type="image"><!-- ClearArt -->
 	<left>765</left>
@@ -270,7 +270,7 @@
 	<height>145</height>
 	<width>160</width>
 	<aspectratio align="bottom">keep</aspectratio>
-	<texture>$INFO[Window.Property(movie.Clearart)]</texture>
+	<texture>$INFO[Window.Property(Clearart)]</texture>
 	</control>
 	<control type="image"><!-- ClearArt -->
 	<left>765</left>
@@ -288,7 +288,7 @@
 	<align>left</align>
 	<aligny>center</aligny>
 	<font>Font_24A</font>
-	<label>$INFO[Window.Property(movie.year)]</label>
+	<label>$INFO[Window.Property(year)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	</control>
 	<control type="label"><!-- OMDB -->
@@ -300,7 +300,7 @@
 	<aligny>center</aligny>
 	<scroll>true</scroll>
 	<font>Font_18A</font>
-	<label>$INFO[Window.Property(movie.omdb.tomatoConsensus)]</label>
+	<label>$INFO[Window.Property(omdb.tomatoConsensus)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	</control>
 	<control type="label"><!-- Genre -->
@@ -311,7 +311,7 @@
 	<align>left</align>
 	<aligny>center</aligny>
 	<font>Font_18A</font>
-	<label>$INFO[Window.Property(movie.Genre)]</label>
+	<label>$INFO[Window.Property(Genre)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
@@ -407,26 +407,26 @@
 	<content>
 	<item>
 	<label>Path: </label><!-- Path -->
-	<label2>$INFO[Window.Property(movie.file)]</label2>
-	<visible>!IsEmpty(Window.Property(movie.file))</visible>
-	<onclick>PlayMedia($ESCINFO[Window.Property(movie.file)])</onclick>
+	<label2>$INFO[Window.Property(file)]</label2>
+	<visible>!IsEmpty(Window.Property(file))</visible>
+	<onclick>PlayMedia($ESCINFO[Window.Property(file)])</onclick>
 	</item>
 	<item>
 	<label>IMDB/TMDB Number </label><!-- IMDB Number -->
-	<label2>$INFO[Window.Property(movie.imdb_id)] / $INFO[Window.Property(movie.ID)]</label2>
-	<onclick>RunScript(script.cinemavision,movieids=$INFO[Window.Property(movie.imdb_id)])</onclick>
+	<label2>$INFO[Window.Property(imdb_id)] / $INFO[Window.Property(ID)]</label2>
+	<onclick>RunScript(script.cinemavision,ds=$INFO[Window.Property(imdb_id)])</onclick>
 	</item>
 	<item>
 	<label>$LOCALIZE[20339]/$LOCALIZE[20417]</label><!-- Director/Written -->
-	<label2>$INFO[Window.Property(movie.director)]/$INFO[Window.Property(movie.writer)]</label2>
+	<label2>$INFO[Window.Property(director)]/$INFO[Window.Property(writer)]</label2>
 	<onclick>SetFocus(149,5)</onclick>
-	<visible>!IsEmpty(Window.Property(movie.director))</visible>
+	<visible>!IsEmpty(Window.Property(director))</visible>
 	</item>
 	<item>
 	<label>Awards: </label><!-- Awards -->
-	<label2>$INFO[Window.Property(movie.omdb.Awards),,[CR]]$INFO[Window.Property(movie.omdb.tomatoConsensus),,[CR]]</label2>
+	<label2>$INFO[Window.Property(omdb.Awards),,[CR]]$INFO[Window.Property(omdb.tomatoConsensus),,[CR]]</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(movie.omdb.Awards))</visible>
+	<visible>!IsEmpty(Window.Property(omdb.Awards))</visible>
 	</item>
 	<item>
 	<label>$LOCALIZE[572]</label><!-- Studios -->
@@ -435,26 +435,26 @@
 	</item>
 	<item>
 	<label>$LOCALIZE[180]</label><!-- Duration -->
-	<label2>$INFO[Window.Property(movie.Duration)] min</label2>
+	<label2>$INFO[Window.Property(Duration)] min</label2>
 	<onclick>SetFocus(149,11)</onclick>
 	</item>
 	<item>
 	<label>Status</label><!-- Status -->
-	<label2>$INFO[Window.Property(movie.Status)]  $INFO[Window.Property(movie.release_date)]</label2>
+	<label2>$INFO[Window.Property(Status)]  $INFO[Window.Property(release_date)]</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(movie.Status))</visible>
+	<visible>!IsEmpty(Window.Property(Status))</visible>
 	</item>
 	<item>
 	<label>Top250: </label><!-- Top250 -->
-	<label2>$INFO[Window.Property(movie.Top250)]</label2>
-	<visible>!IsEmpty(Window.Property(movie.Top250))</visible>
+	<label2>$INFO[Window.Property(Top250)]</label2>
+	<visible>!IsEmpty(Window.Property(Top250))</visible>
 	<onclick>noop</onclick>
 	</item>
 	<item>
 	<label>Budget/Revenue: </label><!-- Budget -->
-	<label2>$INFO[Window.Property(movie.Budget)] $ / $INFO[Window.Property(movie.Revenue)] $</label2>
+	<label2>$INFO[Window.Property(Budget)] $ / $INFO[Window.Property(Revenue)] $</label2>
 	<onclick>noop</onclick>
-	<visible>!IsEmpty(Window.Property(movie.Budget))</visible>
+	<visible>!IsEmpty(Window.Property(Budget))</visible>
 	</item>
 	</content>
 	</control>
@@ -486,10 +486,10 @@
 	<height>133</height>
 	<align>justify</align>
 	<font>Font_18A</font>
-	<label>$INFO[Window.Property(movie.Plot)]</label>
+	<label>$INFO[Window.Property(Plot)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
-	<visible>IsEmpty(Window.Property(movie.banner))</visible>
+	<visible>IsEmpty(Window.Property(banner))</visible>
 	</control>
 	<control type="textbox"><!-- Plot -->
 	<left>30</left>
@@ -498,10 +498,10 @@
 	<height>133</height>
 	<align>justify</align>
 	<font>Font_18A</font>
-	<label>$INFO[Window.Property(movie.Plot)]</label>
+	<label>$INFO[Window.Property(Plot)]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
-	<visible>!IsEmpty(Window.Property(movie.banner))</visible>
+	<visible>!IsEmpty(Window.Property(banner))</visible>
 	</control>
 	<control type="image">
 	<left>720</left>
@@ -524,7 +524,7 @@
 	<width>523</width>
 	<height>382</height>
 	<aspectratio align="left">keep</aspectratio>
-	<texture background="true">$INFO[Window.Property(movie.Poster)]</texture>
+	<texture background="true">$INFO[Window.Property(Poster)]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
 	<visible>!Skin.HasSetting(sextendsett_case)</visible>
@@ -537,7 +537,7 @@
 	<width>238</width>
 	<height>340</height>
 	<aspectratio>stretch</aspectratio>
-	<texture background="true">$INFO[Window.Property(movie.Poster)]</texture>
+	<texture background="true">$INFO[Window.Property(Poster)]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	</control>
 	<control type="image"><!-- Case -->
@@ -558,7 +558,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio scalediffuse="true">keep</aspectratio>
-	<texture>$INFO[Window.Property(movie.VideoCodec),flags/casecodec/,.png]</texture>
+	<texture>$INFO[Window.Property(VideoCodec),flags/casecodec/,.png]</texture>
 	</control>
 	<control type="label"><!-- Logo DB extended script -->
 	<left>978</left>
@@ -568,7 +568,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<label>$INFO[Container(850).ListItem.Title]</label>
-	<visible>IsEmpty(Window.Property(movie.VideoCodec))</visible>
+	<visible>IsEmpty(Window.Property(VideoCodec))</visible>
 	</control>
 	</control>
 	<control type="image">
@@ -631,113 +631,113 @@
 	<height>45</height>
 	<include>FlagImage</include>
 	<texture>$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
-	<visible>!IsEmpty(Window.Property(movie.Studio))</visible>
+	<visible>!IsEmpty(Window.Property(Studio))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.Studio))</visible>
+	<visible>!IsEmpty(Window.Property(Studio))</visible>
 	</control>
 	<control type="image"><!-- Mpaa  -->
 	<include>FlagImage</include>
 	<texture>$VAR[value_mpaa_sextra]</texture>
-	<visible>!IsEmpty(Window.Property(movie.mpaa))</visible>
+	<visible>!IsEmpty(Window.Property(mpaa))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.mpaa))</visible>
+	<visible>!IsEmpty(Window.Property(mpaa))</visible>
 	</control>	
 	<control type="image"><!-- Codec de video  -->
 	<include>FlagImage</include>
-	<texture>$INFO[Window.Property(movie.VideoCodec),flags/casecodec/,.png]</texture>
-	<visible>!IsEmpty(Window.Property(movie.VideoCodec))</visible>
+	<texture>$INFO[Window.Property(VideoCodec),flags/casecodec/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(VideoCodec))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.VideoCodec))</visible>
+	<visible>!IsEmpty(Window.Property(VideoCodec))</visible>
 	</control>
 	<control type="image"><!-- Resolucao  -->
 	<include>FlagImage</include>
-	<texture>$INFO[Window.Property(movie.VideoResolution),flags/resolution/,.png]</texture>
-	<visible>!IsEmpty(Window.Property(movie.VideoResolution))</visible>
+	<texture>$INFO[Window.Property(VideoResolution),flags/resolution/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(VideoResolution))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.VideoResolution))</visible>
+	<visible>!IsEmpty(Window.Property(VideoResolution))</visible>
 	</control>
 	<control type="image"><!-- Codec de audio  -->
 	<include>FlagImage</include>
-	<texture>$INFO[Window.Property(movie.AudioCodec),flags/audiocodec/,.png]</texture>
-	<visible>!IsEmpty(Window.Property(movie.AudioCodec))</visible>
+	<texture>$INFO[Window.Property(AudioCodec),flags/audiocodec/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(AudioCodec))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.AudioCodec))</visible>
+	<visible>!IsEmpty(Window.Property(AudioCodec))</visible>
 	</control>
 	<control type="image"><!-- Aspecto  -->
 	<include>FlagLabel</include>
-	<texture>$INFO[Window.Property(movie.VideoAspect),flags/aspectratio/,.png]</texture>
-	<visible>!IsEmpty(Window.Property(movie.VideoAspect))</visible>
+	<texture>$INFO[Window.Property(VideoAspect),flags/aspectratio/,.png]</texture>
+	<visible>!IsEmpty(Window.Property(VideoAspect))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.VideoAspect))</visible>
+	<visible>!IsEmpty(Window.Property(VideoAspect))</visible>
 	</control>
     <control type="image"><!-- Channels -->
     <include>FlagImage</include>
-    <texture>$INFO[Window.Property(movie.AudioChannels),flags/audiochannels/,.png]</texture>
-    <visible>!IsEmpty(Window.Property(movie.AudioChannels))</visible>
+    <texture>$INFO[Window.Property(AudioChannels),flags/audiochannels/,.png]</texture>
+    <visible>!IsEmpty(Window.Property(AudioChannels))</visible>
     </control>
 	<control type="image">
 	<include>FlagSeparator</include>
-    <visible>!IsEmpty(Window.Property(movie.AudioChannels))</visible>
+    <visible>!IsEmpty(Window.Property(AudioChannels))</visible>
 	</control>
 	<control type="label"><!-- language  -->
 	<width>45</width>
 	<height>45</height>
 	<top>-10</top>
 	<font>Font_18</font>
-	<label>$INFO[Window.Property(movie.AudioLanguage.1)]</label>
-	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.1))</visible>
+	<label>$INFO[Window.Property(AudioLanguage.1)]</label>
+	<visible>!IsEmpty(Window.Property(AudioLanguage.1))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.1))</visible>
+	<visible>!IsEmpty(Window.Property(AudioLanguage.1))</visible>
 	</control>
 	<control type="label"><!-- language 2 -->
 	<width>45</width>
 	<height>45</height>
 	<top>-10</top>
 	<font>Font_18</font>
-	<label>$INFO[Window.Property(movie.AudioLanguage.2)]</label>
-	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.2))</visible>
+	<label>$INFO[Window.Property(AudioLanguage.2)]</label>
+	<visible>!IsEmpty(Window.Property(AudioLanguage.2))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.AudioLanguage.2))</visible>
+	<visible>!IsEmpty(Window.Property(AudioLanguage.2))</visible>
 	</control>
 	<control type="label"><!-- SubtitleLanguage  -->
 	<width>45</width>
 	<height>45</height>
 	<top>-10</top>
 	<font>Font_18</font>
-	<label>$INFO[Window.Property(movie.SubtitleLanguage.1)]</label>
-	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.1))</visible>
+	<label>$INFO[Window.Property(SubtitleLanguage.1)]</label>
+	<visible>!IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.1))</visible>
+	<visible>!IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
 	</control>
 	<control type="label"><!-- SubtitleLanguage 2 -->
 	<width>45</width>
 	<height>45</height>
 	<top>-10</top>
 	<font>Font_18</font>
-	<label>$INFO[Window.Property(movie.SubtitleLanguage.2)]</label>
-	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.2))</visible>
+	<label>$INFO[Window.Property(SubtitleLanguage.2)]</label>
+	<visible>!IsEmpty(Window.Property(SubtitleLanguage.2))</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(Window.Property(movie.SubtitleLanguage.2))</visible>
+	<visible>!IsEmpty(Window.Property(SubtitleLanguage.2))</visible>
 	</control>
 	</control>
 	<control type="image">
@@ -2120,9 +2120,9 @@
 	</item>
 	<item id="23"><!-- Play Media -->
 	<label>31700</label>
-	<onclick>PlayMedia($INFO[Window.Property(movie.file)])</onclick>
+	<onclick>PlayMedia($INFO[Window.Property(file)])</onclick>
 	<onclick>Dialog.Close(all,true)</onclick>
-	<visible>!IsEmpty(Window.Property(movie.file))</visible>
+	<visible>!IsEmpty(Window.Property(file))</visible>
 	</item>
 	<item id="24"><!-- Settings -->
 	<label>Settings</label>
@@ -2130,7 +2130,7 @@
 	</item>
 	<item id="25"><!-- CouchPotato -->
 	<label>CouchPotato</label>
-	<onclick>RunPlugin(plugin://plugin.video.couchpotato_manager/movies/add?imdb_id=$INFO[Window.Property(movie.imdb_id)])</onclick>
+	<onclick>RunPlugin(plugin://plugin.video.couchpotato_manager//add?imdb_id=$INFO[Window.Property(imdb_id)])</onclick>
 	</item>
 	<item id="12"><!-- Sets -->
 	<label>31820</label>
@@ -2600,7 +2600,7 @@
 	<width>1280</width>
 	<align>center</align>
 	<aligny>center</aligny>
-	<label>$INFO[Window.Property(movie.Title)]</label>
+	<label>$INFO[Window.Property(Title)]</label>
 	<font>Font_24</font>
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
@@ -2792,7 +2792,7 @@
 	<width>1280</width>
 	<align>center</align>
 	<aligny>center</aligny>
-	<label>$INFO[Window.Property(movie.Title)]</label>
+	<label>$INFO[Window.Property(Title)]</label>
 	<font>Font_24</font>
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
