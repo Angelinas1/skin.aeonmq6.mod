@@ -2302,7 +2302,6 @@
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvepg)</onclick>
 	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVGuide))</onclick>
 	<include>DefaultReset</include>
-	<visible>Skin.HasSetting(submode)</visible>
 	</item>
 	<item>
 	<label>$LOCALIZE[19024]</label><!-- Estacoes de Radio --><!-- 6524 -->

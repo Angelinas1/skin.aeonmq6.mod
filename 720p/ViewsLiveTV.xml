@@ -426,7 +426,7 @@
 	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
     <control type="image">
 	<animation effect="slide" time="400" start="0,0" end="0,400" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
-	<left>180</left>
+	<left>250</left>
 	<top>440</top>
 	<width>1100</width>
 	<height>265</height>
@@ -634,14 +634,14 @@
 	<animation effect="slide" time="400" start="0,0" end="0,400" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
 	<left>0</left>
 	<top>440</top>
-	<width>180</width>
+	<width>250</width>
 	<height>265</height>
 	<texture>grey.png</texture>
 	<colordiffuse>90FFFFFF</colordiffuse>
 	</control>
 	<control type="image">
 	<animation effect="slide" time="400" start="0,0" end="0,400" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
-	<left>178</left>
+	<left>248</left>
 	<top>440</top>
 	<width>2</width>
 	<height>265</height>
@@ -651,7 +651,7 @@
 	<animation effect="slide" time="400" start="0,0" end="0,400" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
 	<left>0</left>
 	<top>440</top>
-	<width>240</width>
+	<width>250</width>
 	<height>25</height>
 	<texture>grey.png</texture>
 	<colordiffuse>E4101010</colordiffuse>
@@ -662,7 +662,7 @@
 	<left>0</left>
 	<top>440</top>
 	<width>1280</width>
-	<height>266</height>
+	<height>306</height>
 	<onleft>9000</onleft>
 	<onright>9000</onright>
 	<onup>9000</onup>
@@ -675,7 +675,7 @@
 	<control type="image">
 	<left>0</left>
 	<top>0</top>
-	<width>154</width>
+	<width>250</width>
 	<height>25</height>
 	<texture>grey.png</texture>
 	<colordiffuse>50101010</colordiffuse>
@@ -692,7 +692,7 @@
 	<textcolor>$VAR[value_headercolor]</textcolor>
 	</control>
 	</rulerlayout>
-	<channellayout height="40" width="180"><!--Name/Logo list-->
+	<channellayout height="40" width="248"><!--Name/Logo list-->
 	<control type="label" id="197"><!--Name in list-->
 	<visible>Skin.HasSetting(epglowlistname)</visible>
 	<include>SettingsLabel</include>
@@ -709,17 +709,17 @@
 	<control type="image">
 	<left>0</left>
 	<top>0</top>
-	<width>180</width>
+	<width>250</width>
 	<height>3</height>
 	<texture>divider.png</texture>
 	<colordiffuse>90FFFFFF</colordiffuse>
 	</control>
 	</channellayout>
-	<focusedchannellayout height="40" width="180"><!--Name/Logo list-->
+	<focusedchannellayout height="40" width="250"><!--Name/Logo list-->
 	<control type="image" id="1">
 	<left>0</left>
 	<top>0</top>
-	<width>178</width>
+	<width>248</width>
 	<height>40</height>
 	<texture>settings_button.png</texture>
 	<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(10)">conditional</animation>

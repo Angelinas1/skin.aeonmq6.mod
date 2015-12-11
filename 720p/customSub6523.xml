@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="6523" type="dialog"><!-- Aeon MQ 6 --><!-- EPG TV -->
+	<defaultcontrol>-</defaultcontrol>
+	<include>SubMenuCommon</include>
+	<controls>
+	<control type="group">
+	<include condition="Window.IsVisible(6000)">MenuCustom</include>
+	<control type="group"><!-- default group -->
+	<include>Animation_SubMenu</include>
+	<include condition="Window.IsVisible(6000)">SubmenuGoTo</include>
+	<include condition="Window.IsVisible(Home)">SubMenuDefault</include>
+	<control type="panel" id="9000">
+	<include condition="Window.IsVisible(6000)">SubmenuVList</include>
+	<include condition="Window.IsVisible(Home)">SubmenuHList</include>
+	<content>
+	<item>
+	<label fallback="31014">$VAR[value_menu52041.label]</label>
+	<property name="condition">$INFO[skin.string(menu52041.visible)]</property>
+	<property name="name">menu52041</property>
+	<property name="id">$INFO[skin.string(menu52041.master)]</property>
+	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6523)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu52041.action])</onclick>
+	<visible>![IsEmpty(skin.string(menu52041.master)) | SubString(skin.string(menu52041.visible),off)] | Window.IsVisible(6000)</visible>
+	</item>
+	<item>
+	<label fallback="31014">$VAR[value_menu52042.label]</label>
+	<property name="condition">$INFO[skin.string(menu52042.visible)]</property>
+	<property name="name">menu52042</property>
+	<property name="id">$INFO[skin.string(menu52042.master)]</property>
+	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6523)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu52042.action])</onclick>
+	<visible>![IsEmpty(skin.string(menu52042.master)) | SubString(skin.string(menu52042.visible),off)] | Window.IsVisible(6000)</visible>
+	</item>
+	<item>
+	<label fallback="31014">$VAR[value_menu52043.label]</label>
+	<property name="condition">$INFO[skin.string(menu52043.visible)]</property>
+	<property name="name">menu52043</property>
+	<property name="id">$INFO[skin.string(menu52043.master)]</property>
+	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6523)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu52043.action])</onclick>
+	<visible>![IsEmpty(skin.string(menu52043.master)) | SubString(skin.string(menu52043.visible),off)] | Window.IsVisible(6000)</visible>
+	</item>
+	<item>
+	<label fallback="31014">$VAR[value_menu52044.label]</label>
+	<property name="condition">$INFO[skin.string(menu52044.visible)]</property>
+	<property name="name">menu52044</property>
+	<property name="id">$INFO[skin.string(menu52044.master)]</property>
+	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6523)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu52044.action])</onclick>
+	<visible>![IsEmpty(skin.string(menu52044.master)) | SubString(skin.string(menu52044.visible),off)] | Window.IsVisible(6000)</visible>
+	</item>
+	<item>
+	<label fallback="31014">$VAR[value_menu52045.label]</label>
+	<property name="condition">$INFO[skin.string(menu52045.visible)]</property>
+	<property name="name">menu52045</property>
+	<property name="id">$INFO[skin.string(menu52045.master)]</property>
+	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6523)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu52045.action])</onclick>
+	<visible>![IsEmpty(skin.string(menu52045.master)) | SubString(skin.string(menu52045.visible),off)] | Window.IsVisible(6000)</visible>
+	</item>
+	</content>
+	</control>
+	<include condition="Window.IsVisible(6000)">Glass</include>
+	</control>
+	</control>
+	</controls>
+</window>

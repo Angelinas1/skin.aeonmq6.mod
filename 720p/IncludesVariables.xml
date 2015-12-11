@@ -16,7 +16,7 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),music)">6004</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),livetv)">6005</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),livetvchannels)">6522</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(subid),livetvepg)">6013</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(subid),livetvepg)">6523</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),radio)">6524</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),favourites)">6006</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(subid),games)">6007</value>
