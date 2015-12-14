@@ -18457,6 +18457,197 @@
 	<value condition="StringCompare(skin.string(menu52065.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52065.path)],return)</value>
 	<value condition="StringCompare(skin.string(menu52065.master),favs)">$INFO[skin.string(menu52065.path)]</value>
 	<value condition="StringCompare(skin.string(menu52065.master),addons)">RunAddon($INFO[skin.string(menu52065.path)])</value>
+	</variable>
+	<!--......-->
+	<variable name="value_menu52071.label">
+	<value condition="IsEmpty(skin.string(menu52071.label)) + !StringCompare(skin.string(menu52071.master),addons)">$INFO[skin.string(menu52071.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52071.label)) + StringCompare(skin.string(menu52071.master),addons)">$INFO[system.addontitle(skin.string(menu52071.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52071.label))">$INFO[skin.string(menu52071.label)]</value>
+	</variable>
+	<variable name="value_menu52071.action">
+	<value condition="![StringCompare(skin.string(menu52071.master),vplaylist) | StringCompare(skin.string(menu52071.master),aplaylist) | StringCompare(skin.string(menu52071.master),vnodes) | StringCompare(skin.string(menu52071.master),favs) | StringCompare(skin.string(menu52071.master),addons)]">$INFO[skin.string(menu52071.action)]</value>
+	<value condition="StringCompare(skin.string(menu52071.master),vplaylist) | StringCompare(skin.string(menu52071.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52071.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52071.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52071.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52071.master),favs)">$INFO[skin.string(menu52071.path)]</value>
+	<value condition="StringCompare(skin.string(menu52071.master),addons)">RunAddon($INFO[skin.string(menu52071.path)])</value>
+	</variable>
+	<variable name="value_menu52072.label">
+	<value condition="IsEmpty(skin.string(menu52072.label)) + !StringCompare(skin.string(menu52072.master),addons)">$INFO[skin.string(menu52072.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52072.label)) + StringCompare(skin.string(menu52072.master),addons)">$INFO[system.addontitle(skin.string(menu52072.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52072.label))">$INFO[skin.string(menu52072.label)]</value>
+	</variable>
+	<variable name="value_menu52072.action">
+	<value condition="![StringCompare(skin.string(menu52072.master),vplaylist) | StringCompare(skin.string(menu52072.master),aplaylist) | StringCompare(skin.string(menu52072.master),vnodes) | StringCompare(skin.string(menu52072.master),favs) | StringCompare(skin.string(menu52072.master),addons)]">$INFO[skin.string(menu52072.action)]</value>
+	<value condition="StringCompare(skin.string(menu52072.master),vplaylist) | StringCompare(skin.string(menu52072.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52072.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52072.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52072.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52072.master),favs)">$INFO[skin.string(menu52072.path)]</value>
+	<value condition="StringCompare(skin.string(menu52072.master),addons)">RunAddon($INFO[skin.string(menu52072.path)])</value>
+	</variable>
+	<variable name="value_menu52073.label">
+	<value condition="IsEmpty(skin.string(menu52073.label)) + !StringCompare(skin.string(menu52073.master),addons)">$INFO[skin.string(menu52073.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52073.label)) + StringCompare(skin.string(menu52073.master),addons)">$INFO[system.addontitle(skin.string(menu52073.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52073.label))">$INFO[skin.string(menu52073.label)]</value>
+	</variable>
+	<variable name="value_menu52073.action">
+	<value condition="![StringCompare(skin.string(menu52073.master),vplaylist) | StringCompare(skin.string(menu52073.master),aplaylist) | StringCompare(skin.string(menu52073.master),vnodes) | StringCompare(skin.string(menu52073.master),favs) | StringCompare(skin.string(menu52073.master),addons)]">$INFO[skin.string(menu52073.action)]</value>
+	<value condition="StringCompare(skin.string(menu52073.master),vplaylist) | StringCompare(skin.string(menu52073.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52073.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52073.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52073.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52073.master),favs)">$INFO[skin.string(menu52073.path)]</value>
+	<value condition="StringCompare(skin.string(menu52073.master),addons)">RunAddon($INFO[skin.string(menu52073.path)])</value>
+	</variable>
+	<variable name="value_menu52074.label">
+	<value condition="IsEmpty(skin.string(menu52074.label)) + !StringCompare(skin.string(menu52074.master),addons)">$INFO[skin.string(menu52074.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52074.label)) + StringCompare(skin.string(menu52074.master),addons)">$INFO[system.addontitle(skin.string(menu52074.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52074.label))">$INFO[skin.string(menu52074.label)]</value>
+	</variable>
+	<variable name="value_menu52074.action">
+	<value condition="![StringCompare(skin.string(menu52074.master),vplaylist) | StringCompare(skin.string(menu52074.master),aplaylist) | StringCompare(skin.string(menu52074.master),vnodes) | StringCompare(skin.string(menu52074.master),favs) | StringCompare(skin.string(menu52074.master),addons)]">$INFO[skin.string(menu52074.action)]</value>
+	<value condition="StringCompare(skin.string(menu52074.master),vplaylist) | StringCompare(skin.string(menu52074.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52074.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52074.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52074.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52074.master),favs)">$INFO[skin.string(menu52074.path)]</value>
+	<value condition="StringCompare(skin.string(menu52074.master),addons)">RunAddon($INFO[skin.string(menu52074.path)])</value>
+	</variable>
+	<variable name="value_menu52075.label">
+	<value condition="IsEmpty(skin.string(menu52075.label)) + !StringCompare(skin.string(menu52075.master),addons)">$INFO[skin.string(menu52075.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52075.label)) + StringCompare(skin.string(menu52075.master),addons)">$INFO[system.addontitle(skin.string(menu52075.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52075.label))">$INFO[skin.string(menu52075.label)]</value>
+	</variable>
+	<variable name="value_menu52075.action">
+	<value condition="![StringCompare(skin.string(menu52075.master),vplaylist) | StringCompare(skin.string(menu52075.master),aplaylist) | StringCompare(skin.string(menu52075.master),vnodes) | StringCompare(skin.string(menu52075.master),favs) | StringCompare(skin.string(menu52075.master),addons)]">$INFO[skin.string(menu52075.action)]</value>
+	<value condition="StringCompare(skin.string(menu52075.master),vplaylist) | StringCompare(skin.string(menu52075.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52075.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52075.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52075.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52075.master),favs)">$INFO[skin.string(menu52075.path)]</value>
+	<value condition="StringCompare(skin.string(menu52075.master),addons)">RunAddon($INFO[skin.string(menu52075.path)])</value>
 	</variable>	
 	<!--......-->
+	<variable name="value_menu52081.label">
+	<value condition="IsEmpty(skin.string(menu52081.label)) + !StringCompare(skin.string(menu52081.master),addons)">$INFO[skin.string(menu52081.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52081.label)) + StringCompare(skin.string(menu52081.master),addons)">$INFO[system.addontitle(skin.string(menu52081.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52081.label))">$INFO[skin.string(menu52081.label)]</value>
+	</variable>
+	<variable name="value_menu52081.action">
+	<value condition="![StringCompare(skin.string(menu52081.master),vplaylist) | StringCompare(skin.string(menu52081.master),aplaylist) | StringCompare(skin.string(menu52081.master),vnodes) | StringCompare(skin.string(menu52081.master),favs) | StringCompare(skin.string(menu52081.master),addons)]">$INFO[skin.string(menu52081.action)]</value>
+	<value condition="StringCompare(skin.string(menu52081.master),vplaylist) | StringCompare(skin.string(menu52081.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52081.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52081.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52081.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52081.master),favs)">$INFO[skin.string(menu52081.path)]</value>
+	<value condition="StringCompare(skin.string(menu52081.master),addons)">RunAddon($INFO[skin.string(menu52081.path)])</value>
+	</variable>
+	<variable name="value_menu52082.label">
+	<value condition="IsEmpty(skin.string(menu52082.label)) + !StringCompare(skin.string(menu52082.master),addons)">$INFO[skin.string(menu52082.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52082.label)) + StringCompare(skin.string(menu52082.master),addons)">$INFO[system.addontitle(skin.string(menu52082.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52082.label))">$INFO[skin.string(menu52082.label)]</value>
+	</variable>
+	<variable name="value_menu52082.action">
+	<value condition="![StringCompare(skin.string(menu52082.master),vplaylist) | StringCompare(skin.string(menu52082.master),aplaylist) | StringCompare(skin.string(menu52082.master),vnodes) | StringCompare(skin.string(menu52082.master),favs) | StringCompare(skin.string(menu52082.master),addons)]">$INFO[skin.string(menu52082.action)]</value>
+	<value condition="StringCompare(skin.string(menu52082.master),vplaylist) | StringCompare(skin.string(menu52082.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52082.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52082.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52082.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52082.master),favs)">$INFO[skin.string(menu52082.path)]</value>
+	<value condition="StringCompare(skin.string(menu52082.master),addons)">RunAddon($INFO[skin.string(menu52082.path)])</value>
+	</variable>
+	<variable name="value_menu52083.label">
+	<value condition="IsEmpty(skin.string(menu52083.label)) + !StringCompare(skin.string(menu52083.master),addons)">$INFO[skin.string(menu52083.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52083.label)) + StringCompare(skin.string(menu52083.master),addons)">$INFO[system.addontitle(skin.string(menu52083.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52083.label))">$INFO[skin.string(menu52083.label)]</value>
+	</variable>
+	<variable name="value_menu52083.action">
+	<value condition="![StringCompare(skin.string(menu52083.master),vplaylist) | StringCompare(skin.string(menu52083.master),aplaylist) | StringCompare(skin.string(menu52083.master),vnodes) | StringCompare(skin.string(menu52083.master),favs) | StringCompare(skin.string(menu52083.master),addons)]">$INFO[skin.string(menu52083.action)]</value>
+	<value condition="StringCompare(skin.string(menu52083.master),vplaylist) | StringCompare(skin.string(menu52083.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52083.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52083.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52083.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52083.master),favs)">$INFO[skin.string(menu52083.path)]</value>
+	<value condition="StringCompare(skin.string(menu52083.master),addons)">RunAddon($INFO[skin.string(menu52083.path)])</value>
+	</variable>
+	<variable name="value_menu52084.label">
+	<value condition="IsEmpty(skin.string(menu52084.label)) + !StringCompare(skin.string(menu52084.master),addons)">$INFO[skin.string(menu52084.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52084.label)) + StringCompare(skin.string(menu52084.master),addons)">$INFO[system.addontitle(skin.string(menu52084.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52084.label))">$INFO[skin.string(menu52084.label)]</value>
+	</variable>
+	<variable name="value_menu52084.action">
+	<value condition="![StringCompare(skin.string(menu52084.master),vplaylist) | StringCompare(skin.string(menu52084.master),aplaylist) | StringCompare(skin.string(menu52084.master),vnodes) | StringCompare(skin.string(menu52084.master),favs) | StringCompare(skin.string(menu52084.master),addons)]">$INFO[skin.string(menu52084.action)]</value>
+	<value condition="StringCompare(skin.string(menu52084.master),vplaylist) | StringCompare(skin.string(menu52084.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52084.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52084.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52084.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52084.master),favs)">$INFO[skin.string(menu52084.path)]</value>
+	<value condition="StringCompare(skin.string(menu52084.master),addons)">RunAddon($INFO[skin.string(menu52084.path)])</value>
+	</variable>
+	<variable name="value_menu52085.label">
+	<value condition="IsEmpty(skin.string(menu52085.label)) + !StringCompare(skin.string(menu52085.master),addons)">$INFO[skin.string(menu52085.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52085.label)) + StringCompare(skin.string(menu52085.master),addons)">$INFO[system.addontitle(skin.string(menu52085.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52085.label))">$INFO[skin.string(menu52085.label)]</value>
+	</variable>
+	<variable name="value_menu52085.action">
+	<value condition="![StringCompare(skin.string(menu52085.master),vplaylist) | StringCompare(skin.string(menu52085.master),aplaylist) | StringCompare(skin.string(menu52085.master),vnodes) | StringCompare(skin.string(menu52085.master),favs) | StringCompare(skin.string(menu52085.master),addons)]">$INFO[skin.string(menu52085.action)]</value>
+	<value condition="StringCompare(skin.string(menu52085.master),vplaylist) | StringCompare(skin.string(menu52085.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52085.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52085.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52085.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52085.master),favs)">$INFO[skin.string(menu52085.path)]</value>
+	<value condition="StringCompare(skin.string(menu52085.master),addons)">RunAddon($INFO[skin.string(menu52085.path)])</value>
+	</variable>
+	<!--......-->
+	<variable name="value_menu52091.label">
+	<value condition="IsEmpty(skin.string(menu52091.label)) + !StringCompare(skin.string(menu52091.master),addons)">$INFO[skin.string(menu52091.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52091.label)) + StringCompare(skin.string(menu52091.master),addons)">$INFO[system.addontitle(skin.string(menu52091.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52091.label))">$INFO[skin.string(menu52091.label)]</value>
+	</variable>
+	<variable name="value_menu52091.action">
+	<value condition="![StringCompare(skin.string(menu52091.master),vplaylist) | StringCompare(skin.string(menu52091.master),aplaylist) | StringCompare(skin.string(menu52091.master),vnodes) | StringCompare(skin.string(menu52091.master),favs) | StringCompare(skin.string(menu52091.master),addons)]">$INFO[skin.string(menu52091.action)]</value>
+	<value condition="StringCompare(skin.string(menu52091.master),vplaylist) | StringCompare(skin.string(menu52091.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52091.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52091.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52091.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52091.master),favs)">$INFO[skin.string(menu52091.path)]</value>
+	<value condition="StringCompare(skin.string(menu52091.master),addons)">RunAddon($INFO[skin.string(menu52091.path)])</value>
+	</variable>
+	<variable name="value_menu52092.label">
+	<value condition="IsEmpty(skin.string(menu52092.label)) + !StringCompare(skin.string(menu52092.master),addons)">$INFO[skin.string(menu52092.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52092.label)) + StringCompare(skin.string(menu52092.master),addons)">$INFO[system.addontitle(skin.string(menu52092.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52092.label))">$INFO[skin.string(menu52092.label)]</value>
+	</variable>
+	<variable name="value_menu52092.action">
+	<value condition="![StringCompare(skin.string(menu52092.master),vplaylist) | StringCompare(skin.string(menu52092.master),aplaylist) | StringCompare(skin.string(menu52092.master),vnodes) | StringCompare(skin.string(menu52092.master),favs) | StringCompare(skin.string(menu52092.master),addons)]">$INFO[skin.string(menu52092.action)]</value>
+	<value condition="StringCompare(skin.string(menu52092.master),vplaylist) | StringCompare(skin.string(menu52092.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52092.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52092.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52092.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52092.master),favs)">$INFO[skin.string(menu52092.path)]</value>
+	<value condition="StringCompare(skin.string(menu52092.master),addons)">RunAddon($INFO[skin.string(menu52092.path)])</value>
+	</variable>
+	<variable name="value_menu52093.label">
+	<value condition="IsEmpty(skin.string(menu52093.label)) + !StringCompare(skin.string(menu52093.master),addons)">$INFO[skin.string(menu52093.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52093.label)) + StringCompare(skin.string(menu52093.master),addons)">$INFO[system.addontitle(skin.string(menu52093.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52093.label))">$INFO[skin.string(menu52093.label)]</value>
+	</variable>
+	<variable name="value_menu52093.action">
+	<value condition="![StringCompare(skin.string(menu52093.master),vplaylist) | StringCompare(skin.string(menu52093.master),aplaylist) | StringCompare(skin.string(menu52093.master),vnodes) | StringCompare(skin.string(menu52093.master),favs) | StringCompare(skin.string(menu52093.master),addons)]">$INFO[skin.string(menu52093.action)]</value>
+	<value condition="StringCompare(skin.string(menu52093.master),vplaylist) | StringCompare(skin.string(menu52093.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52093.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52093.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52093.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52093.master),favs)">$INFO[skin.string(menu52093.path)]</value>
+	<value condition="StringCompare(skin.string(menu52093.master),addons)">RunAddon($INFO[skin.string(menu52093.path)])</value>
+	</variable>
+	<variable name="value_menu52094.label">
+	<value condition="IsEmpty(skin.string(menu52094.label)) + !StringCompare(skin.string(menu52094.master),addons)">$INFO[skin.string(menu52094.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52094.label)) + StringCompare(skin.string(menu52094.master),addons)">$INFO[system.addontitle(skin.string(menu52094.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52094.label))">$INFO[skin.string(menu52094.label)]</value>
+	</variable>
+	<variable name="value_menu52094.action">
+	<value condition="![StringCompare(skin.string(menu52094.master),vplaylist) | StringCompare(skin.string(menu52094.master),aplaylist) | StringCompare(skin.string(menu52094.master),vnodes) | StringCompare(skin.string(menu52094.master),favs) | StringCompare(skin.string(menu52094.master),addons)]">$INFO[skin.string(menu52094.action)]</value>
+	<value condition="StringCompare(skin.string(menu52094.master),vplaylist) | StringCompare(skin.string(menu52094.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52094.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52094.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52094.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52094.master),favs)">$INFO[skin.string(menu52094.path)]</value>
+	<value condition="StringCompare(skin.string(menu52094.master),addons)">RunAddon($INFO[skin.string(menu52094.path)])</value>
+	</variable>
+	<variable name="value_menu52095.label">
+	<value condition="IsEmpty(skin.string(menu52095.label)) + !StringCompare(skin.string(menu52095.master),addons)">$INFO[skin.string(menu52095.defaultlabel)]</value>
+	<value condition="IsEmpty(skin.string(menu52095.label)) + StringCompare(skin.string(menu52095.master),addons)">$INFO[system.addontitle(skin.string(menu52095.path))]</value>
+	<value condition="!IsEmpty(skin.string(menu52095.label))">$INFO[skin.string(menu52095.label)]</value>
+	</variable>
+	<variable name="value_menu52095.action">
+	<value condition="![StringCompare(skin.string(menu52095.master),vplaylist) | StringCompare(skin.string(menu52095.master),aplaylist) | StringCompare(skin.string(menu52095.master),vnodes) | StringCompare(skin.string(menu52095.master),favs) | StringCompare(skin.string(menu52095.master),addons)]">$INFO[skin.string(menu52095.action)]</value>
+	<value condition="StringCompare(skin.string(menu52095.master),vplaylist) | StringCompare(skin.string(menu52095.master),vnodes)">ActivateWindow(videolibrary,$INFO[skin.string(menu52095.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52095.master),aplaylist)">ActivateWindow(musiclibrary,$INFO[skin.string(menu52095.path)],return)</value>
+	<value condition="StringCompare(skin.string(menu52095.master),favs)">$INFO[skin.string(menu52095.path)]</value>
+	<value condition="StringCompare(skin.string(menu52095.master),addons)">RunAddon($INFO[skin.string(menu52095.path)])</value>
+	</variable>
+	<!--......-->
+
+	
+	
+	
+	
+	
+	
+	
 </includes>

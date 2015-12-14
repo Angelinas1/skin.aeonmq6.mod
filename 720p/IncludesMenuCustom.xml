@@ -2318,7 +2318,6 @@
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvrecords)</onclick>
 	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVRecordings))</onclick>
 	<include>DefaultReset</include>
-	<visible>Skin.HasSetting(submode)</visible>
 	</item>
 	<item>
 	<label>$LOCALIZE[31006]-$LOCALIZE[19040]</label><!-- TV ao vivo Agendamento --><!-- 6526 -->
@@ -2326,9 +2325,7 @@
 	<property name="id">livetv</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvtimers)</onclick>
 	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVTimers))</onclick>
-	<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].channel.tv)</onclick>
 	<include>DefaultReset</include>
-	<visible>Skin.HasSetting(submode)</visible>
 	</item>
 	<item>
 	<label>$LOCALIZE[31006]-$LOCALIZE[31011]</label><!-- TV ao vivo Ajustes --><!-- 6527 -->
@@ -2336,9 +2333,7 @@
 	<property name="id">livetv</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvsettings)</onclick>
 	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(pvrsettings))</onclick>
-	<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].channel.tv)</onclick>
 	<include>DefaultReset</include>
-	<visible>Skin.HasSetting(submode)</visible>
 	</item>
 	<item>
 	<label>31416</label><!-- Extras --><!-- 6528 -->
