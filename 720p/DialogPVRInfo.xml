@@ -658,6 +658,19 @@
 	<visible>Control.HasFocus(158)</visible>
 	</control>
 	</control>
+	<control type="label">
+	<visible>Control.IsVisible(616)</visible>
+	<left>0</left>
+	<top>680</top>
+	<height>40</height>
+	<width>810</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<label>$INFO[Container(1001).ListItem.Label] [COLOR=red]as[/COLOR] $INFO[Container(1001).ListItem.Label2]</label>
+	<font>Font_24</font>
+	<textcolor>F9000000</textcolor>
+	<scroll>true</scroll>
+	</control>
 	<control type="group"><!-- Menu bar -->
 	<left>0</left>
 	<top>465</top>
