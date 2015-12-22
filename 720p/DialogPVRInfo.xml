@@ -666,7 +666,7 @@
 	<width>810</width>
 	<align>center</align>
 	<aligny>center</aligny>
-	<label>$INFO[Container(1001).ListItem.Label] [COLOR=red]as[/COLOR] $INFO[Container(1001).ListItem.Label2]</label>
+	<label>$INFO[Container(1000).ListItem.Label]$INFO[Container(1001).ListItem.Label] [COLOR=red]as[/COLOR] $INFO[Container(1000).ListItem.Label2]$INFO[Container(1001).ListItem.Label2]</label>
 	<font>Font_24</font>
 	<textcolor>F9000000</textcolor>
 	<scroll>true</scroll>
@@ -786,12 +786,12 @@
 	<item id="3"><!-- Cast -->
 	<label>Cast</label>
 	<onclick>SetFocus(1000,0)</onclick>
-	<visible>!IntegerGreaterThan(Window(Home).Property(SkinHelper.PVR.tvdb_id),1)</visible>
+	<visible>IsEmpty(Window(Home).Property(SkinHelper.PVR.Characterart)) + !IsEmpty(Window(Home).Property(SkinHelper.PVR.Poster))</visible>
 	</item>
 	<item id="4"><!-- Cast -->
 	<label>Cast TV</label>
 	<onclick>SetFocus(1001,0)</onclick>
-	<visible>IntegerGreaterThan(Window(Home).Property(SkinHelper.PVR.tvdb_id),1)</visible>
+	<visible>!IsEmpty(Window(Home).Property(SkinHelper.PVR.Characterart)) + !IsEmpty(Window(Home).Property(SkinHelper.PVR.Poster))</visible>
 	</item>
 	<item id="6"><!-- Cinema Ex -->
 	<label>31066</label>
