@@ -1,5 +1,6 @@
 <window><!-- Aeon MQ 6 -->
 	<defaultcontrol always="true">10</defaultcontrol>
+	<menucontrol>9900</menucontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>10,11,12,13,100</views>
 	<onunload condition="!Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>

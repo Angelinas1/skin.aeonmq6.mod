@@ -1,6 +1,7 @@
 <window>
 	<!-- Aeon MQ 6 -->
 	<defaultcontrol>50</defaultcontrol>
+	<menucontrol>9900</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<allowoverlay>no</allowoverlay>
 	<views>50,51,54,55,56,57,60,62,69,5735,5800,5801</views>
@@ -475,7 +476,6 @@
 			</control>
 			<!-- ViewTypes -->
 			<control type="group" id="51">
-				<include>AeonMQ6</include>
 				<!-- 50 -->
 				<include condition="Skin.HasSetting(viewposter_pvr)">ViewPoster</include>
 				<!-- 54 -->
@@ -649,7 +649,7 @@
 							<top>0</top>
 							<width>299</width>
 							<height>60</height>
-							<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&type=banner</texture>
+							<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;type=banner</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(50)">conditional</animation>
 						</control>

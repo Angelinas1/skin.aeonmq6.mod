@@ -3958,17 +3958,21 @@
 				<focusposition>1</focusposition>
 				<scrolltime>450</scrolltime>
 				<control type="button" id="3">
-					<!-- Sort by button -->
-					<include>TopMenuButton</include>
-					<label>103</label>
-					<ondown>SetFocus(50)</ondown>
-				</control>
+                    <!-- Sort by button -->
+                    <include>TopMenuButton</include>
+                    <label>103</label>
+                    <ondown>SetFocus(50)</ondown>
+					<visible>!Window.IsActive(TVGuide)</visible>
+                </control>
 				<control type="togglebutton" id="4">
-					<!-- Sort asc -->
-					<include>TopMenuButton</include>
+                    <!-- Sort asc -->
+                    <include>TopMenuButton</include>
+					<alttexturefocus border="5">button-focus.png</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
 					<label>$LOCALIZE[585]</label>
 					<altlabel>$LOCALIZE[584]</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+					<visible>!Window.IsActive(TVGuide)</visible>
 				</control>
 				<control type="button" id="9145">
 					<include>TopMenuButton</include>
