@@ -11,7 +11,6 @@
 	<include file="IncludesMusic.xml"/>
 	<include file="IncludesWeather.xml"/>
 	<include file="IncludesTopMenu.xml"/>
-	<include file="IncludesLyrics.xml"/>
 	<include file="ViewsRightList.xml"/>
 	<!-- 51 -->
 	<include file="ViewsBanner.xml"/>
@@ -1140,6 +1139,12 @@
 			<include>FlagLabel</include>
 			<label>$VAR[value_drive]</label>
 			<visible>!IsEmpty(Control.GetLabel(556))</visible>
+		</control>
+		<control type="label">
+			<!-- Unwatched Episodes -->
+			<include>FlagLabel</include>
+			<label>$INFO[ListItem.Episode] / $INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+			<visible>Container.Content(tvshows)</visible>
 		</control>
 	</include>
 	<include name="FlagsHelperContent_1">

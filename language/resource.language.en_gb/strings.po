@@ -2763,6 +2763,10 @@ msgid "DELETE GROUP"
 msgstr "DELETE GROUP"
 
 msgctxt "#31798"
+msgid "PVR AEONNOX"
+msgstr "PVR AEONNOX"
+
+msgctxt "#31799"
 msgid "GET ARTIST INFO"
 msgstr "GET ARTIST INFO"
 
@@ -2853,6 +2857,26 @@ msgstr "GLASS LIST"
 msgctxt "#31822"
 msgid "RIGHT LIST"
 msgstr "RIGHT LIST"
+
+msgctxt "#31823"
+msgid "MIDDLE LIST"
+msgstr "MIDDLE LIST"
+
+msgctxt "#31824"
+msgid "COWERFLOW BACK LIST"
+msgstr "COWERFLOW BACK LIST"
+
+msgctxt "#31825"
+msgid "PVR MQ6"
+msgstr "PVR MQ6"
+
+msgctxt "#31826"
+msgid "TV BOX"
+msgstr "TV BOX"
+
+msgctxt "#31827"
+msgid "TV POSTERLITE"
+msgstr "TV POSTERLITE"
 
 msgctxt "#31828"
 msgid "PATH FOR CUSTOM DISC ART"

@@ -217,7 +217,7 @@
 	<aligny>center</aligny>
 	<include>subcolor</include>
 	<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21864]:[/COLOR] $INFO[ListItem.Label2]</label>
-	<visible>IsEmpty(ListItem.Property(Addon.Creator))</visible>
+	<visible>IsEmpty(ListItem.Property(Addon.Creator)) + !IsEmpty(ListItem.Label2)</visible>
 	</control>
 	<control type="label">
 	<left>45</left>
@@ -261,7 +261,7 @@
 	<aligny>center</aligny>
 	<include>subcolorfocus</include>
 	<label>[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21864]:[/COLOR] $INFO[ListItem.Label2]</label>
-	<visible>IsEmpty(ListItem.Property(Addon.Creator))</visible>
+	<visible>IsEmpty(ListItem.Property(Addon.Creator)) + !IsEmpty(ListItem.Label2)</visible>
 	</control>
 	<control type="label">
 	<left>45</left>
@@ -305,7 +305,7 @@
 	<align>right</align>
 	<aligny>center</aligny>
 	<onleft>3</onleft>
-	<onright>3</onright>
+	<onright>61</onright>
 	<onup>3</onup>
 	<ondown>3</ondown>
 	</control>

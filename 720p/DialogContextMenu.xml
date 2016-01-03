@@ -73,6 +73,13 @@
 	<label>31671</label>
 	<visible>System.HasAddon(script.libraryeditor) + [Container.Content(Movies) | Container.Content(episodes)]</visible>
 	</control>
+	<control type="button" id="1036">
+	<include>DialogContext_Button</include>
+	<onleft>Dialog.Close(106)</onleft>
+	<onright>Dialog.Close(106)</onright>
+	<onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
+	<label>Set View</label>
+	</control>
 	<control type="button" id="1034">
 	<include>DialogContext_Button</include>
 	<onleft>Dialog.Close(106)</onleft>
