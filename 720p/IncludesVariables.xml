@@ -194,7 +194,8 @@
 	</variable>
 	<!--############################################################################### TOP MENU - IR PARA ############################################################################# -->
 	<variable name="Top_GoTo">
-		<value condition="![StringCompare(Container(9000).ListItem.Property(widgets),settings) | IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + [!SubString(Container(9000).ListItem.Property(id),extras) | !Skin.HasSetting(extra_extra)]">510</value>
+		<value condition="![StringCompare(Container(9000).ListItem.Property(widgets),settings) | IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + [!SubString(Container(9000).ListItem.Property(id),extras) | !Skin.HasSetting(extra_extra)] + !Skin.HasSetting(widget_one)">510</value>
+		<value condition="![StringCompare(Container(9000).ListItem.Property(widgets),settings) | IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + [!SubString(Container(9000).ListItem.Property(id),extras) | !Skin.HasSetting(extra_extra)] + Skin.HasSetting(widget_one)">9224</value>
 		<value condition="SubString(Container(9000).ListItem.Property(id),extras) + Skin.HasSetting(extra_extra)">2517</value>
 		<value condition="[IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + ![StringCompare(Container(9000).ListItem.Property(widgets),settings) | Skin.HasSetting(kioskcode)]">5100</value>
 		<value condition="[IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + !StringCompare(Container(9000).ListItem.Property(widgets),settings) + Skin.HasSetting(kioskcode)">8004</value>
@@ -5815,7 +5816,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(skin.string(genres_epg),number)">genres/$INFO[ListItem.Property(GenreType)].png</value>
 		<value condition="StringCompare(skin.string(genres_epg),label)">genres/$INFO[ListItem.Genre].png</value>
 		<value condition="StringCompare(skin.string(genres_epg),no_color)">genres/0.png</value>
-	</variable>	
+	</variable>
 	<variable name="value_genres_label">
 		<value condition="StringCompare(skin.string(genres_epg),number)">PVR</value>
 		<value condition="StringCompare(skin.string(genres_epg),label)">EPG(label)</value>

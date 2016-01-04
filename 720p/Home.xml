@@ -68,6 +68,31 @@
 			<ondown>SetFocus(510)</ondown>
 			<onup>SetFocus(510)</onup>
 		</control>
+		<control type="button" id="9224">
+			<include>InvisibleButton</include>
+			<onleft>SetFocus(510)</onleft>
+			<onright>SetFocus(510)</onright>
+			<ondown>SetFocus(9000)</ondown>
+			<onup>SetFocus(510)</onup>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmovies)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video1)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmovies)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.recent)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recent)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.random)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.random)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.recommended)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recommended)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recommended)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recommendedmovies)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.nextepisodes)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.nextepisodes)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.random)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.random)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.recommended)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recommended)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.recent)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recent)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recent)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.nextepisodes)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),music.artist)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,music.recentsong)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),music.recentsong)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,music.randomsong)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),music.randomsong)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,music.recentalbum)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),music.recentalbum)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,music.randomalbum)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),music.randomalbum)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,music.recentplayedalbum)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),music.recentplayedalbum)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,music.artist)</onclick>
+		</control>
 		<control type="multiimage" id="5044">
 			<!-- Extra Fanart Artist -->
 			<include>InvisibleButton</include>
@@ -2093,6 +2118,16 @@
 						<include>Animation_HomeGlass</include>
 						<include>Animation_Fade</include>
 						<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)] | [Control.IsVisible(510) | Control.HasFocus(5100) + Control.IsVisible(510)] + ![StringCompare(Container(9000).ListItem.Property(widgets),weather) | StringCompare(Container(9000).ListItem.Property(id),weather)]</visible>
+					</control>
+					<control type="image">
+						<left>340</left>
+						<top>515</top>
+						<width>600</width>
+						<height>26</height>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<include>Animation_HomeGlass</include>
+						<texture>osd_glass.png</texture>
+						<visible>Control.HasFocus(9224)</visible>
 					</control>
 					<control type="image">
 						<left>340</left>

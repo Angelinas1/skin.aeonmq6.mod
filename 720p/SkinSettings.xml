@@ -336,7 +336,7 @@
 					<label>ExtendedInfo (Art) - $VAR[value_widgets_extra]</label>
 					<onclick>SetFocus(4193)</onclick>
 					<selected>Skin.HasSetting(extra_panel_layout,panel_layout_1)</selected>
-			</control>
+				</control>
 				<control type="button" id="1155">
 					<!-- Art dos Widgets -->
 					<label>Movies (Art) - $VAR[value_widgets_movie]</label>
@@ -366,6 +366,12 @@
 					<onclick>Skin.ToggleSetting(widget_cast)</onclick>
 					<selected>Skin.HasSetting(widget_cast)</selected>
 				</control>
+				<control type="radiobutton" id="1160">
+					<!-- Art dos Widgets cast -->
+					<label>One click change widget</label>
+					<onclick>Skin.ToggleSetting(widget_one)</onclick>
+					<selected>Skin.HasSetting(widget_one)</selected>
+			</control>
 			</control>
 			<!--#######################################################################   MOBILIA   #######################################################################-->
 			<control type="group" id="9007">
