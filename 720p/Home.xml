@@ -74,12 +74,14 @@
 			<onright>SetFocus(510)</onright>
 			<ondown>SetFocus(9000)</ondown>
 			<onup>SetFocus(510)</onup>
-			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmovies)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video1)</onclick>
-			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmovies)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.recent)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video1)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.recent)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recent)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.random)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.random)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.recommended)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recommended)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recommended)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recommendedmovies)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmovies)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmovies)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.sets)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.nextepisodes)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.nextepisodes)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.random)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.random)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.recommended)</onclick>
@@ -125,6 +127,28 @@
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.radio)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,channel.epg)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus_group)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,channel.group)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.inprogressmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recommendedmedia)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentmedia)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recentmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.moviesforgenre)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.moviesforgenre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.showsforgenre)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.showsforgenre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.favouritemedia)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.favouritemedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentalbums)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recentalbums)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recommendedalbums)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedalbums)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentsongs)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recentsongs)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentplayedsongs)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recentplayedsongs)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recommendedsongs)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedsongs)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.inprogressmedia)</onclick>			
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.tvshow.recent)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.genre)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.genre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.genre)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.genre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.actors)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.actors)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.actors)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.actors)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.studios)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.studios)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.studios)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.studios)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.years)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.years)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.years)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.years)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.directors)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.directors)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.countries)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.countries)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.tvshow.recent)</onclick>
 		</control>
 		<control type="multiimage" id="5044">
 			<!-- Extra Fanart Artist -->
@@ -1594,7 +1618,7 @@
 							<width>500</width>
 							<align>left</align>
 							<include>HomeFlagLabel</include>
-							<label>[B]$INFO[Container(510).Property(SkinHelper.MovieSet.Years)][/B]</label>
+							<label>[B]$INFO[Container(510).ListItem.Property(SkinHelper.MovieSet.Years)][/B]</label>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
