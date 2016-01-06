@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="6030" type="dialog">
-<zorder>0</zorder>
 	<defaultcontrol always="true">149</defaultcontrol>
+	<menucontrol>9100</menucontrol>
 	<onload>Skin.SetString(sextend_list,1000)</onload>
 	<controls>
 	<control type="group"><!-- default group -->

@@ -128,7 +128,8 @@
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus_group)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.epg)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,channel.group)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.inprogressmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recommendedmedia)</onclick>
-			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentmedia)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.inprogressandrecommendedmedia)</onclick>
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.inprogressandrecommendedmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentmedia)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recentmedia)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.moviesforgenre)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.moviesforgenre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.showsforgenre)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.showsforgenre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.favouritemedia)</onclick>

@@ -4,6 +4,7 @@
 	<!-- ######################################################################### Music Window #########################################################################-->
 	<include name="MusicWindow">
 		<defaultcontrol always="true">51</defaultcontrol>
+		<menucontrol>9100</menucontrol>
 		<onload condition="Window.Previous(6626)">Container.SetViewMode($INFO[skin.string(setviewmusic)])</onload>
 		<onload condition="Window.Previous(6626)">SetFocus(9940)</onload>
 		<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>

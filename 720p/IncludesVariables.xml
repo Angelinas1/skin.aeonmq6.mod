@@ -3817,7 +3817,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recommended)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window(0).Property(recommendedmovies)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.genre)">videodb://movies/genres/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)">videodb://movies/sets/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.tags)">plugin://plugin.video.youtube/special/new_uploaded_videos_tv/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.tags)">videodb://movies/tags/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.actors)">videodb://movies/actors/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.directors)">videodb://movies/directors/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.countries)">videodb://movies/countries/</value>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1"><!-- Aeon MQ 6 -->
 	<defaultcontrol>51</defaultcontrol>
+	<menucontrol>9100</menucontrol>
 	<onload condition="Window.Previous(6631)">Container.SetViewMode($INFO[skin.string(setviewprograms)])</onload>
 	<onload condition="Window.Previous(6631)">SetFocus(9940)</onload>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>

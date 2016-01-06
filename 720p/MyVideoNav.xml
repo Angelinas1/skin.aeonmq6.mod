@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window><!-- Aeon MQ 6 -->
 	<defaultcontrol always="true">51</defaultcontrol>
+	<menucontrol>9100</menucontrol>
 	<onload condition="Window.Previous(6625)">Container.SetViewMode($INFO[skin.string(setviewvideo)])</onload>
 	<onload condition="Window.Previous(6625)">SetFocus(9940)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">RunScript(script.tv.show.next.aired,backend=True)</onload>

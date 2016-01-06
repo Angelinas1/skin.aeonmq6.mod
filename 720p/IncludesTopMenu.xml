@@ -1190,12 +1190,11 @@
 					<label>103</label>
 				</control>
 				<control type="togglebutton" id="4">
-					<!-- Sort asc -->
-					<include>TopMenuButton</include>
-					<label>31481</label>
-					<altlabel>31480</altlabel>
-					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-				</control>
+                    <!-- Sort asc -->
+                    <include>TopMenuButton</include>
+                    <label>$INFO[Container.SortOrder]</label>
+				<visible>!Window.IsActive(TVGuide)</visible>
+                </control>
 				<control type="radiobutton" id="14">
 					<!-- Watched Toggle -->
 					<include>TopMenuRadioButton</include>
@@ -3649,12 +3648,11 @@
 					<label>103</label>
 				</control>
 				<control type="togglebutton" id="4">
-					<!-- Sort asc -->
-					<include>TopMenuButton</include>
-					<label>31481</label>
-					<altlabel>31480</altlabel>
-					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-				</control>
+                    <!-- Sort asc -->
+                    <include>TopMenuButton</include>
+                    <label>$INFO[Container.SortOrder]</label>
+				<visible>!Window.IsActive(TVGuide)</visible>
+                </control>
 				<control type="button" id="991">
 					<!-- Global Search -->
 					<include>TopMenuButton</include>
@@ -3964,16 +3962,12 @@
                     <ondown>SetFocus(50)</ondown>
 					<visible>!Window.IsActive(TVGuide)</visible>
                 </control>
-				<control type="togglebutton" id="4">
+                <control type="togglebutton" id="4">
                     <!-- Sort asc -->
                     <include>TopMenuButton</include>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
-					<alttexturenofocus>-</alttexturenofocus>
-					<label>$LOCALIZE[585]</label>
-					<altlabel>$LOCALIZE[584]</altlabel>
-					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-					<visible>!Window.IsActive(TVGuide)</visible>
-				</control>
+                    <label>$INFO[Container.SortOrder]</label>
+				<visible>!Window.IsActive(TVGuide)</visible>
+                </control>
 				<control type="button" id="9145">
 					<include>TopMenuButton</include>
 					<label>Set color in Timeline EPG</label>
