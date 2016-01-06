@@ -3176,6 +3176,166 @@
 							<visible>SubString(skin.string(menu20.master),vpl)</visible>
 						</item>
 						<item>
+							<!-- Playlist de 1 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu1.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes1)</onclick>
+							<visible>!IsEmpty(skin.string(menu1.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 2 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu2.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes2)</onclick>
+							<visible>!IsEmpty(skin.string(menu2.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 3 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu3.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes3)</onclick>
+							<visible>!IsEmpty(skin.string(menu3.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 4 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu4.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes4)</onclick>
+							<visible>!IsEmpty(skin.string(menu4.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 5 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu5.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes5)</onclick>
+							<visible>!IsEmpty(skin.string(menu5.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 6 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu6.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes6)</onclick>
+							<visible>!IsEmpty(skin.string(menu6.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 7 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu7.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes7)</onclick>
+							<visible>!IsEmpty(skin.string(menu7.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 8 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu8.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes8)</onclick>
+							<visible>!IsEmpty(skin.string(menu8.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 9 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu9.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes9)</onclick>
+							<visible>!IsEmpty(skin.string(menu9.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 10 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu10.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes10)</onclick>
+							<visible>!IsEmpty(skin.string(menu10.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 11 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu11.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes11)</onclick>
+							<visible>!IsEmpty(skin.string(menu11.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 12 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu12.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes12)</onclick>
+							<visible>!IsEmpty(skin.string(menu12.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 13 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu13.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes13)</onclick>
+							<visible>!IsEmpty(skin.string(menu13.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 14 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu14.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes14)</onclick>
+							<visible>!IsEmpty(skin.string(menu14.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 15 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu15.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes15)</onclick>
+							<visible>!IsEmpty(skin.string(menu15.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 16 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu16.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes16)</onclick>
+							<visible>!IsEmpty(skin.string(menu16.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 17 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu17.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes17)</onclick>
+							<visible>!IsEmpty(skin.string(menu17.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 18 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu18.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes18)</onclick>
+							<visible>!IsEmpty(skin.string(menu18.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 19 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu19.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes19)</onclick>
+							<visible>!IsEmpty(skin.string(menu19.path))</visible>
+						</item>
+						<item>
+							<!-- Playlist de 20 - vnodes -->
+							<icon>-</icon>
+							<label>($VAR[value_menu20.label])</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,vnodes20)</onclick>
+							<visible>!IsEmpty(skin.string(menu20.path))</visible>
+						</item>
+						<item>
 							<!-- Playlist de musica 1 - Recentes -->
 							<icon>-</icon>
 							<label>$LOCALIZE[31073] ($VAR[value_menu1.label])</label>

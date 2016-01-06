@@ -3817,7 +3817,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.recommended)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window(0).Property(recommendedmovies)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.genre)">videodb://movies/genres/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)">videodb://movies/sets/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.tags)">videodb://movies/tags/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.tags)">plugin://plugin.video.youtube/special/new_uploaded_videos_tv/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.actors)">videodb://movies/actors/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.directors)">videodb://movies/directors/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.countries)">videodb://movies/countries/</value>
@@ -3855,6 +3855,26 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vpl18.recent)">special://videoplaylists/$INFO[skin.string(menu18.path)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vpl19.recent)">special://videoplaylists/$INFO[skin.string(menu19.path)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vpl20.recent)">special://videoplaylists/$INFO[skin.string(menu20.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes1)">$INFO[skin.string(menu1.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes2)">$INFO[skin.string(menu2.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes3)">$INFO[skin.string(menu2.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes4)">$INFO[skin.string(menu4.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes5)">$INFO[skin.string(menu5.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes6)">$INFO[skin.string(menu6.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes7)">$INFO[skin.string(menu7.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes8)">$INFO[skin.string(menu8.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes9)">$INFO[skin.string(menu9.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes10)">$INFO[skin.string(menu10.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes11)">$INFO[skin.string(menu12.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes12)">$INFO[skin.string(menu12.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes13)">$INFO[skin.string(menu13.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes14)">$INFO[skin.string(menu14.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes15)">$INFO[skin.string(menu15.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes16)">$INFO[skin.string(menu16.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes17)">$INFO[skin.string(menu17.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes18)">$INFO[skin.string(menu18.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes19)">$INFO[skin.string(menu19.path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes20)">$INFO[skin.string(menu20.path)]</value>
 	</variable>
 	<variable name="value_widgetsmusic">
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),music.recentsong)">musicdb://songs/</value>
@@ -3995,6 +4015,26 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vpl18.recent)">$LOCALIZE[31072] ($VAR[value_menu18.label])</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vpl19.recent)">$LOCALIZE[31072] ($VAR[value_menu19.label])</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vpl20.recent)">$LOCALIZE[31072] ($VAR[value_menu20.label])</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes1)">$INFO[skin.string(menu1.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes2)">$INFO[skin.string(menu2.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes3)">$INFO[skin.string(menu2.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes4)">$INFO[skin.string(menu4.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes5)">$INFO[skin.string(menu5.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes6)">$INFO[skin.string(menu6.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes7)">$INFO[skin.string(menu7.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes8)">$INFO[skin.string(menu8.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes9)">$INFO[skin.string(menu9.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes10)">$INFO[skin.string(menu10.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes11)">$INFO[skin.string(menu12.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes12)">$INFO[skin.string(menu12.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes13)">$INFO[skin.string(menu13.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes14)">$INFO[skin.string(menu14.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes15)">$INFO[skin.string(menu15.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes16)">$INFO[skin.string(menu16.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes17)">$INFO[skin.string(menu17.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes18)">$INFO[skin.string(menu18.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes19)">$INFO[skin.string(menu19.label)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),vnodes20)">$INFO[skin.string(menu20.label)]</value>
 	</variable>
 	<variable name="value_widgetsmodemusic">
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),music.recentsong)">$LOCALIZE[182] - $LOCALIZE[31583]</value>
