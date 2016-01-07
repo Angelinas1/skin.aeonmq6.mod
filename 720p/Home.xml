@@ -2274,6 +2274,9 @@
 				<include condition="!IsEmpty(Weather.Plugin)">widgets_weather</include>
 				<include condition="!IsEmpty(skin.string(mymenu1.widget))">widgets_mymenu1</include>
 				<include condition="!IsEmpty(skin.string(mymenu2.widget))">widgets_mymenu2</include>
+				<include condition="!IsEmpty(skin.string(mymenu3.widget))">widgets_mymenu3</include>
+				<include condition="!IsEmpty(skin.string(mymenu4.widget))">widgets_mymenu4</include>
+				<include condition="!IsEmpty(skin.string(mymenu5.widget))">widgets_mymenu5</include>
 				<include condition="System.HasAddon(script.favourites)">widgets_favourites</include>
 				<include condition="System.HasAddon(script.tv.show.next.aired)">widgets_tvguide</include>
 				<include condition="System.HasAddon(script.games.rom.collection.browser)">widgets_games</include>
@@ -2716,6 +2719,30 @@
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu2)</onclick>
 							<visible>!IsEmpty(skin.string(mymenu2.widget))</visible>
+						</item>
+						<item>
+							<!-- Meu menu 3 -->
+							<icon>-</icon>
+							<label>$LOCALIZE[31075] 3</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu3)</onclick>
+							<visible>!IsEmpty(skin.string(mymenu3.widget))</visible>
+						</item>
+						<item>
+							<!-- Meu menu 4 -->
+							<icon>-</icon>
+							<label>$LOCALIZE[31075] 4</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu4)</onclick>
+							<visible>!IsEmpty(skin.string(mymenu4.widget))</visible>
+						</item>
+						<item>
+							<!-- Meu menu 5 -->
+							<icon>-</icon>
+							<label>$LOCALIZE[31075] 5</label>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
+							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu5)</onclick>
+							<visible>!IsEmpty(skin.string(mymenu5.widget))</visible>
 						</item>
 						<item>
 							<!-- Clima -->
