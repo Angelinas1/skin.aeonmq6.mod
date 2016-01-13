@@ -274,6 +274,14 @@
 	<onclick condition="!Skin.HasSetting(viewcoverside_video) + Skin.HasSetting(clickactivateview_video)">back</onclick>
 	<selected>Skin.HasSetting(viewcoverside_video)</selected>	
 	</control>
+	<control type="radiobutton" id="19281"><!-- MidList967 --><!-- 83 -->
+	<radioposx>894</radioposx>
+	<label>MidList967</label>
+	<onclick>Skin.ToggleSetting(viewmidlist967_video)</onclick>
+	<onclick condition="!Skin.HasSetting(viewmidlist967_video)">Skin.SetString(setviewvideo,83)</onclick>
+	<onclick condition="!Skin.HasSetting(viewmidlist967_video) + Skin.HasSetting(clickactivateview_video)">back</onclick>
+	<selected>Skin.HasSetting(viewmidlist967_video)</selected>	
+	</control>
 	</control>
 	<control type="scrollbar" id="9031">
 	<include>ScrollBar_Vertical</include>

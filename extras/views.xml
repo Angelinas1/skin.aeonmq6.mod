@@ -25,4 +25,5 @@
 	<view id="TV Box" value="5735" languageid="31826" type="tvchannels,tvrecordings"/>
     <view id="TV Posterlite" value="5800" languageid="31827" type="tvchannels,tvrecordings" />
     <view id="PVR AeonNox" value="5801" languageid="31798" type="tvchannels,tvrecordings" />
+    <view id="MiddleList967" value="83" languageid="31823" type="movies,setmovies,tvshows,season"/>
 </views>

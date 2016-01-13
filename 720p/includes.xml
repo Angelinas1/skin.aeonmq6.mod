@@ -60,6 +60,8 @@
 	<include file="ViewsPhotoShow.xml"/>
 	<!-- 79 -->
 	<include file="ViewsMultiplexPVR.xml"/>
+	<!-- 83 -->
+	<include file="ViewsMiddleList967.xml"/>
 	<!-- 5802 -->
 	<include file="ViewsGames.xml"/>
 	<include file="ViewsLiveTV.xml"/>

@@ -9,7 +9,7 @@
 	<onunload condition="Skin.HasSetting(trailers)">Skin.Reset(trailers)</onunload>
 	<onunload condition="Skin.HasSetting(playlists)">Skin.Reset(playlists)</onunload>
 	<allowoverlay>no</allowoverlay>
-	<views>51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,77,78,80</views>
+	<views>51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,77,78,80,83</views>
 	<controls>
 	<control type="multiimage"><!-- Multi Fanart -->
 	<include>WindowBG</include>
@@ -466,6 +466,7 @@
 	<include condition="Skin.HasSetting(viewmiddle_video)">ViewMiddleList</include><!-- 77 -->
 	<include condition="Skin.HasSetting(viewcoverback_video)">ViewCoverandBackVideo</include><!-- 78 -->
 	<include condition="Skin.HasSetting(viewcoverside_video)">ViewCoverSideVideo</include><!-- 81 -->
+	<include condition="Skin.HasSetting(viewmidlist967_video)">ViewMidList967</include><!-- 83 -->	
 	</control>
 	<include>TouchScreen</include>
 	<include>ScrollLabel</include>
