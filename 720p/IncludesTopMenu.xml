@@ -1169,6 +1169,28 @@
 					<onclick>Skin.ToggleSetting(nopreferclearart)</onclick>
 					<visible>Control.IsVisible(59) + !Skin.HasSetting(noartwidevideo) | Control.IsVisible(54) + !Skin.HasSetting(noartpostervideo) | Control.IsVisible(55) + !Skin.HasSetting(noartlowlistvideo) | Control.IsVisible(57) + !Skin.HasSetting(noartglasslistvideo) | Control.IsVisible(51) + !Skin.HasSetting(noartrightlistvideo) | Control.IsVisible(60) | Control.IsVisible(62) + Skin.HasSetting(noviewpanelposter) + [Container.Content(movies) | Container.Content(tvshows)] | Control.IsVisible(70) + !Skin.HasSetting(noartposterlistvideo) + Container.Content(movies)</visible>
 				</control>
+				<!-- middlelist -->
+				<control type="radiobutton" id="92151">
+					<include>TopMenuRadioButton</include>
+					<label>31486</label>
+					<onclick>Skin.ToggleSetting(nomidlistvideocase)</onclick>
+					<selected>!Skin.HasSetting(nomidlistvideocase)</selected>
+					<visible>Control.IsVisible(77) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+				</control>
+				<control type="radiobutton" id="92153">
+					<include>TopMenuRadioButton</include>
+					<label>31112</label>
+					<onclick>Skin.ToggleSetting(midlistplotvideo)</onclick>
+					<selected>Skin.HasSetting(midlistplotvideo)</selected>
+					<visible>Control.IsVisible(77)</visible>
+				</control>
+				<control type="radiobutton" id="92154">
+					<include>TopMenuRadioButton</include>
+					<label>31490</label>
+					<onclick>Skin.ToggleSetting(slimmidlistvideo)</onclick>
+					<selected>Skin.HasSetting(slimmidlistvideo)</selected>
+					<visible>Control.IsVisible(77)</visible>
+				</control>
 			</control>
 			<control type="grouplist" id="9301">
 				<!-- Colecao -->

@@ -720,7 +720,7 @@
 
 			<!-- ##########          MAIN ITEM LIST          ########## -->
 			<control type="fixedlist" id="83">
-				<viewtype label="31448">list</viewtype>
+				<viewtype label="ViewMidList967">list</viewtype>
 				<posx>310</posx>
 				<posy>142</posy>
 				<width>600</width>
