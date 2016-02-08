@@ -11,6 +11,28 @@
 	<onload condition="Skin.HasSetting(kioskcode)">Skin.Reset(codestep)</onload>
 	<onload>Skin.Reset(playlists)</onload>
 	<onload>Skin.Reset(windowbg)</onload>
+	<onload>Skin.SetString(BW_SkinHelper.AllMoviesBackground.Poster.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMoviesBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllTvShowsBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMusicVideosBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.RecentMusicBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMusicBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.GlobalFanartBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.InProgressMoviesBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.RecentMoviesBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.UnwatchedMoviesBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.InProgressShowsBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.RecentEpisodesBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.GlobalFanartBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllVideosBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.RecentVideosBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.InProgressVideosBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.PvrBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.PicturesBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMoviesBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMusicBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMusicSongsBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllTvShowsBackground.Wall.EnableWallImages, 20)</onload>
 	<onunload condition="SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
 	<controls>
 		<control type="button" id="8000">
@@ -138,7 +160,7 @@
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedalbums)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentsongs)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recentsongs)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recentplayedsongs)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recentplayedsongs)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.recommendedsongs)</onclick>
-			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedsongs)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.inprogressmedia)</onclick>			
+			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.recommendedsongs)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,extras.helper.inprogressmedia)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.tvshow.recent)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.genre)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.genre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,tvshow.genre)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.genre)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.actors)</onclick>
@@ -968,14 +990,6 @@
 					<texture background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>Player.HasAudio</visible>
-				</control>
-				<control type="image">
-					<left>50</left>
-					<top>100</top>
-					<width>110</width>
-					<height>60</height>
-					<aspectratio align="center">keep</aspectratio>
-					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$INFO[MusicPlayer.Title]&amp;type=clearlogo,banner,discart</texture>
 				</control>
 				<control type="videowindow" id="8">
 					<left>35</left>
@@ -4010,12 +4024,19 @@
 				<animation effect="slide" start="0,0" end="0,-210" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="300" condition="Skin.HasSetting(submode)">Conditional</animation>
 				<visible>Control.HasFocus(9000) + [SubString(Container(9000).ListItem.Property(id),movie) + Library.HasContent(Movies) 
+
 | SubString(Container(9000).ListItem.Property(id),tvshow) + Library.HasContent(TVShows) | SubString(Container(9000).ListItem.Property(id),concert) 
+
 + Library.HasContent(MusicVideos) | SubString(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) 
+
 | SubString(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) 
+
 | SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)] 
+
 + ![Player.HasMedia + [System.IdleTime(8) |  Skin.HasSetting(highermainmenu)] |  Skin.HasSetting(nohometotals) 
+
 | Skin.HasSetting(highertotals) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo 
+
 | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
 				<control type="image">
 					<left>0</left>
