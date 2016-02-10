@@ -3626,11 +3626,17 @@
 					<label>31172</label>
 					<onclick>noop</onclick>
 					<visible>IsEmpty(skin.string(menucopy1.label)) + IsEmpty(skin.string(menucopy2.label)) + IsEmpty(skin.string(menucopy3.label)) 
+
 + IsEmpty(skin.string(menucopy4.label)) + IsEmpty(skin.string(menucopy5.label)) + IsEmpty(skin.string(menucopy6.label)) 
+
 + IsEmpty(skin.string(menucopy7.label)) + IsEmpty(skin.string(menucopy8.label)) + IsEmpty(skin.string(menucopy9.label)) 
+
 + IsEmpty(skin.string(menucopy10.label)) + IsEmpty(skin.string(menucopy11.label)) + IsEmpty(skin.string(menucopy12.label)) 
+
 + IsEmpty(skin.string(menucopy13.label)) + IsEmpty(skin.string(menucopy14.label)) + IsEmpty(skin.string(menucopy15.label)) 
+
 + IsEmpty(skin.string(menucopy16.label)) + IsEmpty(skin.string(menucopy17.label)) + IsEmpty(skin.string(menucopy18.label)) 
+
 + IsEmpty(skin.string(menucopy19.label)) + IsEmpty(skin.string(menucopy20.label))</visible>
 				</item>
 			</content>
@@ -5489,6 +5495,18 @@
 				<onclick>Skin.ToggleSetting(randombg_helper_pictures)</onclick>
 				<selected>Skin.HasSetting(randombg_helper_pictures)</selected>
 				<visible>StringCompare(Container(9000).ListItem.Property(id),pictures)</visible>
+			</control>
+			<control type="radiobutton" id="235">
+				<!-- Helper background pictures-->
+				<include>CustomMenuRadioButton</include>
+				<label>Helper Background</label>
+				<onclick>Skin.ToggleSetting(randombg_helper_vpl)</onclick>
+				<selected>Skin.HasSetting(randombg_helper_vpl)</selected>
+				<visible>StringCompare(Container(9000).ListItem.Property(id),vpl11) | StringCompare(Container(9000).ListItem.Property(id),vpl12) 
+| StringCompare(Container(9000).ListItem.Property(id),vpl13) | StringCompare(Container(9000).ListItem.Property(id),vpl14) 
+| StringCompare(Container(9000).ListItem.Property(id),vpl15) | StringCompare(Container(9000).ListItem.Property(id),vpl16) 
+| StringCompare(Container(9000).ListItem.Property(id),vpl17) | StringCompare(Container(9000).ListItem.Property(id),vpl18) 
+| StringCompare(Container(9000).ListItem.Property(id),vpl19) | StringCompare(Container(9000).ListItem.Property(id),vpl20)</visible>
 			</control>
 			<control type="button" id="234">
 				<left>240</left>

@@ -3016,7 +3016,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(ListItem.Mpaa,Australia:X)">flags/mpaa/Australian_OFLC_X18s.png</value>
 	</variable>
 	<variable name="value_mpaa_sextra">
-		<value condition="SubString(Window.Property(movie.mpaa),Rated NR) | SubString(Window.Property(movie.mpaa,Rated: NR) | StringCompare(Window.Property(movie.mpaa),NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
+		<value condition="SubString(Window.Property(movie.mpaa),Rated NR) | SubString(Window.Property(movie.mpaa),Rated: NR) | StringCompare(Window.Property(movie.mpaa),NR)">flags/mpaa/MPAA_NR_Certificate_US.png</value>
 		<value condition="SubString(Window.Property(movie.mpaa),Rated G) | SubString(Window.Property(movie.mpaa),Rated: G) | StringCompare(Window.Property(movie.mpaa),G)">flags/mpaa/MPAA_G_Certificate_US.png</value>
 		<value condition="[SubString(Window.Property(movie.mpaa),Rated PG) | SubString(Window.Property(movie.mpaa),Rated: PG) | StringCompare(Window.Property(movie.mpaa),PG)] + ![SubString(Window.Property(movie.mpaa),Rated PG-13) | SubString(Window.Property(movie.mpaa),Rated: PG-13)]">flags/mpaa/MPAA_PG_Certificate_US.png</value>
 		<value condition="SubString(Window.Property(movie.mpaa),Rated PG-13) | SubString(Window.Property(movie.mpaa),Rated: PG-13) | StringCompare(Window.Property(movie.mpaa),PG-13)">flags/mpaa/MPAA_PG-13_Certificate_US.png</value>
@@ -6403,7 +6403,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="!Skin.HasSetting(randommoviebg) + SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/movies.jpg</value>
 		<value condition="!Skin.HasSetting(randommoviebg) + SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/movies.jpg</value>
 		<value condition="!Skin.HasSetting(randommoviebg) + SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/movies.jpg</value>
-		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,movies]</value>
+		<value condition="!Skin.HasSetting(randommoviebg) + SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,movies]</value>
 		<value condition="Skin.HasSetting(randommoviebg) + !Skin.HasSetting(randombg_helper_movies)">special://userdata/addon_data/script.artworkorganizer/MovieFanart</value>
 		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_movies) + ![StringCompare(Container(9000).ListItem.Property(widgets),movie.recent) | StringCompare(Container(9000).ListItem.Property(widgets),movie.random) | StringCompare(Container(9000).ListItem.Property(widgets),movie.recommended)]">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground)]</value>
 		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_movies) + StringCompare(Container(9000).ListItem.Property(widgets),movie.recent)">$INFO[Window(Home).Property(SkinHelper.RecentMoviesBackground)]</value>
@@ -6419,12 +6419,12 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="!Skin.HasSetting(randomtvshowbg) + SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/tvshows.jpg</value>
 		<value condition="!Skin.HasSetting(randomtvshowbg) + SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/tvshows.jpg</value>
 		<value condition="!Skin.HasSetting(randomtvshowbg) + SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/tvshows.jpg</value>
-		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,tvshows]</value>
-		<value condition="Skin.HasSetting(randommoviebg) + !Skin.HasSetting(randombg_helper_tvshow)">special://userdata/addon_data/script.artworkorganizer/TVShowFanart</value>
-		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_tvshow) + ![StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recent) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.random) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recommended)]">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</value>
-		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_tvshow) + StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recent)">$INFO[Window(Home).Property(SkinHelper.RecentEpisodesBackground)]</value>
-		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_tvshow) + StringCompare(Container(9000).ListItem.Property(widgets),tvshow.random)">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</value>
-		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_tvshow) + StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recommended)">$INFO[Window(Home).Property(SkinHelper.InProgressShowsBackground)]</value>
+		<value condition="!Skin.HasSetting(randomtvshowbg) + SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,tvshows]</value>
+		<value condition="Skin.HasSetting(randomtvshowbg) + !Skin.HasSetting(randombg_helper_tvshow)">special://userdata/addon_data/script.artworkorganizer/TVShowFanart</value>
+		<value condition="Skin.HasSetting(randomtvshowbg) + Skin.HasSetting(randombg_helper_tvshow) + ![StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recent) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.random) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recommended)]">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</value>
+		<value condition="Skin.HasSetting(randomtvshowbg) + Skin.HasSetting(randombg_helper_tvshow) + StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recent)">$INFO[Window(Home).Property(SkinHelper.RecentEpisodesBackground)]</value>
+		<value condition="Skin.HasSetting(randomtvshowbg) + Skin.HasSetting(randombg_helper_tvshow) + StringCompare(Container(9000).ListItem.Property(widgets),tvshow.random)">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</value>
+		<value condition="Skin.HasSetting(randomtvshowbg) + Skin.HasSetting(randombg_helper_tvshow) + StringCompare(Container(9000).ListItem.Property(widgets),tvshow.recommended)">$INFO[Window(Home).Property(SkinHelper.InProgressShowsBackground)]</value>
 	</variable>
 	<variable name="value_menutheme_concerts">
 		<value condition="!Skin.HasSetting(randomconcertbg) + SubString(skin.string(theme),colors)">special://skin/backgrounds/concerts.jpg</value>
@@ -6438,7 +6438,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="!Skin.HasSetting(randomconcertbg) + SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,concerts]</value>
 		<value condition="!Skin.HasSetting(randomconcertbg) + !Skin.HasSetting(randombg_helper_concerts)">special://userdata/addon_data/script.artworkorganizer/MusicVideoFanart</value>
 		<value condition="Skin.HasSetting(randomconcertbg) + !Skin.HasSetting(randombg_helper_concerts)">special://userdata/addon_data/script.artworkorganizer/MusicVideoFanart</value>
-		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_concerts)">$INFO[Window(Home).Property(SkinHelper.AllMusicVideosBackground)]</value>
+		<value condition="Skin.HasSetting(randomconcertbg) + Skin.HasSetting(randombg_helper_concerts)">$INFO[Window(Home).Property(SkinHelper.AllMusicVideosBackground)]</value>
 	</variable>
 	<variable name="value_menutheme_music">
 		<value condition="!Skin.HasSetting(randommusicbg) + SubString(skin.string(theme),colors)">special://skin/backgrounds/music.jpg</value>
@@ -6449,7 +6449,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="!Skin.HasSetting(randommusicbg) + SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/music.jpg</value>
 		<value condition="!Skin.HasSetting(randommusicbg) + SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/music.jpg</value>
 		<value condition="!Skin.HasSetting(randommusicbg) + SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/music.jpg</value>
-		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,music]</value>
+		<value condition="!Skin.HasSetting(randommusicbg) + SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,music]</value>
 		<value condition="Skin.HasSetting(randommoviebg) + !Skin.HasSetting(randombg_helper_music)">special://userdata/addon_data/script.artworkorganizer/ArtistFanart</value>
 		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_music) + ![StringCompare(Container(9000).ListItem.Property(widgets),music.recentsong) | StringCompare(Container(9000).ListItem.Property(widgets),music.randomsong) | StringCompare(Container(9000).ListItem.Property(widgets),music.recentalbum) | StringCompare(Container(9000).ListItem.Property(widgets),music.randomalbum) | StringCompare(Container(9000).ListItem.Property(widgets),music.recentplayedalbum)]">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</value>
 		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_music) + StringCompare(Container(9000).ListItem.Property(widgets),music.recentsong)">$INFO[Window(Home).Property(SkinHelper.RecentMusicBackground)]</value>
@@ -6457,6 +6457,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_music) + StringCompare(Container(9000).ListItem.Property(widgets),music.recentalbum)">$INFO[Window(Home).Property(SkinHelper.RecentMusicBackground)]</value>
 		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_music) + StringCompare(Container(9000).ListItem.Property(widgets),music.randomalbum)">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</value>
 		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_music) + StringCompare(Container(9000).ListItem.Property(widgets),music.recentplayedalbum)">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</value>
+		<value condition="Skin.HasSetting(randommoviebg) + Skin.HasSetting(randombg_helper_music) + StringCompare(Container(9000).ListItem.Property(widgets),music.years)">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground.Wall.BW)]</value>
 	</variable>
 	<variable name="value_menutheme_livetv">
 		<value condition="!Skin.HasSetting(randomlivetvbg) + SubString(skin.string(theme),colors)">special://skin/backgrounds/livetv.jpg</value>
@@ -6649,15 +6650,16 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,mymenu]</value>
 	</variable>
 	<variable name="value_menutheme_vplaylist">
-		<value condition="SubString(skin.string(theme),colors)">special://skin/backgrounds/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),reddish)">$INFO[Skin.String(extrapack)]backgrounds_reddish/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),modern)">$INFO[Skin.String(extrapack)]backgrounds_modern/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),future)">$INFO[Skin.String(extrapack)]backgrounds_future/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),cold)">$INFO[Skin.String(extrapack)]backgrounds_cold/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/vplaylist.jpg</value>
-		<value condition="SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,vplaylist]</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),colors)">special://skin/backgrounds/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),reddish)">$INFO[Skin.String(extrapack)]backgrounds_reddish/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),modern)">$INFO[Skin.String(extrapack)]backgrounds_modern/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),future)">$INFO[Skin.String(extrapack)]backgrounds_future/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),cold)">$INFO[Skin.String(extrapack)]backgrounds_cold/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),warm)">$INFO[Skin.String(extrapack)]backgrounds_warm/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),darkness)">$INFO[Skin.String(extrapack)]backgrounds_darkness/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),digitalart)">$INFO[Skin.String(extrapack)]backgrounds_digitalart/vplaylist.jpg</value>
+		<value condition="!Skin.HasSetting(randombg_helper_vpl) + SubString(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,vplaylist]</value>
+		<value condition="Skin.HasSetting(randombg_helper_vpl)">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground.Wall.BW)]</value>
 	</variable>
 	<variable name="value_menutheme_aplaylist">
 		<value condition="SubString(skin.string(theme),colors)">special://skin/backgrounds/aplaylist.jpg</value>

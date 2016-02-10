@@ -11,10 +11,10 @@
 	<onload condition="Skin.HasSetting(kioskcode)">Skin.Reset(codestep)</onload>
 	<onload>Skin.Reset(playlists)</onload>
 	<onload>Skin.Reset(windowbg)</onload>
-	<onload>Skin.SetString(BW_SkinHelper.AllMoviesBackground.Poster.Wall.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.AllMoviesBackground.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.AllTvShowsBackground.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.AllMusicVideosBackground.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMusicSongsBackground.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.RecentMusicBackground.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.AllMusicBackground.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.GlobalFanartBackground.EnableWallImages, 20)</onload>
@@ -29,10 +29,18 @@
 	<onload>Skin.SetString(SkinHelper.InProgressVideosBackground.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.PvrBackground.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.PicturesBackground.EnableWallImages, 20)</onload>
-	<onload>Skin.SetString(SkinHelper.AllMoviesBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.BW_AllMoviesBackground.Wall.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.AllMusicBackground.Wall.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.AllMusicSongsBackground.Wall.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(SkinHelper.AllTvShowsBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllTvShowsBackground.Poster.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(SkinHelper.AllMoviesBackground.Poster.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(BW_SkinHelper.AllMoviesBackground.Poster.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(BW_SkinHelper.AllTvShowsBackground.Poster.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(BW_SkinHelper.AllMoviesBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(BW_SkinHelper.AllMusicBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(BW_SkinHelper.AllMusicSongsBackground.Wall.EnableWallImages, 20)</onload>
+	<onload>Skin.SetString(BW_SkinHelper.AllTvShowsBackground.Wall.EnableWallImages, 20)</onload>
 	<onunload condition="SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
 	<controls>
 		<control type="button" id="8000">
@@ -4025,17 +4033,24 @@
 				<animation effect="fade" start="100" end="0" time="300" condition="Skin.HasSetting(submode)">Conditional</animation>
 				<visible>Control.HasFocus(9000) + [SubString(Container(9000).ListItem.Property(id),movie) + Library.HasContent(Movies) 
 
+
 | SubString(Container(9000).ListItem.Property(id),tvshow) + Library.HasContent(TVShows) | SubString(Container(9000).ListItem.Property(id),concert) 
+
 
 + Library.HasContent(MusicVideos) | SubString(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) 
 
+
 | SubString(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) 
+
 
 | SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)] 
 
+
 + ![Player.HasMedia + [System.IdleTime(8) |  Skin.HasSetting(highermainmenu)] |  Skin.HasSetting(nohometotals) 
 
+
 | Skin.HasSetting(highertotals) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo 
+
 
 | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
 				<control type="image">
