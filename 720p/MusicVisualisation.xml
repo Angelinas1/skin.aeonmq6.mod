@@ -151,7 +151,26 @@
 					<top>-20</top>
 					<width>244</width>
 					<height>244</height>
-					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>20</left>
+					<top>-20</top>
+					<width>264</width>
+					<height>244</height>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<aspectratio align="left">stretch</aspectratio>
+					<visible>Player.IsInternetStream</visible>
+				</control> 
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>40</left>
+					<top>-20</top>
+					<width>244</width>
+					<height>244</height>
+					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]/cdart.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
@@ -193,6 +212,7 @@
 				<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>!Player.IsInternetStream</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -203,6 +223,17 @@
 				<fadetime>300</fadetime>
 				<aspectratio align="center">keep</aspectratio>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<left>29</left>
+				<top>-5</top>
+				<width>360</width>
+				<height>240</height>
+				<texture background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+				<fadetime>300</fadetime>
+				<aspectratio align="center">keep</aspectratio>
+				<animation effect="fade" end="60" condition="true">Conditional</animation>
+				<visible>Player.IsInternetStream</visible>
 			</control>
 			<control type="label">
 				<left>415</left>
@@ -341,6 +372,25 @@
 					<top>-20</top>
 					<width>300</width>
 					<height>214</height>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>30</left>
+					<top>-20</top>
+					<width>234</width>
+					<height>214</height>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<aspectratio align="left">stretch</aspectratio>
+					<visible>Player.IsInternetStream</visible>
+				</control> 
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>0</left>
+					<top>-20</top>
+					<width>300</width>
+					<height>270</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio</visible>
@@ -367,7 +417,7 @@
 			</control>
 			<control type="image">
 				<left>1030</left>
-				<top>010</top>
+				<top>10</top>
 				<width>220</width>
 				<height>95</height>
 				<texture background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
@@ -509,6 +559,25 @@
 					<top>-53</top>
 					<width>421</width>
 					<height>300</height>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>88</left>
+					<top>-51</top>
+					<width>328</width>
+					<height>298</height>
+					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<visible>Player.IsInternetStream</visible>
+				</control> 
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>33</left>
+					<top>-53</top>
+					<width>421</width>
+					<height>300</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio</visible>
@@ -547,6 +616,17 @@
 				<fadetime>300</fadetime>
 				<aspectratio align="right" aligny="bottom">keep</aspectratio>
 				<visible>!IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
+			</control>
+			<control type="image">
+				<!-- logo artista -->
+				<left>465</left>
+				<top>-80</top>
+				<width>795</width>
+				<height>100</height>
+				<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$VAR[value_playertitle]&amp;type=clearlogo</texture>
+				<fadetime>300</fadetime>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>IsEmpty(Skin.String(CustomMusicLogoPath)) + Player.IsInternetStream</visible>
 			</control>
 			<control type="label">
 				<!-- Nome do artista -->

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.aeonmq6MOD" version="3.2.1" name="Aeon MQ 6 MOD" provider-name="MarcosQui">
+	<addon id="skin.aeonmq6MOD" version="6.0.1" name="Aeon MQ 6 MOD" provider-name="MarcosQui">
 	<requires>
-	<import addon="xbmc.gui" version="5.9.0"/>
+	<import addon="xbmc.gui" version="5.10.0"/>
 	<import addon="service.skin.widgets" version="0.0.30"/>
 	<import addon="service.library.data.provider" version="0.0.9"/>
 	<import addon="service.nextup.notification" version="1.0.8"/>
@@ -12,13 +12,14 @@
 	<import addon="script.games.rom.collection.browser" version="2.1.2"/>
 	<import addon="script.artistslideshow" version="1.8.6"/>
 	<import addon="script.tv.show.next.aired" version="6.0.14"/>
-	<import addon="script.cu.lrclyrics" version="3.2.0"/>
 	<import addon="script.toolbox" version="1.1.0"/>
 	<import addon="script.globalsearch" version="5.0.0"/>
 	<import addon="script.extendedinfo" version="3.1.1" />
 	<import addon="script.cinemavision" version="1.0.1" />
 	<import addon="resource.uisounds.aeonmq6" version="1.0.0"/>
 	<import addon="script.skin.helper.service" version="1.0.0"/>
+	<import addon="resource.images.studios.white" version="0.0.6"/>
+	<import addon="resource.images.studios.coloured" version="0.0.7"/>
 	</requires>
 	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
 	<res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>

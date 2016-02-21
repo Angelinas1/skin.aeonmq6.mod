@@ -49,8 +49,8 @@
 				<onfocus condition="SubString(skin.string(m_panel_layout),panel_layout_banner)">Skin.SetString(m_panel_layout,panel_layout_cd)</onfocus>
 				<onfocus condition="SubString(skin.string(m_panel_layout),panel_layout_cd)">Skin.SetString(m_panel_layout,panel_layout_clearart)</onfocus>
 				<onfocus condition="SubString(skin.string(m_panel_layout),panel_layout_clearart)">Skin.SetString(m_panel_layout,panel_layout_clearlogo)</onfocus>
-				<onfocus condition="SubString(skin.string(m_panel_layout),panel_layout_clearlogo)">Skin.SetString(m_panel_layout,panel_layout_shelf)</onfocus>
-				<onfocus condition="SubString(skin.string(m_panel_layout),panel_layout_shelf)">Skin.SetString(m_panel_layout,panel_layout_1)</onfocus>
+				<onfocus condition="SubString(skin.string(m_panel_layout),panel_layout_clearlogo)">Skin.SetString(m_panel_layout,panel_zoom)</onfocus>
+				<onfocus condition="SubString(skin.string(m_panel_layout),panel_zoom)">Skin.SetString(m_panel_layout,panel_layout_1)</onfocus>
 			</control>
 			<control type="button" id="4195">
 				<include>InvisibleButton</include>
@@ -371,7 +371,7 @@
 					<label>One click change widget</label>
 					<onclick>Skin.ToggleSetting(widget_one)</onclick>
 					<selected>Skin.HasSetting(widget_one)</selected>
-			</control>
+				</control>
 			</control>
 			<!--#######################################################################   MOBILIA   #######################################################################-->
 			<control type="group" id="9007">
@@ -2083,7 +2083,7 @@
 					<onup>9100</onup>
 					<ondown>SetFocus($INFO[skin.string(idcolorflags)])</ondown>
 					<itemgap>0</itemgap>
-					<pagecontrol></pagecontrol>
+					<pagecontrol/>
 					<control type="button" id="1222">
 						<!-- resetar -->
 						<label>$LOCALIZE[31687] - $LOCALIZE[31599]</label>
@@ -5185,7 +5185,7 @@
 						<colordiffuse>FFDAA520</colordiffuse>
 						<onclick>Skin.SetString(discaudio,0)</onclick>
 						<onclick>Skin.SetString(discvideo,0)</onclick>
-						<onclick>Skin.SetString(cdart_seconds,4000)</onclick>
+						<onclick>Skin.SetString(cdart_seconds,1000)</onclick>
 						<onclick>SetFocus(9100)</onclick>
 						<onclick>Notification($LOCALIZE[31656],$LOCALIZE[31237])</onclick>
 					</control>

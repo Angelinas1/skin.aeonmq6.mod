@@ -27,6 +27,7 @@
 		<ondown>9000</ondown>
 		<orientation>horizontal</orientation>
 		<pagecontrol>-</pagecontrol>
+		<focusposition>5</focusposition>
 		<include>Animation_Widgets</include>
 		<itemlayout width="101" height="190">
 			<control type="image">
@@ -1724,17 +1725,22 @@
 	<width>199</width>
 	<height>240</height>
 	
+
 <texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_wposter1]</texture>
 	
+
 <colordiffuse>97FFFFFF</colordiffuse>
 	<aspectratio align="center" aligny="top">stretch</aspectratio>
 	
+
 <animation type="Focus" reversible="false">
-	<effect type="zoom" center="auto" start="80" end="100" time="400" 
+	<effect type="zoom" center="auto" start="80" end="100" 
+time="400" 
 tween="back" easing="out" />
 	<effect type="fade" start="80" end="100" time="400" />
 	</animation>
-	</control>
+	
+</control>
 	
 <control type="image"><!-- poster 
 	<left>4</left>
@@ -1742,13 +1748,17 @@ tween="back" easing="out" />
 	<width>199</width>
 	<height>240</height>
 	
+
 <texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_wposter1]</texture>
 	
+
 <colordiffuse>FF333333</colordiffuse>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	
+
 <animation type="Focus" reversible="false">
-	<effect type="zoom" center="auto" start="80" end="100" time="400" 
+	<effect type="zoom" center="auto" start="80" end="100" 
+time="400" 
 tween="back" easing="out" />
 	</animation>
 	</control> 
@@ -1791,6 +1801,264 @@ tween="back" easing="out" />
 			</control>
 		</focusedlayout>
 	</include>
+	<include name="panel_zoom">
+		<left>30</left>
+		<top>350</top>
+		<width>1215</width>
+		<height>400</height>
+		<onup>512</onup>
+		<ondown>9000</ondown>
+		<orientation>horizontal</orientation>
+		<pagecontrol>1</pagecontrol>
+		<focusposition>0</focusposition>
+		<scrolltime tween="sine" easing="out">500</scrolltime>
+		<include>Animation_Widgets</include>
+		<itemlayout width="101" height="390">
+			<control type="group">
+				<visible>Control.HasFocus(9000) | Control.HasFocus(510) | ControlGroup(512).HasFocus | Control.HasFocus(9224) | Control.HasFocus(1000)</visible>
+				<!-- reflexo video -->
+				<control type="image">
+					<left>4</left>
+					<top>166</top>
+					<width>97</width>
+					<height>165</height>
+					<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_widgetsposter]</texture>
+					<colordiffuse>97FFFFFF</colordiffuse>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<animation effect="fade" start="100" end="25" time="400" condition="ControlGroup(510).HasFocus">Conditional</animation>
+				</control>
+				<!-- poster -->
+				<control type="image">
+					<left>4</left>
+					<top>0</top>
+					<width>97</width>
+					<height>165</height>
+					<texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_widgetsposter]</texture>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<animation effect="fade" start="100" end="25" time="400" condition="ControlGroup(510).HasFocus">Conditional</animation>
+				</control>
+				<control type="progress">
+					<left>9</left>
+					<top>170</top>
+					<width>87</width>
+					<height>5</height>
+					<info>ListItem.PercentPlayed</info>
+					<animation effect="fade" start="100" end="25" time="400" condition="ControlGroup(510).HasFocus">Conditional</animation>
+					<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+				</control>
+				<control type="image">
+					<left>76</left>
+					<top>118</top>
+					<width>25</width>
+					<height>25</height>
+					<texture>OverlayWatched.png</texture>
+					<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<animation effect="fade" start="100" end="25" time="400" condition="ControlGroup(510).HasFocus">Conditional</animation>
+					<visible>!Skin.HasSetting(nooverlays) + IntegerGreaterThan(ListItem.Playcount,0)</visible>
+				</control>
+				<control type="label">
+					<left>5</left>
+					<top>121</top>
+					<width>93</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_yearshome</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<shadowcolor>black</shadowcolor>
+					<visible>SubString(Container(9000).ListItem.Property(widgets),years)</visible>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout condition="![Control.HasFocus(500) | Control.HasFocus(510) | ControlGroup(512).HasFocus | Control.HasFocus(1000)]" width="101" height="190">
+			<animation effect="fade" start="100" end="0" time="150" delay="500" condition="ControlGroup(616).HasFocus">Visible</animation>
+			<!-- reflexo video -->
+			<control type="image">
+				<left>4</left>
+				<top>166</top>
+				<width>97</width>
+				<height>165</height>
+				<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_widgetsposter]</texture>
+				<colordiffuse>97FFFFFF</colordiffuse>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+			</control>
+			<!-- poster -->
+			<control type="image">
+				<left>4</left>
+				<top>0</top>
+				<width>97</width>
+				<height>165</height>
+				<texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_widgetsposter]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="progress">
+				<left>9</left>
+				<top>170</top>
+				<width>87</width>
+				<height>5</height>
+				<info>ListItem.PercentPlayed</info>
+				<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+			</control>
+			<control type="image">
+				<left>76</left>
+				<top>118</top>
+				<width>25</width>
+				<height>25</height>
+				<texture>OverlayWatched.png</texture>
+				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<visible>!Skin.HasSetting(nooverlays) + IntegerGreaterThan(ListItem.Playcount,0)</visible>
+			</control>
+			<control type="label">
+				<left>5</left>
+				<top>121</top>
+				<width>93</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_yearshome</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<shadowcolor>black</shadowcolor>
+				<visible>SubString(Container(9000).ListItem.Property(widgets),years)</visible>
+			</control>
+		</focusedlayout>
+		<focusedlayout condition="Control.HasFocus(512) | Control.HasFocus(510) | Control.HasFocus(9224)" width="405" height="390">
+			<control type="group">
+				<!-- modern case  -->
+				<top>130</top>
+				<animation effect="zoom" center="0,248" start="100" end="220" time="500" tween="cubic" easing="out" reversible="false">Focus</animation>
+				<animation type="Focus" reversible="false" condition="true">
+					<effect type="slide" start="0,0" end="20,0" time="500" delay="1000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="300" delay="1000"/>
+				</animation>
+				<animation effect="slide" time="0" start="0,0" end="-25,0" tween="cubic" easing="out" condition="true">Conditional</animation>
+				<animation effect="slide" time="0" start="0,0" end="0,-145" tween="cubic" easing="out" condition="true">Conditional</animation>
+				<control type="image">
+					<!-- modern case middle-->
+					<left>0</left>
+					<top>41</top>
+					<width>261</width>
+					<height>191</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_middle.png</texture>
+				</control>
+				<control type="group">
+					<!-- CDART VIDEO -->
+					<left>70</left>
+					<top>70</top>
+					<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+					<animation type="Focus">
+						<effect type="slide" start="0,0" end="-32,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+					</animation>
+					<control type="image">
+						<width>112</width>
+						<height>112</height>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+						<include>Animation_ViewsCDart</include>
+					</control>
+					<control type="image">
+						<width>112</width>
+						<height>112</height>
+						<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(510).ListItem.Title]&amp;type=discart</texture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+						<include>Animation_ViewsCDart</include>
+						<visible>IsEmpty(ListItem.Art(discart))</visible>
+					</control>
+				</control>
+				<control type="group">
+					<!-- modern case left -->
+					<animation type="Focus" reversible="false" condition="true">
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-15,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+					</animation>
+					<control type="image">
+						<!-- left -->
+						<left>37</left>
+						<top>46</top>
+						<width>261</width>
+						<height>181</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>modern_left.png</texture>
+					</control>
+					<control type="image">
+						<!-- left poster -->
+						<left>70</left>
+						<top>45</top>
+						<width>126</width>
+						<height>184</height>
+						<aspectratio align="left">stretch</aspectratio>
+						<texture diffuse="modern_left_poster.png">$VAR[value_widgetsposter]</texture>
+						<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+					</control>
+					<control type="image">
+						<!-- left ram -->
+						<left>36</left>
+						<top>46</top>
+						<width>261</width>
+						<height>181</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>modern_left_ram.png</texture>
+					</control>
+					<control type="image">
+						<!-- left codec -->
+						<left>91</left>
+						<top>165</top>
+						<width>15</width>
+						<height>36</height>
+						<texture>modern/$INFO[Container(510).ListItem.VideoCodec].png</texture>
+						<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+					</control>
+				</control>
+				<control type="image">
+					<!-- right -->
+					<left>-2</left>
+					<top>41</top>
+					<width>261</width>
+					<height>191</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_right.png</texture>
+				</control>
+				<control type="image">
+					<!-- right poster-->
+					<left>70</left>
+					<top>45</top>
+					<width>140</width>
+					<height>184</height>
+					<aspectratio align="right">stretch</aspectratio>
+					<texture diffuse="modern_right_poster.png">$VAR[value_widgetsposter]</texture>
+					<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+				</control>
+				<control type="image">
+					<!-- right -->
+					<left>-2</left>
+					<top>41</top>
+					<width>261</width>
+					<height>191</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_right_ram.png</texture>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
 	<!-- ################################################################################ Comum ################################################################################ -->
 	<include name="widgets_common">
 		<control type="panel" id="510">
@@ -1807,7 +2075,12 @@ tween="back" easing="out" />
 			<include condition="SubString(skin.string(m_panel_layout),panel_layout_clearlogo)">panel_layout_clearlogo</include>
 			<include condition="SubString(skin.string(m_panel_layout),panel_layout_shelf)">panel_layout_shelf</include>
 			<content target="video">$VAR[value_widgetsvideo]</content>
-			<visible>Control.IsVisible(8003) + StringCompare(Container(9000).ListItem.Property(target),video1)</visible>
+			<visible>Control.IsVisible(8003) + !SubString(skin.string(m_panel_layout),panel_zoom) + StringCompare(Container(9000).ListItem.Property(target),video1)</visible>
+		</control>
+		<control type="fixedlist" id="510">
+			<include condition="SubString(skin.string(m_panel_layout),panel_zoom)">panel_zoom</include>
+			<content target="video">$VAR[value_widgetsvideo]</content>
+			<visible>Control.IsVisible(8003) + SubString(skin.string(m_panel_layout),panel_zoom) + StringCompare(Container(9000).ListItem.Property(target),video1)</visible>
 		</control>
 		<control type="panel" id="510">
 			<include condition="SubString(skin.string(tv_panel_layout),panel_layout_1)">panel_layout_1</include>
@@ -2098,26 +2371,26 @@ tween="back" easing="out" />
 			<include>Animation_Fade</include>
 			<visible allowhiddenfocus="true">Control.IsVisible(510) + Control.HasFocus(71)</visible>
 		</control>
-	<control type="image" id="6078">
-	<visible>StringCompare(Container(9000).ListItem.Property(target),plus_epg)</visible>
-	<left>1140</left>
-	<top>400</top>
-	<width>80</width>
-	<height>80</height>
-	<aspectratio align="center">keep</aspectratio>
-	<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="false" condition="System.IdleTime(6)">Conditional</animation>
-	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=discart</texture>
-	<fadetime>FanartCrossFadeTime</fadetime>
-	</control>
-	<control type="image" id="6079">
-	<visible>StringCompare(Container(9000).ListItem.Property(target),plus_epg)</visible>
-	<left>1180</left>
-	<top>375</top>
-	<height>120</height>
-	<aspectratio align="left">keep</aspectratio>
-	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=poster</texture>
-	<fadetime>FanartCrossFadeTime</fadetime>
-	</control>	
+		<control type="image" id="6078">
+			<visible>StringCompare(Container(9000).ListItem.Property(target),plus_epg)</visible>
+			<left>1140</left>
+			<top>400</top>
+			<width>80</width>
+			<height>80</height>
+			<aspectratio align="center">keep</aspectratio>
+			<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="false" condition="System.IdleTime(6)">Conditional</animation>
+			<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=discart</texture>
+			<fadetime>FanartCrossFadeTime</fadetime>
+		</control>
+		<control type="image" id="6079">
+			<visible>StringCompare(Container(9000).ListItem.Property(target),plus_epg)</visible>
+			<left>1180</left>
+			<top>375</top>
+			<height>120</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=poster</texture>
+			<fadetime>FanartCrossFadeTime</fadetime>
+		</control>
 		<control type="panel" id="510">
 			<include>panel_layout</include>
 			<content target="video">$VAR[value_widgetshelper]</content>
@@ -3040,7 +3313,7 @@ tween="back" easing="out" />
 				<align>center</align>
 				<font>Font_18A</font>
 				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>Isengard</label>
+				<label>Jarvis</label>
 			</control>
 			<control type="label">
 				<left>1098</left>

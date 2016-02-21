@@ -5,7 +5,6 @@
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<allowoverlay>no</allowoverlay>
 	<views>50,51,54,55,56,57,60,62,69,5735,5800,5801</views>
-	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,10)</onload>
 	<controls>
 		<control type="multiimage">
 			<!-- Fanart -->
@@ -556,7 +555,7 @@
 							<width>260</width>
 							<height>35</height>
 							<font>Font_22</font>
-							<label>$INFO[ListItem.ChannelNumber]$INFO[ListItem.Label, - ]</label>
+							<label>$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label, - ]</label>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>E4101010</textcolor>

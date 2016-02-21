@@ -1137,6 +1137,20 @@
 					<selected>!Skin.HasSetting(noartposterlistvideo)</selected>
 					<visible>Control.IsVisible(70)</visible>
 				</control>
+				<control type="radiobutton" id="92142">
+					<include>TopMenuRadioButton</include>
+					<label>List Banner</label>
+					<onclick>Skin.ToggleSetting(bannermodernlistvideo)</onclick>
+					<selected>Skin.HasSetting(bannermodernlistvideo)</selected>
+					<visible>Control.IsVisible(84)</visible>
+				</control>
+				<control type="radiobutton" id="92143">
+					<include>TopMenuRadioButton</include>
+					<label>31490</label>
+					<onclick>Skin.ToggleSetting(slimmodernlistvideo)</onclick>
+					<selected>Skin.HasSetting(slimmodernlistvideo)</selected>
+					<visible>Control.IsVisible(84) + !Skin.HasSetting(bannermodernlistvideo)</visible>
+				</control>
 				<!-- Global -->
 				<control type="button" id="92149">
 					<include>TopMenuButton</include>
@@ -1212,11 +1226,11 @@
 					<label>103</label>
 				</control>
 				<control type="togglebutton" id="4">
-                    <!-- Sort asc -->
-                    <include>TopMenuButton</include>
-                    <label>$INFO[Container.SortOrder]</label>
-				<visible>!Window.IsActive(TVGuide)</visible>
-                </control>
+					<!-- Sort asc -->
+					<include>TopMenuButton</include>
+					<label>$INFO[Container.SortOrder]</label>
+					<visible>!Window.IsActive(TVGuide)</visible>
+				</control>
 				<control type="radiobutton" id="14">
 					<!-- Watched Toggle -->
 					<include>TopMenuRadioButton</include>
@@ -3670,11 +3684,11 @@
 					<label>103</label>
 				</control>
 				<control type="togglebutton" id="4">
-                    <!-- Sort asc -->
-                    <include>TopMenuButton</include>
-                    <label>$INFO[Container.SortOrder]</label>
-				<visible>!Window.IsActive(TVGuide)</visible>
-                </control>
+					<!-- Sort asc -->
+					<include>TopMenuButton</include>
+					<label>$INFO[Container.SortOrder]</label>
+					<visible>!Window.IsActive(TVGuide)</visible>
+				</control>
 				<control type="button" id="991">
 					<!-- Global Search -->
 					<include>TopMenuButton</include>
@@ -3978,18 +3992,18 @@
 				<focusposition>1</focusposition>
 				<scrolltime>450</scrolltime>
 				<control type="button" id="3">
-                    <!-- Sort by button -->
-                    <include>TopMenuButton</include>
-                    <label>103</label>
-                    <ondown>SetFocus(50)</ondown>
+					<!-- Sort by button -->
+					<include>TopMenuButton</include>
+					<label>103</label>
+					<ondown>SetFocus(50)</ondown>
 					<visible>!Window.IsActive(TVGuide)</visible>
-                </control>
-                <control type="togglebutton" id="4">
-                    <!-- Sort asc -->
-                    <include>TopMenuButton</include>
-                    <label>$INFO[Container.SortOrder]</label>
-				<visible>!Window.IsActive(TVGuide)</visible>
-                </control>
+				</control>
+				<control type="togglebutton" id="4">
+					<!-- Sort asc -->
+					<include>TopMenuButton</include>
+					<label>$INFO[Container.SortOrder]</label>
+					<visible>!Window.IsActive(TVGuide)</visible>
+				</control>
 				<control type="button" id="9145">
 					<include>TopMenuButton</include>
 					<label>Set color in Timeline EPG</label>
@@ -4077,14 +4091,13 @@
 					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
 				</control>
-				
-	<control type="radiobutton" id="5">
-	<description>Group recording items by folder structure</description>
-	<textwidth>235</textwidth>
-	<include>TopMenuRadioButton</include>
-	<label>19270</label>
-	<visible></visible>
-	</control>
+				<control type="radiobutton" id="5">
+					<description>Group recording items by folder structure</description>
+					<textwidth>235</textwidth>
+					<include>TopMenuRadioButton</include>
+					<label>19270</label>
+					<visible/>
+				</control>
 				<control type="radiobutton" id="6">
 					<description>Show hidden channels</description>
 					<textwidth>235</textwidth>
@@ -4092,22 +4105,22 @@
 					<label>19051</label>
 					<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
 				</control>
-	<control type="radiobutton" id="7">
-	<description>Show deleted recordings</description>
-	<textwidth>235</textwidth>
-	<include>TopMenuRadioButton</include>
-	<label>19184</label>
-	<visible></visible>
-	</control>
-	<control type="radiobutton" id="31">
-	<description>Filter</description>
-	<textwidth>235</textwidth>
-	<include>TopMenuButton</include>
-	<label>587</label>
-	<selected>Container.Filtered</selected>
-	<onclick>right</onclick>
-	<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
-	</control>	
+				<control type="radiobutton" id="7">
+					<description>Show deleted recordings</description>
+					<textwidth>235</textwidth>
+					<include>TopMenuRadioButton</include>
+					<label>19184</label>
+					<visible/>
+				</control>
+				<control type="radiobutton" id="31">
+					<description>Filter</description>
+					<textwidth>235</textwidth>
+					<include>TopMenuButton</include>
+					<label>587</label>
+					<selected>Container.Filtered</selected>
+					<onclick>right</onclick>
+					<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+				</control>
 				<control type="radiobutton" id="9413">
 					<include>TopMenuRadioButton</include>
 					<label>31250</label>

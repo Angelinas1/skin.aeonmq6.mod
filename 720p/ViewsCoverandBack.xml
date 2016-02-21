@@ -1244,7 +1244,7 @@
 	<effect type="rotatey" center="485" start="0" end="15" time="0" tween="quadratic" easing="out"/>
 	</animation>
 	<aspectratio align="center">keep</aspectratio>
-	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 	<visible>!IsEmpty(Control.GetLabel(557))</visible>
 	</control>
 	<control type="image"><!-- Back side title -->
@@ -1397,7 +1397,7 @@
 	<control type="image"><!-- Estudio -->
 	<height>20</height>
 	<width>35</width>
-	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 	<visible>!IsEmpty(Control.GetLabel(557))</visible>
 	</control>
 	<control type="image"><!-- Codec de video -->
@@ -1440,7 +1440,7 @@
 	<control type="image"><!-- Codec de video -->
 	<height>20</height>
 	<width>35</width>
-	<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio),flags/studios/,.png]</texture>
+	<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio),resource://resource.images.studios.coloured/,.png]</texture>
 	</control>
 	<control type="image"><!-- Codec de video -->
 	<height>20</height>
@@ -2454,7 +2454,7 @@
 	<effect type="rotatey" center="485" start="0" end="15" time="0" tween="quadratic" easing="out"/>
 	</animation>
 	<aspectratio align="center">keep</aspectratio>
-	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 	<visible>!IsEmpty(Control.GetLabel(557))</visible>
 	</control>
 	<control type="image"><!-- Back side title -->
@@ -2627,7 +2627,7 @@
 	<control type="image"><!-- Estudio -->
 	<height>20</height>
 	<width>35</width>
-	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 	<visible>!IsEmpty(Control.GetLabel(557))</visible>
 	</control>
 	<control type="image"><!-- Codec de video -->

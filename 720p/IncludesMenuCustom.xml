@@ -3626,17 +3626,11 @@
 					<label>31172</label>
 					<onclick>noop</onclick>
 					<visible>IsEmpty(skin.string(menucopy1.label)) + IsEmpty(skin.string(menucopy2.label)) + IsEmpty(skin.string(menucopy3.label)) 
-
 + IsEmpty(skin.string(menucopy4.label)) + IsEmpty(skin.string(menucopy5.label)) + IsEmpty(skin.string(menucopy6.label)) 
-
 + IsEmpty(skin.string(menucopy7.label)) + IsEmpty(skin.string(menucopy8.label)) + IsEmpty(skin.string(menucopy9.label)) 
-
 + IsEmpty(skin.string(menucopy10.label)) + IsEmpty(skin.string(menucopy11.label)) + IsEmpty(skin.string(menucopy12.label)) 
-
 + IsEmpty(skin.string(menucopy13.label)) + IsEmpty(skin.string(menucopy14.label)) + IsEmpty(skin.string(menucopy15.label)) 
-
 + IsEmpty(skin.string(menucopy16.label)) + IsEmpty(skin.string(menucopy17.label)) + IsEmpty(skin.string(menucopy18.label)) 
-
 + IsEmpty(skin.string(menucopy19.label)) + IsEmpty(skin.string(menucopy20.label))</visible>
 				</item>
 			</content>
@@ -5470,7 +5464,7 @@
 				<label>Helper Background</label>
 				<onclick>Skin.ToggleSetting(randombg_helper_livetv)</onclick>
 				<selected>Skin.HasSetting(randombg_helper_livetv)</selected>
-				<visible>StringCompare(Container(9000).ListItem.Property(id),livetv)</visible>
+				<visible>Skin.HasSetting(randomlivetvbg) + StringCompare(Container(9000).ListItem.Property(id),livetv)</visible>
 			</control>
 			<control type="radiobutton" id="231">
 				<!-- Helper background radio-->

@@ -1,0 +1,582 @@
+<includes><!-- Aeon MQ 6 -->
+	<!--##################################################################################   VISTA ARTE Modern - 84   ##################################################################################-->
+	<include name="ModernListLabel">
+	<left>0</left>
+	<height>20</height>
+	<width>350</width>
+	<font>Font_18A</font>
+	<aligny>top</aligny>
+	<align>left</align>
+	<textcolor>$VAR[value_headercolor]</textcolor>
+	<textoffsetx>0</textoffsetx>
+	<textoffsety>0</textoffsety>
+	<scroll>true</scroll>
+	</include>
+	<include name="ModernListDisc">
+	<width>130</width>
+	<height>130</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</include>
+	<include name="ViewModernList">
+	<control type="group"><!-- default group -->
+	<animation effect="fade" time="400">VisibleChange</animation>
+	<visible>Control.IsVisible(84)</visible>
+	<control type="button" id="9915">
+	<include>InvisibleButton</include>
+	<onup>84</onup>
+	<ondown>84</ondown>
+	<onleft>84</onleft>
+	<onright>9914</onright>
+	</control>
+	<control type="button" id="9914">
+	<include>InvisibleButton</include>
+	<onup>84</onup>
+	<ondown>84</ondown>
+	<onleft>84</onleft>
+	<onright>9915</onright>
+	</control>
+	<control type="group">
+	<animation effect="slide" time="500" start="0,400" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
+	<animation effect="slide" time="500" start="0,400" end="0,0" tween="cubic" easing="out">Visible</animation>
+	<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
+	<control type="group"><!-- Painel de Info -->
+	<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
+	<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
+	<visible>Control.HasFocus(9915)| Window.IsActive(84) + Skin.HasSetting(midlistplotvideo) + !IsEmpty(Control.GetLabel(5501))</visible>
+	<control type="image">
+	<left>871</left>
+	<top>-70</top>
+	<width>30</width>
+	<height>580</height>
+	<texture flipx="true">shadow.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>900</left>
+	<top>-70</top>
+	<width>380</width>
+	<height>720</height>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<animation effect="fade" end="85" condition="true">Conditional</animation>
+	<include>Animation_Fade</include>
+	</control>
+	<control type="textbox">
+	<left>920</left>
+	<top>20</top>
+	<width>340</width>
+	<height>474</height>
+	<font>Font_18A</font>
+	<label>$VAR[value_plot]</label>
+	<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
+	</control>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>-60</top>
+	<width>820</width>
+	<height>260</height>
+	<texture diffuse="red_metal_fanart1.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">stretch</aspectratio>
+	</control>
+	<control type="image">
+	<left>600</left>
+	<top>520</top>
+	<width>340</width>
+	<height>114</height>
+	<texture>$INFO[ListItem.Art(clearart)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	</control>
+	<control type="image">
+	<left>600</left>
+	<top>520</top>
+	<width>340</width>
+	<height>114</height>
+	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.Title]&amp;type=clearart</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<visible>IsEmpty(ListItem.Art(clearart))</visible>
+	</control>
+	<control type="grouplist"><!-- Painel de video -->
+	<left>280</left>
+	<top>114</top>
+	<animation effect="slide" time="600" start="0,0" end="-1000,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsActive(84) + Skin.HasSetting(midlistplotvideo)">Conditional</animation>
+	<control type="videowindow">
+	<left>-280</left>
+	<top>-100</top>
+	<width>600</width>
+	<height>330</height>
+	<visible>Player.HasVideo</visible>
+	<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+	</control>
+	</control>
+	<control type="grouplist"><!-- Painel de info -->
+	<left>1280</left>
+	<top>514</top>
+	<orientation>vertical</orientation>
+	<itemgap>0</itemgap>
+	<animation effect="slide" time="600" start="0,0" end="-360,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(84) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
+	<control type="label">
+	<include>ModernListLabel</include>
+	<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+	</control>
+	<control type="label">
+	<include>ModernListLabel</include>
+	<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+	</control>
+	<control type="label">
+	<include>ModernListLabel</include>
+	<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+	</control>
+	<control type="label">
+	<include>ModernListLabel</include>
+	<label>$VAR[value_ground14_label]: [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]</label>
+	</control>
+	<control type="label">
+	<include>ModernListLabel</include>
+	<label>$VAR[value_ground15_label]: [COLOR=FFFFFAF0]$VAR[value_ground15_value][/COLOR]</label>
+	</control>
+	<control type="label">
+	<include>ModernListLabel</include>
+	<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
+	</control>
+	</control>
+	<control type="group"><!-- modern case  -->
+	<top>-20</top>
+	<left>830</left>
+	<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
+	<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
+	<visible>!IsEmpty(ListItem.art(poster))+![Control.HasFocus(9915) | Window.IsActive(84) + Skin.HasSetting(midlistplotvideo) | Window.IsVisible(621)]</visible>
+	<control type="image"><!-- modern case middle-->
+	<left>2</left>
+	<top>82</top>
+	<width>523</width>
+	<height>382</height>
+	<aspectratio align="left">keep</aspectratio>
+	<texture>Case/pozadina.png</texture>
+	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	</control>
+	<control type="group"><!-- CDART VIDEO -->
+	<left>150</left>
+	<top>150</top>
+	<animation type="WindowOpen">
+	<effect type="slide" start="0,0" end="-48,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+	<effect type="fade" start="0" end="100" time="500" delay="500"/>
+	</animation>
+	<animation type="Visible">
+	<effect type="slide" start="0,0" end="0,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+	<effect type="fade" start="0" end="100" time="500" delay="500"/>
+	</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation type="Hidden">
+	<effect type="slide" start="-48,0" end="0,0" time="8000" tween="cubic" easing="out"/>
+	<effect type="fade" start="100" end="0" time="200"/>
+	</animation>
+	<control type="image">
+	<width>220</width>
+	<height>220</height>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</control>
+	<control type="image">
+	<left>10</left>
+	<top>10</top>
+	<width>200</width>
+	<height>200</height>
+	<visible>IsEmpty(ListItem.art(discart))</visible>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="top">stretch</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</control>
+	<control type="image">
+	<width>220</width>
+	<height>220</height>
+	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.Title]&amp;type=discart</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</control>
+	</control>
+	<control type="group"><!-- modern case left -->
+	<animation type="Conditional" reversible="true" condition="Control.HasFocus(84)">
+	<effect type="slide" start="0,0" end="-40,0" time="4000" tween="cubic" easing="out"/>
+	<effect type="slide" start="0,0" end="0,-6" time="4000" tween="cubic" easing="out"/>
+	<effect type="zoom" start="100" end="102" time="4000"/>
+	</animation>
+	<animation type="Conditional" reversible="true" condition="!Control.HasFocus(84)">
+	<effect type="slide" start="0,-6" end="0,0" time="4000" tween="cubic" easing="out"/>
+	<effect type="slide" start="-40,0" end="0,0" time="4000" tween="cubic" easing="out"/>
+	<effect type="zoom" start="102" end="100" time="4000"/>
+	</animation>
+	<control type="image"><!-- left -->
+	<left>82</left>
+	<top>92</top>
+	<width>524</width>
+	<height>362</height>
+	<aspectratio align="left">keep</aspectratio>
+	<texture>Case/levo.png</texture>
+	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	</control>
+	</control>
+	<control type="image"><!-- modern case middle-->
+	<left>2</left>
+	<top>82</top>
+	<width>523</width>
+	<height>382</height>
+	<aspectratio align="left">keep</aspectratio>
+	<texture>Case/pozadina1.png</texture>
+	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	</control>
+	<control type="group"><!-- modern case left -->
+	<animation type="Conditional" reversible="true" condition="Control.HasFocus(84)">
+	<effect type="slide" start="0,0" end="-40,0" time="4000" tween="cubic" easing="out"/>
+	<effect type="slide" start="0,0" end="0,-6" time="4000" tween="cubic" easing="out"/>
+	<effect type="zoom" start="100" end="102" time="4000"/>
+	</animation>
+	<animation type="Conditional" reversible="true" condition="!Control.HasFocus(84)">
+	<effect type="slide" start="0,-6" end="0,0" time="4000" tween="cubic" easing="out"/>
+	<effect type="slide" start="-40,0" end="0,0" time="4000" tween="cubic" easing="out"/>
+	<effect type="zoom" start="102" end="100" time="4000"/>
+	</animation>	
+	<control type="image"><!-- left poster -->
+	<left>120</left>
+	<top>65</top>
+	<width>400</width>
+	<height>395</height>
+	<aspectratio align="left">stretch</aspectratio>
+	<texture diffuse="Case/levo_podloga.png">$INFO[ListItem.Art(poster)]</texture>
+	<animation condition="true" effect="rotatey" center="130" start="0" end="-30" time="0">Conditional</animation>
+	</control>
+	<control type="image"><!-- left ram -->
+	<left>82</left>
+	<top>92</top>
+	<width>524</width>
+	<height>362</height>
+	<aspectratio align="left">keep</aspectratio>
+	<texture>Case/levoram.png</texture>
+	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	</control>
+	<control type="image"><!-- left codec -->
+	<left>166</left>
+	<top>335</top>
+	<width>27</width>
+	<height>70</height>
+	<texture>$VAR[value_videocodec_modern]</texture>
+	<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+	</control>
+	</control>
+	<control type="image"><!-- right -->
+	<left>-5</left>
+	<top>82</top>
+	<width>573</width>
+	<height>382</height>
+	<aspectratio align="left">keep</aspectratio>
+	<texture>Case/desno.png</texture>
+	<animation effect="slide" end="-276,0" time="0">Conditional</animation>
+	</control>	
+	<control type="image"><!-- right poster-->
+	<left>122</left>
+	<top>65</top>
+	<width>440</width>
+	<height>395</height>
+	<aspectratio align="right">stretch</aspectratio>
+	<texture diffuse="Case/desno_podloga.png">$INFO[ListItem.Art(poster)]</texture>
+	<animation condition="true" effect="rotatey" center="122" start="0" end="-27" time="0">Conditional</animation>
+	</control>	
+	<control type="image"><!-- right -->
+	<left>-5</left>
+	<top>82</top>
+	<width>553</width>
+	<height>382</height>
+	<aspectratio align="left">keep</aspectratio>
+	<texture>Case/desnoram.png</texture>
+	<animation effect="slide" end="-276,0" time="0">Conditional</animation>
+	</control>	
+	</control>
+	<control type="fixedlist" id="84">
+	<viewtype label="Modern List">list</viewtype>
+	<left>10</left>
+	<top>260</top>
+	<width>600</width>
+	<height>360</height>
+	<pagecontrol>80</pagecontrol>
+	<onleft>80</onleft>
+	<onright condition="![IsEmpty(Control.GetLabel(5501)) | Window.IsActive(84) + Skin.HasSetting(midlistplotvideo)]">9914</onright>
+	<onright condition="IsEmpty(Control.GetLabel(5501)) | Window.IsActive(84) + Skin.HasSetting(midlistplotvideo)">9920</onright>
+	<onup>84</onup>
+	<ondown>84</ondown>
+	<focusposition>1</focusposition>
+	<orientation>vertical</orientation>
+	<scrolltime>450</scrolltime>
+	<preloaditems>2</preloaditems>
+	<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(621)">Conditional</animation>
+	<itemlayout condition="Skin.HasSetting(bannermodernlistvideo)" height="80">
+	<control type="image"><!-- Cover -->
+	<width>600</width>
+	<height>79</height>
+	<bordersize>5</bordersize>
+	<texture background="true">$VAR[value_banner]</texture>
+	<aspectratio align="left" aligny="center">keep</aspectratio>
+	<visible>!Control.HasFocus(9914)</visible>
+	</control>
+	<control type="image"><!-- Cover -->
+	<width>600</width>
+	<height>79</height>
+	<bordersize>5</bordersize>
+	<colordiffuse>FF505050</colordiffuse>
+	<texture background="true">$VAR[value_banner]</texture>
+	<aspectratio align="left" aligny="center">keep</aspectratio>
+	<visible>Control.HasFocus(9914) | Control.HasFocus(9915)</visible>
+	</control>
+	<control type="image">
+	<left>570</left>
+	<top>3</top>
+	<width>25</width>
+	<height>25</height>
+	<texture>$VAR[value_watchedstyle]</texture>
+	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	</control>
+	</itemlayout>
+	<itemlayout condition="!Skin.HasSetting(bannermodernlistvideo) + !Skin.HasSetting(slimmodernlistvideo)" height="30">
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>599</width>
+	<height>1</height>
+	<texture>line.png</texture>
+	</control>
+	<control type="label">
+	<left>20</left>
+	<top>1</top>
+	<width>450</width>
+	<height>30</height>
+	<font>Font_20</font>
+	<aligny>center</aligny>
+	<include>listcolor</include>
+	<label>$INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+	<left>483</left>
+	<top>0</top>
+	<width>85</width>
+	<height>30</height>
+	<font>Font_18A</font>
+	<align>center</align>
+	<aligny>center</aligny>
+	<include>detailcolor</include>
+	<label>$INFO[ListItem.Year]</label>
+	</control>
+	<control type="image">
+	<left>570</left>
+	<top>3</top>
+	<width>25</width>
+	<height>25</height>
+	<texture>$VAR[value_watchedstyle]</texture>
+	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	</control>
+	</itemlayout>
+	<itemlayout condition="!Skin.HasSetting(bannermodernlistvideo) + Skin.HasSetting(slimmodernlistvideo)" height="27">
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>599</width>
+	<height>1</height>
+	<texture>line.png</texture>
+	</control>
+	<control type="label">
+	<left>20</left>
+	<top>1</top>
+	<width>450</width>
+	<height>27</height>
+	<font>Font_20</font>
+	<aligny>center</aligny>
+	<include>listcolor</include>
+	<label>$INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+	<left>483</left>
+	<top>1</top>
+	<width>85</width>
+	<height>27</height>
+	<font>Font_18A</font>
+	<align>center</align>
+	<aligny>center</aligny>
+	<include>detailcolor</include>
+	<label>$INFO[ListItem.Year]</label>
+	</control>
+	<control type="image">
+	<left>565</left>
+	<top>0</top>
+	<width>28</width>
+	<height>28</height>
+	<texture>$VAR[value_watchedstyle]</texture>
+	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	</control>
+	</itemlayout>
+	<focusedlayout condition="!Skin.HasSetting(bannermodernlistvideo) + Skin.HasSetting(slimmodernlistvideo)" height="30">
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>600</width>
+	<height>30</height>
+	<texture>settings_button_focus.png</texture>
+	</control>
+	<control type="label">
+	<left>20</left>
+	<top>1</top>
+	<width>450</width>
+	<height>30</height>
+	<font>Font_20</font>
+	<aligny>center</aligny>
+	<include>listcolorfocus</include>
+	<label>$INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+	<left>483</left>
+	<top>0</top>
+	<width>85</width>
+	<height>30</height>
+	<font>Font_18A</font>
+	<align>center</align>
+	<aligny>center</aligny>
+	<include>detailcolorfocus</include>
+	<label>$INFO[ListItem.Year]</label>
+	</control>
+	<control type="image">
+	<left>565</left>
+	<top>0</top>
+	<width>30</width>
+	<height>30</height>
+	<texture>$VAR[value_watchedstyle]</texture>
+	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	</control>
+	</focusedlayout>
+	<focusedlayout condition="!Skin.HasSetting(bannermodernlistvideo) + !Skin.HasSetting(slimmodernlistvideo)" height="50">
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>600</width>
+	<height>50</height>
+	<texture>settings_button_focus.png</texture>
+	</control>
+	<control type="label">
+	<left>20</left>
+	<top>0</top>
+	<width>450</width>
+	<height>30</height>
+	<font>Font_22</font>
+	<aligny>center</aligny>
+	<include>listcolorfocus</include>
+	<label>$INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+	<left>20</left>
+	<top>29</top>
+	<width>450</width>
+	<height>16</height>
+	<font>Font_18A</font>
+	<align>left</align>
+	<aligny>center</aligny>
+	<include>subcolorfocus</include>
+	<label>$VAR[value_listinfofocus]</label>
+	<visible>!StringCompare(ListItem.Label,..)</visible>
+	</control>
+	<control type="label">
+	<left>483</left>
+	<top>0</top>
+	<width>85</width>
+	<height>30</height>
+	<font>Font_18A</font>
+	<align>center</align>
+	<aligny>center</aligny>
+	<include>detailcolorfocus</include>
+	<label>$INFO[ListItem.Year]</label>
+	</control>
+	<control type="image">
+	<description>IMDB rating</description>
+	<left>492</left>
+	<top>30</top>
+	<width>65</width>
+	<height>13</height>
+	<info>ListItem.StarRating</info>
+	<colordiffuse>$VAR[value_headercolorfocus]</colordiffuse>
+	<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(seasons) | IsEmpty(ListItem.Title)]</visible>
+	</control>
+	<control type="image">
+	<left>565</left>
+	<top>10</top>
+	<width>30</width>
+	<height>30</height>
+	<texture>$VAR[value_watchedstyle]</texture>
+	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	</control>
+	</focusedlayout>
+	<focusedlayout condition="Skin.HasSetting(bannermodernlistvideo)" height="120">
+	<control type="image"><!-- Cover -->
+	<width>600</width>
+	<height>119</height>
+	<bordersize>5</bordersize>
+	<texture background="true">$VAR[value_banner]</texture>
+	<aspectratio align="left" aligny="center">keep</aspectratio>
+	</control>
+	<control type="image">
+	<left>565</left>
+	<top>10</top>
+	<width>30</width>
+	<height>30</height>
+	<texture>$VAR[value_watchedstyle]</texture>
+	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+	<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+	</control>
+	</focusedlayout>
+	</control>
+	<control type="textbox">
+	<left>920</left>
+	<top>480</top>
+	<width>340</width>
+	<height>154</height>
+	<font>Font_18A</font>
+	<label>$VAR[value_plot]</label>
+	<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+	<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
+	<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
+	<visible>![Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(84) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)]</visible>
+	</control>
+	<control type="label" id="5501"><!-- Plot -->
+	<include>InvisibleButton</include>
+	<label>$VAR[value_plot]</label>
+	</control>
+	<control type="label" id="5502"><!-- Tag -->
+	<include>InvisibleButton</include>
+	<label>$VAR[value_listinfofocus]</label>
+	</control>
+	</control>
+	<control type="scrollbar" id="80">
+	<include>ScrollBar_Vertical</include>
+	<left>5</left>
+	<top>280</top>
+	<height>320</height>
+	<onleft>9900</onleft>
+	<onright>84</onright>
+	<include>Animation_Fade</include>
+	<visible allowhiddenfocus="true">Control.IsVisible(84) + Control.HasFocus(80)</visible>
+	</control>
+	</control>
+	</include>
+	</includes>

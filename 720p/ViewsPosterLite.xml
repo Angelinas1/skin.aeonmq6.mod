@@ -222,7 +222,7 @@
 	<control type="videowindow">
 	<width>790</width>
 	<height>336</height>
-	<animation effect="slide" end="66,0" time="500" reversible="true" condition="StringCompare(Control.GetLabel(92132),poster) + !Skin.HasSetting(nopldiscart)+!Skin.HasSetting(plopencase)+[!IsEmpty(ListItem.Art(discart)|!IsEmpty(Window(0).Property(Set.Movie.6.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.7.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.8.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.9.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.10.Art(discart)))]">Conditional</animation>
+	<animation effect="slide" end="66,0" time="500" reversible="true" condition="StringCompare(Control.GetLabel(92132),poster) + !Skin.HasSetting(nopldiscart)+!Skin.HasSetting(plopencase)+[!IsEmpty(ListItem.Art(discart))|!IsEmpty(Window(0).Property(Set.Movie.6.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.7.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.8.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.9.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.10.Art(discart)))]">Conditional</animation>
 	<visible>Player.HasVideo+!VideoPlayer.IsFullscreen+!Skin.HasSetting(homefullscreentrailer)</visible>
 	</control>
 	<control type="image">
@@ -301,7 +301,7 @@
 	<top>160</top>
 	<width>66</width>
 	<visible>IsEmpty(ListItem.Art(discart))</visible>
-	<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+	<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="top">keep</aspectratio>
 	</control>	

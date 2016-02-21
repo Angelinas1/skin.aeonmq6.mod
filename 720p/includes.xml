@@ -62,6 +62,8 @@
 	<include file="ViewsMultiplexPVR.xml"/>
 	<!-- 83 -->
 	<include file="ViewsMiddleList967.xml"/>
+	<!-- 83 -->
+	<include file="ViewsModernList.xml"/>
 	<!-- 5802 -->
 	<include file="ViewsGames.xml"/>
 	<include file="ViewsLiveTV.xml"/>
@@ -1028,7 +1030,7 @@
 			<!-- Estudio -->
 			<height>45</height>
 			<include>FlagImage</include>
-			<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+			<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 			<visible>!IsEmpty(Control.GetLabel(557))</visible>
 		</control>
 		<control type="image">
@@ -1497,7 +1499,8 @@
 			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(77)">Conditional</animation>
 			<visible>Control.IsVisible(51) |Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(77)</visible>
-		</control>			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
+		</control>
+		<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 		<control type="image">
 			<left>-650</left>
 			<top>-40</top>
@@ -3917,5 +3920,322 @@
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.50.AlbumName))</visible>
 			</item>
 		</content>
+	</include>
+	<include name="ModernCase">
+		<control type="group">
+			<!-- modern case  -->
+			<control type="image">
+				<!-- modern case middle-->
+				<left>0</left>
+				<top>82</top>
+				<width>523</width>
+				<height>382</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>modern_middle.png</texture>
+				<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+			<control type="group">
+				<!-- CDART VIDEO -->
+				<left>150</left>
+				<top>150</top>
+				<animation type="WindowOpen">
+					<effect type="slide" start="0,0" end="-65,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="500" delay="500"/>
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="0,0" end="0,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="500" delay="500"/>
+				</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation type="Hidden">
+					<effect type="slide" start="-65,0" end="0,0" time="8000" tween="cubic" easing="out"/>
+					<effect type="fade" start="100" end="0" time="200"/>
+				</animation>
+				<control type="image">
+					<width>224</width>
+					<height>224</height>
+					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(discart)]</texture>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+					<include>Animation_ViewsCDart</include>
+				</control>
+				<control type="image">
+					<width>224</width>
+					<height>224</height>
+					<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Window.Property(Title)]&amp;type=discart</texture>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+					<include>Animation_ViewsCDart</include>
+					<visible>IsEmpty(Window.Property(discart)) + !Skin.HasSetting(sextendsett_fakedisc)</visible>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(sextendsett_fakedisc)</visible>
+					<width>234</width>
+					<height>234</height>
+					<visible>IsEmpty(Window.Property(discart))</visible>
+					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(Poster)]</texture>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+					<include>Animation_ViewsCDart</include>
+				</control>
+			</control>
+			<control type="group">
+				<!-- modern case left -->
+				<animation type="WindowOpen">
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-30,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="500" delay="300"/>
+				</animation>
+				<control type="image">
+					<!-- left -->
+					<left>73</left>
+					<top>92</top>
+					<width>523</width>
+					<height>362</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_left.png</texture>
+					<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+				<control type="image">
+					<!-- left poster -->
+					<left>143</left>
+					<top>87</top>
+					<width>300</width>
+					<height>375</height>
+					<aspectratio align="left">stretch</aspectratio>
+					<texture diffuse="modern_left_poster.png">$INFO[Window.Property(Poster)]</texture>
+					<animation condition="true" effect="rotatey" center="143" start="-19" end="-19" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+				<control type="image">
+					<!-- left ram -->
+					<left>73</left>
+					<top>92</top>
+					<width>523</width>
+					<height>362</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_left_ram.png</texture>
+					<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+				<control type="image">
+					<!-- left codec -->
+					<left>182</left>
+					<top>330</top>
+					<width>29</width>
+					<height>73</height>
+					<texture>$INFO[Window.Property(VideoCodec),modern/,.png]</texture>
+					<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+			</control>
+			<control type="image">
+				<!-- right -->
+				<left>-5</left>
+				<top>82</top>
+				<width>523</width>
+				<height>382</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>modern_right.png</texture>
+				<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+			<control type="image">
+				<!-- right poster-->
+				<left>142</left>
+				<top>90</top>
+				<width>340</width>
+				<height>370</height>
+				<aspectratio align="right">stretch</aspectratio>
+				<texture diffuse="modern_right_poster.png">$INFO[Window.Property(Poster)]</texture>
+				<animation condition="true" effect="rotatey" center="140" start="-17" end="-17" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+			<control type="image">
+				<!-- right -->
+				<left>-5</left>
+				<top>82</top>
+				<width>523</width>
+				<height>382</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>modern_right_ram.png</texture>
+				<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="Modern_Case_widget">
+		<control type="group">
+			<!-- modern case  -->
+			<animation effect="zoom" center="auto" start="100" end="40" time="400" tween="cubic" easing="out" condition="true">Focus</animation>
+			<control type="image">
+				<!-- modern case middle-->
+				<left>0</left>
+				<top>82</top>
+				<width>523</width>
+				<height>382</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>modern_middle.png</texture>
+				<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+			<control type="group">
+				<!-- CDART VIDEO -->
+				<left>150</left>
+				<top>150</top>
+				<animation type="WindowOpen">
+					<effect type="slide" start="0,0" end="-65,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="500" delay="500"/>
+				</animation>
+				<animation type="Visible">
+					<effect type="slide" start="0,0" end="0,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="500" delay="500"/>
+				</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation type="Hidden">
+					<effect type="slide" start="-65,0" end="0,0" time="8000" tween="cubic" easing="out"/>
+					<effect type="fade" start="100" end="0" time="200"/>
+				</animation>
+				<control type="image">
+					<width>224</width>
+					<height>224</height>
+					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(discart)]</texture>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+					<include>Animation_ViewsCDart</include>
+				</control>
+				<control type="image">
+					<width>224</width>
+					<height>224</height>
+					<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Window.Property(Title)]&amp;type=discart</texture>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+					<include>Animation_ViewsCDart</include>
+					<visible>IsEmpty(Window.Property(discart)) + !Skin.HasSetting(sextendsett_fakedisc)</visible>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(sextendsett_fakedisc)</visible>
+					<width>234</width>
+					<height>234</height>
+					<visible>IsEmpty(Window.Property(discart))</visible>
+					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(Poster)]</texture>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+					<include>Animation_ViewsCDart</include>
+				</control>
+			</control>
+			<control type="group">
+				<!-- modern case left -->
+				<animation type="WindowOpen">
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-10,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-2" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="-30,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="500" delay="300"/>
+				</animation>
+				<control type="image">
+					<!-- left -->
+					<left>73</left>
+					<top>92</top>
+					<width>523</width>
+					<height>362</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_left.png</texture>
+					<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+				<control type="image">
+					<!-- left poster -->
+					<left>143</left>
+					<top>87</top>
+					<width>300</width>
+					<height>375</height>
+					<aspectratio align="left">stretch</aspectratio>
+					<texture diffuse="modern_left_poster.png">$VAR[value_widgetsposter]</texture>
+					<animation condition="true" effect="rotatey" center="143" start="-19" end="-19" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+				<control type="image">
+					<!-- left ram -->
+					<left>73</left>
+					<top>92</top>
+					<width>523</width>
+					<height>362</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_left_ram.png</texture>
+					<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+				<control type="image">
+					<!-- left codec -->
+					<left>182</left>
+					<top>330</top>
+					<width>29</width>
+					<height>73</height>
+					<texture>$INFO[Window.Property(VideoCodec),modern/,.png]</texture>
+					<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+			</control>
+			<control type="image">
+				<!-- right -->
+				<left>-5</left>
+				<top>82</top>
+				<width>523</width>
+				<height>382</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>modern_right.png</texture>
+				<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+			<control type="image">
+				<!-- right poster-->
+				<left>142</left>
+				<top>90</top>
+				<width>340</width>
+				<height>370</height>
+				<aspectratio align="right">stretch</aspectratio>
+				<texture diffuse="modern_right_poster.png">$VAR[value_widgetsposter]</texture>
+				<animation condition="true" effect="rotatey" center="140" start="-17" end="-17" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+			<control type="image">
+				<!-- right -->
+				<left>-5</left>
+				<top>82</top>
+				<width>523</width>
+				<height>382</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>modern_right_ram.png</texture>
+				<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+				<visible>!Skin.HasSetting(sextendsett_case)</visible>
+			</control>
+		</control>
 	</include>
 </includes>

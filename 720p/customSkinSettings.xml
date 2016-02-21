@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="6639" type="dialog"><!-- Aeon MQ 6 -->
+	<defaultcontrol>9911</defaultcontrol>
+	<include>Animation_Fade</include>
+	<controls>
+	<control type="button" id="9911">
+	<include>InvisibleButton</include>
+	<onleft>Dialog.Close(6639)</onleft>
+	<onright>Dialog.Close(6639)</onright>
+	<onup>Dialog.Close(6639)</onup>
+	<ondown>Dialog.Close(6639)</ondown>
+	</control>
+	<control type="image">
+				<left>540</left>
+				<top>0</top>
+				<width>740</width>
+				<height>400</height>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<animation effect="fade" end="95" condition="true">Conditional</animation>
+	</control>
+	<control type="group"><!-- default group -->
+	<control type="label">
+	<left>540</left>
+	<top>15</top>
+	<width>740</width>
+	<height>49</height>
+	<align>center</align>
+	<label>Skin setting</label>
+	<font>Font_32</font>
+	<textcolor>FFFFFAF0</textcolor>
+	</control>
+	<control type="image">
+	<left>140</left>
+	<top>80</top>
+	<width>1000</width>
+	<height>2</height>
+	<align>left</align>
+	<texture flipx="true">divider.png</texture>
+	</control>
+	<control type="image"><!-- Skin Logo -->
+	<posx>1098</posx>
+	<posy>21</posy>	
+	<width>140</width>
+	<height>100</height>	
+	<texture>aeonmq6_logo.png</texture>
+	<colordiffuse>FFFFFFFF</colordiffuse>
+	<aspectratio align="center" aligny="top">keep</aspectratio>
+	</control>
+	<control type="label"><!-- Versao -->
+	<left>1098</left>
+	<top>90</top>	
+	<width>140</width>	
+	<height>25</height>
+	<align>center</align>
+	<font>Font_18</font>
+	<textcolor>FFFFFAF0</textcolor>
+	<label>$VAR[SkinVersion]</label>
+	</control>
+
+	<control type="textbox">
+	<left>580</left>
+	<top>90</top>
+	<width>700</width>
+	<height>260</height>
+	<label>Initial skin setting for MOD Version</label>
+	<font>Font_18A</font>
+	<align>justify</align>
+	</control>
+	</control>
+	</controls>
+</window>

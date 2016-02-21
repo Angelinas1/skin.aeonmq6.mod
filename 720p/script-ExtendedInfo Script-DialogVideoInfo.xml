@@ -104,6 +104,19 @@
 	<include>Animation_ViewsCDart</include>
 	</control>
 	<control type="image">
+	<top>10</top>
+	<left>5</left>
+	<visible>Skin.HasSetting(sextendsett_fakedisc)</visible>
+	<width>224</width>
+	<height>224</height>
+	<visible>IsEmpty(Window.Property(discart))</visible>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(Poster)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="top">stretch</aspectratio>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<include>Animation_ViewsCDart</include>
+	</control>
+	<control type="image">
 	<width>234</width>
 	<height>234</height>
 	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Window.Property(Title)]&type=discart</texture>
@@ -111,18 +124,7 @@
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 	<include>Animation_ViewsCDart</include>
-	<visible>IsEmpty(Window.Property(discart)) + !Skin.HasSetting(sextendsett_fakedisc)</visible>
-	</control>
-	<control type="image">
-	<visible>Skin.HasSetting(sextendsett_fakedisc)</visible>
-	<width>234</width>
-	<height>234</height>
 	<visible>IsEmpty(Window.Property(discart))</visible>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window.Property(Poster)]</texture>
-	<fadetime>FanartCrossFadeTime</fadetime>
-	<aspectratio align="center" aligny="top">stretch</aspectratio>
-	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
-	<include>Animation_ViewsCDart</include>
 	</control>
 	</control>	
 	<control type="image"><!-- Star -->
@@ -242,7 +244,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
-	<texture>$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
+	<texture>$INFO[Container(550).ListItem(0).label,resource://resource.images.studios.coloured/,.png]</texture>
 	<visible>IsEmpty(Window.Property(Logo)) + Skin.HasSetting(sextendsett_artlogo)</visible>
 	</control>
 	<control type="image"><!-- Logo -->
@@ -251,7 +253,7 @@
 	<height>80</height>
 	<width>160</width>
 	<aspectratio>keep</aspectratio>
-	<texture background="true">$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
+	<texture background="true">$INFO[Container(550).ListItem(0).label,resource://resource.images.studios.coloured/,.png]</texture>
 	<visible>!IsEmpty(Window.Property(Logo)) | !Skin.HasSetting(sextendsett_artlogo)</visible>
 	</control>
 	<control type="image"><!-- Banner -->
@@ -630,7 +632,7 @@
 	<control type="image"><!-- Studio  -->
 	<height>45</height>
 	<include>FlagImage</include>
-	<texture>$INFO[Container(550).ListItem(0).label,flags/studios/,.png]</texture>
+	<texture>$INFO[Container(550).ListItem(0).label,resource://resource.images.studios.coloured/,.png]</texture>
 	<visible>!IsEmpty(Window.Property(Studio))</visible>
 	</control>
 	<control type="image">
@@ -1396,7 +1398,7 @@
 	<aligny>center</aligny>
 	<align>center</align>
 	<aspectratio>keep</aspectratio>
-	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,resource://resource.images.studios.coloured/,.png]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<colordiffuse>FF909090</colordiffuse>
 	</control>
@@ -1410,7 +1412,7 @@
 	<aligny>center</aligny>
 	<align>center</align>
 	<aspectratio>keep</aspectratio>
-	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,resource://resource.images.studios.coloured/,.png]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<colordiffuse>FF909090</colordiffuse>
 	<include>Animation_Fade</include>
@@ -1424,7 +1426,7 @@
 	<aligny>center</aligny>
 	<align>center</align>
 	<aspectratio>keep</aspectratio>
-	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,resource://resource.images.studios.coloured/,.png]</texture>
 	<bordertexture border="-2">grey.png</bordertexture>
 	<include>Animation_Fade</include>
 	<visible>Control.HasFocus(550)</visible>
@@ -1918,7 +1920,7 @@
 	<aligny>center</aligny>
 	<align>center</align>
 	<aspectratio>keep</aspectratio>
-	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,resource://resource.images.studios.coloured/,.png]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<colordiffuse>FF909090</colordiffuse>
 	</control>
@@ -1932,7 +1934,7 @@
 	<aligny>center</aligny>
 	<align>center</align>
 	<aspectratio>keep</aspectratio>
-	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,resource://resource.images.studios.coloured/,.png]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<colordiffuse>FF909090</colordiffuse>
 	<include>Animation_Fade</include>
@@ -1946,7 +1948,7 @@
 	<aligny>center</aligny>
 	<align>center</align>
 	<aspectratio>keep</aspectratio>
-	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,flags/studios/,.png]</texture>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.label,resource://resource.images.studios.coloured/,.png]</texture>
 	<bordertexture border="-2">grey.png</bordertexture>
 	<include>Animation_Fade</include>
 	<visible>Control.HasFocus(1450)</visible>

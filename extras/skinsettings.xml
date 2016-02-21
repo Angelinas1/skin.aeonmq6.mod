@@ -1,0 +1,414 @@
+<settings>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.recent" label="Recent" condition="" icon="special://skin/extras/widgetthumbs/1.jpg" description="Reacent Movie widget provided by service.library.data.provider.">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video1)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.random" label="Random" condition="" icon="special://skin/extras/widgetthumbs/2.jpg" description="Random Movie widget provided by service.library.data.provider.">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video1)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.recommended" label="Recommended" condition="" icon="special://skin/extras/widgetthumbs/3.jpg" description="In Progres Movie widget provided by service.library.data.provider.">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video1)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.genre" label="Genre" condition="" icon="special://skin/extras/widgetthumbs/4.jpg" description="Widget aranged by Genre">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.sets" label="Sets" condition="" icon="special://skin/extras/widgetthumbs/5.jpg" description="Movie sets Widget,open in list">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.actors" label="Movies Actors" condition="" icon="special://skin/extras/widgetthumbs/6.jpg" description="Movie by Actor Widget,open in list">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.directors" label="Movies Directors" condition="" icon="special://skin/extras/widgetthumbs/7.jpg" description="Movie by Director Widget,open in list">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.countries" label="Movies Countries" condition="" icon="special://skin/extras/widgetthumbs/8.jpg" description="Movie by Country Widget,open in list">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.studios" label="Movies Studios" condition="" icon="special://skin/extras/widgetthumbs/9.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.years" label="Movies Years" condition="" icon="special://skin/extras/widgetthumbs/10.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="movie.tvshow.recent" label="Movies TVShow Reacent" condition="" icon="special://skin/extras/widgetthumbs/11.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="tvshow.recent" label="TVShow Reacent" condition="" icon="special://skin/extras/widgetthumbs/12.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video2)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="tvshow.random" label="TVShow Random" condition="" icon="special://skin/extras/widgetthumbs/13.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video2)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="tvshow.recommended" label="TVShow Recommended" condition="" icon="special://skin/extras/widgetthumbs/14.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video2)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="tvshow.genre" label="TVShow Genre" condition="" icon="special://skin/extras/widgetthumbs/15.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="tvshow.actors" label="TVShow Actors" condition="" icon="special://skin/extras/widgetthumbs/16.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="tvshow.studios" label="TVShow Studios" condition="" icon="special://skin/extras/widgetthumbs/17.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="tvshow.years" label="TVShow Years" condition="" icon="special://skin/extras/widgetthumbs/18.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="concert.recent" label="Concert Recent" condition="Library.HasContent(MusicVideos)" icon="special://skin/extras/widgetthumbs/19.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="concert.genre" label="Concert Genre" condition="Library.HasContent(MusicVideos)" icon="special://skin/extras/widgetthumbs/20.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,video)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.recentsong" label="Music Recent Song" condition="" icon="special://skin/extras/widgetthumbs/21.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.recentalbum" label="Music Recent Album" condition="" icon="special://skin/extras/widgetthumbs/22.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.recentplayedalbum" label="Music Recent Played Album" condition="" icon="special://skin/extras/widgetthumbs/23.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.genre" label="Music Genre" condition="" icon="special://skin/extras/widgetthumbs/24.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.artist" label="Music Artist" condition="" icon="special://skin/extras/widgetthumbs/25.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.years" label="Music Years" condition="" icon="special://skin/extras/widgetthumbs/26.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="channel.tv" label="Channels TV" condition="PVR.HasTVChannels" icon="special://skin/extras/widgetthumbs/27.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="plus.pvrhelper" label="Channels TV Helper" condition="PVR.HasTVChannels" icon="special://skin/extras/widgetthumbs/28.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="channel.epg" label="Channels EPG" condition="PVR.HasTVChannels" icon="special://skin/extras/widgetthumbs/29.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus_epg)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="channel.group" label="Channels Group" condition="PVR.HasTVChannels" icon="special://skin/extras/widgetthumbs/30.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus_group)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="channel.radio" label="Channels Radio" condition="PVR.HasRadio" icon="special://skin/extras/widgetthumbs/31.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="weather" label="Weather" condition="" icon="special://skin/extras/widgetthumbs/37.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="settings" label="Settings" condition="" icon="special://skin/extras/widgetthumbs/38.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="favourites" label="Favourites" condition="System.HasAddon(script.favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name))" icon="special://skin/extras/widgetthumbs/39.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="games" label="Games" condition="" icon="special://skin/extras/widgetthumbs/40.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="addons.programs" label="Addons Programs" condition="!System.Platform.Android" icon="special://skin/extras/widgetthumbs/41.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="addons.android" label="Addons Android" condition="System.Platform.Android" icon="special://skin/extras/widgetthumbs/42.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="addons.video" label="Addons Video" condition="!System.Platform.Android" icon="special://skin/extras/widgetthumbs/43.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="addons.audio" label="Addons Audio" condition="!System.Platform.Android" icon="special://skin/extras/widgetthumbs/44.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.topratedmovies" label="Top rated Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/45.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.trendingmovies" label="Trending Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/46.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.topratedtvshows" label="Toprated tvShows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/47.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.onairtvshows" label="onair tvShows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/48.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>		
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.airingtodaytvshows" label="airingtoday tvShows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/49.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="nextaired" label="nextaired tvShows" condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)" icon="special://skin/extras/widgetthumbs/50.jpg" description="Widget from script.tv.show.next.aired">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onselect>
+    </setting>		
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.incinemas" label="in Cinemas" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/54.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.intheaters" label="in Theaters" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/55.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.upcoming" label="upcoming Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/56.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.comingsoon" label="Comingsoon Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/57.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.newdvdreleases" label="NewDVDreleases Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/58.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.boxoffice" label="Boxoffice Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/59.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.opening" label="Opening Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/60.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.toprentals" label="Toprentals Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/61.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.currentdvdreleases" label="CurrentDVDreleases Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/62.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.upcomingdvds" label="UpcomingDVDs Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/63.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.premiereshows" label="PremiereShows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/64.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.trendingshows" label="TrendingShows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/66.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.traktsimilartvshows" label="traktsimilartvshows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/66.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.traktsimilarmovies" label="traktsimilarmovies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/66.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.airingepisodes" label="airingepisodes" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/66.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recommendedmovies" label="Helper Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/67.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recommendedmedia" label="Helper Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/68.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recentmedia" label="Helper Recent Media" condition="" icon="special://skin/extras/widgetthumbs/69.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.inprogressandrecommendedmedia" label="Helper InProgressandRecommended Media" condition="" icon="special://skin/extras/widgetthumbs/70.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.nextepisodes" label="Helper NextEpisodes" condition="" icon="special://skin/extras/widgetthumbs/71.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.nextairedtvshows" label="Helper NextAired TVShows" condition="" icon="special://skin/extras/widgetthumbs/71.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recentalbums" label="Helper Recent Albums" condition="" icon="special://skin/extras/widgetthumbs/72.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recommendedalbums" label="Helper Recommended Albums" condition="" icon="special://skin/extras/widgetthumbs/73.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recentsongs" label="Helper Recent Songs" condition="" icon="special://skin/extras/widgetthumbs/74.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recentplayedsongs" label="Helper Recent Played Songs" condition="" icon="special://skin/extras/widgetthumbs/75.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.recommendedsongs" label="Helper Recommended Songs" condition="" icon="special://skin/extras/widgetthumbs/76.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.moviesforgenre" label="Helper Movies for Genre" condition="" icon="special://skin/extras/widgetthumbs/77.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.showsforgenre" label="Helper Shows for Genre" condition="" icon="special://skin/extras/widgetthumbs/78.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.favouritemedia" label="Helper Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/79.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.favourites" label="Helper Favourite" condition="" icon="special://skin/extras/widgetthumbs/79.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.helper.inprogressmedia" label="Helper InProgress Media" condition="" icon="special://skin/extras/widgetthumbs/80.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras.helper)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras2.mostplayedroms" label="YouTube most played" condition="" icon="special://skin/extras/widgetthumbs/81.jpg" description="Widget from skin helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras2)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl1.recent" label="Video PlayList 1.recent" condition="SubString(skin.string(menu1.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 1">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl2.recent" label="Video PlayList 2.recent" condition="SubString(skin.string(menu2.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 2">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl3.recent" label="Video PlayList 3.recent" condition="SubString(skin.string(menu3.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 3">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl4.recent" label="Video PlayList 4.recent" condition="SubString(skin.string(menu4.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 4">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl5.recent" label="Video PlayList 5.recent" condition="SubString(skin.string(menu5.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 5">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl6.recent" label="Video PlayList 6.recent" condition="SubString(skin.string(menu6.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 6">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl7.recent" label="Video PlayList 7.recent" condition="SubString(skin.string(menu7.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 7">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl8.recent" label="Video PlayList 8.recent" condition="SubString(skin.string(menu8.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 8">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl9.recent" label="Video PlayList 9.recent" condition="SubString(skin.string(menu9.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 9">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl10.recent" label="Video PlayList 10.recent" condition="SubString(skin.string(menu10.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 10">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl11.recent" label="Video PlayList 11.recent" condition="SubString(skin.string(menu11.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 11">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl12.recent" label="Video PlayList 12.recent" condition="SubString(skin.string(menu12.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 12">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl13.recent" label="Video PlayList 13.recent" condition="SubString(skin.string(menu13.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 13">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl14.recent" label="Video PlayList 14.recent" condition="SubString(skin.string(menu14.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 14">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl15.recent" label="Video PlayList 15.recent" condition="SubString(skin.string(menu15.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 15">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl16.recent" label="Video PlayList 16.recent" condition="SubString(skin.string(menu16.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 16">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl17.recent" label="Video PlayList 17.recent" condition="SubString(skin.string(menu17.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 17">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl18.recent" label="Video PlayList 18.recent" condition="SubString(skin.string(menu18.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 18">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl19.recent" label="Video PlayList 19.recent" condition="SubString(skin.string(menu19.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 19">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vpl20.recent" label="Video PlayList 20.recent" condition="SubString(skin.string(menu20.master),vpl)" icon="special://skin/extras/widgetthumbs/82.jpg" description="Widget from Video PlayList 20">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes1" label="Video Nodes 1" condition="!IsEmpty(skin.string(menu1.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 1">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes2" label="Video Nodes 2" condition="!IsEmpty(skin.string(menu2.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 2">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes3" label="Video Nodes 3" condition="!IsEmpty(skin.string(menu3.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 3">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes4" label="Video Nodes 4" condition="!IsEmpty(skin.string(menu4.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 4">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes5" label="Video Nodes 5" condition="!IsEmpty(skin.string(menu5.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 5">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes6" label="Video Nodes 6" condition="!IsEmpty(skin.string(menu6.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 6">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes7" label="Video Nodes 7" condition="!IsEmpty(skin.string(menu7.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 7">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes8" label="Video Nodes 8" condition="!IsEmpty(skin.string(menu8.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 8">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes9" label="Video Nodes 9" condition="!IsEmpty(skin.string(menu9.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 9">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes10" label="Video Nodes 10" condition="!IsEmpty(skin.string(menu10.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 10">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes11" label="Video Nodes 11" condition="!IsEmpty(skin.string(menu11.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 11">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes12" label="Video Nodes 12" condition="!IsEmpty(skin.string(menu12.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 12">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes13" label="Video Nodes 13" condition="!IsEmpty(skin.string(menu13.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 13">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes14" label="Video Nodes 14" condition="!IsEmpty(skin.string(menu14.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 14">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes15" label="Video Nodes 15" condition="!IsEmpty(skin.string(menu15.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 15">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes16" label="Video Nodes 16" condition="!IsEmpty(skin.string(menu16.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 16">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes17" label="Video Nodes 17" condition="!IsEmpty(skin.string(menu17.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 17">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes18" label="Video Nodes 18" condition="!IsEmpty(skin.string(menu18.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 18">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes19" label="Video Nodes 19" condition="!IsEmpty(skin.string(menu19.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 19">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="vnodes20" label="Video Nodes 20" condition="!IsEmpty(skin.string(menu20.path))" icon="special://skin/extras/widgetthumbs/83.jpg" description="Widget from Video Nodes 20">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistvideo)</onselect>
+    </setting>	
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl1.recent" label="Audio PlayList 1" condition="SubString(skin.string(menu1.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 1">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl2.recent" label="Audio PlayList 2" condition="SubString(skin.string(menu2.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 2">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl3.recent" label="Audio PlayList 3" condition="SubString(skin.string(menu3.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 3">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl4.recent" label="Audio PlayList 4" condition="SubString(skin.string(menu4.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 4">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl5.recent" label="Audio PlayList 5" condition="SubString(skin.string(menu5.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 5">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl6.recent" label="Audio PlayList 6" condition="SubString(skin.string(menu6.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 6">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl7.recent" label="Audio PlayList 7" condition="SubString(skin.string(menu7.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 7">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl8.recent" label="Audio PlayList 8" condition="SubString(skin.string(menu8.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 8">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl9.recent" label="Audio PlayList 9" condition="SubString(skin.string(menu9.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 9">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl10.recent" label="Audio PlayList 10" condition="SubString(skin.string(menu10.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 10">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl11.recent" label="Audio PlayList 11" condition="SubString(skin.string(menu11.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 11">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl12.recent" label="Audio PlayList 12" condition="SubString(skin.string(menu12.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 12">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl13.recent" label="Audio PlayList 13" condition="SubString(skin.string(menu13.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 13">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl14.recent" label="Audio PlayList 14" condition="SubString(skin.string(menu14.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 14">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl15.recent" label="Audio PlayList 15" condition="SubString(skin.string(menu15.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 15">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl16.recent" label="Audio PlayList 16" condition="SubString(skin.string(menu16.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 16">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl17.recent" label="Audio PlayList 17" condition="SubString(skin.string(menu17.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 17">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl18.recent" label="Audio PlayList 18" condition="SubString(skin.string(menu18.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 18">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl19.recent" label="Audio PlayList 19" condition="SubString(skin.string(menu19.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 19">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="apl20.recent" label="Audio PlayList 20" condition="SubString(skin.string(menu20.master),apl)" icon="special://skin/extras/widgetthumbs/84.jpg" description="Widget from Audio PlayList 20">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
+    </setting>	
+
+</settings>
