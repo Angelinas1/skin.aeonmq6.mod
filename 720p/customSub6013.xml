@@ -19,7 +19,7 @@
 	<property name="name">menu0101</property>
 	<property name="id">$INFO[skin.string(menu0101.master)]</property>
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6001)</onclick>
+	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6013)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu0101.action])</onclick>
 	<visible>![IsEmpty(skin.string(menu0101.master)) | SubString(skin.string(menu0101.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>

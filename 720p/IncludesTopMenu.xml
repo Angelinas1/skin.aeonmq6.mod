@@ -1151,6 +1151,13 @@
 					<selected>Skin.HasSetting(slimmodernlistvideo)</selected>
 					<visible>Control.IsVisible(84) + !Skin.HasSetting(bannermodernlistvideo)</visible>
 				</control>
+					<control type="radiobutton" id="92144">
+					<include>TopMenuRadioButton</include>
+					<label>Open Case</label>
+					<onclick>Skin.ToggleSetting(shelf_open_case)</onclick>
+					<selected>Skin.HasSetting(shelf_open_case)</selected>
+					<visible>Control.IsVisible(63)</visible>
+				</control>
 				<!-- Global -->
 				<control type="button" id="92149">
 					<include>TopMenuButton</include>

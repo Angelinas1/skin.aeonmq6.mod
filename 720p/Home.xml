@@ -1558,7 +1558,7 @@
 							<include>HomeFlagImage</include>
 							<texture>http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.TVShowTitle]&type=characterart</texture>
 							<visible>!IsEmpty(Container(510).ListItem.VideoCodec)</visible>
-					</control>
+						</control>
 					</control>
 					<control type="image" id="551">
 						<!-- Controle estudio -->
@@ -1948,7 +1948,7 @@
 							<fadetime>FanartCrossFadeTime</fadetime>
 						</control>
 					</control>
-					</control>
+				</control>
 			</control>
 			<control type="group" id="607">
 				<!-- Painel de detalhes Gallery-->
@@ -3038,14 +3038,7 @@
 				<animation effect="slide" start="0,0" end="0,-395" condition="Skin.HasSetting(highertotals) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-210" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="300" condition="Skin.HasSetting(submode)">Conditional</animation>
-				<visible>Control.HasFocus(9000) + [SubString(Container(9000).ListItem.Property(id),movie) + Library.HasContent(Movies) 
-| SubString(Container(9000).ListItem.Property(id),tvshow) + Library.HasContent(TVShows) | SubString(Container(9000).ListItem.Property(id),concert) 
-+ Library.HasContent(MusicVideos) | SubString(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) 
-| SubString(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) 
-| SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)] 
-+ ![Player.HasMedia + [System.IdleTime(8) |  Skin.HasSetting(highermainmenu)] |  Skin.HasSetting(nohometotals) 
-| Skin.HasSetting(highertotals) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo 
-| Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
+				<visible>Control.HasFocus(9000) + [SubString(Container(9000).ListItem.Property(id),movie) + Library.HasContent(Movies) | SubString(Container(9000).ListItem.Property(id),tvshow) + Library.HasContent(TVShows) | SubString(Container(9000).ListItem.Property(id),concert) + Library.HasContent(MusicVideos) | SubString(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) | SubString(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) | SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)] + ![Player.HasMedia + [System.IdleTime(8) |  Skin.HasSetting(highermainmenu)] |  Skin.HasSetting(nohometotals) | Skin.HasSetting(highertotals) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
 				<control type="image">
 					<left>0</left>
 					<top>605</top>
