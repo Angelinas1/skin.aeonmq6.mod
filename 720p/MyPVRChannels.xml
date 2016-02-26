@@ -11,10 +11,11 @@
 			<include>WindowBG</include>
 			<imagepath background="true">$VAR[value_menutheme_livetv]</imagepath>
 		</control>
-		<control type="image">
+		<control type="multiimage">
 			<!-- Fanart -->
 			<include>WindowBG</include>
-			<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</texture>
+			<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.PVR.ExtraFanArt)]</imagepath>
+			<visible>!IsEmpty(Window(Home).Property(SkinHelper.PVR.ExtraFanArt))</visible>
 		</control>
 		<control type="image">
 			<posx>1058</posx>
