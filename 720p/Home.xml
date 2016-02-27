@@ -11,6 +11,7 @@
 	<onload condition="Skin.HasSetting(kioskcode)">Skin.Reset(codestep)</onload>
 	<onload>Skin.Reset(playlists)</onload>
 	<onload>Skin.Reset(windowbg)</onload>
+		<onload>SetProperty(SkinHelper.WidgetContainer,510)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,10)</onload>
 	<onload>Skin.SetString(SkinHelper.WallImagesDelay, 10)</onload>
 	<onload>Skin.SetString(SkinHelper.AllMoviesBackground.EnableWallImages, 20)</onload>
@@ -1664,7 +1665,7 @@
 							<visible>!IsEmpty(Container(510).ListItem.Property(Type))</visible>
 						</control>
 					</control>
-					<control type="group">
+					<control type="grouplist">
 						<!-- Detalhes set -->
 						<visible>StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)</visible>
 						<left>100</left>
@@ -1698,7 +1699,7 @@
 							<align>left</align>
 							<width>150</width>
 							<include>HomeFlagLabel</include>
-							<label>[B]$INFO[Container(510).ListItem.Property(SkinHelper.MovieSet.Runtime)][/B]</label>
+							<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime)][/B]</label>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -1706,7 +1707,7 @@
 							<width>500</width>
 							<align>left</align>
 							<include>HomeFlagLabel</include>
-							<label>[B]$INFO[Container(510).ListItem.Property(SkinHelper.MovieSet.Years)][/B]</label>
+							<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Count)]111[/B]</label>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">

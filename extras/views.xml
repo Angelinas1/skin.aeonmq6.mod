@@ -1,30 +1,30 @@
 <views>
-    <view id="Right List" value="51" languageid="31822" type="all" />
-    <view id="Banner" value="52" languageid="31811" type="movies,tvshows,musicvideos,seasons,artists" />
-    <view id="BannerInfo" value="53" languageid="31812" type="movies,tvshows,musicvideos,seasons,artists" />
-    <view id="Poster" value="54" languageid="31808" type="all" />
-    <view id="Low List" value="55" languageid="31807" type="all" />	
-	<view id="Wall" value="56" languageid="31805" type="all" />
-    <view id="GlassList" value="57" languageid="31821" type="all" />
-    <view id="CoverFlow" value="58" languageid="31810" type="movies,setmovies,tvshows,musicvideos,seasons,sets,artists,tvrecordings" />
-    <view id="Wide" value="59" languageid="31813" type="all" />
-    <view id="ShowArt" value="60" languageid="31819" type="movies,setmovies,tvshows,season,musicvideos,seasons,sets,artists" />
-    <view id="Multiplex" value="61" languageid="31803" type="movies,setmovies,tvshows" />
-    <view id="Panel" value="62" languageid="31818" type="all" />	
-	<view id="Shelf" value="63" languageid="31809" type="movies,setmovies,tvshows" />	
-    <view id="LandScapeX" value="64" languageid="31804" type="tvshows" />
-	<view id="Sets" value="65" languageid="31820" type="setmovies" />
-    <view id="ShowCase" value="66" languageid="31802" type="movies,setmovies,tvshows" />
-	<view id="3DWall" value="67" languageid="31806" type="movies" />
-    <view id="PosterLite" value="69" languageid="31815" type="movies,setmovies,tvshows,seasons,episodes" />
-    <view id="PosterList" value="70" languageid="31814" type="movies,setmovies" />
-    <view id="Total Art" value="71" languageid="31816" type="movies" />	
-    <view id="Middle List" value="77" languageid="31823" type="movies,setmovies,tvshows" />
-    <view id="CowerFlowBack" value="78" languageid="31824" type="movies,setmovies,tvshows,musicvideos,seasons,sets,artists" />
-	<view id="PVR MQ6" value="80" languageid="31825" type="tvchannels,tvrecordings" />
-	<view id="TV Box" value="5735" languageid="31826" type="tvchannels,tvrecordings" />
-    <view id="TV Posterlite" value="5800" languageid="31827" type="tvchannels,tvrecordings" />
-    <view id="PVR AeonNox" value="5801" languageid="31798" type="tvchannels,tvrecordings" />
-    <view id="MiddleList967" value="83" languageid="31823" type="movies,setmovies,tvshows,season" />
-    <view id="Modern View" value="84" languageid="31845" type="movies,setmovies" />
+    <view id="Right List" value="51" languageid="31822" type="all"/>
+    <view id="Banner" value="52" languageid="31811" type="movies,tvshows,musicvideos,seasons,artists"/>
+    <view id="BannerInfo" value="53" languageid="31812" type="movies,tvshows,musicvideos,seasons,artists"/>
+    <view id="Poster" value="54" languageid="31808" type="all"/>
+    <view id="Low List" value="55" languageid="31807" type="all"/>	
+	<view id="Wall" value="56" languageid="31805" type="all"/>
+    <view id="GlassList" value="57" languageid="31821" type="all"/>
+    <view id="CoverFlow" value="58" languageid="31810" type="movies,setmovies,tvshows,musicvideos,seasons,sets,artists,tvrecordings"/>
+    <view id="Wide" value="59" languageid="31813" type="all"/>
+    <view id="ShowArt" value="60" languageid="31819" type="movies,setmovies,tvshows,season,musicvideos,seasons,sets,artists"/>
+    <view id="Multiplex" value="61" languageid="31803" type="movies,setmovies,tvshows"/>
+    <view id="Panel" value="62" languageid="31818" type="all"/>	
+	<view id="Shelf" value="63" languageid="31809" type="movies,setmovies,tvshows"/>	
+    <view id="LandScapeX" value="64" languageid="31804" type="tvshows"/>
+	<view id="Sets" value="65" languageid="31820" type="setmovies"/>
+    <view id="ShowCase" value="66" languageid="31802" type="movies,setmovies,tvshows"/>
+	<view id="3DWall" value="67" languageid="31806" type="movies"/>
+    <view id="PosterLite" value="69" languageid="31815" type="movies,setmovies,tvshows,seasons,episodes"/>
+    <view id="PosterList" value="70" languageid="31814" type="movies,setmovies"/>
+    <view id="Total Art" value="71" languageid="31816" type="movies"/>	
+    <view id="Middle List" value="77" languageid="31823" type="movies,setmovies,tvshows"/>
+    <view id="CowerFlowBack" value="78" languageid="31824" type="movies,setmovies,tvshows,musicvideos,seasons,sets,artists"/>
+	<view id="PVR MQ6" value="80" languageid="31825" type="tvchannels,tvrecordings"/>
+	<view id="TV Box" value="5735" languageid="31826" type="tvchannels,tvrecordings"/>
+    <view id="TV Posterlite" value="5800" languageid="31827" type="tvchannels,tvrecordings"/>
+    <view id="PVR AeonNox" value="5801" languageid="31798" type="tvchannels,tvrecordings"/>
+    <view id="MiddleList967" value="83" languageid="31823" type="movies,setmovies,tvshows,season"/>
+    <view id="Modern View" value="84" languageid="31845" type="movies,setmovies"/>
 </views>

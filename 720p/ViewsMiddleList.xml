@@ -919,7 +919,7 @@
 	</control>
 	<control type="group"><!-- VIDEO SEM ESTOJO -->
 	<include>Animation_Fade</include>
-	<visible>![!Skin.HasSetting(nomidlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos)  | Container.Content(sets)] | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>![!Skin.HasSetting(nomidlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos)  | Container.Content(sets) | Container.Content(tvshows)] | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	<control type="image"><!-- Filmes/Fotos/Arquivos reflexo -->
 	<left>-5</left>
 	<top>419</top>
@@ -943,7 +943,7 @@
 	</control>
 	<control type="group"><!-- FILMES ESTOJO -->
 	<include>Animation_Fade</include>
-	<visible>!Skin.HasSetting(nomidlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos)  | Container.Content(sets)]</visible>
+	<visible>!Skin.HasSetting(nomidlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows)]</visible>
 	<control type="image"><!-- Poster reflexo -->
 	<left>-5</left>
 	<top>434</top>
@@ -988,6 +988,18 @@
 	<aligny>center</aligny>
 	<aspectratio scalediffuse="true">keep</aspectratio>
 	<texture>$VAR[value_videocodec0]</texture>
+	</control>
+	<control type="image"><!-- Codec -->
+	<left>88</left>
+	<top>12</top>
+	<width>70</width>
+	<height>70</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<align>center</align>
+	<aligny>center</aligny>
+	<aspectratio scalediffuse="true">keep</aspectratio>
+	<texture>$INFO[Container(77).ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
+	<visible>Container.Content(tvshows)</visible>
 	</control>
 	</control>
 	<control type="group"><!-- MUSICA -->

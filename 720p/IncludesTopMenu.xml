@@ -237,11 +237,11 @@
 			<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus">Conditional</animation>
 			<control type="grouplist" id="9101">
 				<!-- Go to -->
-				<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,510" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
 				<left>1</left>
-				<top>-300</top>
+				<top>-460</top>
 				<width>318</width>
-				<height>300</height>
+				<height>460</height>
 				<onup>9100</onup>
 				<ondown>9101</ondown>
 				<onleft>51</onleft>
@@ -357,6 +357,49 @@
 					<onclick>SetFocus(51)</onclick>
 					<onclick>ActivateWindow(4)</onclick>
 					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+				</control>
+				<control type="radiobutton" id="9117">
+					<label>Enable forced views</label>
+					<include>TopMenuRadioButton</include>
+					<onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
+					<selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>
+				</control>
+				<control type="button" id="9118">
+					<include>TopMenuButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=movies)</onclick>
+					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+					<label>Forced view for movies: $INFO[Skin.String(SkinHelper.ForcedViews.movies)]</label>
+				</control>
+				<control type="button" id="9119">
+					<include>TopMenuButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=tvshows)</onclick>
+					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+					<label>Forced view for tv shows:  $INFO[Skin.String(SkinHelper.ForcedViews.tvshows)]</label>
+				</control>
+				<control type="button" id="9120">
+					<include>TopMenuButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=seasons)</onclick>
+					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+					<label>Forced view for seasons:  $INFO[Skin.String(SkinHelper.ForcedViews.seasons)]</label>
+				</control>
+				<control type="button" id="9121">
+					<include>TopMenuButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=episodes)</onclick>
+					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+					<label>Forced view for episodes: $INFO[Skin.String(SkinHelper.ForcedViews.episodes)]</label>
+					<font>Reg28</font>
+				</control>
+				<control type="button" id="9122">
+					<include>TopMenuButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=sets)</onclick>
+					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+					<label>Forced view for movie sets: $INFO[Skin.String(SkinHelper.ForcedViews.sets)]</label>
+				</control>
+				<control type="button" id="9123">
+					<include>TopMenuButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=setmovies)</onclick>
+					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+					<label>Forced view for movies inside set: $INFO[Skin.String(SkinHelper.ForcedViews.setmovies)]</label>
 				</control>
 			</control>
 			<control type="grouplist" id="9201">
