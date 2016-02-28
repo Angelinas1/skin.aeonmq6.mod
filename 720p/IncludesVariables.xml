@@ -5514,6 +5514,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Container.Content(tvshows)">$INFO[Skin.String(PosterLitePlusTVShows)]</value>
 		<value condition="Container.Content(seasons)">$INFO[Skin.String(PosterLitePlusSeasons)]</value>
 		<value condition="Container.Content(episodes)">$INFO[Skin.String(PosterLitePlusEpisodes)]</value>
+		<value condition="Container.Content(musicvideos)">$INFO[Skin.String(PosterLitePlusConcerts)]</value>
 		<value condition="Container.Content(sets)">$INFO[Skin.String(PosterLitePlusSets)]</value>
 	</variable>
 	<variable name="PLPlusIconLabel">

@@ -1088,6 +1088,7 @@
 					<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
 					<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
 					<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
+					<onclick condition="Container.Content(musicvideos)">SetProperty(Area,Concerts,home)</onclick>
 					<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 					<onclick condition="[StringCompare(Control.GetLabel(92132),noicon) | IsEmpty(Control.GetLabel(92132))]">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
 					<onclick condition="[StringCompare(Control.GetLabel(92132),banner) | IsEmpty(Control.GetLabel(92132))] + Container.Content(seasons)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
@@ -1115,6 +1116,7 @@
 					<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
 					<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
 					<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
+					<onclick condition="Container.Content(musicvideos)">SetProperty(Area,Concerts,home)</onclick>
 					<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 					<onclick condition="StringCompare(Control.GetLabel(92133),noicon) | IsEmpty(Control.GetLabel(92133))">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],logo)</onclick>
 					<onclick condition="StringCompare(Control.GetLabel(92133),cdart)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],noicon)</onclick>
@@ -1137,6 +1139,7 @@
 					<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
 					<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
 					<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
+					<onclick condition="Container.Content(musicvideos)">SetProperty(Area,Concerts,home)</onclick>
 					<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 					<onclick condition="StringCompare(Control.GetLabel(92134),titleoff) | IsEmpty(Control.GetLabel(92134))">Skin.SetString(PLTitle$INFO[Window(home).Property(Area)],titleon)</onclick>
 					<onclick condition="StringCompare(Control.GetLabel(92134),titleon)">Skin.SetString(PLTitle$INFO[Window(home).Property(Area)],titleoff)</onclick>

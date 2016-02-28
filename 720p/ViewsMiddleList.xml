@@ -324,28 +324,6 @@
 	<bordertexture border="-2" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
 	<animation effect="fade" time="200">Focus</animation>
 	</control>
-	<control type="image"><!-- fake banner -->
-	<left>300</left>
-	<top>5</top>
-	<width>598</width>
-	<height>120</height>
-	<aspectratio align="center" aligny="center">scale</aspectratio>
-	<texture background="true">http://localhost:52307/getthumb&title=$INFO[Listitem.Title]</texture>
-	<bordertexture border="-4" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
-	<animation effect="fade" time="200">Focus</animation>
-	<visible>!Container.Content(artists) + IsEmpty(ListItem.Art(banner))</visible>
-	</control>
-	<control type="image"><!-- fake banner logo over -->
-	<left>300</left>
-	<top>5</top>
-	<width>598</width>
-	<height>120</height>
-	<aspectratio align="center" aligny="center">scale</aspectratio>
-	<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-	<bordertexture border="-4" colordiffuse="$VAR[value_texturecolor]">darkgrey.png</bordertexture>
-	<animation effect="fade" time="200">Focus</animation>
-	<visible>!Container.Content(artists) + IsEmpty(ListItem.Art(banner))</visible>
-	</control>
 	<control type="image"><!-- banner music-->
 	<left>300</left>
 	<top>5</top>
@@ -712,7 +690,7 @@
 	<left>20</left>
 	<top>-55</top>
 	<width>235</width>
-	<height>235</height>
+	<height>210</height>
 	<visible>IsEmpty(ListItem.Art(discart)) + !Container.Content(artists) + !IsEmpty(ListItem.Title) + !Container.Content(episodes)</visible>
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
@@ -988,18 +966,18 @@
 	<aligny>center</aligny>
 	<aspectratio scalediffuse="true">keep</aspectratio>
 	<texture>$VAR[value_videocodec0]</texture>
+	<visible>!Player.HasVideo</visible>
 	</control>
 	<control type="image"><!-- Codec -->
 	<left>88</left>
 	<top>12</top>
 	<width>70</width>
 	<height>70</height>
-	<fadetime>FanartCrossFadeTime</fadetime>
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio scalediffuse="true">keep</aspectratio>
 	<texture>$INFO[Container(77).ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
-	<visible>Container.Content(tvshows)</visible>
+	<visible>Container.Content(tvshows) + !Player.HasVideo</visible>
 	</control>
 	</control>
 	<control type="group"><!-- MUSICA -->
