@@ -4660,8 +4660,9 @@ tween="back" easing="out" />
 				<!-- Alerts -->
 				<left>360</left>
 				<top>100</top>
-				<visible>[!IsEmpty(Window(Weather).Property(Alerts)) + IsEmpty(Window(Home).Property(WeatherOverride))] | StringCompare(Window(Home).Property(WeatherOverride),alerts)</visible>
+				<visible>StringCompare(skin.string(weather_mode),alerts)</visible>
 				<control type="textbox">
+				<visible>[!IsEmpty(Window(Weather).Property(Alerts)) + IsEmpty(Window(Home).Property(WeatherOverride))] | StringCompare(Window(Home).Property(WeatherOverride),alerts)</visible>
 					<left>10</left>
 					<top>10</top>
 					<width>880</width>
@@ -4670,11 +4671,130 @@ tween="back" easing="out" />
 					<pagecontrol>-</pagecontrol>
 					<align>left</align>
 					<aligny>top</aligny>
-					<info>Window(Weather).Property(Alerts)</info>
+					<info>$INFO[Window(Weather).Property(Alerts)]</info>
 					<animation effect="fade" start="0" end="100" delay="1600" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 					<autoscroll time="2000" delay="10000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>
+			<control type="group">
+				<left>0</left>
+				<top>-20</top>
+				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<control type="group" id="5200">
+				<control type="label">
+				<left>0</left>
+				<top>-30</top>
+				<width>880</width>
+				<height>49</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_32</font>
+				<label>$LOCALIZE[31844]$INFO[Container(53).ListItem.Label, - ]</label>
+				<textcolor>FFFFFAF0</textcolor>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+				</control>
+				<control type="panel" id="53">
+				<viewtype label="535">list</viewtype>
+					<left>0</left>
+					<top>0</top>
+					<width>880</width>
+					<height>267</height>
+					<scrolltime>200</scrolltime>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>5001</pagecontrol>
+					<itemlayout height="265" width="440">
+						<control type="image">
+							<left>2</left>
+							<top>2</top>
+							<height>260</height>
+							<width>430</width>	
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<left>2</left>
+							<top>2</top>
+							<height>260</height>
+							<width>430</width>	
+							<texture>$INFO[Window(Weather).Property(Layer)]</texture>
+							<aspectratio>scale</aspectratio>
+							<colordiffuse>70FFFFFF</colordiffuse>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>450</top>	
+							<height>35</height>
+							<width>224</width>
+							<texture>$INFO[ListItem.Label2]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout height="265" width="440">
+						<control type="image">
+							<left>2</left>
+							<top>2</top>
+							<height>260</height>
+							<width>430</width>	
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<left>2</left>
+							<top>2</top>
+							<height>260</height>
+							<width>430</width>	
+							<texture>$INFO[Window(Weather).Property(Layer)]</texture>
+							<aspectratio>scale</aspectratio>
+							<colordiffuse>70FFFFFF</colordiffuse>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>450</top>	
+							<height>35</height>
+							<width>224</width>
+							<texture>$INFO[ListItem.Label2]</texture>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$INFO[Window(Weather).Property(Map.1.Heading)]</label>
+							<label2>$INFO[Window(Weather).Property(Map.1.Legend)]</label2>
+							<icon>$INFO[Window(Weather).Property(Map.1.Area)]</icon>
+							<property name="Layer">$INFO[Window(Weather).Property(Map.1.Layer)]</property>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>$INFO[Window(Weather).Property(Map.2.Heading)]</label>
+							<label2>$INFO[Window(Weather).Property(Map.2.Legend)]</label2>
+							<icon>$INFO[Window(Weather).Property(Map.2.Area)]</icon>
+							<property name="Layer">$INFO[Window(Weather).Property(Map.2.Layer)]</property>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>$INFO[Window(Weather).Property(Map.3.Heading)]</label>
+							<label2>$INFO[Window(Weather).Property(Map.3.Legend)]</label2>
+							<icon>$INFO[Window(Weather).Property(Map.3.Area)]</icon>
+							<property name="Layer">$INFO[Window(Weather).Property(Map.3.Layer)]</property>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>$INFO[Window(Weather).Property(Map.4.Heading)]</label>
+							<label2>$INFO[Window(Weather).Property(Map.4.Legend)]</label2>
+							<icon>$INFO[Window(Weather).Property(Map.4.Area)]</icon>
+							<property name="Layer">$INFO[Window(Weather).Property(Map.4.Layer)]</property>
+							<onclick>noop</onclick>
+						</item>
+						<item>
+							<label>$INFO[Window(Weather).Property(Map.5.Heading)]</label>
+							<label2>$INFO[Window(Weather).Property(Map.5.Legend)]</label2>
+							<icon>$INFO[Window(Weather).Property(Map.5.Area)]</icon>
+							<property name="Layer">$INFO[Window(Weather).Property(Map.5.Layer)]</property>
+							<onclick>noop</onclick>
+						</item>
+					</content>
+				</control>
+			</control>
+			</control>
 			</control>
 		</control>
 	</include>
