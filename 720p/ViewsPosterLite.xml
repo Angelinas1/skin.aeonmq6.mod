@@ -828,6 +828,17 @@
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
 	<include>PLDisc</include>
 	</control>
+	<control type="image">
+	<left>112</left>
+	<top>55</top>
+	<width>270</width>
+	<height>270</height>
+	<aligny>center</aligny>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[ListItem.Label]</texture>
+	<include>PLDisc</include>
+	<visible>IsEmpty(ListItem.Art(discart))</visible>
+	</control>
 	</control>
 	</include>
 	<include name="PLcdARTVert">

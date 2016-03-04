@@ -4362,10 +4362,10 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),channel.radio)">http://localhost:52307/getthumb&amp;title=$INFO[Container(510).ListItem.Label] radio</value>
 	</variable>
 	<variable name="value_widgets_cast">
-		<value condition="IsEmpty(Container(510).ListItem.Season) + !StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)+!StringCompare(Container(510).ListItem.Property(Type),tvshow)+!StringCompare(Container(510).ListItem.Property(Type),episode)">plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[Container(510).ListItem.Title]</value>
-		<value condition="!IsEmpty(Container(510).ListItem.TVShowTitle) | StringCompare(Container(510).ListItem.Property(Type),tvshow)">plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[Container(510).ListItem.TVShowTitle]</value>
-		<value condition="!IsEmpty(Container(510).ListItem.TVShowTitle) | StringCompare(Container(510).ListItem.Property(Type),episode)">plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[Container(510).ListItem.TVShowTitle]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)">plugin://script.skin.helper.service/?action=getcast&amp;movieset=$INFO[Container(510).ListItem.Title]</value>
+		<value condition="IsEmpty(Container(510).ListItem.Season) + !StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)+!StringCompare(Container(510).ListItem.Property(Type),tvshow)+!StringCompare(Container(510).ListItem.Property(Type),episode)">plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[Container(510).ListItem.Title]&amp;downloadthumbs=true</value>
+		<value condition="!IsEmpty(Container(510).ListItem.TVShowTitle) | StringCompare(Container(510).ListItem.Property(Type),tvshow)">plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[Container(510).ListItem.TVShowTitle]&amp;downloadthumbs=true</value>
+		<value condition="!IsEmpty(Container(510).ListItem.TVShowTitle) | StringCompare(Container(510).ListItem.Property(Type),episode)">plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[Container(510).ListItem.TVShowTitle]&amp;downloadthumbs=true</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)">plugin://script.skin.helper.service/?action=getcast&amp;movieset=$INFO[Container(510).ListItem.Title]&amp;downloadthumbs=true</value>
 	</variable>
 	<variable name="value_mainmenubg_preview">
 		<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(22)">special://skin/backgrounds/</value>
@@ -5472,7 +5472,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PLCodec">
-		<value condition="Container.Content(movies) | Container.Content(sets)">$VAR[value_videocodec0]</value>
+		<value condition="Container.Content(movies) | Container.Content(sets) | Container.Content(musicvideos)">$VAR[value_videocodec0]</value>
 		<value>$VAR[value_codecdefault]</value>
 	</variable>
 	<variable name="PLGenre">

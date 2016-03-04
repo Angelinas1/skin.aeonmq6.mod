@@ -1561,6 +1561,75 @@
 							<visible>!IsEmpty(Container(510).ListItem.VideoCodec)</visible>
 						</control>
 					</control>
+					<control type="group">
+						<!-- ART of Disc for Sets -->
+						<left>2</left>
+						<top>115</top>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes))</visible>
+							<control type="image" id="3450">
+							<!-- S widget -->
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+							</control>
+							<control type="image" id="3451">
+							<!-- S widget -->
+							<top>25</top>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
+							</control>
+							<control type="image" id="3452">
+							<!-- S widget -->
+							<top>50</top>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
+							</control>
+							<control type="image" id="3453">
+							<!-- S widget -->
+							<top>75</top>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
+							</control>
+							<control type="image" id="3454">
+							<!-- S widget -->
+							<top>100</top>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
+							</control>
+							<control type="image" id="3455">
+							<!-- S widget -->
+							<top>125</top>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
+							</control>
+							<control type="image" id="3456">
+							<!-- S widget -->
+							<top>150</top>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
+							</control>
+							<control type="image" id="3457">
+							<!-- S widget -->
+							<top>175</top>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.7.DiscArt)]</texture>
+							</control>
+					</control>
 					<control type="image" id="551">
 						<!-- Controle estudio -->
 						<include>InvisibleButton</include>
@@ -1688,67 +1757,19 @@
 							<include>HomeFlagLabel</include>
 							<label>[B]$INFO[Container(510).ListItem.Rating][/B]</label>
 							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Rating) + !SubString(Container(510).ListItem.Rating,song)</visible>
+							<visible>!IsEmpty(Container(510).ListItem.Rating)</visible>
 						</control>
 						<control type="label">
 							<include>HomeFlagSeparator</include>
-							<visible>!IsEmpty(Container(510).ListItem.Rating) + !SubString(Container(510).ListItem.Rating,song)</visible>
+							<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Country))</visible>
 						</control>
 						<control type="label">
-							<!-- Versao do addon -->
+							<!-- Country -->
 							<align>left</align>
-							<width>150</width>
+							<width>250</width>
 							<include>HomeFlagLabel</include>
-							<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime)][/B]</label>
+							<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Country)][/B]</label>
 							<scroll>true</scroll>
-						</control>
-						<control type="label">
-							<!-- Data -->
-							<width>500</width>
-							<align>left</align>
-							<include>HomeFlagLabel</include>
-							<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Count)]111[/B]</label>
-							<scroll>true</scroll>
-						</control>
-						<control type="label">
-							<!-- Data (next aired) -->
-							<width>100</width>
-							<include>HomeFlagLabel</include>
-							<label>[B]$INFO[Container(510).ListItem.Property(SkinHelper.MovieSet.Writer)][/B]</label>
-							<scroll>true</scroll>
-						</control>
-						<control type="label">
-							<include>HomeFlagSeparator</include>
-							<visible>!IsEmpty(Container(510).ListItem.Property(NextDate))</visible>
-						</control>
-						<control type="label">
-							<!-- Duracao -->
-							<width>140</width>
-							<include>HomeFlagLabel</include>
-							<label>[B]$VAR[value_runtime][/B]</label>
-							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Duration) + IsEmpty(Container(510).ListItem.Property(ChannelName))</visible>
-						</control>
-						<control type="label">
-							<!-- Duracao pvr -->
-							<width>450</width>
-							<include>HomeFlagLabel</include>
-							<label>[B]$INFO[Container(510).ListItem.Property(ChannelName),, • ]$INFO[Container(510).ListItem.Property(StartTime),,  :  ]$INFO[Container(510).ListItem.Property(EndTime),, • ][/B]</label>
-							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Property(ChannelName))</visible>
-						</control>
-						<control type="label">
-							<include>HomeFlagSeparator</include>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Type))</visible>
-						</control>
-						<control type="label">
-							<!-- Type -->
-							<width>160</width>
-							<include>HomeFlagLabel</include>
-							<label>$INFO[Container(510).ListItem.Property(Type)]</label>
-							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Type))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -1758,7 +1779,7 @@
 						<height>25</height>
 						<texture>gradient_focus.png</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<visible>![IsEmpty(Container(510).ListItem.Genre) + IsEmpty(Container(510).ListItem.Property(Type)) + IsEmpty(Container(510).ListItem.Property(Addon.Summary))]</visible>
+						<visible>![IsEmpty(Container(510).ListItem.Genre) + IsEmpty(Container(510).ListItem.Property(Type)) + IsEmpty(Container(510).ListItem.Property(Addon.Summary))] | StringCompare(Container(9000).ListItem.Property(widgets),movie.sets)</visible>
 					</control>
 					<control type="image">
 						<left>100</left>
@@ -1780,6 +1801,19 @@
 						<font>Font_18A</font>
 						<label>[B]$INFO[Container(510).ListItem.Genre]$INFO[Container(510).ListItem.Property(Addon.Summary)][/B]</label>
 						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<!-- Genero Set-->
+						<left>100</left>
+						<top>124</top>
+						<width>450</width>
+						<height>20</height>
+						<align>left</align>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<font>Font_18A</font>
+						<label>[B]Genres: [/B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</label>
+						<scroll>true</scroll>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Genre))</visible>
 					</control>
 					<control type="label">
 						<!-- Episode Number -->
@@ -1827,6 +1861,110 @@
 						<align>left</align>
 						<texture flipx="true">divider.png</texture>
 						<visible>![IsEmpty(Container(510).ListItem.Genre) + IsEmpty(Container(510).ListItem.Property(Type)) + IsEmpty(Container(510).ListItem.Property(Addon.Summary))]</visible>
+					</control>
+					<control type="image">
+						<left>100</left>
+						<top>150</top>
+						<width>450</width>
+						<height>25</height>
+						<texture>gradient_focus.png</texture>
+						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Director))</visible>
+					</control>
+					<control type="label">
+						<!-- Director Set-->
+						<left>100</left>
+						<top>150</top>
+						<width>450</width>
+						<height>20</height>
+						<align>left</align>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<font>Font_18A</font>
+						<label>[B]Director: [/B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Director)]</label>
+						<scroll>true</scroll>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Director))</visible>
+					</control>
+					<control type="image">
+						<left>100</left>
+						<top>176</top>
+						<width>450</width>
+						<height>25</height>
+						<texture>gradient_focus.png</texture>
+						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Writer))</visible>
+					</control>
+					<control type="label">
+						<!-- Writer Set-->
+						<left>100</left>
+						<top>176</top>
+						<width>450</width>
+						<height>20</height>
+						<align>left</align>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<font>Font_18A</font>
+						<label>[B]Writer: [/B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Writer)]</label>
+						<scroll>true</scroll>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Writer))</visible>
+					</control>
+					<control type="image">
+						<left>100</left>
+						<top>202</top>
+						<width>450</width>
+						<height>25</height>
+						<texture>gradient_focus.png</texture>
+						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes))</visible>
+					</control>
+					<control type="label">
+						<!-- Duration Set-->
+						<left>100</left>
+						<top>202</top>
+						<width>450</width>
+						<height>20</height>
+						<align>left</align>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<font>Font_18A</font>
+						<label>[B]Duration: [/B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Hours)] Hours $INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes)] Minutes</label>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes))</visible>
+					</control>
+					<control type="grouplist">
+						<!-- ART of Sets -->
+							<left>100</left>
+							<top>235</top>
+							<orientation>horizontal</orientation>
+							<itemgap>3</itemgap>
+							<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes))</visible>
+							<control type="image" id="3450">
+							<!-- S widget -->
+							<width>100</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.0.ClearArt)]</texture>
+							</control>
+							<control type="image" id="3451">
+							<!-- S widget -->
+							<left>125</left>
+							<width>100</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.1.ClearArt)]</texture>
+							</control>
+							<control type="image" id="3452">
+							<!-- S widget -->
+							<left>250</left>
+							<width>100</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.2.ClearArt)]</texture>
+							</control>
+							<control type="image" id="3453">
+							<!-- S widget -->
+							<left>375</left>
+							<width>100</width>
+							<height>80</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>$INFO[Window(Home).Property(SkinHelper.MovieSet.3.ClearArt)]</texture>
+							</control>
 					</control>
 					<control type="textbox">
 						<!-- Plot video menor -->
@@ -1882,6 +2020,27 @@
 						<label>[B]$INFO[Container(510).ListItem.Director][/B]</label>
 						<scroll>true</scroll>
 					</control>
+					<control type="image">
+						<left>580</left>
+						<top>100</top>
+						<width>320</width>
+						<height>25</height>
+						<texture>gradient_focus.png</texture>
+						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Years))</visible>
+					</control>
+					<control type="label">
+						<!-- Years -->
+						<left>580</left>
+						<top>100</top>
+						<width>320</width>
+						<height>20</height>
+						<align>left</align>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<font>Font_18A</font>
+						<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Years)][/B]</label>
+						<scroll>true</scroll>
+					</control>
 					<control type="multiimage">
 						<left>880</left>
 						<top>75</top>
@@ -1911,6 +2070,18 @@
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 						<visible>!IsEmpty(Container(510).ListItem.Director)</visible>
+					</control>
+					<control type="textbox">
+						<!-- Plot Set menor -->
+						<left>580</left>
+						<top>124</top>
+						<width>320</width>
+						<height>235</height>
+						<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.ExtendedPlot)]</label>
+						<textcolor>FFFFFAF0</textcolor>
+						<font>Font_18A</font>
+						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.MovieSet.ExtendedPlot))</visible>
 					</control>
 					<control type="textbox">
 						<!-- Elenco maior -->
