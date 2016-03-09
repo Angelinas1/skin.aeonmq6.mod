@@ -12,6 +12,7 @@
 	<onload>Skin.Reset(playlists)</onload>
 	<onload>Skin.Reset(windowbg)</onload>
 		<onload>SetProperty(SkinHelper.WidgetContainer,510)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,10)</onload>
 	<onload>Skin.SetString(SkinHelper.WallImagesDelay, 10)</onload>
 	<onload>Skin.SetString(SkinHelper.AllMoviesBackground.EnableWallImages, 20)</onload>
@@ -765,7 +766,6 @@
 					<width>1300</width>
 					<texture>dan.png</texture>
 					<aspectratio align="center">stretch</aspectratio>
-					<animation effect="fade" start="10" end="100" time="6000">WindowOpen</animation>
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<animation effect="fade" start="60" end="100" time="5000" condition="true">conditional</animation>
 				</control>
@@ -1339,7 +1339,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture fallback="DefaultPicture.png" background="true">$VAR[value_widgetsinfopanel]</texture>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>!StringCompare(Container(9000).ListItem.Property(target),video1)</visible>
+					<visible>![StringCompare(Container(9000).ListItem.Property(target),video1)|StringCompare(Container(9000).ListItem.Property(target),video2)]</visible>
 				</control>
 				<control type="image">
 					<!-- Thumb video1 -->
@@ -1350,7 +1350,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture fallback="DefaultPicture.png" background="true">$VAR[value_widgetsinfopanelvideo1]</texture>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>ControlGroup(512).HasFocus | !SubString(skin.string(m_panel_layout),panel_zoom) + SubString(Container(9000).ListItem.Property(target),video1)</visible>
+					<visible>ControlGroup(512).HasFocus+!StringCompare(Container(9000).ListItem.Property(target),video2) | !SubString(skin.string(m_panel_layout),panel_zoom) + SubString(Container(9000).ListItem.Property(target),video1)</visible>
 				</control>
 				<control type="image">
 					<!-- Thumb video2 -->
@@ -3681,7 +3681,7 @@
 				<visible>Skin.HasSetting(widget_cast)</visible>
 				<left>285</left>
 				<top>600</top>
-				<include condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(517) | Control.HasFocus(1000)">Animation_HomePanel_Cast</include>
+				<include condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(517) | Control.HasFocus(1000)">Animation_HomePanel</include>
 				<animation effect="slide" start="0,150" end="0,0" condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(517) | Control.HasFocus(1000)">Conditional</animation>
 				<visible>Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(517) | Control.HasFocus(1000)</visible>
 				<control type="list" id="1000">

@@ -2110,12 +2110,12 @@ tween="back" easing="out" />
 		</control>
 		<control type="panel" id="510">
 			<include>panel_layout</include>
-			<content>$VAR[value_widgetsplus]</content>
+			<content target="$VAR[value_target]">$VAR[value_widgetsplus]</content>
 			<visible>Control.IsVisible(8003) + StringCompare(Container(9000).ListItem.Property(target),plus)</visible>
 		</control>
 		<control type="panel" id="510">
 			<include>panel_layout_epgposter</include>
-			<content>$VAR[value_widgetsplus]</content>
+			<content target="video">$VAR[value_widgetsplus]</content>
 			<visible>Control.IsVisible(8003) + StringCompare(Container(9000).ListItem.Property(target),plus_poster)</visible>
 		</control>
 		<control type="list" id="510">

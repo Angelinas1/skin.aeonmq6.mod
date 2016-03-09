@@ -5220,7 +5220,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="[StringCompare(Container(9000).ListItem.Property(widgets),movie.genre) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.genre) | StringCompare(Container(9000).ListItem.Property(widgets),concert.genre)]">genres/video/$INFO[ListItem.Label].jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),music.genre)">genres/music/$INFO[ListItem.Label].jpg</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),countries)">icons/countries/$INFO[ListItem.Label].png</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">flags/studios/$INFO[ListItem.Label].png</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),years)">icons/years/$INFO[ListItem.Label].png</value>
 	</variable>
 	<variable name="value_widgetsinfopanel">
@@ -5230,7 +5230,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="[StringCompare(Container(9000).ListItem.Property(widgets),movie.genre) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.genre) | StringCompare(Container(9000).ListItem.Property(widgets),concert.genre)]">genres/video/$INFO[Container(510).ListItem.Label].jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),music.genre)">genres/music/$INFO[Container(510).ListItem.Label].jpg</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),countries)">icons/countries/$INFO[Container(510).ListItem.Label].png</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">flags/studios/$INFO[Container(510).ListItem.Label].png</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">$INFO[Container(510).ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),years)">icons/years/$INFO[Container(510).ListItem.Label].png</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),channel.group)">group/$INFO[ListItem.Label].png</value>
 	</variable>
@@ -5268,7 +5268,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="[StringCompare(Container(9000).ListItem.Property(widgets),movie.genre) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.genre) | StringCompare(Container(9000).ListItem.Property(widgets),concert.genre)]">genress/video/$INFO[Container(510).ListItem.Label].jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),music.genre)">genres/music/$INFO[Container(510).ListItem.Label].jpg</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),countries)">icons/countries/$INFO[Container(510).ListItem.Label].png</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">flags/studios/$INFO[Container(510).ListItem.Label].png</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">$INFO[Container(510).ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),years)">icons/years/$INFO[Container(510).ListItem.Label].png</value>
 	</variable>
 	<variable name="value_widgetsinfopanelvideo2">
@@ -5281,7 +5281,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="[StringCompare(Container(9000).ListItem.Property(widgets),movie.genre) | StringCompare(Container(9000).ListItem.Property(widgets),tvshow.genre) | StringCompare(Container(9000).ListItem.Property(widgets),concert.genre)]">genress/video/$INFO[Container(510).ListItem.Label].jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),music.genre)">genres/music/$INFO[Container(510).ListItem.Label].jpg</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),countries)">icons/countries/$INFO[Container(510).ListItem.Label].png</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">flags/studios/$INFO[Container(510).ListItem.Label].png</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),studios)">$INFO[Container(510).ListItem.Label,resource://resource.images.studios.coloured/resources/,.png]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),years)">icons/years/$INFO[Container(510).ListItem.Label].png</value>
 	</variable>
 	<variable name="value_tvwidget2">
@@ -5299,9 +5299,9 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Window.IsActive(25) + Container.Content(genres) + Skin.HasSetting(externalvideogenreicon)">$INFO[Skin.String(CustomVideoGenreIcon)]$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(genres) + !Skin.HasSetting(externalmusicgenreicon)">genres/music/$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(genres) + Skin.HasSetting(externalmusicgenreicon)">$INFO[Skin.String(CustomMusicGenreIcon)]$INFO[ListItem.Label,,.jpg]</value>
-		<value condition="Container.Content(directors)">http://localhost:52307/getthumb&title=$INFO[ListItem.Label]IMDB</value>
+		<value condition="Container.Content(directors)">http://localhost:52307/getthumb&title=$INFO[ListItem.Label] IMDB</value>
 		<value condition="Container.Content(countries)">icons/countries/$INFO[ListItem.Label].png</value>
-		<value condition="Container.Content(studios)">flags/studios/$INFO[ListItem.Label].png</value>
+		<value condition="Container.Content(studios)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="Container.Content(years)">icons/years/$INFO[ListItem.Label].png</value>
 	</variable>
 	<variable name="value_poster-10">

@@ -11,6 +11,7 @@
 	<include file="IncludesMusic.xml"/>
 	<include file="IncludesWeather.xml"/>
 	<include file="IncludesTopMenu.xml"/>
+	<include file="IncludesLyrics.xml"/>
 	<include file="ViewsRightList.xml"/>
 	<!-- 51 -->
 	<include file="ViewsBanner.xml"/>
