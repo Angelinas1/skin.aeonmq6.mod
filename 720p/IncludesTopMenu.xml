@@ -359,43 +359,55 @@
 					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
 				</control>
 				<control type="radiobutton" id="9117">
+					<label>Enable helper Looksups</label>
+					<include>TopMenuRadioButton</include>
+					<onclick>Skin.ToggleSetting(SkinHelper.EnableAddonsLookups)</onclick>
+					<selected>!Skin.HasSetting(SkinHelper.EnableAddonsLookups)</selected>
+				</control>
+				<control type="radiobutton" id="9118">
+					<label>Enable helper AnimatedPosters</label>
+					<include>TopMenuRadioButton</include>
+					<onclick>Skin.ToggleSetting(AnimatedPosters)</onclick>
+					<selected>!Skin.HasSetting(AnimatedPosters)</selected>
+				</control>
+				<control type="radiobutton" id="9120">
 					<label>Enable forced views</label>
 					<include>TopMenuRadioButton</include>
 					<onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
 					<selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>
 				</control>
-				<control type="button" id="9118">
+				<control type="button" id="9121">
 					<include>TopMenuButton</include>
 					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=movies)</onclick>
 					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
 					<label>Forced view for movies: $INFO[Skin.String(SkinHelper.ForcedViews.movies)]</label>
 				</control>
-				<control type="button" id="9119">
+				<control type="button" id="9122">
 					<include>TopMenuButton</include>
 					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=tvshows)</onclick>
 					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
 					<label>Forced view for tv shows:  $INFO[Skin.String(SkinHelper.ForcedViews.tvshows)]</label>
 				</control>
-				<control type="button" id="9120">
+				<control type="button" id="9123">
 					<include>TopMenuButton</include>
 					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=seasons)</onclick>
 					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
 					<label>Forced view for seasons:  $INFO[Skin.String(SkinHelper.ForcedViews.seasons)]</label>
 				</control>
-				<control type="button" id="9121">
+				<control type="button" id="9124">
 					<include>TopMenuButton</include>
 					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=episodes)</onclick>
 					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
 					<label>Forced view for episodes: $INFO[Skin.String(SkinHelper.ForcedViews.episodes)]</label>
 					<font>Reg28</font>
 				</control>
-				<control type="button" id="9122">
+				<control type="button" id="9125">
 					<include>TopMenuButton</include>
 					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=sets)</onclick>
 					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
 					<label>Forced view for movie sets: $INFO[Skin.String(SkinHelper.ForcedViews.sets)]</label>
 				</control>
-				<control type="button" id="9123">
+				<control type="button" id="9126">
 					<include>TopMenuButton</include>
 					<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=setmovies)</onclick>
 					<visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
@@ -1389,21 +1401,21 @@
 					<label>31696</label>
 					<onclick>Skin.ToggleSetting(originaltitle)</onclick>
 					<selected>Skin.HasSetting(originaltitle)</selected>
-					<visible>Container.Content(movies) + !Control.IsVisible(51)</visible>
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9314">
 					<include>TopMenuRadioButton</include>
 					<label>31142</label>
 					<onclick>Skin.ToggleSetting(clearlogotitle)</onclick>
 					<selected>Skin.HasSetting(clearlogotitle)</selected>
-					<visible>!Control.IsVisible(51)</visible>
+					<visible></visible>
 				</control>
 				<control type="radiobutton" id="9315">
 					<include>TopMenuRadioButton</include>
 					<label>31976</label>
 					<onclick>Skin.ToggleSetting(nomoviestagline)</onclick>
 					<selected>!Skin.HasSetting(nomoviestagline)</selected>
-					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Control.IsVisible(51)]</visible>
+					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="radiobutton" id="9316">
 					<include>TopMenuRadioButton</include>

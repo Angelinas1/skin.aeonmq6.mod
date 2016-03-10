@@ -4473,7 +4473,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_defaultvideofanart">
 		<value condition="![IsEmpty(skin.string(windowbg)) | Container.Content(genres)] + IsEmpty(ListItem.Art(fanart))">$INFO[skin.string(windowbg)]</value>
-		<value condition="Container.Content(movies) + !Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="Container.Content(movies) + !Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]+!IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart))+!Skin.HasSetting(AnimatedPosters)">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</value>
+		<value condition="Container.Content(movies) + !Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]+[IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart))|Skin.HasSetting(AnimatedPosters)]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]">special://skin/backgrounds/red_metal.jpg</value>
 		<value condition="Container.Content(musicvideos) + [SubString(skin.string(musicvideosfanart),fanart) | SubString(skin.string(musicvideosfanart),extra) + IsEmpty(Control.GetLabel(5020))]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(tvshows) + !Control.IsVisible(84) + [SubString(skin.string(tvshowsfanart),fanart) | SubString(skin.string(tvshowsfanart),extra) + IsEmpty(Control.GetLabel(5020))]">$INFO[ListItem.Art(fanart)]</value>
@@ -5292,7 +5293,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_poster">
 		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.Poster))">$INFO[Window(home).Property(SkinHelper.PVR.Poster)]</value>
-		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(poster)) + !IsEmpty(Window(home).Property(SkinHelper.AnimatedPoster))+ !Skin.HasSetting(AnimatedPosters)">$INFO[Window(home).Property(SkinHelper.AnimatedPoster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(poster)) + [IsEmpty(Window(home).Property(SkinHelper.AnimatedPoster))|Skin.HasSetting(AnimatedPosters)]">$INFO[ListItem.Art(poster)]</value>
 		<value condition="![IsEmpty(ListItem.Art(tvshow.poster)) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster)) + ![Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(years) | Container.Content(episodes)] | Container.Content(episodes)">$INFO[ListItem.Icon]</value>
 		<value condition="Window.IsActive(25) + Container.Content(genres) + !Skin.HasSetting(externalvideogenreicon)">genres/video/$INFO[ListItem.Label,,.jpg]</value>
