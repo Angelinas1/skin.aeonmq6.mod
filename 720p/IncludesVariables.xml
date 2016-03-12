@@ -3812,6 +3812,12 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="!IsEmpty(Skin.String(CustomAnimatedIconFolder))">[COLOR=$VAR[value_headercolor]] - $LOCALIZE[15311] $INFO[Skin.String(CustomAnimatedIconFolder)][/COLOR]</value>
 		<value condition="IsEmpty(Skin.String(CustomAnimatedIconFolder))">[COLOR=$VAR[value_headercolor]] - $LOCALIZE[15300][/COLOR]</value>
 	</variable>
+	<variable name="value_customweathericonsfolder">
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),weather/)">Regular</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.coloured/)">Coloured</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.3d-coloured/)">3d-coloured</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)">animated</value>
+		</variable>
 	<variable name="value_arrow1">
 		<value condition="Control.HasFocus(510) | Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(9100) | Control.HasFocus(9101)">arrow_left.png</value>
 		<value condition="Control.HasFocus(9000)">arrow_left.png</value>

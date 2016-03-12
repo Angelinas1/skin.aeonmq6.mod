@@ -5563,6 +5563,28 @@
 				<visible>StringCompare(Container(9000).ListItem.Property(id),weather) + Skin.HasSetting(weathericons) + Skin.HasSetting(weathericons_external)</visible>
 			</control>
 			<control type="button" id="132">
+				<!-- Icones Clima/Pasta -->
+				<!-- nao trocar id -->
+				<include>CustomMenuButton</include>
+				<label>Set Path for Icon      -       $VAR[value_customweathericonsfolder]</label>
+				<onclick>SetFocus(133)</onclick>
+				<visible>StringCompare(Container(9000).ListItem.Property(id),weather) + !Skin.HasSetting(weathericons)</visible>
+			</control>
+			<control type="button" id="133">
+				<!-- Icones Clima/Pasta -->
+				<!-- nao trocar id -->
+				<include>InvisibleButton</include>
+				<onleft>131</onleft>
+				<onright>131</onright>
+				<onup>131</onup>
+				<ondown>134</ondown>
+				<onclick condition="IsEmpty(skin.string(CustomWeatherIconFolder)|SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)">Skin.SetString(CustomWeatherIconFolder,weather/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),weather/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.coloured/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.coloured/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.3d-coloured/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.3d-coloured/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.animated/)</onclick>
+				<visible>StringCompare(Container(9000).ListItem.Property(id),weather) + !Skin.HasSetting(weathericons)</visible>
+			</control>
+			<control type="button" id="134">
 				<!-- Fundo Clima/Condicional -->
 				<include>CustomMenuButton</include>
 				<label>$VAR[value_weathercondition] ($LOCALIZE[31181])</label>
@@ -5570,7 +5592,7 @@
 				<visible>StringCompare(Container(9000).ListItem.Property(id),weather)</visible>
 				<enable>IsEmpty(skin.string(weather.bg))</enable>
 			</control>
-			<control type="radiobutton" id="133">
+			<control type="radiobutton" id="135">
 				<!-- Fundo Clima Externo -->
 				<include>CustomMenuRadioButton</include>
 				<label>31901</label>
@@ -5579,7 +5601,7 @@
 				<visible>StringCompare(Container(9000).ListItem.Property(id),weather) + SubString(skin.string(weatherconditionbg),weathercondition)</visible>
 				<enable>IsEmpty(skin.string(weather.bg))</enable>
 			</control>
-			<control type="button" id="134">
+			<control type="button" id="136">
 				<!-- Fundo Clima/Pasta -->
 				<include>CustomMenuButton</include>
 				<label>$VAR[value_weatherconditionfolder]</label>
@@ -5587,7 +5609,7 @@
 				<visible>StringCompare(Container(9000).ListItem.Property(id),weather) + SubString(skin.string(weatherconditionbg),weathercondition) + Skin.HasSetting(weathercondition_external)</visible>
 				<enable>IsEmpty(skin.string(weather.bg))</enable>
 			</control>
-			<control type="button" id="136">
+			<control type="button" id="137">
 				<!-- Ajustes de desligamento -->
 				<include>CustomMenuButton</include>
 				<label>- $LOCALIZE[13008]</label>

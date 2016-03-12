@@ -2155,7 +2155,7 @@ tween="back" easing="out" />
 		</control>
 		<control type="list" id="510">
 			<visible>Control.IsVisible(8003) + StringCompare(Container(9000).ListItem.Property(target),plus_epg)</visible>
-			<content target="video">pvr://channels/tv/All&amp;channels/</content>
+			<content target="video">$VAR[value_widgetsplus]</content>
 			<viewtype label="19031">list</viewtype>
 			<left>0</left>
 			<top>380</top>
@@ -4187,7 +4187,7 @@ tween="back" easing="out" />
 						<label>$INFO[Window(Weather).Property(Daily.1.LowTemperature)]</label>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4230,7 +4230,7 @@ tween="back" easing="out" />
 						<label>$INFO[Window(Weather).Property(Daily.2.LowTemperature)]</label>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Daily.2.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.2.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4273,7 +4273,7 @@ tween="back" easing="out" />
 						<label>$INFO[Window(Weather).Property(Daily.3.LowTemperature)]</label>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Daily.3.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.3.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4316,7 +4316,7 @@ tween="back" easing="out" />
 						<label>$INFO[Window(Weather).Property(Daily.4.LowTemperature)]</label>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4359,7 +4359,7 @@ tween="back" easing="out" />
 						<label>$INFO[Window(Weather).Property(Daily.5.LowTemperature)]</label>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Daily.5.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.5.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4402,7 +4402,7 @@ tween="back" easing="out" />
 						<label>$INFO[Window(Weather).Property(Daily.6.LowTemperature)]</label>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Daily.6.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.6.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4445,7 +4445,7 @@ tween="back" easing="out" />
 						<label>$INFO[Window(Weather).Property(Daily.7.LowTemperature)]</label>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4492,7 +4492,7 @@ tween="back" easing="out" />
 						</control>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Weekend.1.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Weekend.1.OutlookIcon)]</texture>
 						<include>Widget_WeatherIconWeekend</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4538,7 +4538,7 @@ tween="back" easing="out" />
 						</control>
 					</control>
 					<control type="image">
-						<texture>weather/$INFO[Window(Weather).Property(Weekend.2.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Weekend.2.OutlookIcon)]</texture>
 						<include>Widget_WeatherIconWeekend</include>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
@@ -4577,7 +4577,7 @@ tween="back" easing="out" />
 					</control>
 					<control type="image">
 						<include>Widget_WeatherIcon36hour</include>
-						<texture>weather/$INFO[Window(Weather).Property(36Hour.1.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(36Hour.1.OutlookIcon)]</texture>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
 					<control type="multiimage">
@@ -4610,7 +4610,7 @@ tween="back" easing="out" />
 					</control>
 					<control type="image">
 						<include>Widget_WeatherIcon36hour</include>
-						<texture>weather/$INFO[Window(Weather).Property(36Hour.2.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(36Hour.2.OutlookIcon)]</texture>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
 					<control type="multiimage">
@@ -4643,7 +4643,7 @@ tween="back" easing="out" />
 					</control>
 					<control type="image">
 						<include>Widget_WeatherIcon36hour</include>
-						<texture>weather/$INFO[Window(Weather).Property(36Hour.3.OutlookIcon)]</texture>
+						<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(36Hour.3.OutlookIcon)]</texture>
 						<visible>!Skin.HasSetting(weathericons)</visible>
 					</control>
 					<control type="multiimage">

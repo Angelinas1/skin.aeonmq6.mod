@@ -530,7 +530,6 @@
 				<!-- 77 -->
 				<include condition="Skin.HasSetting(viewcoverback_video)">ViewCoverandBackVideo</include>
 				<!-- 78 -->
-				<include condition="Skin.HasSetting(viewcoverside_video)">ViewCoverSideVideo</include>
 				<!-- 81 -->
 				<include condition="Skin.HasSetting(viewmidlist967_video)">ViewMidList967</include>
 				<!-- 83 -->

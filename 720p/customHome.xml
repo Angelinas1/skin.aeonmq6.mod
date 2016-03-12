@@ -162,24 +162,24 @@
 	<itemgap>0</itemgap>
 	<scrolltime>-</scrolltime>
 	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-	<visible>!Skin.HasSetting(weathericons) + [Control.HasFocus(129) | Control.HasFocus(130) | Control.HasFocus(131)]</visible>
+	<visible>!Skin.HasSetting(weathericons) + [[Control.HasFocus(129) | Control.HasFocus(130) | Control.HasFocus(131)] | [Control.HasFocus(132)] | Control.HasFocus(133)]</visible>
 	<control type="image"><!-- Icone do clima 1 -->
 	<width>180</width>
 	<height>90</height>
 	<aspectratio align="center">keep</aspectratio>
-	<texture background="true">weather/$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</texture>
+	<texture background="true">$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</texture>
 	</control>
 	<control type="image"><!-- Icone do clima 2 -->
 	<width>180</width>
 	<height>90</height>
 	<aspectratio align="center">keep</aspectratio>
-	<texture background="true">weather/$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</texture>
+	<texture background="true">$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</texture>
 	</control>
 	<control type="image"><!-- Icone do clima 3 -->
 	<width>180</width>
 	<height>90</height>
 	<aspectratio align="center">keep</aspectratio>
-	<texture background="true">weather/$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
+	<texture background="true">$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
 	</control>
 	</control>
 	<control type="grouplist">

@@ -358,7 +358,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.1.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.1.OutlookIcon)]</texture>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -399,7 +399,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.2.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.2.OutlookIcon)]</texture>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -440,7 +440,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.3.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.3.OutlookIcon)]</texture>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -481,7 +481,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.4.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.4.OutlookIcon)]</texture>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -522,7 +522,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.5.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.5.OutlookIcon)]</texture>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -563,7 +563,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.6.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.6.OutlookIcon)]</texture>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -604,7 +604,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.7.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.7.OutlookIcon)]</texture>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -758,7 +758,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>36HourIcon</include>
-	<texture>weather/$INFO[Window.Property(36Hour.1.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.1.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>36HourOutlook</include>
@@ -793,11 +793,11 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>36HourIcon</include>
-	<texture>weather/$INFO[Window.Property(36Hour.2.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.2.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>36HourOutlook</include>
-	<info>weather/$INFO[Window.Property(36Hour.2.OutlookIcon)]</info>
+	<info>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.2.OutlookIcon)]</info>
 	</control>
 	<control type="image">
 	<include>36HourArrowUp</include>
@@ -828,7 +828,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>36HourIcon</include>
-	<texture>weather/$INFO[Window.Property(36Hour.3.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.3.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>36HourOutlook</include>
@@ -978,7 +978,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>WeekendIcon</include>
-	<texture>weather/$INFO[Window.Property(Weekend.1.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Weekend.1.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>WeekendOutlook</include>
@@ -1019,7 +1019,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>WeekendIcon</include>
-	<texture>weather/$INFO[Window.Property(Weekend.2.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Weekend.2.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>WeekendOutlook</include>
@@ -1234,7 +1234,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.1.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.1.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1267,7 +1267,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.2.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.2.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1300,7 +1300,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.3.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.3.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1333,7 +1333,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.4.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.4.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1366,7 +1366,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.5.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.5.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1399,7 +1399,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.6.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.6.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1432,7 +1432,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.7.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.7.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1465,7 +1465,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.8.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.8.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1498,7 +1498,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.9.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.9.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1531,7 +1531,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.10.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.10.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1564,7 +1564,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.11.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.11.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1597,7 +1597,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Hourly.12.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.12.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1818,7 +1818,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.1.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.1.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1851,7 +1851,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.2.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.2.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1884,7 +1884,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.3.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.3.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1917,7 +1917,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.4.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.4.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1950,7 +1950,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.5.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.5.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1983,7 +1983,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.6.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.6.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2016,7 +2016,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.7.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.7.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2049,7 +2049,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.8.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.8.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2082,7 +2082,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.9.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.9.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2115,7 +2115,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.10.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.10.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2148,7 +2148,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.11.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.11.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2181,7 +2181,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.12.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.12.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2214,7 +2214,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.13.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.13.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2247,7 +2247,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.14.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.14.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2280,7 +2280,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.15.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.15.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2313,7 +2313,7 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
-	<texture>weather/$INFO[Window.Property(Daily.16.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.16.OutlookIcon)]</texture>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
