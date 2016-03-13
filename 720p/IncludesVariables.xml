@@ -3814,9 +3814,17 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_customweathericonsfolder">
 		<value condition="SubString(skin.string(CustomWeatherIconFolder),weather/)">Regular</value>
-		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.coloured/)">Coloured</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.coloured/)">coloured</value>
 		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.3d-coloured/)">3d-coloured</value>
 		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)">animated</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.default/)">default</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.white/)">white</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.3d-white/)">3d-white</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.flat/)">flat</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.outline/)">outline</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.outline-hd/)">outline-hd</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.transparent/)">transparent</value>
+		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.grey/)">grey</value>
 		</variable>
 	<variable name="value_arrow1">
 		<value condition="Control.HasFocus(510) | Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(9100) | Control.HasFocus(9101)">arrow_left.png</value>
@@ -6149,13 +6157,11 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Container.Content(songs) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Window.IsActive(135)]">$INFO[ListItem.Artist]$INFO[ListItem.Album, | ]</value>
 	</variable>
 	<variable name="value_songinfo_track">
-		<value condition="!Player.HasAudio">$INFO[ListItem.TrackNumber]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber]</value>
+		<value>$INFO[ListItem.TrackNumber]</value>
 	</variable>
 	<variable name="value_songinfo_duration">
 		<value condition="!Player.HasAudio + SubString(ListItem.Duration,min)">$INFO[ListItem.Duration]</value>
 		<value condition="![Player.HasAudio | SubString(ListItem.Duration,min)]">$INFO[ListItem.Duration] $LOCALIZE[31961]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Duration]</value>
 	</variable>
 	<variable name="value_songinfo_plot">
 		<value condition="!Player.HasAudio">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
@@ -6173,8 +6179,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.AudioChannels,flags/audiochannels/,ch.png]</value>
 	</variable>
 	<variable name="value_songinfo_thumb">
-		<value condition="!Player.HasAudio">$INFO[Listitem.Icon]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Cover]</value>
+		<value>$INFO[Listitem.Icon]</value>
 	</variable>
 	<variable name="value_albumsong_items">
 		<value condition="Container.Content(artists)">$LOCALIZE[21888]: $INFO[Container(50).NumItems] $LOCALIZE[31040]</value>

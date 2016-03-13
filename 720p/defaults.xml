@@ -139,20 +139,9 @@
 	<top>220</top>
 	<width>410</width>
 	<height>270</height>
-	<spinwidth>16</spinwidth>
-	<spinheight>16</spinheight>
-	<spinposx>640</spinposx>
-	<spinposy>520</spinposy>
-	<align>justify</align>
-	<spinfont/>
-	<spincolor>FFFFFAF0</spincolor>
-	<textureup>-</textureup>
-	<texturedown>-</texturedown>
-	<textureupfocus>-</textureupfocus>
-	<texturedownfocus>-</texturedownfocus>
-	<image>-</image>
-	<textcolor>FFFFFAF0</textcolor>
-	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(6621)">Conditional</animation>
+	<align>left</align>
+	<textcolor>white</textcolor>
+	<font>font13</font>
 	</default>
 	<default type="spincontrol">
 	<pulseonselect>false</pulseonselect>

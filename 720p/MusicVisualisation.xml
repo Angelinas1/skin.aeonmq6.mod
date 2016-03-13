@@ -143,16 +143,17 @@
 					<height>244</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5605),Empty.png)+stringcompare(Control.GetLabel(5606),Empty.png)</visible>
 				</control>
-				<control type="image">
+				<control type="image" id="5606">
 					<include>Animation_CDart</include>
 					<left>40</left>
 					<top>-20</top>
 					<width>240</width>
 					<height>240</height>
-					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5605),Empty.png)</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>
@@ -164,13 +165,13 @@
 					<aspectratio align="left">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
 				</control> 
-				<control type="image">
+				<control type="image" id="5605">
 					<include>Animation_CDart</include>
 					<left>40</left>
 					<top>-20</top>
 					<width>244</width>
 					<height>244</height>
-					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]/cdart.png</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
@@ -364,16 +365,17 @@
 					<height>214</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5607),Empty.png)+stringcompare(Control.GetLabel(5608),Empty.png)</visible>
 				</control>
-				<control type="image">
+				<control type="image" id="5608">
 					<include>Animation_CDart</include>
 					<left>0</left>
 					<top>-20</top>
 					<width>300</width>
 					<height>214</height>
-					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5607),Empty.png)</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>
@@ -384,14 +386,14 @@
 					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
 					<aspectratio align="left">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
-				</control> 
-				<control type="image">
+				</control>			
+				<control type="image" id="5607">
 					<include>Animation_CDart</include>
 					<left>0</left>
 					<top>-20</top>
 					<width>300</width>
 					<height>270</height>
-					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
@@ -406,24 +408,43 @@
 				<texture flipy="true" fallback="DefaultAudio.png" diffuse="thumb_reflect.png" background="true">$INFO[MusicPlayer.Cover]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
-			<control type="image">
+			<control type="image" id="5703">
 				<left>20</left>
 				<top>-40</top>
 				<width>300</width>
-				<height>214</height>
+				<height>224</height>
 				<fadetime>200</fadetime>
 				<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture>
 				<aspectratio align="left">keep</aspectratio>
+			</control>
+			<control type="image" id="5702">
+				<left>20</left>
+				<top>-40</top>
+				<width>300</width>
+				<height>224</height>
+				<fadetime>200</fadetime>
+				<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</texture>
+				<aspectratio align="left">keep</aspectratio>
+				<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5703),DefaultAudio.png)</visible>
+			</control>
+			<control type="image" id="5704">
+				<left>1030</left>
+				<top>10</top>
+				<width>220</width>
+				<height>95</height>
+				<texture  fallback="Empty.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+				<fadetime>300</fadetime>
+				<aspectratio align="center">keep</aspectratio>
+				<animation effect="fade" end="100" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>1030</left>
 				<top>10</top>
 				<width>220</width>
 				<height>95</height>
-				<texture background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
-				<fadetime>300</fadetime>
-				<aspectratio align="center">keep</aspectratio>
-				<animation effect="fade" end="100" condition="true">Conditional</animation>
+				<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=clearlogo</texture>
+				<aspectratio align="left">keep</aspectratio>
+				<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5704),Empty.png)</visible>
 			</control>
 			<control type="label">
 				<!-- Nome do artista -->
@@ -543,24 +564,34 @@
 				<animation effect="slide" start="0,0" end="140,0" time="800" delay="3000" tween="sine" easing="inout" condition="Player.HasAudio">Conditional</animation>
 				<animation effect="slide" end="-140,0" time="800" tween="sine" easing="inout" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
 				<animation effect="fade" start="100" end="0,0" time="300" delay="500" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
-				<control type="image">
-					<include>Animation_CDart</include>
+				<control type="image" id="5604">
 					<left>33</left>
 					<top>-53</top>
 					<width>421</width>
 					<height>290</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5609),Empty.png)+stringcompare(Control.GetLabel(5610),Empty.png)</visible>
 				</control>
-				<control type="image">
+				<control type="image" id="5609">
 					<include>Animation_CDart</include>
 					<left>33</left>
 					<top>-53</top>
 					<width>421</width>
 					<height>290</height>
-					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio</visible>
+				</control>
+				<control type="image" id="5610">
+					<include>Animation_CDart</include>
+					<left>33</left>
+					<top>-53</top>
+					<width>421</width>
+					<height>290</height>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5609),Empty.png)</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>

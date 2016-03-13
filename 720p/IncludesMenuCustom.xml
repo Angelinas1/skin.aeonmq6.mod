@@ -5578,10 +5578,18 @@
 				<onright>131</onright>
 				<onup>131</onup>
 				<ondown>134</ondown>
-				<onclick condition="IsEmpty(skin.string(CustomWeatherIconFolder)|SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)">Skin.SetString(CustomWeatherIconFolder,weather/)</onclick>
+				<onclick condition="IsEmpty(skin.string(CustomWeatherIconFolder)|SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.grey/)">Skin.SetString(CustomWeatherIconFolder,weather/)</onclick>
 				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),weather/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.coloured/)</onclick>
 				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.coloured/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.3d-coloured/)</onclick>
 				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.3d-coloured/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.animated/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.default/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.default/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.white/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.white/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.3d-white/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.3d-white/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.flat/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.flat/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.outline/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.outline/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.outline-hd/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.outline-hd/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.transparent/)</onclick>
+				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.transparent/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.grey/)</onclick>
 				<visible>StringCompare(Container(9000).ListItem.Property(id),weather) + !Skin.HasSetting(weathericons)</visible>
 			</control>
 			<control type="button" id="134">
