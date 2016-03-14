@@ -6579,4 +6579,31 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">Seeking:[COLOR=$VAR[value_headercolor]] $INFO[Player.SeekOffset][/COLOR]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">Seeking:</value>
 	</variable>
+	<variable name="value_widgetsnew1">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window(0).Property(randommovies)]</value>
+	</variable>
+	<variable name="value_widgetsnew2">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=newdvdmovies</value>
+	</variable>
+	<variable name="value_widgetsnew3">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=topratedmovies</value>
+	</variable>
+	<variable name="value_widgetsnew4">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(0).Property(recentmovies)]</value>
+	</variable>
+	<variable name="value_widgetsnew5">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="value_widgetsnew6">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=boxofficemovies</value>
+	</variable>
+	<variable name="value_widgetsnew7">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=currentdvdmovies</value>
+	</variable>
+	<variable name="value_widgetsnew8">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=toprentalmovies</value>
+	</variable>
+	<variable name="value_widgetsnew9">
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window(0).Property(recentvideos)]</value>
+	</variable>
 </includes>

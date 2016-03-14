@@ -3827,17 +3827,17 @@ tween="back" easing="out" />
 	</include>
 	<include name="Widget_Weather7Day">
 		<width>123</width>
-		<visible>StringCompare(Container(9000).ListItem.Property(widgets),weather) + !Skin.HasSetting(custommode)</visible>
+		<visible>StringCompare(Container(9000).ListItem.Property(widgets),weather)</visible>
 		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 	</include>
 	<include name="Widget_WeatherWeekend">
 		<width>150</width>
-		<visible>StringCompare(Container(9000).ListItem.Property(widgets),weather) + !Skin.HasSetting(custommode)</visible>
+		<visible>StringCompare(Container(9000).ListItem.Property(widgets),weather)</visible>
 		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 	</include>
 	<include name="Widget_Weather36hour">
 		<width>300</width>
-		<visible>StringCompare(Container(9000).ListItem.Property(widgets),weather) + !Skin.HasSetting(custommode)</visible>
+		<visible>StringCompare(Container(9000).ListItem.Property(widgets),weather)</visible>
 		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 	</include>
 	<include name="widgets_weather">

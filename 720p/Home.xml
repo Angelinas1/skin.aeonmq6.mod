@@ -291,7 +291,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window(0).Property(randommovies)]</content>
+					<content target="video">$VAR[value_widgetsnew1]</content>
 				</control>
 				<control type="wraplist" id="2510">
 					<!-- Filmes Em extra 2L-->
@@ -349,7 +349,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content>plugin://script.extendedinfo?info=newdvdmovies</content>
+					<content target="video">$VAR[value_widgetsnew2]</content>
 				</control>
 				<control type="wraplist" id="2511">
 					<!-- Filmes Em extra 3L-->
@@ -410,7 +410,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content>plugin://script.extendedinfo?info=topratedmovies</content>
+					<content target="video">$VAR[value_widgetsnew3]</content>
 				</control>
 				<control type="wraplist" id="2512">
 					<!-- Filmes Em extra 4L-->
@@ -469,7 +469,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content>plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(0).Property(recentmovies)]</content>
+					<content target="video">$VAR[value_widgetsnew4]</content>
 				</control>
 				<control type="wraplist" id="2513">
 					<!-- Filmes Em extra central L-->
@@ -548,7 +548,7 @@
 							<colordiffuse>FF3B3B3B</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content>plugin://script.extendedinfo?info=airingtodaytvshows</content>
+					<content target="video">$VAR[value_widgetsnew5]</content>
 				</control>
 				<control type="wraplist" id="2517">
 					<!-- Filmes Em extra central R-->
@@ -627,7 +627,7 @@
 							<colordiffuse>FF3B3B3B</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content>plugin://script.extendedinfo?info=boxofficemovies</content>
+					<content target="video">$VAR[value_widgetsnew6]</content>
 				</control>
 				<control type="wraplist" id="2514">
 					<!-- Filmes Em extra 2R-->
@@ -661,7 +661,7 @@
 							<animation effect="fade" time="480">Focus</animation>
 						</control>
 					</focusedlayout>
-					<content>plugin://script.extendedinfo?info=currentdvdmovies</content>
+					<content target="video">$VAR[value_widgetsnew7]</content>
 				</control>
 				<control type="image">
 					<!-- Shadow -->
@@ -705,7 +705,7 @@
 							<animation effect="fade" time="480">Focus</animation>
 						</control>
 					</focusedlayout>
-					<content>plugin://script.extendedinfo?info=toprentalmovies</content>
+					<content target="video">$VAR[value_widgetsnew8]</content>
 				</control>
 				<control type="wraplist" id="2516">
 					<!-- Filmes Em extra 1R-->
@@ -757,7 +757,7 @@
 							<animation effect="fade" time="480">Focus</animation>
 						</control>
 					</focusedlayout>
-					<content>plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window(0).Property(recentvideos)]</content>
+					<content target="video">$VAR[value_widgetsnew9]</content>
 				</control>
 				<control type="image">
 					<left>-5</left>
