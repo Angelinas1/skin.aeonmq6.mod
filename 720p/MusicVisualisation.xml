@@ -854,6 +854,308 @@
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 			</control>
 		</control>
+		<control type="group">
+			<!-- Layout 4  -->
+			<left>0</left>
+			<top>773</top>
+			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
+			<animation effect="slide" start="0,720" end="0,-300" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
+			<animation effect="slide" start="0,-300" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
+			<visible>StringCompare(skin.string(vis_layout),style4)</visible>
+			<control type="image">
+				<left>0</left>
+				<top>-40</top>
+				<height>500</height>
+				<width>1680</width>
+				<texture>details_back.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+			</control>
+			<control type="group">
+				<left>-70</left>
+				<top>-20</top>
+				<visible>Player.HasAudio</visible>
+				<animation effect="slide" start="0,0" end="140,0" time="800" delay="3000" tween="sine" easing="inout" condition="Player.HasAudio">Conditional</animation>
+				<animation effect="slide" end="-140,0" time="800" tween="sine" easing="inout" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
+				<animation effect="fade" start="100" end="0,0" time="300" delay="500" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
+				<control type="image" id="5604">
+					<left>-290</left>
+					<top>120</top>
+					<width>421</width>
+					<height>290</height>
+					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5609),Empty.png)+stringcompare(Control.GetLabel(5610),Empty.png)</visible>
+				</control>
+				<control type="image" id="5609">
+					<include>Animation_CDart</include>
+					<left>-290</left>
+					<top>120</top>
+					<width>421</width>
+					<height>290</height>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio</visible>
+				</control>
+				<control type="image" id="5610">
+					<include>Animation_CDart</include>
+					<left>-290</left>
+					<top>120</top>
+					<width>421</width>
+					<height>290</height>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;type=discart</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5609),Empty.png)</visible>
+				</control>
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>88</left>
+					<top>-51</top>
+					<width>328</width>
+					<height>288</height>
+					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<visible>Player.IsInternetStream</visible>
+				</control> 
+			</control>
+			<control type="image">
+				<left>20</left>
+				<top>25</top>
+				<width>421</width>
+				<height>300</height>
+				<fadetime>200</fadetime>
+				<texture fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=banner</texture>
+				<aspectratio align="left">keep</aspectratio>
+			</control>
+			<control type="image">
+				<!-- reflexo -->
+				<left>20</left>
+				<top>210</top>
+				<width>421</width>
+				<height>300</height>
+				<colordiffuse>30FFFFFF</colordiffuse>
+				<texture flipy="true" fallback="DefaultAudio.png" diffuse="thumb_poster_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=banner</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image" id="5620">
+				<!-- logo artista -->
+				<left>465</left>
+				<top>-80</top>
+				<width>795</width>
+				<height>100</height>
+				<texture fallback="Empty.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+				<fadetime>300</fadetime>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>!IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
+			</control>
+			<control type="image" id="5621">
+				<left>465</left>
+				<top>-80</top>
+				<width>795</width>
+				<height>100</height>
+				<texture fallback="Empty.png">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;type=clearlogo</texture>
+				<fadetime>300</fadetime>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="label">
+				<!-- Nome do artista -->
+				<left>465</left>
+				<top>-23</top>
+				<width>795</width>
+				<height>30</height>
+				<align>right</align>
+				<font>Font_50</font>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<textcolor>CCFFFFFF</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+				<visible>stringcompare(Control.GetLabel(5621),Empty.png)</visible>
+			</control>
+			<control type="label">
+				<!-- Nome da faixa -->
+				<left>465</left>
+				<top>50</top>
+				<width>795</width>
+				<height>20</height>
+				<align>right</align>
+				<font>Font_32</font>
+				<label>[COLOR=$VAR[value_headercolor]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.Title]</label>
+				<textcolor>88DDDDDD</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="label">
+				<!-- Nome do album -->
+				<left>645</left>
+				<top>96</top>
+				<width>615</width>
+				<height>20</height>
+				<align>right</align>
+				<font>Font_23</font>
+				<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.Year,| ,] $INFO[MusicPlayer.Genre,| ,]</label>
+				<textcolor>88DDDDDD</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="label">
+				<left>470</left>
+				<top>210</top>
+				<width>240</width>
+				<height>24</height>
+				<align>left</align>
+				<font>Font_14</font>
+				<label>$INFO[MusicPlayer.SampleRate,, [COLOR=88DDDDDD]KHZ[/COLOR]][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,, [COLOR=88DDDDDD]Kbps[/COLOR]][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,, [COLOR=88DDDDDD]Bits[/COLOR]]</label>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+			</control>
+			<control type="image">
+				<left>565</left>
+				<top>28</top>
+				<width>700</width>
+				<height>1.5</height>
+				<texture diffuse="shadow_mask_v.png">line.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<left>565</left>
+				<top>88</top>
+				<width>700</width>
+				<height>1.5</height>
+				<texture diffuse="shadow_mask_v.png">line.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<left>565</left>
+				<top>122</top>
+				<width>700</width>
+				<height>1.5</height>
+				<texture diffuse="shadow_mask_v.png">line.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+			</control>
+			<control type="progress">
+				<left>470</left>
+				<top>200</top>
+				<width>170</width>
+				<height>5</height>
+				<info>Player.Progress</info>
+				<animation effect="fade" end="70" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<!-- Duracao -->
+				<left>470</left>
+				<top>170</top>
+				<width>200</width>
+				<height>18</height>
+				<align>left</align>
+				<font>Font_30</font>
+				<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+				<textcolor>CCFFFFFF</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="label">
+				<!-- Proxima faixa - proximo artista -->
+				<left>800</left>
+				<top>134</top>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<font>Font_22</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<label>$LOCALIZE[31525]:</label>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="label">
+				<left>674</left>
+				<top>160</top>
+				<width>475</width>
+				<height>30</height>
+				<align>right</align>
+				<font>Font_15</font>
+				<label>[COLOR=$VAR[value_headercolor]]$INFO[MusicPlayer.offset(1).TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.offset(1).Title]</label>
+				<textcolor>88DDDDDD</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="label">
+				<left>850</left>
+				<top>183</top>
+				<width>300</width>
+				<height>30</height>
+				<align>right</align>
+				<font>Font_15</font>
+				<label>$INFO[MusicPlayer.offset(1).Artist]</label>
+				<textcolor>88DDDDDD</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="image">
+				<left>1120</left>
+				<top>210</top>
+				<width>30</width>
+				<height>20</height>
+				<texture colordiffuse="AADDDDDD">arrow_right.png</texture>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="image">
+				<left>470</left>
+				<top>90</top>
+				<width>153</width>
+				<height>65</height>
+				<texture>$INFO[MusicPlayer.Property(Album_Label),flags/recordlabel/,.png]</texture>
+				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+				<colordiffuse>88DDDDDD</colordiffuse>
+			</control>
+			<control type="image">
+				<left>682</left>
+				<top>185</top>
+				<width>90</width>
+				<height>65</height>
+				<texture colordiffuse="88DDDDDD">$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>773</left>
+				<top>188</top>
+				<width>90</width>
+				<height>65</height>
+				<align>center</align>
+				<font>Font_25</font>
+				<textcolor>88DDDDDD</textcolor>
+				<shadowcolor>AA000000</shadowcolor>
+				<label>$INFO[MusicPlayer.Channels,,CH]</label>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="image">
+				<left>868</left>
+				<top>207</top>
+				<width>200</width>
+				<height>25</height>
+				<texture fallback="subtitle_rating_0.png">$INFO[Player.StarRating]</texture>
+				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="image">
+				<left>1165</left>
+				<top>139</top>
+				<width>90</width>
+				<height>90</height>
+				<fadetime>200</fadetime>
+				<texture fallback="DefaultAudio.png" background="true">$INFO[MusicPlayer.offset(1).Cover]</texture>
+				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+			</control>
+		</control>
 		<include>BGBlack</include>
 	</controls>
 </window>

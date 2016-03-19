@@ -8,7 +8,7 @@
 	<animation effect="slide" start="-1300,0" end="0,0" time="700" tween="sine" easing="inout" delay="1000">Visible</animation>
 	<animation effect="slide" start="0,0" end="-1300,0" time="400" tween="sine" easing="inout">WindowClose</animation>
 	<animation effect="slide" start="0,0" end="-1300,0" time="400" tween="sine" easing="inout">Hidden</animation>
-	<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Window.IsVisible(120) | Window.IsVisible(122) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)] + [StringCompare(skin.string(vis_layout),style1) | StringCompare(skin.string(vis_layout),style2) | StringCompare(skin.string(vis_layout),style3)]</visible>
+	<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Window.IsVisible(120) | Window.IsVisible(122) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)] + [StringCompare(skin.string(vis_layout),style1) | StringCompare(skin.string(vis_layout),style2) | StringCompare(skin.string(vis_layout),style3) | StringCompare(skin.string(vis_layout),style4)]</visible>
 	<control type="image"><!-- Fundo -->
 	<left>0</left>
 	<top>20</top>
@@ -100,7 +100,7 @@
 	<orientation>vertical</orientation>
 	<pagecontrol>-</pagecontrol>
 	<include>Animation_HomeFade</include>
-	<visible>StringCompare(skin.string(vis_layout),style1) | StringCompare(skin.string(vis_layout),style2) | StringCompare(skin.string(vis_layout),style3)</visible>
+	<visible>StringCompare(skin.string(vis_layout),style1) | StringCompare(skin.string(vis_layout),style2) | StringCompare(skin.string(vis_layout),style3) | StringCompare(skin.string(vis_layout),style4)</visible>
 	<itemlayout width="400" height="30">
 	<control type="image">
 	<left>2</left>

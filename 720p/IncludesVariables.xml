@@ -6224,6 +6224,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="StringCompare(skin.string(vis_layout),style1)">$LOCALIZE[31119] 1</value>
 		<value condition="StringCompare(skin.string(vis_layout),style2)">$LOCALIZE[31119] 2</value>
 		<value condition="StringCompare(skin.string(vis_layout),style3)">$LOCALIZE[31119] 3</value>
+		<value condition="StringCompare(skin.string(vis_layout),style4)">$LOCALIZE[31119] 4</value>
 		<value condition="StringCompare(skin.string(vis_layout),karaoke)">$LOCALIZE[31121]</value>
 	</variable>
 	<variable name="value_menuhelp">

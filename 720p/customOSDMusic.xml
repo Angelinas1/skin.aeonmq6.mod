@@ -136,7 +136,8 @@
 	<onfocus>SetFocus(3)</onfocus>
 	<onfocus condition="StringCompare(skin.string(vis_layout),style1)">Skin.SetString(vis_layout,style2)</onfocus>
 	<onfocus condition="StringCompare(skin.string(vis_layout),style2)">Skin.SetString(vis_layout,style3)</onfocus>
-	<onfocus condition="StringCompare(skin.string(vis_layout),style3)">Skin.SetString(vis_layout,karaoke)</onfocus>
+	<onfocus condition="StringCompare(skin.string(vis_layout),style3)">Skin.SetString(vis_layout,style4)</onfocus>
+	<onfocus condition="StringCompare(skin.string(vis_layout),style4)">Skin.SetString(vis_layout,karaoke)</onfocus>
 	<onfocus condition="StringCompare(skin.string(vis_layout),karaoke)">Skin.SetString(vis_layout,style1)</onfocus>
 	</control>
 	<control type="scrollbar" id="80">
