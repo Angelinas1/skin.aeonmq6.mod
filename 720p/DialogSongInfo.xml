@@ -128,7 +128,7 @@
 	</control>
 	<control type="label"><!-- Track -->
 	<left>-10</left>
-	<top>140</top>
+	<top>180</top>
 	<height>27</height>
 	<width>200</width>
 	<align>right</align>
@@ -139,7 +139,7 @@
 	</control>
 	<control type="label">
 	<left>220</left>
-	<top>140</top>
+	<top>180</top>
 	<height>27</height>
 	<width>440</width>
 	<align>left</align>
@@ -174,7 +174,7 @@
 	</control>
 	<control type="label"><!-- Data -->
 	<left>-10</left>
-	<top>180</top>
+	<top>140</top>
 	<height>27</height>
 	<width>200</width>
 	<align>right</align>
@@ -186,7 +186,7 @@
 	</control>
 	<control type="label">
 	<left>220</left>
-	<top>180</top>
+	<top>140</top>
 	<height>27</height>
 	<width>440</width>
 	<align>left</align>
@@ -215,16 +215,34 @@
 	<textcolor>FFFFFAF0</textcolor>
 	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
 	</control>
-	<control type="image"><!-- Thumb -->
+	<control type="image">
+	<!-- Clearlogo -->
+	<left>380</left>
+	<top>135</top>
+	<width>300</width>
+	<height>140</height>
+	<aspectratio align="right">keep</aspectratio>
+	<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;type=clearlogo</texture>
+	</control>
+				<control type="image">
+				<!-- Banner -->
+				<left>725</left>
+				<top>5</top>
+				<aspectratio>keep</aspectratio>
+				<width>327</width>
+				<height>67</height>
+				<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;type=banner</texture>
+			</control>
+	<control type="image" id="5642"><!-- Thumb -->
 	<left>687</left>
 	<top>80</top>
 	<height>386</height>
 	<width>563</width>
 	<aspectratio align="left">keep</aspectratio>
-	<texture background="true">$VAR[value_songinfo_thumb]</texture>
-	<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshow))</visible>
+	<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[Listitem.Artist]</texture>
+	<visible>!Player.HasAudio</visible>
 	</control>
-	<control type="multiimage"><!-- Artist -->
+	<control type="multiimage" id="5643"><!-- Artist -->
 	<left>687</left>
 	<top>80</top>
 	<height>386</height>
@@ -233,8 +251,8 @@
 	<randomize>true</randomize>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="left">keep</aspectratio>
-	<imagepath fallback="DefaultAudioCover.png" background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-	<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow))</visible>
+	<imagepath fallback="empty" background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+	<visible>Player.HasAudio</visible>
 	</control>
 	<control type="image">
 	<left>686</left>
@@ -318,21 +336,9 @@
 	<scroll>true</scroll>
 	<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
 	</control>
-	<control type="label">
-	<left>30</left>
-	<top>12</top>
-	<width>400</width>
-	<height>27</height>
-	<align>left</align>
-	<aligny>center</aligny>
-	<font>Font_15</font>
-	<textcolor>$VAR[value_flagscolor]</textcolor>
-	<label>$LOCALIZE[31941]: 50 $LOCALIZE[31040]</label>
-	<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
-	</control>
 	<control type="label"><!-- Nome do album -->
 	<left>315</left>
-	<top>16</top>
+	<top>8</top>
 	<width>650</width>
 	<align>center</align>
 	<aligny>center</aligny>
