@@ -309,6 +309,7 @@
 					<onclick>Skin.SetString(tv_panel_layout,panel_layout_1)</onclick>
 					<onclick>Skin.SetString(extra_panel_layout,panel_layout_1)</onclick>
 					<onclick>Skin.SetString(extra_seconds,10000)</onclick>
+					<onclick>Skin.SetString(extra_seconds,10000)</onclick>
 					<onclick>SetFocus(9100)</onclick>
 					<onclick>Notification($LOCALIZE[31656],$LOCALIZE[31237])</onclick>
 				</control>
@@ -371,6 +372,12 @@
 					<label>One click change widget</label>
 					<onclick>Skin.ToggleSetting(widget_one)</onclick>
 					<selected>Skin.HasSetting(widget_one)</selected>
+				</control>
+				<control type="radiobutton" id="1161">
+					<!-- Art dos Widgets cast -->
+					<label>Optimaze look for yoom in Full HD</label>
+					<onclick>Skin.ToggleSetting(widget_zoom_hd)</onclick>
+					<selected>!Skin.HasSetting(widget_zoom_hd)</selected>
 				</control>
 			</control>
 			<!--#######################################################################   MOBILIA   #######################################################################-->

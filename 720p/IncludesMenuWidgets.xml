@@ -1925,7 +1925,7 @@ tween="back" easing="out" />
 				<visible>SubString(Container(9000).ListItem.Property(widgets),years)</visible>
 			</control>
 		</focusedlayout>
-		<focusedlayout condition="Control.HasFocus(512) | Control.HasFocus(510) | Control.HasFocus(9224)" width="405" height="390">
+		<focusedlayout condition="[Control.HasFocus(512) | Control.HasFocus(510) | Control.HasFocus(9224)]+!Skin.HasSetting(widget_zoom_hd)" width="405" height="390">
 			<control type="group">
 				<!-- modern case  -->
 				<top>130</top>
@@ -1975,7 +1975,140 @@ tween="back" easing="out" />
 				</control>
 				<control type="group">
 					<!-- modern case left -->
-					<animation type="Focus" reversible="false" condition="true">
+					<animation type="Focus" reversible="false" condition="!ControlGroup(7512).HasFocus">
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="-15,0" time="8000" delay="9000" tween="cubic" easing="out"/>
+						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
+					</animation>
+					<control type="image">
+						<!-- left -->
+						<left>32</left>
+						<top>46</top>
+						<width>261</width>
+						<height>181</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>modern_left.png</texture>
+					</control>
+					<control type="image">
+						<!-- left poster -->
+						<left>59</left>
+						<top>45</top>
+						<width>143</width>
+						<height>184</height>
+						<aspectratio align="right">stretch</aspectratio>
+						<texture diffuse="modern_left_poster.png">$VAR[value_widgetsposter]</texture>
+						<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="65" start="0" end="-45" time="0">Conditional</animation>
+					</control>
+					<control type="image">
+						<!-- left ram -->
+						<left>32</left>
+						<top>46</top>
+						<width>261</width>
+						<height>181</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>modern_left_ram.png</texture>
+					</control>
+					<control type="image">
+						<!-- left codec -->
+						<left>87</left>
+						<top>165</top>
+						<width>15</width>
+						<height>36</height>
+						<texture>modern/$INFO[Container(510).ListItem.VideoCodec].png</texture>
+						<animation condition="!ControlGroup(7512).HasFocus" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+					</control>
+				</control>
+				<control type="image">
+					<!-- right -->
+					<left>-2</left>
+					<top>41</top>
+					<width>261</width>
+					<height>191</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_right.png</texture>
+				</control>
+				<control type="image">
+					<!-- right poster-->
+					<left>63</left>
+					<top>45</top>
+					<width>125</width>
+					<height>184</height>
+					<aspectratio align="left">stretch</aspectratio>
+					<texture diffuse="modern_right_poster.png">$VAR[value_widgetsposter]</texture>
+					<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="65" start="0" end="-45" time="0">Conditional</animation>
+				</control>
+				<control type="image">
+					<!-- right -->
+					<left>-2</left>
+					<top>41</top>
+					<width>261</width>
+					<height>191</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_right_ram.png</texture>
+					<visible>!Skin.HasSetting(sextendsett_case)</visible>
+				</control>
+			</control>
+		</focusedlayout>
+		<focusedlayout condition="[Control.HasFocus(512) | Control.HasFocus(510) | Control.HasFocus(9224)]+Skin.HasSetting(widget_zoom_hd)" width="405" height="390">
+			<control type="group">
+				<!-- modern case  -->
+				<top>130</top>
+				<animation effect="zoom" center="0,248" start="100" end="220" time="500" tween="cubic" easing="out" reversible="false">Focus</animation>
+				<animation type="Focus" reversible="false" condition="true">
+					<effect type="slide" start="0,0" end="20,0" time="500" delay="1000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="300" delay="1000"/>
+				</animation>
+				<animation effect="slide" time="0" start="0,0" end="-25,0" tween="cubic" easing="out" condition="true">Conditional</animation>
+				<animation effect="slide" time="0" start="0,0" end="0,-145" tween="cubic" easing="out" condition="true">Conditional</animation>
+				<control type="image">
+					<!-- modern case middle-->
+					<left>0</left>
+					<top>41</top>
+					<width>261</width>
+					<height>191</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>modern_middle.png</texture>
+				</control>
+				<control type="group">
+					<!-- CDART VIDEO -->
+					<left>70</left>
+					<top>70</top>
+					<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+					<animation type="Focus">
+						<effect type="slide" start="0,0" end="-32,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+					</animation>
+					<control type="image">
+						<width>112</width>
+						<height>112</height>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+						<include>Animation_ViewsCDart</include>
+					</control>
+					<control type="image">
+						<width>112</width>
+						<height>112</height>
+						<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(510).ListItem.Title]&amp;type=discart</texture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+						<include>Animation_ViewsCDart</include>
+						<visible>IsEmpty(ListItem.Art(discart))</visible>
+					</control>
+				</control>
+				<control type="group">
+					<!-- modern case left -->
+					<animation type="Focus" reversible="false" condition="!ControlGroup(7512).HasFocus">
 						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
 						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
 						<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
@@ -2006,7 +2139,7 @@ tween="back" easing="out" />
 						<height>184</height>
 						<aspectratio align="left">stretch</aspectratio>
 						<texture diffuse="modern_left_poster.png">$VAR[value_widgetsposter]</texture>
-						<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+						<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
 					</control>
 					<control type="image">
 						<!-- left ram -->
@@ -2024,7 +2157,7 @@ tween="back" easing="out" />
 						<width>15</width>
 						<height>36</height>
 						<texture>modern/$INFO[Container(510).ListItem.VideoCodec].png</texture>
-						<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+						<animation condition="!ControlGroup(7512).HasFocus" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
 					</control>
 				</control>
 				<control type="image">
@@ -2044,7 +2177,7 @@ tween="back" easing="out" />
 					<height>184</height>
 					<aspectratio align="right">stretch</aspectratio>
 					<texture diffuse="modern_right_poster.png">$VAR[value_widgetsposter]</texture>
-					<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+					<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
 				</control>
 				<control type="image">
 					<!-- right -->
