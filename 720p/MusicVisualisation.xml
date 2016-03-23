@@ -544,7 +544,7 @@
 			<top>773</top>
 			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,400" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
 			<animation effect="slide" start="0,720" end="0,-300" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
 			<animation effect="slide" start="0,-300" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
@@ -880,7 +880,7 @@
 				<animation effect="slide" start="0,0" end="140,0" time="800" delay="3000" tween="sine" easing="inout" condition="Player.HasAudio">Conditional</animation>
 				<animation effect="slide" end="-140,0" time="800" tween="sine" easing="inout" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
 				<animation effect="fade" start="100" end="0,0" time="300" delay="500" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
-				<control type="image" id="5604">
+				<control type="image" id="5611">
 					<left>-290</left>
 					<top>120</top>
 					<width>421</width>
@@ -915,7 +915,7 @@
 					<top>-51</top>
 					<width>328</width>
 					<height>288</height>
-					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 					<aspectratio align="right">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
 				</control> 

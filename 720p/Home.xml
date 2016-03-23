@@ -46,6 +46,7 @@
 	<onload>Skin.SetString(BW_SkinHelper.AllMusicBackground.Wall.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(BW_SkinHelper.AllMusicSongsBackground.Wall.EnableWallImages, 20)</onload>
 	<onload>Skin.SetString(BW_SkinHelper.AllTvShowsBackground.Wall.EnableWallImages, 20)</onload>
+   <onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
 	<onunload condition="SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
 	<controls>
 		<control type="button" id="8000">
@@ -245,8 +246,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture>black.png</texture>
 				</control>
-				<control type="wraplist" id="2518">
-					<!-- Filmes Em extra central 1-->
+				<control type="wraplist" id="2518"><!-- Filmes Em extra central 1-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2517)</onleft>
 					<onright>SetFocus(2514)</onright>
@@ -294,8 +294,7 @@
 					</focusedlayout>
 					<content target="video">$VAR[value_widgetsnew1]</content>
 				</control>
-				<control type="wraplist" id="2510">
-					<!-- Filmes Em extra 2L-->
+				<control type="wraplist" id="2510"><!-- Filmes Em extra 2L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2515)</onleft>
 					<onright>SetFocus(2511)</onright>
@@ -304,7 +303,7 @@
 					<width>50</width>
 					<height>360</height>
 					<orientation>vertical</orientation>
-					<animation condition="System.IdleTime(1)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
+					<animation condition="System.IdleTime(0)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2510)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
@@ -352,8 +351,7 @@
 					</focusedlayout>
 					<content target="video">$VAR[value_widgetsnew2]</content>
 				</control>
-				<control type="wraplist" id="2511">
-					<!-- Filmes Em extra 3L-->
+				<control type="wraplist" id="2511"><!-- Filmes Em extra 3L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2510)</onleft>
 					<onright>SetFocus(2512)</onright>
@@ -362,7 +360,7 @@
 					<width>60</width>
 					<height>360</height>
 					<orientation>vertical</orientation>
-					<animation condition="System.IdleTime(1)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
+					<animation condition="System.IdleTime(0)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2511)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
@@ -413,8 +411,7 @@
 					</focusedlayout>
 					<content target="video">$VAR[value_widgetsnew3]</content>
 				</control>
-				<control type="wraplist" id="2512">
-					<!-- Filmes Em extra 4L-->
+				<control type="wraplist" id="2512"><!-- Filmes Em extra 4L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2511)</onleft>
 					<onright>SetFocus(2513)</onright>
@@ -424,7 +421,7 @@
 					<width>50</width>
 					<height>440</height>
 					<orientation>vertical</orientation>
-					<animation condition="System.IdleTime(1)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
+					<animation condition="System.IdleTime(0)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2512)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
@@ -472,8 +469,7 @@
 					</focusedlayout>
 					<content target="video">$VAR[value_widgetsnew4]</content>
 				</control>
-				<control type="wraplist" id="2513">
-					<!-- Filmes Em extra central L-->
+				<control type="wraplist" id="2513"><!-- Filmes Em extra central L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2512)</onleft>
 					<onright>SetFocus(2517)</onright>
@@ -551,8 +547,7 @@
 					</focusedlayout>
 					<content target="video">$VAR[value_widgetsnew5]</content>
 				</control>
-				<control type="wraplist" id="2517">
-					<!-- Filmes Em extra central R-->
+				<control type="wraplist" id="2517"><!-- Filmes Em extra central R-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2513)</onleft>
 					<onright>SetFocus(2518)</onright>
@@ -630,8 +625,7 @@
 					</focusedlayout>
 					<content target="video">$VAR[value_widgetsnew6]</content>
 				</control>
-				<control type="wraplist" id="2514">
-					<!-- Filmes Em extra 2R-->
+				<control type="wraplist" id="2514"><!-- Filmes Em extra 1R-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2518)</onleft>
 					<onright>SetFocus(2516)</onright>
@@ -640,7 +634,7 @@
 					<width>53</width>
 					<height>145</height>
 					<orientation>vertical</orientation>
-					<animation condition="System.IdleTime(1)" effect="rotatey" center="1010,390" start="-300" end="-300" time="0">Conditional</animation>
+					<animation condition="System.IdleTime(0)" effect="rotatey" center="1010,390" start="-300" end="-300" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2514)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
@@ -674,8 +668,7 @@
 					<texture>black.png</texture>
 					<colordiffuse>903b3b3b</colordiffuse>
 				</control>
-				<control type="wraplist" id="2515">
-					<!-- Filmes Em extra 1L-->
+				<control type="wraplist" id="2515"><!-- Filmes Em extra 1L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(9000)</onleft>
 					<onright>SetFocus(2510)</onright>
@@ -684,7 +677,7 @@
 					<width>70</width>
 					<height>233</height>
 					<orientation>vertical</orientation>
-					<animation condition="System.IdleTime(1)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
+					<animation condition="System.IdleTime(0)" effect="rotatey" center="200" start="-80" end="-84" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2515)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
@@ -708,8 +701,7 @@
 					</focusedlayout>
 					<content target="video">$VAR[value_widgetsnew8]</content>
 				</control>
-				<control type="wraplist" id="2516">
-					<!-- Filmes Em extra 1R-->
+				<control type="wraplist" id="2516"><!-- Filmes Em extra 2R-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2514)</onleft>
 					<onright>SetFocus(9000)</onright>
@@ -719,7 +711,7 @@
 					<width>53</width>
 					<height>160</height>
 					<orientation>vertical</orientation>
-					<animation condition="System.IdleTime(1)" effect="rotatey" center="1010,390" start="-300" end="-300" time="0">Conditional</animation>
+					<animation condition="System.IdleTime(0)" effect="rotatey" center="1010,390" start="-300" end="-300" time="0">Conditional</animation>
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(25168)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
@@ -768,7 +760,7 @@
 					<texture>dan.png</texture>
 					<aspectratio align="center">stretch</aspectratio>
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
-					<animation effect="fade" start="60" end="100" time="5000" condition="true">conditional</animation>
+					<animation effect="fade" start="60" end="100" time="5000" condition="System.IdleTime(0)">conditional</animation>
 				</control>
 			</control>
 			<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSS</include>
@@ -788,7 +780,7 @@
 					<aligny>top</aligny>
 					<texture diffuse="shadow_mask.png">darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="65" condition="true">Conditional</animation>
+					<animation effect="fade" end="65" condition="System.IdleTime(0)">Conditional</animation>
 					<visible>!system.getbool(lookandfeel.enablerssfeeds)</visible>
 				</control>
 				<control type="image">
@@ -1392,7 +1384,7 @@
 							<height>270</height>
 							<texture>details_back.png</texture>
 							<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-							<animation effect="fade" start="100" end="35" condition="System.IdleTime(1)">conditional</animation>
+							<animation effect="fade" start="100" end="35" condition="System.IdleTime(0)">conditional</animation>
 							<visible>ControlGroup(512).HasFocus | !SubString(skin.string(m_panel_layout),panel_zoom) + SubString(Container(9000).ListItem.Property(target),video1) | !StringCompare(Container(9000).ListItem.Property(target),video1)</visible>
 						</control>
 						<control type="image">
@@ -2207,7 +2199,7 @@
 							<height>210</height>
 							<texture>details_back.png</texture>
 							<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-							<animation effect="fade" start="100" end="35" condition="System.IdleTime(1)">conditional</animation>
+							<animation effect="fade" start="100" end="35" condition="System.IdleTime(0)">conditional</animation>
 						</control>
 						<control type="image">
 							<left>84</left>
@@ -2362,7 +2354,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
-						<animation effect="slide" end="0,-26" condition="System.IdleTime(1)">Conditional</animation>
+						<animation effect="slide" end="0,-26" condition="System.IdleTime(0)">Conditional</animation>
 					</control>
 					<control type="image">
 						<!-- Thumb -->
@@ -2569,7 +2561,8 @@
 			</control>
 			<!-- Seletor dos Widgets -->
 			<control type="group">
-				<animation effect="slide" start="0,0" end="0,385" time="600" tween="sine" easing="inout" condition="Control.HasFocus(5100)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,385" time="600" tween="sine" easing="inout" condition="Control.HasFocus(5100)+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,450" time="600" tween="sine" easing="inout" condition="Control.HasFocus(5100)+[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]">Conditional</animation>
 				<control type="panel" id="5100">
 					<left>0</left>
 					<top>-350</top>
@@ -2644,6 +2637,7 @@
 							<icon>-</icon>
 							<label>31460</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=$INFO[Container(9000).ListItem.Property(name)].widgets,header=Widget Chooser,simple to set your favorite widget)</onclick>
+							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Nenhum -->
@@ -2651,6 +2645,7 @@
 							<label>31162</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onclick>
 							<onclick>Skin.Reset($INFO[Container(9000).ListItem.Property(name)].widgets)</onclick>
+							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Modo custom 1 -->
@@ -2661,6 +2656,7 @@
 							<onclick>Skin.SetString(duallabel,widget1)</onclick>
 							<onclick>Skin.SetString(dualwidgets,widget1)</onclick>
 							<onclick>SetFocus(5200)</onclick>
+							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Modo custom 2 -->
@@ -2671,6 +2667,7 @@
 							<onclick>Skin.SetString(duallabel,widget2)</onclick>
 							<onclick>Skin.SetString(dualwidgets,widget2)</onclick>
 							<onclick>SetFocus(5200)</onclick>
+							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Modo custom 3 -->
@@ -2681,6 +2678,7 @@
 							<onclick>Skin.SetString(duallabel,widget3)</onclick>
 							<onclick>Skin.SetString(dualwidgets,widget3)</onclick>
 							<onclick>SetFocus(5200)</onclick>
+							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 1 -->
@@ -2688,7 +2686,7 @@
 							<label>$LOCALIZE[31075] 1</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu1)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu1.widget))</visible>
+							<visible>!IsEmpty(skin.string(mymenu1.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 2 -->
@@ -2696,7 +2694,7 @@
 							<label>$LOCALIZE[31075] 2</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu2)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu2.widget))</visible>
+							<visible>!IsEmpty(skin.string(mymenu2.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 3 -->
@@ -2704,7 +2702,7 @@
 							<label>$LOCALIZE[31075] 3</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu3)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu3.widget))</visible>
+							<visible>!IsEmpty(skin.string(mymenu3.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 4 -->
@@ -2712,7 +2710,7 @@
 							<label>$LOCALIZE[31075] 4</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu4)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu4.widget))</visible>
+							<visible>!IsEmpty(skin.string(mymenu4.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 5 -->
@@ -2720,7 +2718,7 @@
 							<label>$LOCALIZE[31075] 5</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu5)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu5.widget))</visible>
+							<visible>!IsEmpty(skin.string(mymenu5.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Clima -->
@@ -2728,7 +2726,7 @@
 							<label>31009</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,weather)</onclick>
-							<visible>!IsEmpty(Weather.Plugin)</visible>
+							<visible>!IsEmpty(Weather.Plugin)+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Sistema -->
@@ -2736,6 +2734,7 @@
 							<label>31011</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,settings)</onclick>
+							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Jogos -->
@@ -2743,7 +2742,70 @@
 							<label>31007</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,pluign)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,games)</onclick>
-							<visible>System.HasAddon(script.games.rom.collection.browser) + !IsEmpty(Window(0).Property(MostPlayedROM.1.Title))</visible>
+							<visible>System.HasAddon(script.games.rom.collection.browser) + !IsEmpty(Window(0).Property(MostPlayedROM.1.Title))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for 1L</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_1l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for 2L</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_2l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for 3L</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_3l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for 4L</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_4l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for L</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for R</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_r,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for C</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_c,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for 1R</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_1r,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery -->
+							<icon>-</icon>
+							<label>Choose content for 2R</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_2r,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 					</content>
 				</control>
@@ -2763,7 +2825,7 @@
 					<aligny>top</aligny>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="95" condition="System.IdleTime(1)">Conditional</animation>
+					<animation effect="fade" end="95" condition="System.IdleTime(0)">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>340</left>
@@ -3187,7 +3249,7 @@
 					<aligny>top</aligny>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="95" condition="System.IdleTime(1)">Conditional</animation>
+					<animation effect="fade" end="95" condition="System.IdleTime(0)">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>360</left>
@@ -3228,7 +3290,7 @@
 					<height>50</height>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
 					<texture>osd_menu_info.png</texture>
-					<animation effect="fade" start="50" end="90" time="1000" condition="true" pulse="true">Conditional</animation>
+					<animation effect="fade" start="50" end="90" time="1000" condition="System.IdleTime(0)" pulse="true">Conditional</animation>
 					<animation effect="zoom" start="100" end="60" center="60,610" easing="out" tween="sine" time="300" condition="Control.IsVisible(605)">Conditional</animation>
 				</control>
 				<control type="label">
@@ -3351,7 +3413,7 @@
 					<height>80</height>
 					<texture diffuse="shadow_mask_v.png">osd_grey_bg.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="85" condition="System.IdleTime(1)">Conditional</animation>
+					<animation effect="fade" end="85" condition="System.IdleTime(0)">Conditional</animation>
 				</control>
 				<control type="list" id="600">
 					<!-- Controles -->
@@ -3509,7 +3571,7 @@
 					<height>60</height>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" start="100" end="85" condition="System.IdleTime(1)">conditional</animation>
+					<animation effect="fade" start="100" end="85" condition="System.IdleTime(0)">conditional</animation>
 					<visible>StringCompare(skin.string(mainmenustyle),metal.png)</visible>
 				</control>
 				<control type="multiimage">
@@ -3578,7 +3640,7 @@
 					<height>85</height>
 					<info>Player.Progress</info>
 					<texturebg>progress_clear.png</texturebg>
-					<animation effect="fade" start="100" end="40" time="0" condition="System.IdleTime(1)">Conditional</animation>
+					<animation effect="fade" start="100" end="40" time="0" condition="System.IdleTime(0)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="750" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
 					<visible>Player.HasMedia + System.IdleTime(8)</visible>
 				</control>

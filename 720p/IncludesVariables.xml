@@ -5250,15 +5250,15 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),channel.group)">group/$INFO[ListItem.Label].png</value>
 	</variable>
 	<variable name="value_widgetsinfopanelgallaery">
-		<value condition="Control.HasFocus(2510)">$INFO[Container(2510).ListItem.Art(poster)]</value>
+		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2510).ListItem.Title]&amp;type=poster</value>
 		<value condition="Control.HasFocus(2511)">$INFO[Container(2511).ListItem.Art(poster)]</value>
 		<value condition="Control.HasFocus(2512)">$INFO[Container(2512).ListItem.Art(poster)]</value>
-		<value condition="Control.HasFocus(2513)">$INFO[Container(2513).ListItem.Art(poster)]</value>
-		<value condition="Control.HasFocus(2514)">$INFO[Container(2514).ListItem.Art(poster)]</value>
-		<value condition="Control.HasFocus(2515)">$INFO[Container(2515).ListItem.Art(poster)]</value>
+		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2513).ListItem.Title]&amp;type=poster</value>
+		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2514).ListItem.Title]&amp;type=poster</value>
+		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2515).ListItem.Title]&amp;type=poster</value>
 		<value condition="Control.HasFocus(2516) + !IsEmpty(Container(2516).ListItem.Art(tvshow.poster))">$INFO[Container(2516).ListItem.Art(tvshow.poster)]</value>
 		<value condition="Control.HasFocus(2516)">$INFO[Container(2516).ListItem.Art(poster)]</value>
-		<value condition="Control.HasFocus(2517)">$INFO[Container(2517).ListItem.Art(poster)]</value>
+		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2517).ListItem.Title]&amp;type=poster</value>
 		<value condition="Control.HasFocus(2518)">$INFO[Container(2518).ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="value_widgetsinfopanelgallaeryfanart">
@@ -6582,7 +6582,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window(0).Property(randommovies)]</value>
 	</variable>
 	<variable name="value_widgetsnew2">
-		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=newdvdmovies</value>
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=topratedtvshows</value>
 	</variable>
 	<variable name="value_widgetsnew3">
 		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=topratedmovies</value>
@@ -6594,13 +6594,13 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
 	</variable>
 	<variable name="value_widgetsnew6">
-		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=boxofficemovies</value>
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=incinemamovies</value>
 	</variable>
 	<variable name="value_widgetsnew7">
-		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=currentdvdmovies</value>
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
 	</variable>
 	<variable name="value_widgetsnew8">
-		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=toprentalmovies</value>
+		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://script.extendedinfo?info=upcomingmovies</value>
 	</variable>
 	<variable name="value_widgetsnew9">
 		<value condition="Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window(0).Property(recentvideos)]</value>

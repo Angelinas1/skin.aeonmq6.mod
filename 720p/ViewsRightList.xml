@@ -177,13 +177,171 @@
 					<left>920</left>
 					<top>20</top>
 					<width>340</width>
-					<height>496</height>
+					<height>396</height>
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
 					<visible>Control.HasFocus(9915)</visible>
+				</control>
+				<control type="group">
+				<left>920</left>
+				<top>420</top>
+				<visible>Control.HasFocus(9915) + Container.Content(movies)</visible>
+				<control type="image">
+					<left>10</left>
+					<top>-10</top>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>rotten.png</texture>
+				</control>
+					<control type="list" id="49">
+					<itemlayout height="20">
+					<control type="label">
+						<width>145</width>
+						<height>20</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>190</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>E4101010</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<scroll>true</scroll>
+					</control>
+					</itemlayout>
+					<focusedlayout height="20">
+					<control type="image">
+						<width>340</width>
+						<height>20</height>
+						<texture>settings_button_focus.png</texture>
+						<visible>Control.HasFocus(49)</visible>
+					</control>
+					<control type="label">
+						<width>145</width>
+						<height>20</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>190</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Control.HasFocus(49)</visible>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>490</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>E4101010</textcolor>
+						<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>Control.HasFocus(49)</visible>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>Rating</label>
+						<!-- Rating -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRating)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>Metar</label>
+						<!-- Metar -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesMeter)] %</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>FreshCount</label>
+						<!-- FreshCount -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesFresh)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>RottenCount</label>
+						<!-- RottenCount -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRotten)]</label2>
+						<onclick>noop</onclick>
+					</item>				
+					<item>
+						<label>Reviews</label>
+						<!-- Reviews -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesReviews)]</label2>
+						<onclick>noop</onclick>
+					</item>											
+					<item>
+						<label>Consensus</label>
+						<!-- Consensus -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesConsensus)]</label2>
+						<onclick>noop</onclick>
+						<visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
+					</item>
+					<item>
+						<label>AudienceMeter</label>
+						<!-- AudienceMeter -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter)] %</label2>
+						<onclick>noop</onclick>
+					</item>	
+					<item>
+						<label>AudienceRating</label>
+						<!-- AudienceRating -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesAudienceRating)]</label2>
+						<onclick>noop</onclick>
+					</item>		
+					<item>
+						<label>AudienceReviews</label>
+						<!-- AudienceReviews -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesAudienceReviews)]</label2>
+						<onclick>noop</onclick>
+					</item>			
+					<item>
+						<label>Awards</label>
+						<!-- Awards -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesAwards)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>BoxOffice</label>
+						<!-- BoxOffice -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>DVDRelease</label>
+						<!-- DVDRelease -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesDVDRelease)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					
+				</content>
+			</control>
 				</control>
 				<control type="list" id="51">
 					<viewtype label="31822">list</viewtype>

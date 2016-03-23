@@ -375,7 +375,7 @@
 				</control>
 				<control type="radiobutton" id="1161">
 					<!-- Art dos Widgets cast -->
-					<label>Optimaze look for yoom in Full HD</label>
+					<label>Optimaze zoom look for Case in Full HD</label>
 					<onclick>Skin.ToggleSetting(widget_zoom_hd)</onclick>
 					<selected>!Skin.HasSetting(widget_zoom_hd)</selected>
 				</control>
