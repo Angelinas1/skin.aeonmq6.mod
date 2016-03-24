@@ -5601,6 +5601,18 @@
 				<onright>80</onright>
 				<itemgap>0</itemgap>
 				<pagecontrol>-</pagecontrol>
+				<control type="button" id="1158">
+					<!-- Exportar ajustes -->
+					<label>31622</label>
+					<label2>Atention : Export backup with Script.skin.Helper.Service</label2>
+					<onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
+				</control>
+				<control type="button" id="1159">
+					<!-- Importar ajustes -->
+					<label>31623</label>
+					<label2>Atention : Import backup with Script.skin.Helper.Service</label2>
+					<onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
+				</control>
 				<control type="button" id="1160">
 					<!-- Exportar ajustes -->
 					<label>31622</label>

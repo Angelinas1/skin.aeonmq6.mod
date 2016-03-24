@@ -4412,6 +4412,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_resetdescription">
 		<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">$LOCALIZE[31989]</value>
+		<value condition="Control.HasFocus(1158)">$LOCALIZE[31987]</value>
+		<value condition="Control.HasFocus(1159)">$LOCALIZE[31988]</value>
 		<value condition="Control.HasFocus(1160)">$LOCALIZE[31987]</value>
 		<value condition="Control.HasFocus(1161)">$LOCALIZE[31988]</value>
 		<value condition="Control.HasFocus(1162)">$LOCALIZE[31598]</value>
@@ -4669,6 +4671,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(31) | ControlGroup(10003).HasFocus">$LOCALIZE[31278]</value>
 		<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">$LOCALIZE[31451]</value>
 		<!-- Restaurar ajustes -->
+		<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1158)">$LOCALIZE[31452]</value>
+		<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1159)">$LOCALIZE[31453]</value>
 		<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1160)">$LOCALIZE[31452]</value>
 		<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1161)">$LOCALIZE[31453]</value>
 		<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1162)">$LOCALIZE[31597]</value>
@@ -4695,6 +4699,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_resetalertcolor">
 		<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">FFFFFFFF</value>
+		<value condition="Control.HasFocus(1158)">FF228B22</value>
+		<value condition="Control.HasFocus(1159)">FFDAA520</value>
 		<value condition="Control.HasFocus(1160)">FF228B22</value>
 		<value condition="Control.HasFocus(1161)">FFDAA520</value>
 		<value condition="Control.HasFocus(1162)">FFFFD700</value>
@@ -4703,7 +4709,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_restoreimage">
 		<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">special://skin/backgrounds/extras/settings_skin.jpg</value>
-		<value condition="Control.HasFocus(1160) | Control.HasFocus(1161) | Control.HasFocus(1162) | Control.HasFocus(1163) | Control.HasFocus(1164)">resetalert.png</value>
+		<value condition="Control.HasFocus(1158) | Control.HasFocus(1159) | Control.HasFocus(1160) | Control.HasFocus(1161) | Control.HasFocus(1162) | Control.HasFocus(1163) | Control.HasFocus(1164)">resetalert.png</value>
 	</variable>
 	<variable name="value_virtualcasesublabel">
 		<value condition="Control.HasFocus(10023) + Container(10023).HasFocus(1)">$LOCALIZE[31280][CR]$LOCALIZE[31281]</value>
