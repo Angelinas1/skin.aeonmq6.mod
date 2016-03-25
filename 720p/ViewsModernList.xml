@@ -162,10 +162,10 @@
 	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
 	</control>
 	<control type="group"><!-- CDART VIDEO -->
-	<left>150</left>
-	<top>150</top>
+	<left>140</left>
+	<top>180</top>
 	<animation type="WindowOpen">
-	<effect type="slide" start="0,0" end="-48,0" time="8000" delay="8000" tween="cubic" easing="out"/>
+	<effect type="slide" start="0,0" end="-53,0" time="8000" delay="8000" tween="cubic" easing="out"/>
 	<effect type="fade" start="0" end="100" time="500" delay="500"/>
 	</animation>
 	<animation type="Visible">
@@ -174,12 +174,12 @@
 	</animation>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	<animation type="Hidden">
-	<effect type="slide" start="-48,0" end="0,0" time="8000" tween="cubic" easing="out"/>
+	<effect type="slide" start="-53,0" end="0,0" time="8000" tween="cubic" easing="out"/>
 	<effect type="fade" start="100" end="0" time="200"/>
 	</animation>
 	<control type="image">
-	<width>220</width>
-	<height>220</height>
+	<width>200</width>
+	<height>200</height>
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -189,8 +189,8 @@
 	<control type="image">
 	<left>10</left>
 	<top>10</top>
-	<width>200</width>
-	<height>200</height>
+	<width>190</width>
+	<height>190</height>
 	<visible>IsEmpty(ListItem.art(discart))</visible>
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
@@ -199,8 +199,8 @@
 	<include>Animation_ViewsCDart</include>
 	</control>
 	<control type="image">
-	<width>220</width>
-	<height>220</height>
+	<width>200</width>
+	<height>200</height>
 	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.Title]&amp;type=discart</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -209,6 +209,7 @@
 	</control>
 	</control>
 	<control type="group"><!-- modern case left -->
+	<animation effect="slide" start="0,0" end="-5,0" condition="!Skin.HasSetting(widget_zoom_hd)">Conditional</animation>
 	<animation type="Conditional" reversible="true" condition="Control.HasFocus(84)">
 	<effect type="slide" start="0,0" end="-40,0" time="4000" tween="cubic" easing="out"/>
 	<effect type="slide" start="0,0" end="0,-6" time="4000" tween="cubic" easing="out"/>
@@ -239,6 +240,7 @@
 	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
 	</control>
 	<control type="group"><!-- modern case left -->
+	<animation effect="slide" start="0,0" end="-5,0" condition="!Skin.HasSetting(widget_zoom_hd)">Conditional</animation>
 	<animation type="Conditional" reversible="true" condition="Control.HasFocus(84)">
 	<effect type="slide" start="0,0" end="-40,0" time="4000" tween="cubic" easing="out"/>
 	<effect type="slide" start="0,0" end="0,-6" time="4000" tween="cubic" easing="out"/>
@@ -257,6 +259,17 @@
 	<aspectratio align="left">stretch</aspectratio>
 	<texture diffuse="Case/levo_podloga.png">$INFO[ListItem.Art(poster)]</texture>
 	<animation condition="true" effect="rotatey" center="130" start="0" end="-30" time="0">Conditional</animation>
+	<visible>Skin.HasSetting(widget_zoom_hd)</visible>
+	</control>
+	<control type="image"><!-- left poster -->
+	<left>110</left>
+	<top>65</top>
+	<width>380</width>
+	<height>395</height>
+	<aspectratio align="left">stretch</aspectratio>
+	<texture diffuse="Case/levo_podloga.png">$INFO[ListItem.Art(poster)]</texture>
+	<animation condition="true" effect="rotatey" center="130" start="0" end="-30" time="0">Conditional</animation>
+	<visible>!Skin.HasSetting(widget_zoom_hd)</visible>
 	</control>
 	<control type="image"><!-- left ram -->
 	<left>82</left>
@@ -274,6 +287,16 @@
 	<height>70</height>
 	<texture>$VAR[value_videocodec_modern]</texture>
 	<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+	<visible>Skin.HasSetting(widget_zoom_hd)</visible>
+	</control>
+	<control type="image"><!-- left codec -->
+	<left>158</left>
+	<top>333</top>
+	<width>25</width>
+	<height>73</height>
+	<texture>$VAR[value_videocodec_modern]</texture>
+	<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+	<visible>!Skin.HasSetting(widget_zoom_hd)</visible>
 	</control>
 	</control>
 	<control type="image"><!-- right -->
@@ -293,7 +316,18 @@
 	<aspectratio align="right">stretch</aspectratio>
 	<texture diffuse="Case/desno_podloga.png">$INFO[ListItem.Art(poster)]</texture>
 	<animation condition="true" effect="rotatey" center="122" start="0" end="-27" time="0">Conditional</animation>
-	</control>	
+	<visible>Skin.HasSetting(widget_zoom_hd)</visible>
+	</control>
+	<control type="image"><!-- right poster-->
+	<left>100</left>
+	<top>65</top>
+	<width>400</width>
+	<height>395</height>
+	<aspectratio align="right">stretch</aspectratio>
+	<texture diffuse="Case/desno_podloga.png">$INFO[ListItem.Art(poster)]</texture>
+	<animation condition="true" effect="rotatey" center="122" start="0" end="-27" time="0">Conditional</animation>
+	<visible>!Skin.HasSetting(widget_zoom_hd)</visible>
+	</control>		
 	<control type="image"><!-- right -->
 	<left>-5</left>
 	<top>82</top>

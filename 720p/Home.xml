@@ -246,7 +246,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture>black.png</texture>
 				</control>
-				<control type="wraplist" id="2518"><!-- Filmes Em extra central 1-->
+				<control type="wraplist" id="2518"><!-- Filmes Em extra central c-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
 					<onleft>SetFocus(2517)</onleft>
 					<onright>SetFocus(2514)</onright>
@@ -292,7 +292,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew1]</content>
+					<content target="video">$VAR[value_gallery_chooser_c]</content>
 				</control>
 				<control type="wraplist" id="2510"><!-- Filmes Em extra 2L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
@@ -349,7 +349,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew2]</content>
+					<content target="video">$VAR[value_gallery_chooser_2l]</content>
 				</control>
 				<control type="wraplist" id="2511"><!-- Filmes Em extra 3L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
@@ -409,7 +409,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew3]</content>
+					<content target="video">$VAR[value_gallery_chooser_3l]</content>
 				</control>
 				<control type="wraplist" id="2512"><!-- Filmes Em extra 4L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
@@ -467,7 +467,7 @@
 							<colordiffuse>903b3b3b</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew4]</content>
+					<content target="video">$VAR[value_gallery_chooser_4l]</content>
 				</control>
 				<control type="wraplist" id="2513"><!-- Filmes Em extra central L-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
@@ -545,7 +545,7 @@
 							<colordiffuse>FF3B3B3B</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew5]</content>
+					<content target="video">$VAR[value_gallery_chooser_l]</content>
 				</control>
 				<control type="wraplist" id="2517"><!-- Filmes Em extra central R-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
@@ -623,7 +623,7 @@
 							<colordiffuse>FF3B3B3B</colordiffuse>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew6]</content>
+					<content target="video">$VAR[value_gallery_chooser_r]</content>
 				</control>
 				<control type="wraplist" id="2514"><!-- Filmes Em extra 1R-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
@@ -656,7 +656,7 @@
 							<animation effect="fade" time="480">Focus</animation>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew7]</content>
+					<content target="video">$VAR[value_gallery_chooser_1r]</content>
 				</control>
 				<control type="image">
 					<!-- Shadow -->
@@ -699,7 +699,7 @@
 							<animation effect="fade" time="480">Focus</animation>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew8]</content>
+					<content target="video">$VAR[value_gallery_chooser_1l]</content>
 				</control>
 				<control type="wraplist" id="2516"><!-- Filmes Em extra 2R-->
 					<visible>Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)</visible>
@@ -750,7 +750,7 @@
 							<animation effect="fade" time="480">Focus</animation>
 						</control>
 					</focusedlayout>
-					<content target="video">$VAR[value_widgetsnew9]</content>
+					<content target="video">$VAR[value_gallery_chooser_2r]</content>
 				</control>
 				<control type="image">
 					<left>-5</left>
@@ -2805,6 +2805,20 @@
 							<icon>-</icon>
 							<label>Choose content for 2R</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_2r,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery Def-->
+							<icon>-</icon>
+							<label>Set default content Galery</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_def,header=Galerry Chooser,simple to set your favorite widget in Gallery)</onclick>
+							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+						</item>
+						<item>
+							<!-- Gallery Empty-->
+							<icon>-</icon>
+							<label>Set empty content Galery</label>
+							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_no,header=Galerry Chooser,simple to erease your widget in Gallery)</onclick>
 							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 					</content>

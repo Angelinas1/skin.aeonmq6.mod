@@ -89,7 +89,7 @@
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="channel.group" label="Channels Group" condition="PVR.HasTVChannels" icon="special://skin/extras/widgetthumbs/30.jpg" description="Widget from helper script">
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus_group)</onselect>
     </setting>
-    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="channel.radio" label="Channels Radio" condition="PVR.HasRadio" icon="special://skin/extras/widgetthumbs/31.jpg" description="Widget from helper script">
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="channel.radio" label="Channels Radio" condition="" icon="special://skin/extras/widgetthumbs/31.jpg" description="Widget from helper script">
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
     </setting>
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="weather" label="Weather" condition="" icon="special://skin/extras/widgetthumbs/37.jpg" description="Widget from helper script">
@@ -113,6 +113,9 @@
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="addons.video" label="Addons Video" condition="!System.Platform.Android" icon="special://skin/extras/widgetthumbs/43.jpg" description="Widget from helper script">
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
     </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.popularmovies" label="Popular Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/45.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="addons.audio" label="Addons Audio" condition="!System.Platform.Android" icon="special://skin/extras/widgetthumbs/44.jpg" description="Widget from helper script">
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plus)</onselect>
     </setting>
@@ -120,6 +123,9 @@
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
     </setting>
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.trendingmovies" label="Trending Movies" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/46.jpg" description="Widget from extendedinfo script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.populartvshows" label="Popular tvShows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/45.jpg" description="Widget from extendedinfo script">
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,extras)</onselect>
     </setting>	
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="extras.topratedtvshows" label="Toprated tvShows" condition="System.HasAddon(script.extendedinfo)" icon="special://skin/extras/widgetthumbs/47.jpg" description="Widget from extendedinfo script">
@@ -411,4 +417,303 @@
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,playlistmusic)</onselect>
     </setting>	
 
-</settings>
+	
+	<setting id="TekstSizeWidth" value="||PROMPTSTRING||" label="Width" condition="" icon="" description="" />
+	<setting id="TekstSizeHeight" value="||PROMPTSTRING||" label="Height" condition="" icon="" description="" />
+	<setting id="TeksSizeX" value="||PROMPTSTRING||" label="Left" condition="" icon="" description="" />
+	<setting id="TeksSizeY" value="||PROMPTSTRING||" label="Top" condition="" icon="" description="" />
+	
+    <setting id="Gallery_def" value="def" label="Default" condition="" icon="" description="">
+        <onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_1l,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_2l,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_3l,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_4l,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_l,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_r,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_c,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_1r,def)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_def),def)">Skin.SetString(Gallery_2r,def)</onselect>
+    </setting>
+    <setting id="Gallery_no" value="empty" label="Default" condition="" icon="" description="">
+        <onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_1l,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_2l,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_3l,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_4l,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_l,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_r,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_c,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_1r,)</onselect>
+		<onselect condition="SubString(skin.string(Gallery_no),empty)">Skin.SetString(Gallery_2r,)</onselect>
+    </setting>
+
+    <setting id="Gallery_1l" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1l" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_1l" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1l" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_1l" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1l" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1l" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1l" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1l" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_1l" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1l" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1l" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_1l" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1l" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1l" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1l" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1l" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1l" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1l" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1l" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1l" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1l" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1l" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1l" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1l" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1l" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1l" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1l" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1l" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/201.jpg" description="Widget from Helper script" />
+
+    <setting id="Gallery_2l" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2l" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_2l" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2l" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_2l" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2l" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2l" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2l" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2l" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_2l" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2l" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2l" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_2l" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2l" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2l" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2l" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2l" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2l" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2l" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2l" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2l" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2l" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2l" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2l" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2l" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2l" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2l" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2l" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2l" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/202.jpg" description="Widget from Helper script" />
+	
+    <setting id="Gallery_3l" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_3l" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_3l" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_3l" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_3l" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_3l" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_3l" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_3l" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_3l" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_3l" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_3l" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_3l" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_3l" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_3l" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_3l" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_3l" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_3l" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_3l" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_3l" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_3l" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_3l" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_3l" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_3l" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_3l" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_3l" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_3l" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_3l" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_3l" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_3l" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/203.jpg" description="Widget from Helper script" />
+
+    <setting id="Gallery_4l" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_4l" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_4l" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_4l" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_4l" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_4l" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_4l" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_4l" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_4l" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_4l" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_4l" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_4l" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_4l" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_4l" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_4l" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_4l" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_4l" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_4l" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_4l" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_4l" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_4l" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_4l" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_4l" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_4l" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_4l" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_4l" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_4l" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_4l" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_4l" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/204.jpg" description="Widget from Helper script" />
+	
+    <setting id="Gallery_l" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_l" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_l" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_l" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_l" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_l" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_l" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_l" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_l" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_l" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_l" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_l" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_l" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_l" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_l" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_l" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_l" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_l" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_l" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_l" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_l" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_l" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_l" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_l" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_l" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_l" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_l" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_l" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_l" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/205.jpg" description="Widget from Helper script" />
+
+    <setting id="Gallery_r" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_r" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_r" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_r" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_r" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_r" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_r" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_r" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_r" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_r" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_r" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_r" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_r" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_r" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_r" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_r" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_r" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_r" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_r" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_r" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_r" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_r" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_r" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_r" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_r" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_r" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_r" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_r" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_r" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/206.jpg" description="Widget from Helper script" />	
+
+	<setting id="Gallery_c" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_c" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_c" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_c" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_c" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_c" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_c" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_c" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_c" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_c" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_c" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_c" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_c" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_c" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_c" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_c" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_c" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_c" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_c" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_c" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_c" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_c" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_c" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_c" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_c" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_c" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_c" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_c" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_c" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/207.jpg" description="Widget from Helper script" />
+	
+	<setting id="Gallery_1r" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1r" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_1r" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1r" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_1r" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1r" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1r" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1r" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_1r" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_1r" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1r" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1r" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_1r" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1r" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1r" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1r" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_1r" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1r" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1r" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1r" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1r" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_1r" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1r" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1r" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1r" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1r" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1r" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1r" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_1r" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/208.jpg" description="Widget from Helper script" />
+	
+	<setting id="Gallery_2r" value="popularmovies" label="Popular Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2r" value="populartvshows" label="Popular TVShow" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />		
+    <setting id="Gallery_2r" value="topratedmovies" label="Top rated Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2r" value="topratedtvshows" label="Toprated tvShows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />	
+    <setting id="Gallery_2r" value="onairtvshows" label="onair tvShows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2r" value="airingtodaytvshows" label="airingtoday tvShows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2r" value="incinemas" label="in Cinemas" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2r" value="upcoming" label="upcoming Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-TheMovieDB" />
+    <setting id="Gallery_2r" value="intheaters" label="in Theaters" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_2r" value="comingsoon" label="Comingsoon Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2r" value="newdvdreleases" label="NewDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2r" value="boxoffice" label="Boxoffice Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />	
+    <setting id="Gallery_2r" value="opening" label="Opening Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2r" value="toprentals" label="Toprentals Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2r" value="currentdvdreleases" label="CurrentDVDreleases Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2r" value="upcomingdvds" label="UpcomingDVDs Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Rotten Tomatoes" />
+    <setting id="Gallery_2r" value="premiereshows" label="PremiereShows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2r" value="trendingshows" label="TrendingShows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2r" value="traktsimilartvshows" label="traktsimilartvshows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2r" value="airingepisodes" label="airingepisodes" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2r" value="trendingmovies" label="Trending Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from extendedinfo script-Trakt.tv" />
+    <setting id="Gallery_2r" value="helperrecommendedmovies" label="Recommended Movies" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2r" value="helperrecommendedmedia" label="Recommended Media" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2r" value="helperrecentmedia" label="Reacent Media" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2r" value="helperinprogressandrecommendedmedia" label="InProgres Media" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2r" value="helpernextepisodes" label="Next Episodes" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2r" value="helperfavouritemedia" label="Favourite Media" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2r" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+    <setting id="Gallery_2r" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
+
+	</settings>
