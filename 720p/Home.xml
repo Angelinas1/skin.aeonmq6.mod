@@ -2637,7 +2637,7 @@
 							<icon>-</icon>
 							<label>31460</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=$INFO[Container(9000).ListItem.Property(name)].widgets,header=Widget Chooser,simple to set your favorite widget)</onclick>
-							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Nenhum -->
@@ -2645,7 +2645,7 @@
 							<label>31162</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onclick>
 							<onclick>Skin.Reset($INFO[Container(9000).ListItem.Property(name)].widgets)</onclick>
-							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Modo custom 1 -->
@@ -2656,7 +2656,7 @@
 							<onclick>Skin.SetString(duallabel,widget1)</onclick>
 							<onclick>Skin.SetString(dualwidgets,widget1)</onclick>
 							<onclick>SetFocus(5200)</onclick>
-							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Modo custom 2 -->
@@ -2667,7 +2667,7 @@
 							<onclick>Skin.SetString(duallabel,widget2)</onclick>
 							<onclick>Skin.SetString(dualwidgets,widget2)</onclick>
 							<onclick>SetFocus(5200)</onclick>
-							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Modo custom 3 -->
@@ -2678,7 +2678,7 @@
 							<onclick>Skin.SetString(duallabel,widget3)</onclick>
 							<onclick>Skin.SetString(dualwidgets,widget3)</onclick>
 							<onclick>SetFocus(5200)</onclick>
-							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 1 -->
@@ -2686,7 +2686,7 @@
 							<label>$LOCALIZE[31075] 1</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu1)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu1.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>!IsEmpty(skin.string(mymenu1.widget))+![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 2 -->
@@ -2694,7 +2694,7 @@
 							<label>$LOCALIZE[31075] 2</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu2)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu2.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>!IsEmpty(skin.string(mymenu2.widget))+![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 3 -->
@@ -2702,7 +2702,7 @@
 							<label>$LOCALIZE[31075] 3</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu3)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu3.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>!IsEmpty(skin.string(mymenu3.widget))+![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 4 -->
@@ -2710,7 +2710,7 @@
 							<label>$LOCALIZE[31075] 4</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu4)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu4.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>!IsEmpty(skin.string(mymenu4.widget))+![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Meu menu 5 -->
@@ -2718,7 +2718,7 @@
 							<label>$LOCALIZE[31075] 5</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,plugin)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,mymenu5)</onclick>
-							<visible>!IsEmpty(skin.string(mymenu5.widget))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>!IsEmpty(skin.string(mymenu5.widget))+![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Clima -->
@@ -2726,7 +2726,7 @@
 							<label>31009</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,weather)</onclick>
-							<visible>!IsEmpty(Weather.Plugin)+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>!IsEmpty(Weather.Plugin)+![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Sistema -->
@@ -2734,7 +2734,7 @@
 							<label>31011</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,none)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,settings)</onclick>
-							<visible>![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Jogos -->
@@ -2742,84 +2742,84 @@
 							<label>31007</label>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,pluign)</onclick>
 							<onclick>Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,games)</onclick>
-							<visible>System.HasAddon(script.games.rom.collection.browser) + !IsEmpty(Window(0).Property(MostPlayedROM.1.Title))+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>System.HasAddon(script.games.rom.collection.browser) + !IsEmpty(Window(0).Property(MostPlayedROM.1.Title))+![Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for 1L</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_1l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for 2L</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_2l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for 3L</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_3l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for 4L</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_4l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for L</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_l,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for R</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_r,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for C</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_c,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for 1R</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_1r,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery -->
 							<icon>-</icon>
 							<label>Choose content for 2R</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_2r,header=Widget Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery Def-->
 							<icon>-</icon>
 							<label>Set default content Galery</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_def,header=Galerry Chooser,simple to set your favorite widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 						<item>
 							<!-- Gallery Empty-->
 							<icon>-</icon>
 							<label>Set empty content Galery</label>
 							<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Gallery_no,header=Galerry Chooser,simple to erease your widget in Gallery)</onclick>
-							<visible>[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]</visible>
+							<visible>[Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)]</visible>
 						</item>
 					</content>
 				</control>
