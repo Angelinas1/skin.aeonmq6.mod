@@ -2,6 +2,7 @@
 <window id="0">
 	<!-- Aeon MQ 6 -->
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<menucontrol>9225</menucontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload condition="!StringCompare(skin.string(defaultsettings),1)">ActivateWindow(6628)</onload>
 	<onload condition="System.HasAddon(script.artistslideshow) + Player.HasAudio">RunScript(script.artistslideshow)</onload>
@@ -186,6 +187,10 @@
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),tvshow.years)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.directors)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.directors)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.countries)</onclick>
 			<onclick condition="StringCompare(Container(9000).ListItem.Property(widgets),movie.countries)">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].widgets,movie.tvshow.recent)</onclick>
+		</control>
+		<control type="button" id="9225">
+			<include>InvisibleButton</include>
+			<onfocus>ActivateWindow(6099)</onfocus>
 		</control>
 		<control type="multiimage" id="5044">
 			<!-- Extra Fanart Artist -->
