@@ -89,7 +89,7 @@
 	<content>
 	<item id="1"><!-- Shutdown -->
 	<label>31144</label>
-	<onclick>XBMC.ShutDown()</onclick>
+	<onclick>Quit()</onclick>
 	</item>
 	<item id="2"><!-- Presets do menu principal -->
 	<label>31165</label>

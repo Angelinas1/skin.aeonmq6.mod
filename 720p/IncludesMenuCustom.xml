@@ -2767,7 +2767,7 @@
 					<label2>31057</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],shutdown)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.ShutDown())</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ShutDown())</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -2778,7 +2778,7 @@
 					<label2>31012</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],quit)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.Quit())</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],Quit())</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -2789,7 +2789,7 @@
 					<label2>31058</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],powerdown)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.Powerdown())</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],Powerdown())</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -2800,7 +2800,7 @@
 					<label2>31059</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],reboot)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.Reboot())</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],Reboot())</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -2811,7 +2811,7 @@
 					<label2>31060</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],suspend)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.Suspend())</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],Suspend())</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -2822,7 +2822,7 @@
 					<label2>31061</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],hibernate)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.Hibernate())</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],Hibernate())</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -2833,7 +2833,7 @@
 					<label2>31055</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],timer)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.AlarmClock(shutdowntimer,XBMC.Powerdown()))</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],AlarmClock(shutdowntimer,Powerdown()))</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -2844,7 +2844,7 @@
 					<label2>31056</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],canceltimer)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],XBMC.CancelAlarm(shutdowntimer))</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],CancelAlarm(shutdowntimer))</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>
@@ -5567,17 +5567,6 @@
 				<!-- nao trocar id -->
 				<include>CustomMenuButton</include>
 				<label>Set Path for Icon      -       $VAR[value_customweathericonsfolder]</label>
-				<onclick>SetFocus(133)</onclick>
-				<visible>StringCompare(Container(9000).ListItem.Property(id),weather) + !Skin.HasSetting(weathericons)</visible>
-			</control>
-			<control type="button" id="133">
-				<!-- Icones Clima/Pasta -->
-				<!-- nao trocar id -->
-				<include>InvisibleButton</include>
-				<onleft>131</onleft>
-				<onright>131</onright>
-				<onup>131</onup>
-				<ondown>134</ondown>
 				<onclick condition="IsEmpty(skin.string(CustomWeatherIconFolder)|SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.grey/)">Skin.SetString(CustomWeatherIconFolder,weather/)</onclick>
 				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),weather/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.coloured/)</onclick>
 				<onclick condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.coloured/)">Skin.SetString(CustomWeatherIconFolder,resource://resource.images.weathericons.3d-coloured/)</onclick>

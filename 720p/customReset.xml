@@ -187,7 +187,7 @@
 	<onfocus>Skin.SetString(menu12.widgets,settings)</onfocus>
 	<onfocus>Skin.SetString(menu12.action,ActivateWindow(settings))</onfocus>
 	<onfocus>Skin.SetString(menu13.master,shutdown)</onfocus>
-	<onfocus>Skin.SetString(menu13.action,XBMC.ShutDown())</onfocus>
+	<onfocus>Skin.SetString(menu13.action,ShutDown())</onfocus>
 	<onfocus>Skin.SetString(menu14.master,extras)</onfocus>
 	<onfocus>Skin.SetString(menu14.action,SetFocus(5100))</onfocus>
 	<onfocus>Skin.SetString(menu9.master,programs)</onfocus>
@@ -386,9 +386,9 @@
 	<onfocus>Skin.SetString(menu1205.master,hibernate)</onfocus><!-- Hibernar -->
 	<onfocus>Skin.SetString(menu1205.action,Hibernate)</onfocus>
 	<onfocus>Skin.SetString(menu1206.master,timer)</onfocus><!-- Temporizador -->
-	<onfocus>Skin.SetString(menu1206.action,XBMC.AlarmClock(shutdowntimer,XBMC.Powerdown()))</onfocus>
+	<onfocus>Skin.SetString(menu1206.action,AlarmClock(shutdowntimer,Powerdown()))</onfocus>
 	<onfocus>Skin.SetString(menu1207.master,canceltimer)</onfocus><!-- Cancelar temporizador -->
-	<onfocus>Skin.SetString(menu1207.action,XBMC.CancelAlarm(shutdowntimer))</onfocus>
+	<onfocus>Skin.SetString(menu1207.action,CancelAlarm(shutdowntimer))</onfocus>
 	<onfocus>Skin.SetString(menu1208.master,logoff))</onfocus><!-- Deslogar -->
 	<onfocus>Skin.SetString(menu1208.action,System.Logoff)</onfocus>
 	<onfocus>AlarmClock(nextstep,SetFocus(910),0:02,true)</onfocus>

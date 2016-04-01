@@ -615,7 +615,7 @@
 	<ondown>151</ondown>
 	<onleft>3000</onleft>
 	<onright>3000</onright>	
-	<onclick>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplayinfo)],1)</onclick>
+	<onclick>PlayMedia($ESCINFO[ListItem.Property(gameplayinfo)],1)</onclick>
 	<visible>!IsEmpty(ListItem.Property(autoplayvideoinfo)) + !IsEmpty(ListItem.Property(gameplayinfo))</visible>
 	</control>
 	</control>

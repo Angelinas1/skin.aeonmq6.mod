@@ -15,15 +15,15 @@
 	<content>
 	<item><!-- Shutdown -->
 	<label>31144</label>
-	<onclick>XBMC.ShutDown()</onclick>
+	<onclick>ShutDown()</onclick>
 	</item>
 	<item><!-- Exit -->
 	<label>31012</label>
-	<onclick>XBMC.Quit()</onclick>
+	<onclick>Quit()</onclick>
 	</item>
 	<item><!-- PowerDown -->
 	<label>31058</label>
-	<onclick>XBMC.PowerDown()</onclick>
+	<onclick>PowerDown()</onclick>
 	</item>
 	<item><!-- Customizar Menu -->
 	<label>31207</label>
