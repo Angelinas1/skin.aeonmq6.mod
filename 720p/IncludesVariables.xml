@@ -4962,7 +4962,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_ground1_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + !SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Country]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Country)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Country)]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Theme)]</value>
@@ -5013,7 +5013,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_ground3_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + !SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Director]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Director)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Director)]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Episode] ($LOCALIZE[16101]: $INFO[ListItem.Property(UnwatchedEpisodes)])</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Studio]</value>
 		<value condition="Container.Content(episodes) + !SubString(ListItem.Duration,min)">$INFO[ListItem.Duration,, $LOCALIZE[31961]]</value>
@@ -5030,7 +5030,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_ground4_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.studio]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Studio)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio)]</value>
 	</variable>
 	<variable name="value_ground5_label">
 		<!-- Para vistas que sejam lista -->
@@ -5040,8 +5040,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	<variable name="value_ground5_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + ![SubString(ListItem.Duration,min) | SubString(ListItem.Path,videodb://movies/sets,left)]">$INFO[ListItem.Duration,, $LOCALIZE[31961]]</value>
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + SubString(ListItem.Duration,min) + !SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime),, $LOCALIZE[31961]]</value>
-		<value condition="![SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(0).Property(Set.Movies.Runtime),, $LOCALIZE[31961]]</value>
-		<value condition="SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Runtime)]</value>
+		<value condition="![SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime)),, $LOCALIZE[31961]]</value>
+		<value condition="SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime)]</value>
 	</variable>
 	<variable name="value_ground6_label">
 		<!-- Anos - comum -->
@@ -5052,7 +5052,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_ground6_value">
 		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Year]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Years)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Year)]</value>
 	</variable>
 	<variable name="value_ground11_label">
 		<!-- Para vistas que sejam lista -->
@@ -5208,7 +5208,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_ground17_value">
 		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Year]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Years)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Years)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_YearsActive)]$INFO[ListItem.Property(Artist_Instrument), / ]</value>
 	</variable>
 	<variable name="value_logoandclearart">
@@ -5499,7 +5499,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="PLGenre">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[515]:[/COLOR] $INFO[Window(0).Property(Set.Movies.Genre)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[515]:[/COLOR] $INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</value>
 		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Director)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20339]:[/COLOR] $INFO[ListItem.Director]</value>
 		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Director)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20339]:[/COLOR] $LOCALIZE[161]</value>
 	</variable>
@@ -5623,8 +5623,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_plot">
 		<value condition="![Container.Content(files) | Container.Content(addons) | Window.IsActive(pictures) | SubString(ListItem.Path,videodb://movies/sets,left) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) + [Container.Content(albums) | Container.Content(artists)]]">$INFO[ListItem.Plot]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + System.HasAddon(script.skin.info.service)">$INFO[Window(0).Property(Set.Movies.Plot)]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + !System.HasAddon(script.skin.info.service)">[COLOR=FFB20000]$LOCALIZE[20457] | $LOCALIZE[31435]:[/COLOR] Skin Info Service</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + !Control.HasFocus(5801)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Plot)]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Summary)][CR]$INFO[ListItem.Property(Addon.Description)]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description)]</value>
@@ -5638,7 +5637,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_plotmoviesets">
 		<value condition="Control.HasFocus(65) | Control.HasFocus(80)">$VAR[value_plot]</value>
-		<value condition="Control.HasFocus(5801)">$INFO[Container(5801).ListItem.Property(Plot)]</value>
+		<value condition="Control.HasFocus(5801)">$INFO[Window(Home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
 	</variable>
 	<variable name="value_pvrstatushome">
 		<value condition="PVR.IsRecording">[COLOR=$VAR[value_headercolor]]$LOCALIZE[19158]:[/COLOR][CR]$INFO[PVR.NowRecordingDateTime][CR]$INFO[PVR.NowRecordingTitle][CR]$INFO[PVR.NowRecordingChannel]</value>
