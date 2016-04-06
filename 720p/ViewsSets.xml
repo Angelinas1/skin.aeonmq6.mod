@@ -62,66 +62,91 @@
 	<control type="label">
 	<include>SetsLabel</include>
 	<left>30</left>
-	<top>309</top>
+	<top>289</top>
 	<label>$VAR[value_ground6_label]</label>
 	<visible>!Control.HasFocus(5801)</visible>
 	</control>
 	<control type="label">
 	<include>SetsLabel</include>
 	<left>30</left>
-	<top>309</top>
+	<top>289</top>
 	<label>345</label>
 	<visible>Control.HasFocus(5801)</visible>
 	</control>
 	<control type="label">
 	<include>SetsValue</include>
 	<left>30</left>
-	<top>329</top>
+	<top>309</top>
 	<label>$VAR[value_ground6_value]</label>
 	<visible>!Control.HasFocus(5801)</visible>
 	</control>
 	<control type="label">
 	<include>SetsValue</include>
 	<left>30</left>
-	<top>329</top>
+	<top>309</top>
 	<label>$INFO[Container(5801).ListItem.Property(Year)]</label>
 	<visible>Control.HasFocus(5801)</visible>
 	</control>
 	<control type="label">
 	<include>SetsLabel</include>
 	<left>30</left>
-	<top>359</top>
+	<top>329</top>
 	<label>$LOCALIZE[21875]</label>
 	</control>
 	<control type="label">
 	<include>SetsValue</include>
 	<left>30</left>
-	<top>379</top>
+	<top>349</top>
 	<label>$INFO[ListItem.Country]$INFO[Window(Home).Property(SkinHelper.MovieSet.Country)]</label>
 	</control>
 	<control type="label">
 	<include>SetsLabel</include>
 	<left>352</left>
-	<top>309</top>
+	<top>289</top>
 	<label>$LOCALIZE[515]</label>
 	</control>
 	<control type="label">
 	<include>SetsValue</include>
 	<left>352</left>
-	<top>329</top>
+	<top>309</top>
 	<label>$INFO[ListItem.Genre]$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</label>
 	</control>
 	<control type="label">
 	<include>SetsLabel</include>
 	<left>352</left>
-	<top>359</top>
+	<top>329</top>
 	<label>$LOCALIZE[20388]</label>
 	</control>
 	<control type="label">
 	<include>SetsValue</include>
 	<left>352</left>
-	<top>379</top>
+	<top>349</top>
 	<label>$INFO[ListItem.studio]$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio)]</label>
+	</control>
+	
+	<control type="label">
+	<include>SetsLabel</include>
+	<left>30</left>
+	<top>369</top>
+	<label>$VAR[value_ground16_label]</label>
+	</control>
+	<control type="label">
+	<include>SetsValue</include>
+	<left>30</left>
+	<top>389</top>
+	<label>$INFO[ListItem.Duration]$VAR[value_ground16_value]</label>
+	</control>
+	<control type="label">
+	<include>SetsLabel</include>
+	<left>352</left>
+	<top>369</top>
+	<label>$LOCALIZE[31090]</label>
+	</control>
+	<control type="label">
+	<include>SetsValue</include>
+	<left>352</left>
+	<top>389</top>
+	<label>$INFO[ListItem.Director]$INFO[Window(Home).Property(SkinHelper.MovieSet.Director)]</label>
 	</control>
 	</control>
 	<control type="image">

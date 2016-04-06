@@ -5074,8 +5074,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[19148]</value>
 	</variable>
 	<variable name="value_ground11_value">
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$INFO[ListItem.Country]$INFO[Window(0).Property(Set.Movies.Country)]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Country)]</value>
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$INFO[ListItem.Country]$INFO[Window(Home).Property(SkinHelper.MovieSet.Country)]</value>
+		<value condition="Container.Content(sets)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Country)]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Theme)]</value>
@@ -5101,9 +5101,9 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[180]</value>
 	</variable>
 	<variable name="value_ground12_value">
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(albums)">$INFO[ListItem.Genre]$INFO[Window(0).Property(Set.Movies.Genre)]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Genre)]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.director]</value>
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(albums)">$INFO[ListItem.Genre]$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</value>
+		<value condition="Container.Content(sets)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<!-- Genero Artistas -->
 		<value condition="Container.Content(songs)">$VAR[value_songinfo_duration]</value>
@@ -5125,8 +5125,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[515]</value>
 	</variable>
 	<variable name="value_ground13_value">
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Studio]$INFO[Window(0).Property(Set.Movies.Studio)]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Studio)]</value>
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Studio]$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio)]</value>
+		<value condition="Container.Content(sets)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Mood)]</value>
 		<value condition="Window.IsActive(1) + !Container.Content(Addons)">$INFO[ListItem.Studio]</value>
@@ -5151,8 +5151,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<!-- Criador -->
 	</variable>
 	<variable name="value_ground14_value">
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$INFO[ListItem.Director]$INFO[Window(0).Property(Set.Movies.Director)]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Director)]</value>
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)">$INFO[ListItem.Director]$INFO[Window(Home).Property(SkinHelper.MovieSet.Director)]</value>
+		<value condition="Container.Content(sets)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Director)]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Episode] ($LOCALIZE[16101]: $INFO[ListItem.Property(UnwatchedEpisodes)])</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes)]</value>
 		<value condition="Container.Content(episodes) + !SubString(ListItem.Duration,min)">$INFO[ListItem.Duration,, $LOCALIZE[31961]]</value>
@@ -5172,8 +5172,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<!-- Estilo -->
 	</variable>
 	<variable name="value_ground15_value">
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Writer]$INFO[Window(0).Property(Set.Movies.Writer)]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(0).Property(Set.Movies.Writer)]</value>
+		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Writer]$INFO[Window(Home).Property(SkinHelper.MovieSet.Writer)]</value>
+		<value condition="Container.Content(sets)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Writer)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Died), / ]</value>
 		<!-- Nascido/falecido -->
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Style)]</value>
@@ -5190,8 +5190,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<!-- Gravadora -->
 	</variable>
 	<variable name="value_ground16_value">
-		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(sets)] + !SubString(ListItem.Duration,min)">$INFO[ListItem.Duration,, $LOCALIZE[31961]] $INFO[Window(0).Property(Set.Movies.Runtime),, $LOCALIZE[31961]]</value>
-		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(sets)] + SubString(ListItem.Duration,min)">$INFO[ListItem.Duration]$INFO[Window(0).Property(Set.Movies.Runtime)]</value>
+		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + !SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.ListItemDuration.Hours),, $LOCALIZE[31877]] $INFO[Window(Home).Property(SkinHelper.ListItemDuration.Minutes),, $LOCALIZE[31961]]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Hours),, $LOCALIZE[31877]] $INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes),, $LOCALIZE[31961]]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[Window(0).Property(NextAired.Status)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Formed)]$INFO[ListItem.Property(Artist_Disbanded), / ]</value>
 		<!-- Formado/sem banda -->

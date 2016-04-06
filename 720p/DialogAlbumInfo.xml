@@ -533,6 +533,15 @@
 					<top>140</top>
 					<height>130</height>
 					<width>130</width>
+					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Container(6010).ListItem.Icon]</texture>
+					<visible>IsEmpty(Container(6010).ListItem.Property(cdart))</visible>
+				</control>
+				<control type="image">
+					<left>510</left>
+					<top>140</top>
+					<height>130</height>
+					<width>130</width>
 					<texture>$INFO[Container(6010).ListItem.Property(cdart)]</texture>
 				</control>
 				<control type="image">
@@ -586,7 +595,6 @@
 				<aspectratio align="center" aligny="top">stretch</aspectratio>
 				<texture diffuse="cdart_diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
 				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 				<include>Animation_ViewsCDart</include>
 			</control>
@@ -599,7 +607,6 @@
 				<aspectratio align="center" aligny="top">stretch</aspectratio>
 				<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;album=$INFO[Listitem.Album]&amp;type=discart</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
 				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 				<include>Animation_ViewsCDart</include>
 			</control>
@@ -623,7 +630,7 @@
 				<width>563</width>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Listitem.Icon]</texture>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>
+				<visible>!IsEmpty(ListItem.Icon)</visible>
 			</control>
 			<control type="image">
 				<!-- Banner -->
@@ -795,84 +802,108 @@
 			<control type="group" id="910">
 				<!-- Lists -->
 				<control type="list" id="6010">
-					<visible>SubString(skin.string(sextendalbum_list),6010)</visible>
-					<viewtype label="List">List Info</viewtype>
-					<content>plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[ListItem.Artist]</content>
-					<left>52</left>
-					<top>492</top>
-					<width>1228</width>
-					<height>220</height>
-					<onup>149</onup>
-					<ondown>Skin.Reset(artistzoom)</ondown>
-					<ondown>SetFocus(160)</ondown>
-					<ondown>Skin.SetBool(coverzoom)</ondown>
-					<orientation>horizontal</orientation>
-					<scrolltime>400</scrolltime>
-					<focusposition>2</focusposition>
-					<itemlayout height="170" width="248">
-						<control type="image">
-							<!-- Fake cd -->
-							<left>40</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
-							<fadetime>FanartCrossFadeTime</fadetime>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>
-							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
-							<include>Animation_ViewsCDart</include>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-					</itemlayout>
-					<focusedlayout height="170" width="248">
-						<control type="image">
-							<!-- Fake cd -->
-							<left>40</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
-							<fadetime>FanartCrossFadeTime</fadetime>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>
-							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
-							<include>Animation_ViewsCDart</include>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<aligny>center</aligny>
-							<align>left</align>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="-2">black.png</bordertexture>
-							<colordiffuse>FF909090</colordiffuse>
-							<include>Animation_Fade</include>
-							<visible>!Control.HasFocus(6010)</visible>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<aligny>center</aligny>
-							<align>left</align>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="-2">grey.png</bordertexture>
-							<include>Animation_Fade</include>
-							<visible>Control.HasFocus(6010)</visible>
-						</control>
-					</focusedlayout>
-					<include condition="Player.HasAudio + system.hasaddon(script.artistslideshow)">AlbumContent</include>
-				</control>
+                    <visible>SubString(skin.string(sextendalbum_list),6010)</visible>
+                    <viewtype label="List">List Info</viewtype>
+                    <content>plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[ListItem.Artist]</content>
+                    <left>52</left>
+                    <top>492</top>
+                    <width>1228</width>
+                    <height>220</height>
+                    <onup>149</onup>
+                    <ondown>Skin.Reset(artistzoom)</ondown>
+                    <ondown>SetFocus(160)</ondown>
+                    <ondown>Skin.SetBool(coverzoom)</ondown>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>400</scrolltime>
+                    <focusposition>2</focusposition>
+                    <itemlayout height="170" width="248">
+                        <control type="image">
+                            <!-- Fake cd -->
+                            <left>40</left>
+                            <top>5</top>
+                            <width>179</width>
+                            <height>179</height>
+                            <texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+                            <fadetime>FanartCrossFadeTime</fadetime>
+                            <aspectratio align="center" aligny="top">stretch</aspectratio>
+                            <animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+                            <include>Animation_ViewsCDart</include>
+                        </control>
+                        <control type="image">
+                            <!-- Fake cd -->
+                            <left>40</left>
+                            <top>5</top>
+                            <width>180</width>
+                            <height>180</height>
+                            <texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Property(cdart)]</texture>
+                            <fadetime>FanartCrossFadeTime</fadetime>
+                            <aspectratio align="center" aligny="top">stretch</aspectratio>
+                            <animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+                            <include>Animation_ViewsCDart</include>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>5</top>
+                            <width>180</width>
+                            <height>180</height>
+                            <texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[ListItem.Icon]</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="170" width="248">
+                        <control type="image">
+                            <!-- Fake cd -->
+                            <left>40</left>
+                            <top>5</top>
+                            <width>179</width>
+                            <height>179</height>
+                            <texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+                            <fadetime>FanartCrossFadeTime</fadetime>
+                            <aspectratio align="center" aligny="top">stretch</aspectratio>
+                            <animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+                            <include>Animation_ViewsCDart</include>
+                        </control>
+                        <control type="image">
+                            <!-- Fake cd -->
+                            <left>40</left>
+                            <top>5</top>
+                            <width>180</width>
+                            <height>180</height>
+                            <texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Property(cdart)]</texture>
+                            <fadetime>FanartCrossFadeTime</fadetime>
+                            <aspectratio align="center" aligny="top">stretch</aspectratio>
+                            <animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+                            <include>Animation_ViewsCDart</include>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>5</top>
+                            <width>180</width>
+                            <height>180</height>
+                            <aligny>center</aligny>
+                            <align>left</align>
+                            <aspectratio>scale</aspectratio>
+                            <texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[ListItem.Icon]</texture>
+                            <bordertexture border="-2">black.png</bordertexture>
+                            <colordiffuse>FF909090</colordiffuse>
+                            <include>Animation_Fade</include>
+                            <visible>!Control.HasFocus(6010)</visible>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>5</top>
+                            <width>180</width>
+                            <height>180</height>
+                            <aligny>center</aligny>
+                            <align>left</align>
+                            <aspectratio>scale</aspectratio>
+                            <texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[ListItem.Icon]</texture>
+                            <bordertexture border="-2">grey.png</bordertexture>
+                            <include>Animation_Fade</include>
+                            <visible>Control.HasFocus(6010)</visible>
+                        </control>
+                    </focusedlayout>
+                    <include condition="Player.HasAudio + system.hasaddon(script.artistslideshow)">AlbumContent</include>
+                </control> 
 				<control type="list" id="7010">
 					<visible>SubString(skin.string(sextendalbum_list),7010)</visible>
 					<viewtype label="List">List Info</viewtype>
@@ -929,66 +960,6 @@
 							<bordertexture border="-2">grey.png</bordertexture>
 							<include>Animation_Fade</include>
 							<visible>Control.HasFocus(7010)</visible>
-						</control>
-					</focusedlayout>
-					<include condition="Player.HasAudio + system.hasaddon(script.artistslideshow)">AlbumContent</include>
-				</control>
-				<control type="list" id="8010">
-					<viewtype label="List">List Info</viewtype>
-					<visible>SubString(skin.string(sextendalbum_list),8010)</visible>
-					<content>plugin://script.extendedinfo?info=artistevents&amp;&amp;artistname=$INFO[ListItem.Artist]</content>
-					<left>52</left>
-					<top>492</top>
-					<width>1200</width>
-					<height>220</height>
-					<onup>149</onup>
-					<ondown>Skin.Reset(artistzoom)</ondown>
-					<ondown>SetFocus(160)</ondown>
-					<ondown>Skin.SetBool(coverzoom)</ondown>
-					<orientation>horizontal</orientation>
-					<scrolltime>400</scrolltime>
-					<focusposition>2</focusposition>
-					<itemlayout height="170" width="248">
-						<control type="image">
-							<left>0</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<aligny>center</aligny>
-							<align>left</align>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="-2">black.png</bordertexture>
-							<colordiffuse>FF909090</colordiffuse>
-						</control>
-					</itemlayout>
-					<focusedlayout height="170" width="248">
-						<control type="image">
-							<left>0</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<aligny>center</aligny>
-							<align>left</align>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="-2">black.png</bordertexture>
-							<colordiffuse>FF909090</colordiffuse>
-							<include>Animation_Fade</include>
-							<visible>!Control.HasFocus(8010)</visible>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>5</top>
-							<width>180</width>
-							<height>180</height>
-							<aligny>center</aligny>
-							<align>left</align>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="-2">grey.png</bordertexture>
-							<include>Animation_Fade</include>
-							<visible>Control.HasFocus(8010)</visible>
 						</control>
 					</focusedlayout>
 					<include condition="Player.HasAudio + system.hasaddon(script.artistslideshow)">AlbumContent</include>

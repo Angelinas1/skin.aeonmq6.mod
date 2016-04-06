@@ -113,6 +113,30 @@
 			<imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$INFO[skin.string(musicviz.bg)]</imagepath>
 			<visible>StringCompare(skin.string(vis_bg),custom)</visible>
 		</control>
+				<control type="image" id="6000">
+					<left>0</left>
+					<top>0</top>
+					<width>0</width>
+					<height>0</height>
+					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;track=$INFO[Listitem.Title]&amp;album=$INFO[Listitem.Album]&amp;type=discart</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
+					<control type="image" id="6001">
+					<left>0</left>
+					<top>0</top>
+					<width>0</width>
+					<height>0</height>
+					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;type=banner</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
+				<control type="image" id="6001">
+					<left>0</left>
+					<top>0</top>
+					<width>0</width>
+					<height>0</height>
+					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;type=clearlogo</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
 		<control type="group">
 			<!-- layout estilo 1 -->
 			<left>0</left>
@@ -574,7 +598,7 @@
 					<height>290</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5609),Empty.png)+stringcompare(Control.GetLabel(5610),Empty.png)</visible>
+					<visible>!Pvr.IsPlayingRadio+StringCompare(Control.GetLabel(5609),Empty.png)+IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
 				<control type="image" id="5609">
 					<include>Animation_CDart</include>
@@ -584,7 +608,7 @@
 					<height>290</height>
 					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5610),Empty.png)</visible>
+					<visible>!Pvr.IsPlayingRadio+IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
 				<control type="image" id="5610">
 					<include>Animation_CDart</include>
@@ -592,9 +616,9 @@
 					<top>-53</top>
 					<width>421</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<visible>!Pvr.IsPlayingRadio+!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>
@@ -908,9 +932,9 @@
 					<top>120</top>
 					<width>290</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;type=discart</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5641),Empty.png)</visible>
+					<visible>!Pvr.IsPlayingRadio + !IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
 				<control type="image" id="5643">
 					<include>Animation_CDart</include>
@@ -929,7 +953,7 @@
 				<width>421</width>
 				<height>300</height>
 				<fadetime>200</fadetime>
-				<texture fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=banner</texture>
+				<texture fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Banner)]</texture>
 				<aspectratio align="left">keep</aspectratio>
 			</control>
 			<control type="image" id="5645"><!-- Banner reflect -->
@@ -938,7 +962,7 @@
 				<width>421</width>
 				<height>300</height>
 				<colordiffuse>30FFFFFF</colordiffuse>
-				<texture flipy="true" fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=banner</texture>
+				<texture flipy="true" fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Banner)]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!StringCompare(Control.GetLabel(5644),Empty.png)</visible>
 			</control>
@@ -950,7 +974,7 @@
 				<fadetime>200</fadetime>
 				<texture fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 				<aspectratio align="left">scale</aspectratio>
-				<visible>StringCompare(Control.GetLabel(5644),Empty.png)</visible>
+				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Banner))</visible>
 			</control>
 			<control type="image" id="5647"><!-- Fake banner reflect -->
 				<!-- reflexo -->
@@ -961,7 +985,7 @@
 				<colordiffuse>30FFFFFF</colordiffuse>
 				<texture flipy="true" fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 				<aspectratio align="left">scale</aspectratio>
-				<visible>StringCompare(Control.GetLabel(5644),Empty.png)</visible>
+				<visible>!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Banner))</visible>
 			</control>
 			<control type="image" id="5648"><!-- logo artista -->
 				<left>465</left>
@@ -971,17 +995,17 @@
 				<texture fallback="Empty.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
 				<fadetime>300</fadetime>
 				<aspectratio align="right" aligny="bottom">keep</aspectratio>
-				<visible>!IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
+				<visible>StringCompare(Control.GetLabel(5649),Empty.png)</visible>
 			</control>
 			<control type="image" id="5649"><!-- logo artista -->
 				<left>465</left>
 				<top>-80</top>
 				<width>795</width>
 				<height>100</height>
-				<texture fallback="Empty.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;type=clearlogo</texture>
+				<texture fallback="Empty.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
 				<fadetime>300</fadetime>
 				<aspectratio align="right" aligny="bottom">keep</aspectratio>
-				<visible>!StringCompare(Control.GetLabel(5648),Empty.png)</visible>
+				<visible>!Pvr.IsPlayingRadio + !IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))</visible>
 			</control>
 			<control type="label">
 				<!-- Nome do artista -->
@@ -996,7 +1020,7 @@
 				<shadowcolor>AA000000</shadowcolor>
 				<scroll>false</scroll>
 				<scrollout>false</scrollout>
-				<visible>StringCompare(Control.GetLabel(5649),Empty.png)</visible>
+				<visible>!Pvr.IsPlayingRadio + IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))+StringCompare(Control.GetLabel(5649),Empty.png)</visible>
 			</control>
 			<control type="label">
 				<!-- Nome da faixa -->
