@@ -80,14 +80,6 @@
 	<onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
 	<label>Set View</label>
 	</control>
-	<control type="button" id="1034">
-	<include>DialogContext_Button</include>
-	<onleft>Dialog.Close(106)</onleft>
-	<onright>Dialog.Close(106)</onright>
-	<onclick>RunScript(script.extendedinfo,info=openinfodialog)</onclick>
-	<label>Extended Info</label>
-	<visible>System.HasAddon(script.extendedinfo) + [Container.Content(Movies) | Container.Content(episodes)]</visible>
-	</control>
 	<control type="button" id="1031">
 	<include>DialogContext_Button</include>
 	<onleft>Dialog.Close(106)</onleft>

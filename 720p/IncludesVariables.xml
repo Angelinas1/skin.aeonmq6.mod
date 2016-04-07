@@ -5487,7 +5487,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + ![IsEmpty(ListItem.Art(banner)) | Skin.HasSetting(nodefaultbannersource)]">$INFO[ListItem.Art(banner)]</value>
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + IsEmpty(ListItem.Art(banner)) + !Skin.HasSetting(nodefaultbannersource)">$INFO[ListItem.Icon]</value>
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)] + Skin.HasSetting(nodefaultbannersource)">$INFO[ListItem.path,,banner.jpg]</value>
-		<value condition="![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]">$INFO[ListItem.Icon]</value>
+		<value condition="![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]+!Container.Content(artists)">$INFO[ListItem.Icon]</value>
+		<value condition="Container.Content(artists)">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;type=banner,clearlogo,thumb</value>
 	</variable>
 	<variable name="value_landscape">
 		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>

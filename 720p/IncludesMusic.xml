@@ -10,7 +10,7 @@
 		<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 		<onunload>ClearProperty(Banner,home)</onunload>
 		<allowoverlay>no</allowoverlay>
-		<views>51,54,55,56,58,59,62,78</views>
+		<views>51,54,55,56,58,59,62,78,53</views>
 		<controls>
 			<control type="multiimage">
 				<!-- Multi Fanart -->
@@ -259,6 +259,8 @@
 					<!-- 62 -->
 					<include condition="Skin.HasSetting(viewcoverflowback_music)">ViewCoverFlowBackAudio</include>
 					<!-- 78 -->
+					<include condition="Skin.HasSetting(viewbanner_music)">ViewBannerInfo</include>
+					<!-- 53 -->
 				</control>
 				<control type="image">
 					<!-- Logo -->

@@ -109,7 +109,7 @@
 	<scrolltime>450</scrolltime>
 	<preloaditems>2</preloaditems>
 	<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(6621)">Conditional</animation>
-	<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+	<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists)</visible>
 	<itemlayout height="89" width="367">
 	<control type="image"><!-- Background -->
 	<width>357</width>

@@ -133,6 +133,14 @@
 	<onclick condition="!Skin.HasSetting(viewcoverflowback_music) + Skin.HasSetting(clickactivateview_music)">back</onclick>
 	<selected>Skin.HasSetting(viewcoverflowback_music)</selected>
 	</control>
+	<control type="radiobutton" id="19279"><!-- Banner --><!-- 53 -->
+	<radioposx>894</radioposx>
+	<label>Banner</label>
+	<onclick>Skin.ToggleSetting(viewbanner_music)</onclick>
+	<onclick condition="!Skin.HasSetting(viewbanner_music)">Skin.SetString(setviewmusic,53)</onclick>
+	<onclick condition="!Skin.HasSetting(viewbanner_music) + Skin.HasSetting(clickactivateview_music)">back</onclick>
+	<selected>Skin.HasSetting(viewbanner_music)</selected>
+	</control>
 	</control>
 	</control>
 	</controls>
