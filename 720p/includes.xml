@@ -1080,6 +1080,16 @@
 			<visible>!IsEmpty(ListItem.VideoCodec)</visible>
 		</control>
 		<control type="image">
+			<!-- Codec de video -->
+			<include>FlagImage</include>
+			<texture>$INFO[ListItem.Property(Album_Label)resource://resource.images.mediaicons.white/recordlabel/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+		</control>
+		<control type="image">
+			<include>FlagSeparator</include>
+			<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+		</control>
+		<control type="image">
 			<!-- Resolucao -->
 			<include>FlagImage</include>
 			<texture>$VAR[value_videoresolution]</texture>

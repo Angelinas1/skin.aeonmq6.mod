@@ -4987,7 +4987,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_ground2_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(ListItem.Path,videodb://movies/sets,left) | Container.Content(albums)">$INFO[ListItem.Genre]</value>
-		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(Set.Movies.Genre)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(0).Property(SkinHelper.MovieSet.Genre)]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.director]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<!-- Genero Artistas -->
@@ -5040,7 +5040,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	<variable name="value_ground5_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + ![SubString(ListItem.Duration,min) | SubString(ListItem.Path,videodb://movies/sets,left)]">$INFO[ListItem.Duration,, $LOCALIZE[31961]]</value>
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + SubString(ListItem.Duration,min) + !SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime),, $LOCALIZE[31961]]</value>
-		<value condition="![SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime)),, $LOCALIZE[31961]]</value>
+		<value condition="![SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime),, $LOCALIZE[31961]]</value>
 		<value condition="SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Runtime)]</value>
 	</variable>
 	<variable name="value_ground6_label">

@@ -26,7 +26,7 @@
 	</control>
 	<control type="button" id="69198">
 	<include>InvisibleButton</include>
-	<visible>StringCompare(Control.GetLabel(92132),poster) + !Skin.HasSetting(nowidevideocase) + Skin.HasSetting(plopencase) + ![Container.OnNext|Container.OnPrevious] + !Skin.HasSetting(nopldiscart) + [!IsEmpty(ListItem.Art(discart)) | !IsEmpty(Window(0).Property(Set.Movie.1.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.2.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.3.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.4.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.5.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.6.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.7.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.8.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.9.Art(discart))) | !IsEmpty(Window(0).Property(Set.Movie.10.Art(discart)))]</visible>
+	<visible>StringCompare(Control.GetLabel(92132),poster) + !Skin.HasSetting(nowidevideocase) + Skin.HasSetting(plopencase) + ![Container.OnNext|Container.OnPrevious] + !Skin.HasSetting(nopldiscart) + [!IsEmpty(ListItem.Art(discart)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.0.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.1.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.2.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.3.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.4.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.6.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.7.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.8.DiscArt)) | !IsEmpty(Window(0).Property(SkinHelper.MovieSet.9.DiscArt))]</visible>
 	</control>
 	</control>
 	
@@ -222,7 +222,7 @@
 	<control type="videowindow">
 	<width>790</width>
 	<height>336</height>
-	<animation effect="slide" end="66,0" time="500" reversible="true" condition="StringCompare(Control.GetLabel(92132),poster) + !Skin.HasSetting(nopldiscart)+!Skin.HasSetting(plopencase)+[!IsEmpty(ListItem.Art(discart))|!IsEmpty(Window(0).Property(Set.Movie.6.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.7.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.8.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.9.Art(discart)))|!IsEmpty(Window(0).Property(Set.Movie.10.Art(discart)))]">Conditional</animation>
+	<animation effect="slide" end="66,0" time="500" reversible="true" condition="StringCompare(Control.GetLabel(92132),poster) + !Skin.HasSetting(nopldiscart)+!Skin.HasSetting(plopencase)+[!IsEmpty(ListItem.Art(discart))|!IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt))|!IsEmpty(Window(0).Property(SkinHelper.MovieSet.6.DiscArt))|!IsEmpty(Window(0).Property(SkinHelper.MovieSet.7.DiscArt))|!IsEmpty(Window(0).Property(SkinHelper.MovieSet.8.DiscArt))|!IsEmpty(Window(0).Property(SkinHelper.MovieSet.9.DiscArt))]">Conditional</animation>
 	<visible>Player.HasVideo+!VideoPlayer.IsFullscreen+!Skin.HasSetting(homefullscreentrailer)</visible>
 	</control>
 	<control type="image">
@@ -884,45 +884,45 @@
 	<include name="PLcdART1_5">
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.1.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.2.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.3.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.4.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.5.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
 	</control>
 	</include>
 	<include name="PLcdART6_10">
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.6.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.7.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.8.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.7.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.9.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.8.DiscArt)]</texture>
 	</control>
 	<control type="image">
 	<include>PLDisc</include>
-	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.10.Art(discart))]</texture>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.9.DiscArt)]</texture>
 	</control>
 	</include>
 	<include name="PLDisc">

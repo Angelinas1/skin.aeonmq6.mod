@@ -75,8 +75,7 @@
 					<top>440</top>
 					<width>300</width>
 					<height>110</height>
-	<animation effect="slide" start="0,0" end="200,0"  condition="SubString(ListItem.Path,videodb://movies/sets,left)">Conditional</animation>
-
+					<animation effect="slide" start="0,0" end="200,0"  condition="SubString(ListItem.Path,videodb://movies/sets,left)">Conditional</animation>
 					<texture background="true">$VAR[value_logoandclearart]</texture>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
@@ -343,6 +342,159 @@
 				</content>
 			</control>
 				</control>
+				<control type="group">
+				<left>920</left>
+				<top>420</top>
+				<visible>Control.HasFocus(9915) +[Container.Content(albums) | Container.Content(artist) | Container.Content(song)]</visible>
+				<control type="image">
+					<left>10</left>
+					<top>-10</top>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>rotten.png</texture>
+				</control>
+					<control type="list" id="49">
+					<itemlayout height="20">
+					<control type="label">
+						<width>145</width>
+						<height>20</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>190</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>E4101010</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<scroll>true</scroll>
+					</control>
+					</itemlayout>
+					<focusedlayout height="20">
+					<control type="image">
+						<width>340</width>
+						<height>20</height>
+						<texture>settings_button_focus.png</texture>
+						<visible>Control.HasFocus(49)</visible>
+					</control>
+					<control type="label">
+						<width>145</width>
+						<height>20</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>190</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Control.HasFocus(49)</visible>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>490</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>E4101010</textcolor>
+						<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>Control.HasFocus(49)</visible>
+					</control>
+				</focusedlayout>
+			<content>
+			<visible>Container.Content(albums)</visible>
+					<item>
+						<label>TrackList</label>
+						<!-- Rating -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>TrackList Formatted</label>
+						<!-- Metar -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Music.TrackList.Formatted)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>Albums</label>
+						<!-- FreshCount -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Music.Albums)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>Albums Formatted</label>
+						<!-- RottenCount -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Music.Albums.Formatted)]</label2>
+						<onclick>noop</onclick>
+					</item>				
+					<item>
+						<label>SongCount</label>
+						<!-- Reviews -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Music.SongCount)]</label2>
+						<onclick>noop</onclick>
+					</item>											
+					<item>
+						<label>AlbumCount</label>
+						<!-- Consensus -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Music.AlbumCount)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>Info</label>
+						<!-- AudienceMeter -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Player.Music.Info)]</label2>
+						<onclick>noop</onclick>
+					</item>	
+					<item>
+						<label>TrackList</label>
+						<!-- AudienceRating -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Player.Music.TrackList)]</label2>
+						<onclick>noop</onclick>
+					</item>		
+					<item>
+						<label>Albums</label>
+						<!-- AudienceReviews -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Player.Music.Albums)]</label2>
+						<onclick>noop</onclick>
+					</item>			
+					<item>
+						<label>SongCount</label>
+						<!-- Awards -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Player.Music.SongCount)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item>
+						<label>AlbumCount</label>
+						<!-- BoxOffice -->
+						<label2>$INFO[Window(Home).Property(SkinHelper.Player.Music.AlbumCount)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					
+			</content>
+			</control>
+				</control>
+
 				<control type="list" id="51">
 					<viewtype label="31822">list</viewtype>
 					<left>600</left>
@@ -388,7 +540,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="IsEmpty(Control.GetLabel(5102)) | [Window.IsActive(25) + Skin.HasSetting(slimrightlistvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(slimrightlistmusic)]" height="30">
+					<focusedlayout condition="IsEmpty(Control.GetLabel(5102)) | [Window.IsActive(25) + !Skin.HasSetting(slimrightlistvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(slimrightlistmusic)]" height="30">
 						<control type="image">
 							<left>50</left>
 							<top>0</top>
@@ -417,7 +569,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="!IsEmpty(Control.GetLabel(5102)) + [Window.IsActive(25) + !Skin.HasSetting(slimrightlistvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(slimrightlistmusic)]" height="50">
+					<focusedlayout condition="!IsEmpty(Control.GetLabel(5102)) + [Window.IsActive(25) + Skin.HasSetting(slimrightlistvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(slimrightlistmusic)]" height="50">
 						<control type="image">
 							<left>50</left>
 							<top>0</top>
@@ -539,56 +691,56 @@
 						<effect type="fade" start="100" end="0" time="200"/>
 					</animation>
 					<animation effect="slide" end="0,-135" time="500" tween="sine" easing="out" condition="![IsEmpty(Control.GetLabel(5103)) | IsEmpty(Control.GetLabel(5104))] + SubString(ListItem.Path,videodb://movies/sets,left)">Conditional</animation>
-					<visible>![IsEmpty(Window(0).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(25) + SubString(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)</visible>
+					<visible>![IsEmpty(Window(0).Property(SkinHelper.MovieSet.0.DiscArt)) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(25) + SubString(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.1.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.1.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.0.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.2.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.2.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.1.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.3.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.3.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.2.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.4.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.4.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.3.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.5.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.5.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.4.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.6.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.6.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.7.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.7.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.6.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.8.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.8.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.7.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.7.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.9.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.9.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.8.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.8.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<include>RightListDisc</include>
-						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(Set.Movie.10.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(0).Property(Set.Movie.10.Art(discart)))</visible>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.9.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.9.DiscArt))</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -765,7 +917,7 @@
 				<top>20</top>
 				<height>500</height>
 				<onleft>51</onleft>
-				<onright condition="!IsEmpty(Control.GetLabel(5101))">9915</onright>
+				<onright>9915</onright>
 				<onright condition="IsEmpty(Control.GetLabel(5101))">9920</onright>
 				<include>Animation_Fade</include>
 				<visible allowhiddenfocus="true">Control.IsVisible(51) + Control.HasFocus(80)</visible>
