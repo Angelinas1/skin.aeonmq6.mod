@@ -140,13 +140,12 @@
 		<control type="group">
 			<!-- layout estilo 1 -->
 			<left>0</left>
-			<top>773</top>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
+			<top>803</top>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,20)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,20)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
-			<animation effect="slide" start="0,720" end="0,-300" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
-			<animation effect="slide" start="0,-300" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
 			<visible>StringCompare(skin.string(vis_layout),style1)</visible>
 			<control type="image">
 				<left>0</left>
@@ -354,13 +353,12 @@
 		<control type="group">
 			<!-- layout estilo 2 -->
 			<left>0</left>
-			<top>773</top>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
+			<top>803</top>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,20)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,20)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
-			<animation effect="slide" start="0,720" end="0,-300" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
-			<animation effect="slide" start="0,-300" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
 			<visible>StringCompare(skin.string(vis_layout),style2)</visible>
 			<control type="image">
 				<left>0</left>
@@ -568,13 +566,12 @@
 		<control type="group">
 			<!-- Layout 3  -->
 			<left>0</left>
-			<top>773</top>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
+			<top>803</top>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,20)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,20)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,400" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
-			<animation effect="slide" start="0,720" end="0,-300" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
-			<animation effect="slide" start="0,-300" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
 			<visible>StringCompare(skin.string(vis_layout),style3)</visible>
 			<control type="image">
 				<left>0</left>
@@ -881,17 +878,16 @@
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 			</control>
 		</control>
-		<control type="group">
-			<!-- Layout 4  -->
-			<left>0</left>
-			<top>773</top>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
-			<animation effect="slide" start="0,720" end="0,-300" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
-			<animation effect="slide" start="0,-300" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
-			<visible>StringCompare(skin.string(vis_layout),style4)</visible>
+        <control type="group">
+            <!-- Layout 4  -->
+            <left>0</left>
+            <top>803</top>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,20)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
+            <visible>StringCompare(skin.string(vis_layout),style4)</visible>
 			<control type="image">
 				<left>0</left>
 				<top>-40</top>
@@ -905,8 +901,8 @@
 				<top>-20</top>
 				<visible>Player.HasAudio</visible>
 				<animation effect="slide" start="0,0" end="140,0" time="800" delay="3000" tween="sine" easing="inout" condition="Player.HasAudio">Conditional</animation>
-				<animation effect="slide" end="-140,0" time="800" tween="sine" easing="inout" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
-				<animation effect="fade" start="100" end="0,0" time="300" delay="500" condition="Skin.HasSetting(noviscdart)">Conditional</animation>
+				<animation effect="slide" end="-140,0" time="800" tween="sine" easing="inout" condition="SubString(skin.string(audiofurniture),hide)">Conditional</animation>
+				<animation effect="fade" start="100" end="0,0" time="300" delay="500" condition="SubString(skin.string(audiofurniture),hide)">Conditional</animation>
 				<control type="image" id="5640">
 					<left>-215</left>
 					<top>120</top>
@@ -1030,7 +1026,7 @@
 				<height>20</height>
 				<align>right</align>
 				<font>Font_32</font>
-				<label>[COLOR=$VAR[value_headercolor]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.Title]</label>
+				<label>[COLOR=$VAR[value_headercolor]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.Title] $INFO[System.Progressbar]</label>
 				<textcolor>88DDDDDD</textcolor>
 				<shadowcolor>AA000000</shadowcolor>
 				<scroll>false</scroll>
