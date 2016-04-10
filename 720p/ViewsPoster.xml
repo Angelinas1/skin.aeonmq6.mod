@@ -62,23 +62,23 @@
 	<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
 	</control>
 	<control type="image">
-	<left>210</left>
+	<left>220</left>
 	<top>315</top>
 	<width>40</width>
 	<height>40</height>
 	<texture>$VAR[value_watchedstyle]</texture>
 	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<aspectratio align="right" aligny="bottom">keep</aspectratio>
 	<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + StringCompare(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
 	</control>
 	<control type="image">
-	<left>211</left>
+	<left>221</left>
 	<top>319</top>
 	<width>40</width>
 	<height>40</height>
 	<texture flipy="true">$VAR[value_watchedstyle]</texture>
 	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<aspectratio align="right" aligny="bottom">keep</aspectratio>
 	<visible>[!Skin.HasSetting(nooverlays) + StringCompare(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 	</control>
 	</itemlayout>
@@ -107,9 +107,9 @@
 	</control>
 	<control type="image">
 	<left>210</left>
-	<top>315</top>
-	<width>40</width>
-	<height>40</height>
+	<top>305</top>
+	<width>50</width>
+	<height>50</height>
 	<texture>$VAR[value_watchedstyle]</texture>
 	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 	<aspectratio align="center" aligny="bottom">keep</aspectratio>
@@ -119,9 +119,9 @@
 	</control>
 	<control type="image">
 	<left>211</left>
-	<top>319</top>
-	<width>40</width>
-	<height>40</height>
+	<top>309</top>
+	<width>50</width>
+	<height>50</height>
 	<texture flipy="true">$VAR[value_watchedstyle]</texture>
 	<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 	<aspectratio align="center" aligny="bottom">keep</aspectratio>

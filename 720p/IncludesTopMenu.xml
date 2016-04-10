@@ -759,6 +759,13 @@
 					<visible>!Skin.HasSetting(nocoverflowvideocase) + Control.IsVisible(58) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>
 				<!-- Right List -->
+				<control type="radiobutton" id="9264">
+					<include>TopMenuRadioButton</include>
+					<label>31490</label>
+					<onclick>Skin.ToggleSetting(slimrightlistvideo)</onclick>
+					<selected>!Skin.HasSetting(slimrightlistvideo)</selected>
+					<visible>Control.IsVisible(51) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+				</control>
 				<control type="radiobutton" id="9265">
 					<include>TopMenuRadioButton</include>
 					<label>31486</label>
@@ -1249,6 +1256,11 @@
 					<selected>Skin.HasSetting(slimmidlistvideo)</selected>
 					<visible>Control.IsVisible(77)</visible>
 				</control>
+				<!-- <control type="button" id="92155">
+					<include>TopMenuButton</include>
+					<label>Setview Enable all</label>
+					<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=enable_all_views_video,header=Enable views for video)</onclick>
+				</control> -->
 			</control>
 			<control type="grouplist" id="9301">
 				<!-- Colecao -->

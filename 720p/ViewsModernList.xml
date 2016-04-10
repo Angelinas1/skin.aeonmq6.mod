@@ -374,7 +374,7 @@
 	<visible>Control.HasFocus(9914) | Control.HasFocus(9915)</visible>
 	</control>
 	<control type="image">
-	<left>570</left>
+	<left>400</left>
 	<top>3</top>
 	<width>25</width>
 	<height>25</height>
@@ -413,7 +413,7 @@
 	<label>$INFO[ListItem.Year]</label>
 	</control>
 	<control type="image">
-	<left>570</left>
+	<left>575</left>
 	<top>3</top>
 	<width>25</width>
 	<height>25</height>
@@ -452,7 +452,7 @@
 	<label>$INFO[ListItem.Year]</label>
 	</control>
 	<control type="image">
-	<left>565</left>
+	<left>575</left>
 	<top>0</top>
 	<width>28</width>
 	<height>28</height>
@@ -491,7 +491,7 @@
 	<label>$INFO[ListItem.Year]</label>
 	</control>
 	<control type="image">
-	<left>565</left>
+	<left>575</left>
 	<top>0</top>
 	<width>30</width>
 	<height>30</height>
@@ -552,8 +552,8 @@
 	<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(seasons) | IsEmpty(ListItem.Title)]</visible>
 	</control>
 	<control type="image">
-	<left>565</left>
-	<top>10</top>
+	<left>575</left>
+	<top>1</top>
 	<width>30</width>
 	<height>30</height>
 	<texture>$VAR[value_watchedstyle]</texture>

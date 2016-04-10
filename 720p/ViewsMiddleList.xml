@@ -610,7 +610,7 @@
 	</control>
 	<control type="image">
 	<left>565</left>
-	<top>10</top>
+	<top>1</top>
 	<width>30</width>
 	<height>30</height>
 	<texture>$VAR[value_watchedstyle]</texture>
