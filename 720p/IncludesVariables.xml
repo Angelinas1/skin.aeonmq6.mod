@@ -5652,6 +5652,13 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="PVR.IsRecording">$INFO[Pvr.NowRecordingChannelIcon]</value>
 		<value condition="PVR.HasNonRecordingTimer">$INFO[Pvr.NextRecordingChannelIcon]</value>
 	</variable>
+	<variable name="vis_layout_time">
+		<value condition="StringCompare(skin.string(vis_layout_time),10)">10</value>
+		<value condition="StringCompare(skin.string(vis_layout_time),15)">15</value>
+		<value condition="StringCompare(skin.string(vis_layout_time),20)">20</value>
+		<value condition="StringCompare(skin.string(vis_layout_time),25)">25</value>
+	</variable>
+	
 	<variable name="value_librarystatus">
 		<value condition="SubString(Container(9000).ListItem.Property(id),movie)">$INFO[Window(0).Property(Movies.Count),,[COLOR=50FFFAF0] | [/COLOR]]$INFO[Window(0).Property(Movies.UnWatched),[COLOR=FFFFFAF0]$LOCALIZE[16101]: [/COLOR]]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(id),tvshow)">$INFO[Window(0).Property(TVShows.Count),[COLOR=FFFFFAF0]$LOCALIZE[20343]: [/COLOR]]    $INFO[Window(0).Property(Episodes.Count),[COLOR=FFFFFAF0]$LOCALIZE[20360]: [/COLOR]]    $INFO[Window(0).Property(Episodes.UnWatched),[COLOR=FFFFFAF0]$LOCALIZE[16101]: [/COLOR]]</value>

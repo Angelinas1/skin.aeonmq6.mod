@@ -202,6 +202,14 @@
 	<enable>StringCompare(skin.string(vis_layout),style4)</enable>
 	<visible>StringCompare(skin.string(vis_layout),style4)</visible>
 	</control>
+	<control type="button" id="8"><!-- Hide info Time -->
+	<label>Time for Hide info                                                                            $VAR[vis_layout_time] sec</label>
+	<onclick condition="StringCompare(skin.string(vis_layout_time),25)|StringCompare(skin.string(vis_layout_time),)">Skin.SetString(vis_layout_time,10)</onclick>
+	<onclick condition="StringCompare(skin.string(vis_layout_time),10)">Skin.SetString(vis_layout_time,15)</onclick>
+	<onclick condition="StringCompare(skin.string(vis_layout_time),15)">Skin.SetString(vis_layout_time,20)</onclick>
+	<onclick condition="StringCompare(skin.string(vis_layout_time),20)">Skin.SetString(vis_layout_time,25)</onclick>
+	<visible>Skin.HasSetting(hideinfomusic_style1)|Skin.HasSetting(hideinfomusic_style2)|Skin.HasSetting(hideinfomusic_style3)|Skin.HasSetting(hideinfomusic_style4)</visible>
+	</control>
 	<control type="radiobutton" id="15"><!-- lyrics -->
 	<radioposx>894</radioposx>
 	<label>31722</label>
