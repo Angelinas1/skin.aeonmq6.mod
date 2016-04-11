@@ -1543,7 +1543,7 @@
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
-			<visible>!IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
+			<visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language))</visible>
 		</control>
 		<control type="label">
 			<left>40</left>
@@ -1552,7 +1552,7 @@
 			<height>25</height>
 			<aligny>top</aligny>
 			<font>Font_18A</font>
-			<label>$INFO[Window(2003).Property(AudioLanguage.1)]$INFO[Window(2003).Property(AudioLanguage.2), / ]$INFO[Window(2003).Property(AudioLanguage.3), / ]$INFO[Window(2003).Property(AudioLanguage.4), / ]$INFO[Window(2003).Property(AudioLanguage.5), / ]$INFO[Window(2003).Property(AudioLanguage.6), / ]$INFO[Window(2003).Property(AudioLanguage.7), / ]$INFO[Window(2003).Property(AudioLanguage.8), / ]$INFO[Window(2003).Property(AudioLanguage.9), / ]$INFO[Window(2003).Property(AudioLanguage.10), / ]</label>
+			<label>$INFO[Window(Home).Property(SkinHelper.ListItemLanguages)]</label>
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
@@ -1565,7 +1565,7 @@
 			<height>25</height>
 			<aligny>top</aligny>
 			<font>Font_18A</font>
-			<label>$INFO[Window(2003).Property(AudioLanguage.1)]$INFO[Window(2003).Property(AudioLanguage.2), / ]$INFO[Window(2003).Property(AudioLanguage.3), / ]$INFO[Window(2003).Property(AudioLanguage.4), / ]$INFO[Window(2003).Property(AudioLanguage.5), / ]$INFO[Window(2003).Property(AudioLanguage.6), / ]$INFO[Window(2003).Property(AudioLanguage.7), / ]$INFO[Window(2003).Property(AudioLanguage.8), / ]$INFO[Window(2003).Property(AudioLanguage.9), / ]$INFO[Window(2003).Property(AudioLanguage.10), / ]</label>
+			<label>$INFO[Window(Home).Property(SkinHelper.ListItemLanguages)]</label>
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
@@ -1581,8 +1581,8 @@
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
-			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(2003).Property(AudioLanguage.1))">Conditional</animation>
-			<visible>!IsEmpty(Window(2003).Property(SubtitleLanguage.1))</visible>
+			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language))">Conditional</animation>
+			<visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItemSubtitles))</visible>
 		</control>
 		<control type="label">
 			<left>40</left>
@@ -1591,11 +1591,11 @@
 			<height>25</height>
 			<aligny>top</aligny>
 			<font>Font_18A</font>
-			<label>$INFO[Window(2003).Property(SubtitleLanguage.1)]$INFO[Window(2003).Property(SubtitleLanguage.2), / ]$INFO[Window(2003).Property(SubtitleLanguage.3), / ]$INFO[Window(2003).Property(SubtitleLanguage.4), / ]$INFO[Window(2003).Property(SubtitleLanguage.5), / ]$INFO[Window(2003).Property(SubtitleLanguage.6), / ]$INFO[Window(2003).Property(SubtitleLanguage.7), / ]$INFO[Window(2003).Property(SubtitleLanguage.8), / ]$INFO[Window(2003).Property(SubtitleLanguage.9), / ]$INFO[Window(2003).Property(SubtitleLanguage.10), / ]</label>
+			<label>$INFO[Window(Home).Property(SkinHelper.ListItemSubtitles)]</label>
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
-			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(2003).Property(AudioLanguage.1))">Conditional</animation>
+			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language))">Conditional</animation>
 			<visible>!Control.IsVisible(71)</visible>
 		</control>
 		<control type="label">
@@ -1605,11 +1605,11 @@
 			<height>25</height>
 			<aligny>top</aligny>
 			<font>Font_18A</font>
-			<label>$INFO[Window(2003).Property(SubtitleLanguage.1)]$INFO[Window(2003).Property(SubtitleLanguage.2), / ]$INFO[Window(2003).Property(SubtitleLanguage.3), / ]$INFO[Window(2003).Property(SubtitleLanguage.4), / ]$INFO[Window(2003).Property(SubtitleLanguage.5), / ]$INFO[Window(2003).Property(SubtitleLanguage.6), / ]$INFO[Window(2003).Property(SubtitleLanguage.7), / ]$INFO[Window(2003).Property(SubtitleLanguage.8), / ]$INFO[Window(2003).Property(SubtitleLanguage.9), / ]$INFO[Window(2003).Property(SubtitleLanguage.10), / ]</label>
+			<label>$INFO[Window(Home).Property(SkinHelper.ListItemSubtitles)]</label>
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
-			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(2003).Property(AudioLanguage.1))">Conditional</animation>
+			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language))">Conditional</animation>
 			<visible>Control.IsVisible(71)</visible>
 		</control>
 	</include>
@@ -3070,7 +3070,7 @@
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_skipbwd),disable)]</property>
 				<icon>osd_menu_skipbwd.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Previous)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(150)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_skipbwd),disable)">Skin.SetString(osd_audio_skipbwd,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_skipbwd),disable)">Skin.Reset(osd_audio_skipbwd,disable)</onclick>
 				<visible>[!SubString(skin.string(osd_audio_skipbwd),disable) | Skin.HasSetting(customosd)]</visible>
@@ -3110,7 +3110,7 @@
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_skipfwd),disable)]</property>
 				<icon>osd_menu_skipfwd.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Next)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(151)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_skipfwd),disable)">Skin.SetString(osd_audio_skipfwd,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_skipfwd),disable)">Skin.Reset(osd_audio_skipfwd,disable)</onclick>
 				<visible>[!SubString(skin.string(osd_audio_skipfwd),disable) | Skin.HasSetting(customosd)]</visible>
@@ -3140,7 +3140,7 @@
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_volumeup),disable)]</property>
 				<icon>osd_menu_volup.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">VolumeUp</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(152)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_volumeup),disable)">Skin.SetString(osd_audio_volumeup,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_volumeup),disable)">Skin.Reset(osd_audio_volumeup,disable)</onclick>
 				<visible>[!SubString(skin.string(osd_audio_volumeup),disable) | Skin.HasSetting(customosd)]</visible>
@@ -3150,7 +3150,7 @@
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_volumedown),disable)]</property>
 				<icon>osd_menu_voldown.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">VolumeDown</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(153)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_volumedown),disable)">Skin.SetString(osd_audio_volumedown,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_volumedown),disable)">Skin.Reset(osd_audio_volumedown,disable)</onclick>
 				<visible>[!SubString(skin.string(osd_audio_volumedown),disable) | Skin.HasSetting(customosd)]</visible>
@@ -3160,7 +3160,7 @@
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_mute),disable)]</property>
 				<icon>osd_menu_mute.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">Mute</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(154)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_mute),disable)">Skin.SetString(osd_audio_mute,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_mute),disable)">Skin.Reset(osd_audio_mute,disable)</onclick>
 				<visible>[!SubString(skin.string(osd_audio_mute),disable) | Skin.HasSetting(customosd)]</visible>

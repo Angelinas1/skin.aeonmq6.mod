@@ -121,6 +121,27 @@
 	<include condition="!Skin.HasSetting(audioosdfixedlist)">AudioOSDWrapList</include>
 	<include condition="Skin.HasSetting(audioosdfixedlist)">AudioOSDFixedList</include>
 
+	<control type="button" id="150"><!-- Previous -->
+	<include>InvisibleButton</include>
+	<onfocus>PlayerControl(Previous)</onfocus>
+	</control>	
+	<control type="button" id="151"><!-- Next -->
+	<include>InvisibleButton</include>
+	<onfocus>PlayerControl(Next)</onfocus>
+	</control>		
+	<control type="button" id="152"><!-- VolumeUp -->
+	<include>InvisibleButton</include>
+	<onfocus>VolumeUp</onfocus>
+	</control>	
+	<control type="button" id="153"><!-- VolumeDown -->
+	<include>InvisibleButton</include>
+	<onfocus>VolumeDown</onfocus>
+	</control>
+	<control type="button" id="154"><!-- VolumeDown -->
+	<include>InvisibleButton</include>
+	<onfocus>Mute</onfocus>
+	</control>
+	
 	<control type="progress">
 	<left>30</left>
 	<top>73</top>
