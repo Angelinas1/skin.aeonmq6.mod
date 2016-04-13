@@ -141,13 +141,13 @@
 			<!-- layout estilo 1 -->
 			<left>0</left>
 			<top>803</top>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20+StringCompare(skin.string(vis_layout_time),20))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,20+StringCompare(skin.string(vis_layout_time),20))">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
@@ -360,13 +360,13 @@
 			<!-- layout estilo 2 -->
 			<left>0</left>
 			<top>803</top>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20+StringCompare(skin.string(vis_layout_time),20))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,20+StringCompare(skin.string(vis_layout_time),20))">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
@@ -579,13 +579,13 @@
 			<!-- Layout 3  -->
 			<left>0</left>
 			<top>803</top>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20+StringCompare(skin.string(vis_layout_time),20))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,20+StringCompare(skin.string(vis_layout_time),20))">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="IntegerGreaterThan(MusicPlayer.FinishTime,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,400" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>

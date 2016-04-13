@@ -157,6 +157,16 @@
 	<onfocus>Skin.SetString(tv_panel_layout,panel_layout_1)</onfocus>
 	<onfocus>Skin.SetBool(visanimation_panscan)</onfocus>
 	<onfocus>Skin.SetBool(ontvtunes)</onfocus>
+	<onfocus>Skin.SetBool(widget_cast)</onfocus>
+	<onfocus>Skin.SetBool(widget_one)</onfocus>
+	<onfocus>Skin.SetString(vis_layout_time,10)</onfocus>
+	<onfocus>Skin.SetString(extra_panel_layout,panel_layout_case)</onfocus>
+	<onfocus>Skin.SetString(m_panel_layout,panel_layout_1)</onfocus>
+	<onfocus>Skin.SetString(tv_panel_layout,panel_layout_1)</onfocus>
+	<onfocus>Skin.SetString(extra_seconds,10000)</onfocus>
+	<onfocus>Skin.SetString(fullscreen_icon,logo)</onfocus>
+	<onfocus>Skin.SetString(fullscreen_icon_seek,clearart)</onfocus>
+	<onfocus>Skin.SetString(CustomWeatherIconFolder,weather/)</onfocus>
 	<onfocus>AlarmClock(nextstep,SetFocus(901),0:03,true)</onfocus>
 	</control>
 	<control type="button" id="901">
