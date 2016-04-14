@@ -1424,7 +1424,7 @@
 							<include>Widgets_Button</include>
 							<label>$VAR[button_widget_info_label]</label>
 							<onclick condition="StringCompare(skin.string(button_widget_info),trailer)">PlayMedia($INFO[Container(510).ListItem.Trailer])</onclick>
-							<onclick condition="StringCompare(skin.string(button_widget_info),helper)">RunScript(script.skin.helper.service,action=showinfo,movieid=&amp;$INFO[Container(510).ListItem.DBID ])</onclick>
+							<onclick condition="StringCompare(skin.string(button_widget_info),helper)">RunScript(script.skin.helper.service,action=showinfo,movieid=&amp;$INFO[Container(510).ListItem.DBID])</onclick>
 							<onclick condition="StringCompare(skin.string(button_widget_info),extended)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(510).ListItem.Title],imdb_id=$INFO[Container(510).ListItem.IMDBNumber])</onclick>
 							<onclick condition="StringCompare(skin.string(button_widget_info),youtube)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[Container(510).ListItem.Title],return)</onclick>
 							<onclick condition="StringCompare(skin.string(button_widget_info),cinemavision)">RunScript(script.cinemavision,experience,name=$INFO[Container(510).ListItem.Title])</onclick>

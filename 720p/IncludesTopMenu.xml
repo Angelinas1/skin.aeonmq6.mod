@@ -603,6 +603,13 @@
 					<selected>!Skin.HasSetting(noartlowlistvideo)</selected>
 					<visible>Control.IsVisible(55)</visible>
 				</control>
+				<control type="radiobutton" id="9231">
+					<include>TopMenuRadioButton</include>
+					<label>Hide Title/Subtitle</label>
+					<onclick>Skin.ToggleSetting(noartlowlisttitle)</onclick>
+					<selected>!Skin.HasSetting(noartlowlisttitle)</selected>
+					<visible>Control.IsVisible(55)</visible>
+				</control>
 				<!-- Wall -->
 				<control type="radiobutton" id="9235">
 					<include>TopMenuRadioButton</include>
@@ -793,6 +800,13 @@
 					<label>31508</label>
 					<onclick>Skin.ToggleSetting(noartrightlistvideo)</onclick>
 					<selected>!Skin.HasSetting(noartrightlistvideo)</selected>
+					<visible>Control.IsVisible(51)</visible>
+				</control>
+				<control type="radiobutton" id="9269">
+					<include>TopMenuRadioButton</include>
+					<label>Hide Title/Subtitle</label>
+					<onclick>Skin.ToggleSetting(noartrightlisttitle)</onclick>
+					<selected>!Skin.HasSetting(noartrightlisttitle)</selected>
 					<visible>Control.IsVisible(51)</visible>
 				</control>
 				<!-- Showart -->

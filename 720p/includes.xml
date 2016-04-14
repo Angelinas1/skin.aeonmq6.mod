@@ -1505,11 +1505,10 @@
 			<texture flipy="true" diffuse="shadow_mask.png">darkgrey.png</texture>
 			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 			<animation effect="fade" end="85" condition="true">Conditional</animation>
-			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(55)">Conditional</animation>
 			<animation effect="slide" end="-360,-15" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 			<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(77)">Conditional</animation>
-			<visible>Control.IsVisible(51) |Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(77)</visible>
+			<visible>Control.IsVisible(57) | Control.IsVisible(77)</visible>
 		</control>
 		<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 		<control type="image">
@@ -1531,7 +1530,7 @@
 			<height>60</height>
 			<texture>line_v.png</texture>
 			<colordiffuse>FFFFFAF0</colordiffuse>
-			<visible>![Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59) | Control.IsVisible(70)]</visible>
+			<visible>![Control.IsVisible(57) | Control.IsVisible(59) | Control.IsVisible(70)]</visible>
 		</control>
 		<control type="image">
 			<!-- Audio -->
