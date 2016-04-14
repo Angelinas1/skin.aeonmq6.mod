@@ -716,4 +716,35 @@
     <setting id="Gallery_2r" value="helperinprogressmedia" label="Inprogress Media" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
     <setting id="Gallery_2r" value="helpernextairedtvshows" label="Nextaired TVShows" condition="" icon="special://skin/extras/widgetthumbs/209.jpg" description="Widget from Helper script" />
 
+    <setting id="enable_all_views_video" value="||MULTISELECT||" label="" condition="" icon="" description="">
+        <option id="viewbanner_video" label="viewbanner_video" condition="" default="true"/>
+        <option id="viewbannerinfo_video" label="viewbannerinfo_video" condition="" default="true"/>
+        <option id="viewposter_video" label="viewposter_video" condition="" default="true"/>
+        <option id="viewlowlist_video" label="viewlowlist_video" condition="" default="true"/>
+        <option id="viewwall_video" label="viewwall_video" condition="" default="true"/>
+        <option id="viewglasslist_video" label="viewglasslist_video" condition="" default="true"/>
+        <option id="viewcoverflow_video" label="viewcoverflow_video" condition="" default="true"/>
+        <option id="viewwide_video" label="viewwide_video" condition="" default="true"/>
+        <option id="viewshowart_video" label="viewshowart_video" condition="" default="true"/>
+        <option id="viewmultiplex_video" label="viewmultiplex_video" condition="" default="true"/>
+        <option id="viewpanel_video" label="viewpanel_video" condition="" default="true"/>
+        <option id="viewshelf_video" label="viewshelf_video" condition="" default="true"/>
+        <option id="viewlandscapex_video" label="viewlandscapex_video" condition="" default="true"/>
+        <option id="viewsets_video" label="viewsets_video" condition="" default="true"/>
+        <option id="viewshowcase_video" label="viewshowcase_video" condition="" default="true"/>
+        <option id="viewposterlite_video" label="viewposterlite_video" condition="" default="true"/>
+        <option id="viewposterlist_video" label="viewposterlist_video" condition="" default="true"/>
+        <option id="viewtotalart_video" label="viewtotalart_video" condition="" default="true"/>
+        <option id="viewmiddle_video" label="viewmiddle_video" condition="" default="true"/>
+        <option id="viewcoverback_video" label="viewcoverback_video" condition="" default="true"/>
+        <option id="viewmidlist967_video" label="viewmidlist967_video" condition="" default="true"/>
+        <option id="viewmodern_video" label="viewmodern_video" condition="" default="true"/>
+    </setting>
+	
+        <setting id="button_widget_info" value="trailer" label="Button for start Trailer" condition="" icon="bw1.png" description="Button to start Trailer from widget" />
+		<setting id="button_widget_info" value="helper" label="Button for start Helper Info" condition="" icon="bw1.png" description="Button to start Helper Info from widget" />
+		<setting id="button_widget_info" value="extended" label="Button for start Extended Info" condition="" icon="bw1.png" description="Button to start Extended Info from widget" />
+		<setting id="button_widget_info" value="youtube" label="Button for start Youtube" condition="" icon="bw1.png" description="Button to start Youtube from widget" />
+		<setting id="button_widget_info" value="cinemavision" label="Button for start Cinemavision" condition="" icon="bw1.png" description="Button to start Cinemavision from widget" />
+		
 	</settings>

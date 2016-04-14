@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="6530"><!-- Aeon MQ 6 -->
+
+    <onload>AlarmClock(setfocus,SetFocus(100),00:01,silent)</onload>
+    <controls>
+        <!--fake list used as container -->
+		<!-- use Container(999).ListItem to get all info -->
+		<!-- all normal listitem properties will be available -->
+		<control type="list" id="999">
+            <posx>630</posx>
+            <posy>0</posy>
+            <itemlayout />
+            <focusedlayout />
+		</control>
+						<control type="button" id="5">
+							<!--Play-->
+							<label>208</label>
+							<width>285</width>
+							<height>60</height>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+						</control>
+                        <control type="panel" id="997">
+                            <posx>63</posx>
+							<posy>220</posy>
+							<width>1200</width>
+							<height>714</height>
+							<onup>noop</onup>
+							<ondown>9000</ondown>
+							<onleft>ClearProperty(AdditionalInfo)</onleft>
+							<onback>ClearProperty(AdditionalInfo)</onback>
+							<onleft>SetFocus(9000)</onleft>
+							<scrolltime>200</scrolltime>
+							<orientation>vertical</orientation>
+							<focusposition>0</focusposition>
+							<viewtype label="similar_list">list</viewtype>
+                            <!-- itemlayout movies -->
+					<itemlayout height="85" width="90">
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+						</control>
+					</itemlayout>
+					<focusedlayout height="85" width="90">
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<include>Animation_Fade</include>
+							<visible>!Control.HasFocus(1000)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">grey.png</bordertexture>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(1000)</visible>
+						</control>
+					</focusedlayout>
+                        </control>
+					<control type="panel" id="998">
+                            <posx>63</posx>
+							<posy>220</posy>
+							<width>1200</width>
+							<height>714</height>
+							<onup>noop</onup>
+							<ondown>9000</ondown>
+							<onleft>ClearProperty(AdditionalInfo)</onleft>
+							<onback>ClearProperty(AdditionalInfo)</onback>
+							<onleft>SetFocus(9000)</onleft>
+							<scrolltime>200</scrolltime>
+							<orientation>vertical</orientation>
+							<focusposition>0</focusposition>
+                            <animation effect="fade" start="100" end="25" time="0" condition="Container(51).IsUpdating">Conditional</animation>
+							<viewtype label="actor_list">list</viewtype>
+                            <!-- itemlayout movies -->
+					<itemlayout height="85" width="90">
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+						</control>
+					</itemlayout>
+					<focusedlayout height="85" width="90">
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<include>Animation_Fade</include>
+							<visible>!Control.HasFocus(1000)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">grey.png</bordertexture>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(1000)</visible>
+						</control>
+					</focusedlayout>
+                        </control>
+    <control type="image">
+    <left>0</left>
+    <top>220</top>
+    <width>1280</width>
+    <height>300</height>
+    <texture flipy="true" diffuse="shadow_mask.png">darkgrey.png</texture>
+    <colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+    <animation effect="fade" end="85" condition="true">Conditional</animation>
+    </control>
+    <control type="label">
+    <!-- New -->
+    <left>0</left>
+    <top>290</top>
+    <width>1280</width>
+    <height>40</height>
+    <align>center</align>
+    <aligny>center</aligny>
+    <font>Font_40</font>
+    <label>Dialog is in work ......will be available Soon !!!!</label>
+    <textcolor>FFFFFAF0</textcolor>
+    <shadowcolor>grey</shadowcolor>
+    </control>
+
+	<control type="grouplist" id="9000">
+		<control type="button" id="100">
+			<!-- Home -->
+			<top>260</top>
+			<include>TopMenuButton</include>
+			<label>Exit Dialog</label>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ReplaceWindow(Home)</onclick>
+			<!--<onclick condition="System.HasAddon(plugin.video.youtube) + Skin.String(videoinfo_traileraction,fullscreen)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Container(999).ListItem.Title] Trailer,header=YouTube</onclick>-->
+	</control>
+	</control>
+	</controls>
+	</window>
