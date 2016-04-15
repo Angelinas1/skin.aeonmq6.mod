@@ -162,7 +162,7 @@
 	<itemgap>0</itemgap>
 	<scrolltime>-</scrolltime>
 	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-	<visible>!Skin.HasSetting(weathericons) + [[Control.HasFocus(129) | Control.HasFocus(130) | Control.HasFocus(131)] | [Control.HasFocus(132)] | Control.HasFocus(133)]</visible>
+	<visible>!Skin.HasSetting(weathericons) + [[Control.HasFocus(129) | Control.HasFocus(130) | Control.HasFocus(131)] | [Control.HasFocus(132)] | Control.HasFocus(133)]+!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	<control type="image"><!-- Icone do clima 1 -->
 	<width>180</width>
 	<height>90</height>
@@ -180,6 +180,44 @@
 	<height>90</height>
 	<aspectratio align="center">keep</aspectratio>
 	<texture background="true">$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
+	</control>
+	</control>
+	<control type="grouplist">
+	<left>450</left>
+	<top>610</top>
+	<width>630</width>
+	<height>90</height>
+	<orientation>horizontal</orientation>
+	<itemgap>0</itemgap>
+	<scrolltime>-</scrolltime>
+	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+	<visible>!Skin.HasSetting(weathericons) + [[Control.HasFocus(129) | Control.HasFocus(130) | Control.HasFocus(131)] | [Control.HasFocus(132)] | Control.HasFocus(133)]+SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	<control type="multiimage"><!-- Icone animado 1 -->
+	<width>180</width>
+	<height>90</height>
+	<aspectratio align="center">keep</aspectratio>
+	<imagepath>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.1.FanartCode)]</imagepath>
+	<timeperimage>175</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	</control>
+	<control type="multiimage"><!-- Icone animado 2 -->
+	<width>180</width>
+	<height>90</height>
+	<aspectratio align="center">keep</aspectratio>
+	<imagepath>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.4.FanartCode)]</imagepath>
+	<timeperimage>175</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	</control>
+	<control type="multiimage"><!-- Icone animado 3 -->
+	<width>180</width>
+	<height>90</height>
+	<aspectratio align="center">keep</aspectratio>
+	<imagepath>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window(Weather).Property(Daily.7.FanartCode)]</imagepath>
+	<timeperimage>175</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
 	</control>
 	</control>
 	<control type="grouplist">

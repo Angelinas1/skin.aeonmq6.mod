@@ -4448,6 +4448,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	<variable name="value_weathericons">
 		<value condition="Skin.HasSetting(weathericons) + !Skin.HasSetting(weathericons_external)">$INFO[Skin.String(extrapack)]/icons_weather/</value>
 		<value condition="Skin.HasSetting(weathericons) + Skin.HasSetting(weathericons_external)">$INFO[Skin.String(CustomAnimatedIconFolder)]</value>
+		<value condition="!Skin.HasSetting(weathericons) + SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)">resource://resource.images.weathericons.animated/</value>
 	</variable>
 	<variable name="value_livetvfanart">
 		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.ExtraFanart))">$INFO[Window(home).Property(SkinHelper.PVR.ExtraFanart)]</value>

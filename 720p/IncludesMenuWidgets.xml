@@ -4330,7 +4330,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator7Day</include>
@@ -4373,7 +4373,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator7Day</include>
@@ -4416,7 +4416,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator7Day</include>
@@ -4459,7 +4459,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator7Day</include>
@@ -4502,7 +4502,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator7Day</include>
@@ -4545,7 +4545,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator7Day</include>
@@ -4588,7 +4588,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 				</control>
 			</control>
@@ -4635,7 +4635,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<left>340</left>
@@ -4681,7 +4681,7 @@ tween="back" easing="out" />
 						<timeperimage>75</timeperimage>
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 				</control>
 			</control>
@@ -4719,7 +4719,7 @@ tween="back" easing="out" />
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
 						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(36Hour.1.FanartCode)]</imagepath>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator36hour</include>
@@ -4752,7 +4752,7 @@ tween="back" easing="out" />
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
 						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(36Hour.2.FanartCode)]</imagepath>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherSeparator36hour</include>
@@ -4785,7 +4785,7 @@ tween="back" easing="out" />
 						<randomize>false</randomize>
 						<fadetime>0</fadetime>
 						<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(36Hour.3.FanartCode)]</imagepath>
-						<visible>Skin.HasSetting(weathericons)</visible>
+						<visible>Skin.HasSetting(weathericons) | SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 					</control>
 				</control>
 			</control>

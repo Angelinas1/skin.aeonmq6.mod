@@ -359,6 +359,15 @@
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.1.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>CurrentDailyIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.1.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -400,6 +409,15 @@
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.2.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>CurrentDailyIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.2.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -441,6 +459,15 @@
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.3.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>CurrentDailyIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.3.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -482,6 +509,15 @@
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.4.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>CurrentDailyIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.4.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -523,6 +559,15 @@
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.5.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>CurrentDailyIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.5.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -564,6 +609,15 @@
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.6.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>CurrentDailyIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.6.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -605,6 +659,15 @@
 	<control type="image"><!-- Icone -->
 	<include>CurrentDailyIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.7.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>CurrentDailyIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.7.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="image">
 	<include>CurrentArrowUp</include>
@@ -759,6 +822,15 @@
 	<control type="image"><!-- Icone -->
 	<include>36HourIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.1.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>36HourIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(36Hour.1.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>36HourOutlook</include>
@@ -794,10 +866,19 @@
 	<control type="image"><!-- Icone -->
 	<include>36HourIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.2.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>36HourIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(36Hour.2.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>36HourOutlook</include>
-	<info>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.2.OutlookIcon)]</info>
+	<info>Window.Property(36Hour.2.Outlook)</info>
 	</control>
 	<control type="image">
 	<include>36HourArrowUp</include>
@@ -828,7 +909,16 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>36HourIcon</include>
-	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.3.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(36Hour.1.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>36HourIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(36Hour.1.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>36HourOutlook</include>
@@ -979,6 +1069,15 @@
 	<control type="image"><!-- Icone -->
 	<include>WeekendIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Weekend.1.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>WeekendIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Weekend.1.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>WeekendOutlook</include>
@@ -1020,6 +1119,15 @@
 	<control type="image"><!-- Icone -->
 	<include>WeekendIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Weekend.2.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>WeekendIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Weekend.2.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>WeekendOutlook</include>
@@ -1235,6 +1343,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.1.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.1.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1268,6 +1385,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.2.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.2.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1301,6 +1427,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.3.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.3.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1333,7 +1468,16 @@
 	</control>
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
-	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.4.OutlookIcon)]</texture>
+	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.5.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.5.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1367,6 +1511,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.5.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.5.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1400,6 +1553,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.6.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.6.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1433,6 +1595,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.7.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.7.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1466,6 +1637,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.8.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.8.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1499,6 +1679,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.9.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.9.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1532,6 +1721,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.10.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.10.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1565,6 +1763,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.11.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.11.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1598,6 +1805,15 @@
 	<control type="image"><!-- Icone -->
 	<include>HourlyOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Hourly.12.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>HourlyOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Hourly.12.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Condicao -->
 	<include>HourlyOutlook</include>
@@ -1819,6 +2035,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.1.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.1.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1852,6 +2077,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.2.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.2.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1885,6 +2119,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.3.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.3.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1918,6 +2161,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.4.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.4.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1951,6 +2203,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.5.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.5.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -1984,6 +2245,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.6.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.6.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2017,6 +2287,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.7.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.7.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2050,6 +2329,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.8.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.8.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2083,6 +2371,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.9.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.9.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2116,6 +2413,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.10.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.10.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2149,6 +2455,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.11.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.11.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2182,6 +2497,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.12.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.12.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2215,6 +2539,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.13.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.13.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2248,6 +2581,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.14.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.14.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2281,6 +2623,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.15.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.15.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
@@ -2314,6 +2665,15 @@
 	<control type="image"><!-- Icone -->
 	<include>DailyListOutlookIcon</include>
 	<texture>$INFO[skin.string(CustomWeatherIconFolder)]$INFO[Window.Property(Daily.16.OutlookIcon)]</texture>
+	<visible>!SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
+	</control>
+	<control type="multiimage">
+	<include>DailyListOutlookIcon</include>
+	<timeperimage>75</timeperimage>
+	<randomize>false</randomize>
+	<fadetime>0</fadetime>
+	<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.16.FanartCode)]</imagepath>
+	<visible>SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.animated/)</visible>
 	</control>
 	<control type="label"><!-- Previsao -->
 	<include>DailyListOutlook</include>
