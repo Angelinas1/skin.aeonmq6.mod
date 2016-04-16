@@ -2201,6 +2201,7 @@
 		<value condition="SubString(ListItem(0).Filenameandpath,dvd) | SubString(ListItem(0).Filenameandpath,.ifo,Right) | SubString(ListItem(0).Filenameandpath,.iso,Right) + ![SubString(ListItem(0).Filenameandpath,bluray) | SubString(ListItem(0).Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)]">$VAR[value_codecdvd]</value>
 		<value condition="SubString(ListItem(0).Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)">$VAR[value_codec3dbd0]</value>
 		<value condition="SubString(ListItem(0).Path,videodb://movies/sets,left)">$VAR[value_codecset0]</value>
+		<value condition="SubString(ListItem.Filenameandpath,4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
 		<value condition="SubString(ListItem(0).Filenameandpath,4k)">$VAR[value_codec4k0]</value>
 		<value condition="![SubString(ListItem(0).Filenameandpath,bluray) | SubString(ListItem(0).Filenameandpath,blu-ray) 
 | SubString(ListItem(0).Filenameandpath,bdrip) | SubString(ListItem(0).Filenameandpath,hdtv) | SubString(ListItem(0).Filenameandpath,web) 
@@ -2765,6 +2766,7 @@ SubString(ListItem.Filenameandpath,.3dbd.)
 		<value condition="SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,.iso,Right) + ![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)]">flags/casecodec/dvd.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)">flags/casecodec/3dbd.png</value>
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">flags/casecodec/set.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) 
 | SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hdtv) | SubString(ListItem.Filenameandpath,web) 
@@ -2773,7 +2775,7 @@ SubString(ListItem.Filenameandpath,.3dbd.)
 | 
 SubString(ListItem.Filenameandpath,web) 
 | SubString(ListItem.Path,videodb://movies/sets,left) | 
-SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
+SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ultra)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_videocodec_modern">
 		<value condition="[SubString(ListItem(0).Filenameandpath,bluray) | SubString(ListItem(0).Filenameandpath,blu-ray) | SubString(ListItem(0).Filenameandpath,bdrip)] + ![SubString(ListItem(0).Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)]">modern/bluray.png</value>
@@ -2791,6 +2793,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),hdtv)">flags/casecodec/hdtv.png</value>
 		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),dvd) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.ifo,Right) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.iso,Right) + ![SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bluray) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.)]">flags/casecodec/dvd.png</value>
 		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.)">flags/casecodec/3dbd.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
 		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bluray) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),blu-ray) 
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bdrip) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),hdtv) 
@@ -2798,7 +2801,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.) 
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.iso,Right) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.ifo,Right) 
 | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),web) | SubString(ListItem.Path,videodb://movies/sets,left) 
-| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),4k)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
+| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),4k)|SubString(ListItem.Filenameandpath,4k Ultra)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_videocodechome">
 		<value condition="[SubString(Container(510).ListItem.Filenameandpath,bluray) | SubString(Container(510).ListItem.Filenameandpath,blu-ray) | SubString(Container(510).ListItem.Filenameandpath,bdrip)] + ![SubString(Container(510).ListItem.Filenameandpath,.3dbd.) | SubString(Container(510).ListItem.Filenameandpath,.3d.)]">flags/casecodec/bluray.png</value>
@@ -2807,13 +2810,14 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(Container(510).ListItem.Filenameandpath,dvd) | SubString(Container(510).ListItem.Filenameandpath,.ifo,Right) | SubString(Container(510).ListItem.Filenameandpath,.iso,Right) + ![SubString(Container(510).ListItem.Filenameandpath,bluray) | SubString(Container(510).ListItem.Filenameandpath,.3dbd.) | SubString(Container(510).ListItem.Filenameandpath,.3d.)]">flags/casecodec/dvd.png</value>
 		<value condition="SubString(Container(510).ListItem.Filenameandpath,.3dbd.) | SubString(Container(510).ListItem.Filenameandpath,.3d.)">flags/casecodec/3dbd.png</value>
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">flags/casecodec/set.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
 		<value condition="SubString(Container(510).ListItem.Filenameandpath,4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(Container(510).ListItem.Filenameandpath,bluray) | SubString(Container(510).ListItem.Filenameandpath,blu-ray) 
 | SubString(Container(510).ListItem.Filenameandpath,bdrip) | SubString(Container(510).ListItem.Filenameandpath,hdtv) 
 | SubString(Container(510).ListItem.Filenameandpath,web) | SubString(Container(510).ListItem.Filenameandpath,dvd) 
 | SubString(Container(510).ListItem.Filenameandpath,.3dbd.) | SubString(Container(510).ListItem.Filenameandpath,.3d.) 
 | SubString(Container(510).ListItem.Filenameandpath,.iso,Right) | SubString(Container(510).ListItem.Filenameandpath,.ifo,Right) 
-| SubString(Container(510).ListItem.Filenameandpath,web) | SubString(Container(510).ListItem.Filenameandpath,4k)]">$INFO[Container(510).ListItem.VideoCodec,flags/casecodec/,.png]</value>
+| SubString(Container(510).ListItem.Filenameandpath,web) | SubString(Container(510).ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ultra)]">$INFO[Container(510).ListItem.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<!-- ######################################################################### Variable Video Codec em reproducao ###################################################################### -->
 	<variable name="value_videocodec_fs">
@@ -2822,12 +2826,13 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(Player.Filenameandpath,hdtv)">flags/casecodec/hdtv.png</value>
 		<value condition="SubString(Player.Filenameandpath,dvd) | SubString(Player.Filenameandpath,.ifo,Right) | SubString(Player.Filenameandpath,.iso,Right) + ![SubString(Player.Filenameandpath,bluray) | SubString(Player.Filenameandpath,.3dbd.) | SubString(Player.Filenameandpath,.3d.)]">flags/casecodec/dvd.png</value>
 		<value condition="SubString(Player.Filenameandpath,.3dbd.) | SubString(Player.Filenameandpath,.3d.)">flags/casecodec/3dbd.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
 		<value condition="SubString(Player.Filenameandpath,4k)">flags/casecodec/4k.png</value>
 		<value condition="![SubString(Player.Filenameandpath,bluray) | SubString(Player.Filenameandpath,blu-ray) 
 | SubString(Player.Filenameandpath,bdrip) | SubString(Player.Filenameandpath,hddvd) | SubString(Player.Filenameandpath,dvd) 
 | SubString(Player.Filenameandpath,.ifo,Right) | SubString(Player.Filenameandpath,.iso,Right) | SubString(Player.Filenameandpath,.3dbd.) 
 | SubString(Player.Filenameandpath,.3d.) | SubString(Player.Filenameandpath,web) | SubString(ListItem(0).Path,videodb://movies/sets,left) 
-| SubString(Player.Filenameandpath,4k)]">$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+| SubString(Player.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ultra)]">$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<!-- ######################################################################### Variable Mpaa Flags ######################################################################### -->
 	<variable name="value_mpaa">
@@ -3747,6 +3752,7 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 		<value condition="SubString(skin.string(codec_4k),dvd)">flags/casecodec/dvd.png</value>
 		<value condition="SubString(skin.string(codec_4k),set)">flags/casecodec/set.png</value>
 		<value condition="SubString(skin.string(codec_4k),4k)">flags/casecodec/4k.png</value>
+		<value condition="SubString(skin.string(codec_4k),4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
 	</variable>
 	<variable name="value_codec4k0">
 		<value condition="!SubString(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
@@ -4490,8 +4496,8 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_defaultvideofanart">
 		<value condition="![IsEmpty(skin.string(windowbg)) | Container.Content(genres)] + IsEmpty(ListItem.Art(fanart))">$INFO[skin.string(windowbg)]</value>
-		<value condition="Container.Content(movies) + !Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]+!IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart))+!Skin.HasSetting(AnimatedPosters)">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</value>
-		<value condition="Container.Content(movies) + !Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]+[IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart))|Skin.HasSetting(AnimatedPosters)]">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="Container.Content(movies) + !Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]+!IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart))+!Skin.HasSetting(AnimatedFanart)">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</value>
+		<value condition="Container.Content(movies) + !Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]+[IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart))|Skin.HasSetting(AnimatedFanart)]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(84) + [SubString(skin.string(moviesfanart),fanart) | SubString(skin.string(moviesfanart),extra) + IsEmpty(Control.GetLabel(5020))]">special://skin/backgrounds/red_metal.jpg</value>
 		<value condition="Container.Content(musicvideos) + [SubString(skin.string(musicvideosfanart),fanart) | SubString(skin.string(musicvideosfanart),extra) + IsEmpty(Control.GetLabel(5020))]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(tvshows) + !Control.IsVisible(84) + [SubString(skin.string(tvshowsfanart),fanart) | SubString(skin.string(tvshowsfanart),extra) + IsEmpty(Control.GetLabel(5020))]">$INFO[ListItem.Art(fanart)]</value>

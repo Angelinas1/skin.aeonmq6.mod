@@ -364,6 +364,11 @@
 					<onclick>Skin.ToggleSetting(AnimatedPosters)</onclick>
 					<selected>!Skin.HasSetting(AnimatedPosters)</selected>
 				</control>
+					<label>Enable helper AnimatedFanart</label>
+					<include>TopMenuRadioButton</include>
+					<onclick>Skin.ToggleSetting(AnimatedFanart)</onclick>
+					<selected>!Skin.HasSetting(AnimatedFanart)</selected>
+				</control>
 				<control type="radiobutton" id="9120">
 					<label>Enable forced views</label>
 					<include>TopMenuRadioButton</include>
