@@ -5314,10 +5314,12 @@ SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,flags/casecod
 	</variable>
 	<variable name="value_poster">
 		<value condition="!IsEmpty(Window(home).Property(SkinHelper.PVR.Poster))">$INFO[Window(home).Property(SkinHelper.PVR.Poster)]</value>
-		<value condition="!IsEmpty(ListItem.Art(poster)) +  !StringCompare(ListItem.Art(animatedposter), )+ !Skin.HasSetting(AnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
-		<value condition="!IsEmpty(ListItem.Art(poster)) + [StringCompare(ListItem.Art(animatedposter), )|Skin.HasSetting(AnimatedPosters)]">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(poster)) +  !StringCompare(ListItem.Art(animatedposter), ) + !Skin.HasSetting(AnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
+		<value condition="!IsEmpty(ListItem.Art(poster)) + [StringCompare(ListItem.Art(animatedposter), ) | Skin.HasSetting(AnimatedPosters)]">$INFO[ListItem.Art(poster)]</value>
 		<value condition="![IsEmpty(ListItem.Art(tvshow.poster)) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.poster)]</value>
-		<value condition="IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster)) + ![Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(years) | Container.Content(episodes)] | Container.Content(episodes)">$INFO[ListItem.Icon]</value>
+		<value condition="IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster)) + ![Container.Content(artists) | Container.Content(albums) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(years) | Container.Content(episodes)] | Container.Content(episodes)">$INFO[ListItem.Icon]</value>
+		<value condition="![Control.IsVisible(51) | Control.IsVisible(55)]+[Container.Content(artists) | Container.Content(albums)]">$INFO[ListItem.Icon]</value>
+		<value condition="[Control.IsVisible(51) | Control.IsVisible(55)]+[Container.Content(artists) | Container.Content(albums)]">$INFO[Window(Home).Property(SkinHelper.Music.Thumb)]</value>
 		<value condition="Window.IsActive(25) + Container.Content(genres) + !Skin.HasSetting(externalvideogenreicon)">genres/video/$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="Window.IsActive(25) + Container.Content(genres) + Skin.HasSetting(externalvideogenreicon)">$INFO[Skin.String(CustomVideoGenreIcon)]$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(genres) + !Skin.HasSetting(externalmusicgenreicon)">genres/music/$INFO[ListItem.Label,,.jpg]</value>

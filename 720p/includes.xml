@@ -954,6 +954,34 @@
 		<font>Font_15</font>
 		<textcolor>FFFFFAF0</textcolor>
 	</include>
+	<include name="SizeMusicArtCase">
+		<left>695</left>
+		<top>120</top>
+		<height>341</height>
+		<width>341</width>
+		<aspectratio align="left">stretch</aspectratio>
+	</include>
+	<include name="SizeMusicArtNoCase">
+		<left>687</left>
+		<top>80</top>
+		<height>386</height>
+		<width>386</width>
+		<aspectratio align="left">keep</aspectratio>
+	</include>
+	<include name="LeftMusicDiscCase">
+		<left>840</left>
+		<top>100</top>
+		<width>345</width>
+		<height>345</height>
+		<aspectratio align="center" aligny="top">stretch</aspectratio>
+	</include>
+	<include name="LeftMusicADiscNoCase">
+		<left>880</left>
+		<top>100</top>
+		<width>345</width>
+		<height>345</height>
+		<aspectratio align="center" aligny="top">stretch</aspectratio>
+	</include>
 	<include name="ButtonColor">
 		<left>0</left>
 		<top>0</top>

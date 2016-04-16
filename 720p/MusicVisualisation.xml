@@ -215,7 +215,7 @@
 				<width>350</width>
 				<height>244</height>
 				<fadetime>200</fadetime>
-				<texture flipy="true" fallback="DefaultAudio.png" diffuse="thumb_reflect.png" background="true">$INFO[MusicPlayer.Cover]</texture>
+				<texture flipy="true" fallback="$INFO[MusicPlayer.Cover]" diffuse="thumb_reflect.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
 			<control type="image">
@@ -224,7 +224,7 @@
 				<width>350</width>
 				<height>244</height>
 				<fadetime>200</fadetime>
-				<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture>
+				<texture fallback="$INFO[MusicPlayer.Cover]" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
 				<aspectratio align="left">keep</aspectratio>
 			</control>
 			<control type="image">

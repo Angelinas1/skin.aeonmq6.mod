@@ -1,6 +1,7 @@
 <window>
 	<!-- Aeon MQ 6 -->
 	<defaultcontrol always="true">149</defaultcontrol>
+	<menucontrol>9100</menucontrol>
 	<onload condition="system.hasaddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<onload>ClearProperty(logo,home)</onload>
 	<onload>ClearProperty(Banner,home)</onload>
@@ -572,39 +573,22 @@
 				<height>60</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[Window(home).Property(Logo)]</texture>
-				<visible>!IsEmpty(Window(home).Property(Logo))</visible>
-			</control>
-			<control type="image">
-				<!-- Thumb cv -->
-				<left>887</left>
-				<top>110</top>
-				<width>345</width>
-				<height>345</height>
-				<texture diffuse="cdart_diffuse.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/cd.png]</texture>
-				<fadetime>FanartCrossFadeTime</fadetime>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
-				<include>Animation_ViewsCDart</include>
+				<visible>!IsEmpty(Window(home).Property(Logo))+Skin.HasSetting(music_artlogo)</visible>
 			</control>
 			<control type="image">
 				<!-- Thumb cd fake-->
-				<left>887</left>
-				<top>110</top>
-				<width>345</width>
-				<height>345</height>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
+				<include condition="Skin.HasSetting(music_case)">LeftMusicDiscCase</include>
+				<include condition="!Skin.HasSetting(music_case)">LeftMusicADiscNoCase</include>
 				<texture diffuse="cdart_diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 				<include>Animation_ViewsCDart</include>
+				<visible>Skin.HasSetting(music_fakedisc)</visible>
 			</control>
 			<control type="image">
 				<!-- Thumb cd from helper-->
-				<left>887</left>
-				<top>110</top>
-				<width>345</width>
-				<height>345</height>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
+				<include condition="Skin.HasSetting(music_case)">LeftMusicDiscCase</include>
+				<include condition="!Skin.HasSetting(music_case)">LeftMusicADiscNoCase</include>
 				<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;album=$INFO[Listitem.Album]&amp;type=discart</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
@@ -612,10 +596,8 @@
 			</control>
 			<control type="image">
 				<!-- Thumb cd -->
-				<left>887</left>
-				<top>110</top>
-				<width>345</width>
-				<height>345</height>
+				<include condition="Skin.HasSetting(music_case)">LeftMusicDiscCase</include>
+				<include condition="!Skin.HasSetting(music_case)">LeftMusicADiscNoCase</include>
 				<texture diffuse="cdart_diffuse.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/cd.png]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="center" aligny="top">stretch</aspectratio>
@@ -624,13 +606,38 @@
 			</control>
 			<control type="image">
 				<!-- Thumb -->
-				<left>687</left>
-				<top>80</top>
-				<height>386</height>
-				<width>563</width>
-				<aspectratio align="left">keep</aspectratio>
+				<include condition="Skin.HasSetting(music_case)">SizeMusicArtCase</include>
+				<include condition="!Skin.HasSetting(music_case)">SizeMusicArtNoCase</include>
+				<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.Thumb)]</texture>
+				<visible>IsEmpty(ListItem.Icon)</visible>
+			</control>
+			<control type="image">
+				<!-- Thumb -->
+				<include condition="Skin.HasSetting(music_case)">SizeMusicArtCase</include>
+				<include condition="!Skin.HasSetting(music_case)">SizeMusicArtNoCase</include>
 				<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Listitem.Icon]</texture>
 				<visible>!IsEmpty(ListItem.Icon)</visible>
+			</control>
+			<control type="image"><!-- Case -->
+				<left>687</left>
+				<top>75</top>
+				<height>398</height>
+				<width>398</width>
+				<aspectratio align="left">keep</aspectratio>
+				<fadetime>FanartCrossFadeTime</fadetime>
+				<texture>case_music.png</texture>
+				<include>Animation_CaseGlass</include>
+				<visible>Skin.HasSetting(music_case)</visible>
+			</control>
+			<control type="image">
+				<!-- Logo -->
+				<left>667</left>
+				<top>85</top>
+				<width>398</width>
+				<height>30</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$INFO[Window(home).Property(Logo)]</texture>
+				<visible>!IsEmpty(Window(home).Property(Logo))+Skin.HasSetting(music_case)</visible>
 			</control>
 			<control type="image">
 				<!-- Banner -->
@@ -1396,6 +1403,7 @@
 				</control>
 			</control>
 			<include>BGBlack</include>
+			<include>TopMenu_M</include>
 		</control>
 	</controls>
 </window>

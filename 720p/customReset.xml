@@ -159,6 +159,12 @@
 	<onfocus>Skin.SetBool(ontvtunes)</onfocus>
 	<onfocus>Skin.SetBool(widget_cast)</onfocus>
 	<onfocus>Skin.SetBool(widget_one)</onfocus>
+	<onfocus>Skin.SetBool(music_fakedisc)</onfocus>
+	<onfocus>Skin.SetBool(music_artlogo)</onfocus>
+	<onfocus>Skin.SetBool(music_case)</onfocus>
+	<onfocus>Skin.SetBool(sextendsett_fakedisc)</onfocus>
+	<onfocus>Skin.SetBool(sextendsett_artlogo)</onfocus>
+	<onfocus>Skin.SetBool(sextendsett_case)</onfocus>
 	<onfocus>Skin.SetString(vis_layout_time,10)</onfocus>
 	<onfocus>Skin.SetString(extra_panel_layout,panel_layout_case)</onfocus>
 	<onfocus>Skin.SetString(m_panel_layout,panel_layout_1)</onfocus>
