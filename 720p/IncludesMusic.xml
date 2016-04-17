@@ -36,6 +36,12 @@
 				<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
 				<visible>[Container.Content(artists) | Container.Content(albums)] + SubString(skin.string(musicfanart),extra)</visible>
 			</control>
+			<control type="image" id="5034">
+				<!-- Extra Fanart Artist/Album -->
+				<include>WindowBG</include>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.FanArt)]</texture>
+				<visible>[Container.Content(artists) | Container.Content(albums)] + IsEmpty(ListItem.Art(fanart))</visible>
+			</control>
 			<control type="multiimage" id="5033">
 				<!-- Extra Fanart Song -->
 				<include>WindowBG</include>

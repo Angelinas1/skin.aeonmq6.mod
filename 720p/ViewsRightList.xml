@@ -58,24 +58,23 @@
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
 				</control>
-				<!-- <control type="image" id="15103">
-
+				<control type="image" id="15103">
 					<left>360</left>
 					<top>440</top>
 					<width>300</width>
 					<height>110</height>
-					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;album=$INFO[Listitem.Album]&amp;type=clearlogo</texture>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
-				</control> -->	
+					<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]+ IsEmpty(Control.GetLabel(5103))</visible>
+				</control>
 				<control type="image" id="5104">
 					<!-- clearlogo e clearart -->
 					<left>360</left>
 					<top>440</top>
 					<width>300</width>
 					<height>110</height>
-					<animation effect="slide" start="0,0" end="200,0"  condition="SubString(ListItem.Path,videodb://movies/sets,left)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="100,0"  condition="SubString(ListItem.Path,videodb://movies/sets,left)">Conditional</animation>
 					<texture background="true">$VAR[value_logoandclearart]</texture>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
@@ -674,7 +673,6 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<!-- CDART SETS -->
 					<left>260</left>
 					<top>210</top>
 					<orientation>horizontal</orientation>
@@ -693,7 +691,7 @@
 						<effect type="fade" start="100" end="0" time="200"/>
 					</animation>
 					<animation effect="slide" end="0,-135" time="500" tween="sine" easing="out" condition="![IsEmpty(Control.GetLabel(5103)) | IsEmpty(Control.GetLabel(5104))] + SubString(ListItem.Path,videodb://movies/sets,left)">Conditional</animation>
-					<visible>![IsEmpty(Window(0).Property(SkinHelper.MovieSet.0.DiscArt)) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(25) + SubString(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)</visible>
+					<visible>IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt))+[![IsEmpty(Window(0).Property(SkinHelper.MovieSet.0.DiscArt)) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(25) + SubString(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<include>RightListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
@@ -719,6 +717,73 @@
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
 						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.4.DiscArt))</visible>
 					</control>
+				</control>
+				<control type="grouplist">
+					<!-- CDART SETS da direita -->
+					<left>250</left>
+					<top>60</top>
+					<orientation>vertical</orientation>
+					<itemgap>-92</itemgap>
+					<animation type="WindowOpen">
+						<effect type="slide" start="-100,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="100" time="500" delay="500"/>
+					</animation>
+					<animation type="Visible">
+						<effect type="slide" start="-100,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="100" time="500" delay="500"/>
+					</animation>
+					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+					<animation type="Hidden">
+						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
+						<effect type="fade" start="100" end="0" time="200"/>
+					</animation>
+					<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt))+[![IsEmpty(Window(0).Property(SkinHelper.MovieSet.10.DiscArt)) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(25) + SubString(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)]</visible>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.11.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.11.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.12.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.12.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.13.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.13.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.14.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.14.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.15.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.15.DiscArt))</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<!-- CDART SETS da direita -->
+					<left>250</left>
+					<top>60</top>
+					<orientation>vertical</orientation>
+					<itemgap>-92</itemgap>
+					<animation type="WindowOpen">
+						<effect type="slide" start="-100,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="100" time="500" delay="500"/>
+					</animation>
+					<animation type="Visible">
+						<effect type="slide" start="-100,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="100" time="500" delay="500"/>
+					</animation>
+					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+					<animation type="Hidden">
+						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
+						<effect type="fade" start="100" end="0" time="200"/>
+					</animation>
+					<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt))+[![IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt)) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(25) + SubString(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<include>RightListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
@@ -745,6 +810,53 @@
 						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.9.DiscArt))</visible>
 					</control>
 				</control>
+				<control type="grouplist">
+					<!-- CDART SETS da esquerda -->
+					<left>190</left>
+					<top>60</top>
+					<orientation>vertical</orientation>
+					<itemgap>-92</itemgap>
+					<animation type="WindowOpen">
+						<effect type="slide" start="-100,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="100" time="500" delay="500"/>
+					</animation>
+					<animation type="Visible">
+						<effect type="slide" start="-100,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="100" time="500" delay="500"/>
+					</animation>
+					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+					<animation type="Hidden">
+						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
+						<effect type="fade" start="100" end="0" time="200"/>
+					</animation>
+					<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.5.DiscArt))+[![IsEmpty(Window(0).Property(SkinHelper.MovieSet.0.DiscArt)) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(25) + SubString(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)]</visible>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.0.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.1.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.2.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.3.DiscArt))</visible>
+					</control>
+					<control type="image">
+						<include>RightListDisc</include>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(0).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
+						<visible>!IsEmpty(Window(0).Property(SkinHelper.MovieSet.4.DiscArt))</visible>
+					</control>
+				</control>
+
 				<control type="group">
 					<!-- VIDEO SEM ESTOJO -->
 					<include>Animation_Fade</include>
