@@ -28,29 +28,24 @@
 		<control type="image">
 			<!-- Fanart -->
 			<include>WindowBG</include>
-			<texture background="true">$INFO[MusicPlayer.Property(fanart_image)]</texture>
+			<texture background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.FanArt)]</texture>
 			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] 
-+ IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044)) | [StringCompare(skin.string(vis_bg),slideshow) 
+			<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] | [StringCompare(skin.string(vis_bg),slideshow) 
 | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5045)) | [StringCompare(skin.string(vis_bg),slideshowmosaic) 
-| StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Control.GetLabel(5047)) 
-+ IsEmpty(Control.GetLabel(5048)) + IsEmpty(Control.GetLabel(5049)) + IsEmpty(Control.GetLabel(5050)) 
-+ IsEmpty(Control.GetLabel(5051))</visible>
+| StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Control.GetLabel(5146))</visible>
 		</control>
-		<control type="multiimage" id="5043">
-			<!-- Extra Fanart Song -->
+	<!-- 	<control type="multiimage" id="5043">
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
 			<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] + SubString(skin.string(musicfanart),extra)</visible>
 		</control>
 		<control type="multiimage" id="5044">
-			<!-- Extra Fanart Artist -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
 			<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] + SubString(skin.string(musicfanart),extra) + IsEmpty(Control.GetLabel(5043))</visible>
-		</control>
+		</control> -->
 		<control type="multiimage" id="5045">
 			<!-- Artist SlideShow -->
 			<aspectratio>keep</aspectratio>
@@ -61,7 +56,7 @@
 			<animation effect="zoom" start="100" end="0" center="auto" easing="in" tween="sine" time="300">WindowClose</animation>
 			<animation effect="zoom" start="100" end="0" center="auto" easing="in" tween="sine" time="300">Hidden</animation>
 			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),slideshowmix)">Conditional</animation>
-			<visible>(StringCompare(skin.string(vis_bg),slideshow) | StringCompare(skin.string(vis_bg),slideshowmix))</visible>
+			<visible>StringCompare(skin.string(vis_bg),slideshow) | StringCompare(skin.string(vis_bg),slideshowmix)</visible>
 		</control>
 		<control type="multiimage" id="5046">
 			<!-- Artist SlideShow Mosaico -->
@@ -150,7 +145,7 @@
 			<include>MosaicBG_1</include>
 			<left>853</left>
 			<top>360</top>
-			<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.title] cover</texture>
+			<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.title] $INFO[MusicPlayer.Genre]</texture>
 			<visible>[StringCompare(skin.string(vis_bg),slideshowmosaic) | StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046))</visible>
 		</control>
 		<control type="image">
@@ -160,30 +155,6 @@
 			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
 			<visible>[StringCompare(skin.string(vis_bg),slideshow) | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Control.GetLabel(5146))</visible>
 		</control>
-				<control type="image" id="6000">
-					<left>0</left>
-					<top>0</top>
-					<width>0</width>
-					<height>0</height>
-					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;track=$INFO[Listitem.Title]&amp;album=$INFO[Listitem.Album]&amp;type=discart</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-				</control>
-					<control type="image" id="6001">
-					<left>0</left>
-					<top>0</top>
-					<width>0</width>
-					<height>0</height>
-					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;type=banner</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-				</control>
-				<control type="image" id="6001">
-					<left>0</left>
-					<top>0</top>
-					<width>0</width>
-					<height>0</height>
-					<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;type=clearlogo</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-				</control>
 		<control type="group">
 			<!-- layout estilo 1 -->
 			<left>0</left>
@@ -289,7 +260,7 @@
 				<height>240</height>
 				<timeperimage>5000</timeperimage>
 				<randomize>true</randomize>
-				<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath>
+				<imagepath fallback="http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]" background="true">$VAR[value_playerthumb]</imagepath>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>!Player.IsInternetStream</visible>
@@ -309,7 +280,7 @@
 				<top>-5</top>
 				<width>360</width>
 				<height>240</height>
-				<texture background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+				<texture background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 				<fadetime>300</fadetime>
 				<aspectratio align="center">keep</aspectratio>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
@@ -526,9 +497,9 @@
 				<top>10</top>
 				<width>220</width>
 				<height>95</height>
-				<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=clearlogo</texture>
+				<texture fallback="Empty.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
 				<aspectratio align="left">keep</aspectratio>
-				<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5704),Empty.png)</visible>
+				<visible>stringcompare(Control.GetLabel(5704),Empty.png)</visible>
 			</control>
 			<control type="label">
 				<!-- Nome do artista -->
@@ -678,7 +649,7 @@
 					<top>-53</top>
 					<width>290</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio+!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
@@ -716,7 +687,7 @@
 				<include>InvisibleButton</include>
 				<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</imagepath>
 			</control>
-			<control type="image">
+			<control type="image" id="5053">
 				<!-- logo artista -->
 				<left>465</left>
 				<top>-80</top>
@@ -727,13 +698,13 @@
 				<aspectratio align="right" aligny="bottom">keep</aspectratio>
 				<visible>!IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
 			</control>
-			<control type="image">
+			<control type="image" id="5054">
 				<!-- logo artista -->
 				<left>465</left>
 				<top>-80</top>
 				<width>180</width>
 				<height>100</height>
-				<texture>http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;type=clearlogo</texture>
+				<texture fallback="Empty.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
 				<fadetime>300</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 			</control>
@@ -750,7 +721,6 @@
 				<shadowcolor>AA000000</shadowcolor>
 				<scroll>false</scroll>
 				<scrollout>false</scrollout>
-				<visible>IsEmpty(Control.GetLabel(5052))</visible>
 			</control>
 			<control type="label">
 				<!-- Nome da faixa -->
@@ -980,7 +950,17 @@
 					<height>290</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5641),Empty.png)+stringcompare(Control.GetLabel(5642),Empty.png)</visible>
+					<visible>!Pvr.IsPlayingRadio</visible>
+				</control>
+				<control type="image" id="5650">
+					<include>Animation_CDart</include>
+					<left>-215</left>
+					<top>120</top>
+					<width>290</width>
+					<height>290</height>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
+					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="image" id="5641">
 					<include>Animation_CDart</include>
@@ -998,7 +978,7 @@
 					<top>120</top>
 					<width>290</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
+					<texture diffuse="Empty.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio + !IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
@@ -1071,7 +1051,7 @@
 				<texture fallback="Empty.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
 				<fadetime>300</fadetime>
 				<aspectratio align="right" aligny="bottom">keep</aspectratio>
-				<visible>!Pvr.IsPlayingRadio + !IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))</visible>
+				<visible>!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))</visible>
 			</control>
 			<control type="label">
 				<!-- Nome do artista -->
@@ -1086,7 +1066,7 @@
 				<shadowcolor>AA000000</shadowcolor>
 				<scroll>false</scroll>
 				<scrollout>false</scrollout>
-				<visible>!Pvr.IsPlayingRadio + IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))+StringCompare(Control.GetLabel(5649),Empty.png)</visible>
+				<visible>!Pvr.IsPlayingRadio + IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))+StringCompare(Control.GetLabel(5648),Empty.png)</visible>
 			</control>
 			<control type="label">
 				<!-- Nome da faixa -->

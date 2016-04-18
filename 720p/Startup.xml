@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window><!-- Aeon MQ 6 -->
 	<defaultcontrol always="true">10</defaultcontrol>
+	<onload condition="Skin.String(SplashScreen)">RunScript(script.skin.helper.service,action=splashscreen,file=$INFO[Skin.String(SplashScreen)],duration=10)</onload>
+	<onload condition="!Skin.String(SplashScreen)">ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onload condition="System.HasAddon(script.games.rom.collection.browser)">RunScript(script.games.rom.collection.browser,limit=12)</onload>
-	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
 	<onload condition="Skin.HasSetting(custommode)">Skin.Reset(custommode)</onload>
 	<onload condition="Skin.HasSetting(submode)">Skin.Reset(submode)</onload>
 	<onload condition="Skin.HasSetting(startplay)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
