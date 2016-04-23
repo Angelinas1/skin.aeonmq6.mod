@@ -68,11 +68,6 @@
 					<include>InvisibleButton</include>
 					<label>$VAR[value_drive]</label>
 				</control>
-				<control type="image" id="557">
-					<!-- Controle estudio -->
-					<include>InvisibleButton</include>
-					<texture>$INFO[ListItem.Property(Album_Label),flags/recordlabel/,.png]</texture>
-				</control>
 				<control type="button" id="9900">
 					<!-- to menu/kiosk condition -->
 					<include>InvisibleButton</include>
@@ -197,8 +192,7 @@
 								<!-- Gravadora -->
 								<height>45</height>
 								<include>FlagImage</include>
-								<texture>$INFO[ListItem.Property(Album_Label),flags/recordlabel/,.png]</texture>
-								<visible>!IsEmpty(Control.GetLabel(557))</visible>
+								<texture>$VAR[value_recordlabel_path]$INFO[ListItem.Property(Album_Label)].png</texture>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>

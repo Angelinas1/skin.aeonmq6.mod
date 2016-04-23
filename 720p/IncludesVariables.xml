@@ -3831,7 +3831,10 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.outline-hd/)">outline-hd</value>
 		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.transparent/)">transparent</value>
 		<value condition="SubString(skin.string(CustomWeatherIconFolder),resource://resource.images.weathericons.grey/)">grey</value>
-		</variable>
+	</variable>
+	<variable name="value_recordlabel_path">
+		<value>resource://resource.images.recordlabels.white/</value>
+	</variable>
 	<variable name="value_arrow1">
 		<value condition="Control.HasFocus(510) | Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(9100) | Control.HasFocus(9101)">arrow_left.png</value>
 		<value condition="Control.HasFocus(9000)">arrow_left.png</value>
@@ -4004,7 +4007,7 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.showsforgenre)">plugin://script.skin.helper.service/?action=showsforgenre&amp;limit=50&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.favouritemedia)">plugin://script.skin.helper.service/?action=favouritemedia&amp;limit=50&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.inprogressmedia)">plugin://script.skin.helper.service/?action=inprogressmedia&amp;limit=50&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.nextairedtvshows)">plugin://script.skin.helper.service/?action=nextairedtvshows&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras.helper.nextairedtvshows)">plugin://script.skin.helper.service/?action=nextairedtvshows&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
 	</variable>
 	<variable name="value_widgetsextras2">
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),extras2.mostplayedroms)">plugin://script.extendedinfo?info=youtubeplaylist&amp;&amp;id=rEnWoR732-BHrPp_Pm8_VleD68f9s14-</value>
@@ -4230,7 +4233,7 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 	</variable>
 	<variable name="value_playerthumb">
 		<value condition="!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + !Pvr.IsPlayingRadio">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
-		<value condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + !Pvr.IsPlayingRadio">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</value>
+		<value condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + !Pvr.IsPlayingRadio">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</value>
 		<value condition="Pvr.IsPlayingRadio">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Title]</value>
 	</variable>
 	<variable name="value_playercontrols">
@@ -5324,8 +5327,10 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="!IsEmpty(ListItem.Art(poster)) + [StringCompare(ListItem.Art(animatedposter), ) | Skin.HasSetting(AnimatedPosters)]">$INFO[ListItem.Art(poster)]</value>
 		<value condition="![IsEmpty(ListItem.Art(tvshow.poster)) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster)) + ![Container.Content(artists) | Container.Content(albums) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(years) | Container.Content(episodes)] | Container.Content(episodes)">$INFO[ListItem.Icon]</value>
+		<value condition="[Control.IsVisible(51) | Control.IsVisible(55)]+Container.Content(artists)">$INFO[Window(Home).Property(SkinHelper.Music.ArtistThumb)]</value>
+		<value condition="[Control.IsVisible(51) | Control.IsVisible(55)]+Container.Content(albums)">$INFO[Window(Home).Property(SkinHelper.Music.AlbumThumb)]</value>
 		<value condition="![Control.IsVisible(51) | Control.IsVisible(55)]+[Container.Content(artists) | Container.Content(albums)]">$INFO[ListItem.Icon]</value>
-		<value condition="[Control.IsVisible(51) | Control.IsVisible(55)]+[Container.Content(artists) | Container.Content(albums)]">$INFO[Window(Home).Property(SkinHelper.Music.Thumb)]</value>
+		<value condition="IsEmpty(ListItem.Icon) +![Control.IsVisible(51) | Control.IsVisible(55)]+[Container.Content(artists) | Container.Content(albums)]">$INFO[$INFO[Window(Home).Property(SkinHelper.Music.Thumb)]]</value>
 		<value condition="Window.IsActive(25) + Container.Content(genres) + !Skin.HasSetting(externalvideogenreicon)">genres/video/$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="Window.IsActive(25) + Container.Content(genres) + Skin.HasSetting(externalvideogenreicon)">$INFO[Skin.String(CustomVideoGenreIcon)]$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(genres) + !Skin.HasSetting(externalmusicgenreicon)">genres/music/$INFO[ListItem.Label,,.jpg]</value>
@@ -5635,9 +5640,9 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="![Container.Content(files) | Container.Content(addons) | Window.IsActive(pictures) | SubString(ListItem.Path,videodb://movies/sets,left) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) + [Container.Content(albums) | Container.Content(artists)]]">$INFO[ListItem.Plot]</value>
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + !Control.HasFocus(5801)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Plot)]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Summary)][CR]$INFO[ListItem.Property(Addon.Description)]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="Container.Content(songs)">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(albums)">$INFO[Window(Home).Property(SkinHelper.Music.Info)]</value>
+		<value condition="Container.Content(artists)">[COLOR=$VAR[value_headercolor]]$INFO[Window(Home).Property(SkinHelper.Music.Albums)] :[/COLOR][CR]$INFO[Window(Home).Property(SkinHelper.Music.Info)]</value>
+		<value condition="Container.Content(songs)">$INFO[Window(Home).Property(SkinHelper.Music.Info)]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.Plot]$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
 	</variable>
 	<variable name="value_thumbmoviesets">
