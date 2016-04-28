@@ -6031,6 +6031,7 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="IsEmpty(Player.Art(poster))+IsEmpty(Container(510).Player.Art(poster))+IsEmpty(Player.Art(tvshow.poster))+IsEmpty(Window.Property(movie.Poster))">http://localhost:52307/getthumb&title=$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="value_dialogselect_icon">
+        <value condition="Control.IsVisible(3)+IsEmpty(Container(3).ListItem.Icon)+[Container.Content(movies)|Container.Content(tvshows)|Container.Content(episodes)​]">http://localhost:52307/getthumb&amp;title=$INFO[Container(3).Listitem.Label]</value> 
 		<value condition="Control.IsVisible(3)">$INFO[Container(3).ListItem.Icon]</value>
 		<value condition="Control.IsVisible(6)">$INFO[Container(6).ListItem.Icon]</value>
 	</variable>
