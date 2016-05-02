@@ -62,7 +62,13 @@
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.recentsong" label="Music Recent Song" condition="" icon="special://skin/extras/widgetthumbs/21.jpg" description="Widget from helper script">
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
     </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.randomsong" label="Music Random Song" condition="" icon="special://skin/extras/widgetthumbs/21.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.recentalbum" label="Music Recent Album" condition="" icon="special://skin/extras/widgetthumbs/22.jpg" description="Widget from helper script">
+        <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
+    </setting>
+    <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.randomalbum" label="Music Random Album" condition="" icon="special://skin/extras/widgetthumbs/23.jpg" description="Widget from helper script">
         <onselect condition="">Skin.SetString($INFO[Container(9000).ListItem.Property(name)].target,music)</onselect>
     </setting>
     <setting id="$INFO[Container(9000).ListItem.Property(name)].widgets" value="music.recentplayedalbum" label="Music Recent Played Album" condition="" icon="special://skin/extras/widgetthumbs/23.jpg" description="Widget from helper script">

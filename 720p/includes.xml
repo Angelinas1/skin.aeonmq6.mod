@@ -429,6 +429,7 @@
 		<animation effect="slide" start="-10,-10" end="10,10" time="5000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_panscan) + !Window.IsActive(2006)">Conditional</animation>
 		<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(visanimation_panscan) + Window.IsActive(2006)">Conditional</animation>
 		<animation effect="slide" start="-10,-10" end="10,10" time="5000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(visanimation_panscan) + Window.IsActive(2006)">Conditional</animation>
+		<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow))</visible>
 	</include>
 	<include name="MosaicBG_1">
 		<width>426.5</width>

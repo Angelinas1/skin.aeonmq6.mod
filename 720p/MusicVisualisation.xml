@@ -116,6 +116,13 @@
 			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
 			<visible>[StringCompare(skin.string(vis_bg),slideshow) | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5046))</visible>
 		</control>
+		<control type="image">
+			<!-- Fanart -->
+			<include>WindowBG</include>
+			<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</texture>
+			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
+			<visible>[StringCompare(skin.string(vis_bg),slideshow) | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Window(Home).Property(SkinHelper.Player.Music.FanArt))</visible>		
+		</control>
 		<control type="group">
 			<!-- layout estilo 1 -->
 			<left>0</left>
@@ -211,12 +218,43 @@
 				<aspectratio align="left">keep</aspectratio>
 			</control>
 			<control type="image">
+				<!-- reflexo -->
+				<left>890</left>
+				<top>227</top>
+				<width>350</width>
+				<height>244</height>
+				<fadetime>200</fadetime>
+				<texture flipy="true" fallback="$INFO[MusicPlayer.Cover]" diffuse="thumb_reflect.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<left>890</left>
+				<top>-20</top>
+				<width>350</width>
+				<height>244</height>
+				<fadetime>200</fadetime>
+				<texture fallback="$INFO[MusicPlayer.Cover]" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
+				<aspectratio align="left">keep</aspectratio>
+			</control>
+			<control type="image">
 				<left>14</left>
 				<top>-25</top>
 				<width>390</width>
 				<height>270</height>
 				<texture>musicframe.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>29</left>
+				<top>-5</top>
+				<width>360</width>
+				<height>240</height>
+				<timeperimage>5000</timeperimage>
+				<randomize>true</randomize>
+				<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</texture>
+				<fadetime>FanartCrossFadeTime</fadetime>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>!Player.IsInternetStream + IsEmpty(Control.GetLabel(5046))</visible>
 			</control>
 			<control type="multiimage">
 				<left>29</left>
@@ -225,17 +263,18 @@
 				<height>240</height>
 				<timeperimage>5000</timeperimage>
 				<randomize>true</randomize>
-				<imagepath fallback="http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]" background="true">$VAR[value_playerthumb]</imagepath>
+				<imagepath fallback="http://localhost:52307/getthumb&amp;path=$INFO[MusicPlayer.Artist]" background="true">$VAR[value_playerthumb]</imagepath>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>!Player.IsInternetStream</visible>
 			</control>
+
 			<control type="image">
 				<left>0</left>
 				<top>-10</top>
 				<width>200</width>
 				<height>60</height>
-				<texture background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
 				<fadetime>300</fadetime>
 				<aspectratio align="center">keep</aspectratio>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
@@ -993,7 +1032,7 @@
 				<colordiffuse>30FFFFFF</colordiffuse>
 				<texture flipy="true" fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 				<aspectratio align="left">scale</aspectratio>
-				<visible>!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Banner))</visible>
+				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Banner))</visible>
 			</control>
 			<control type="image" id="5648"><!-- logo artista -->
 				<left>465</left>
