@@ -40,10 +40,6 @@
 	<include>Multiplex_Content</include>
 	</control>
 	</include>
-		<control type="button" id="12225">
-			<include>InvisibleButton</include>
-			<onfocus>PlayMedia($INFO[ListItem.Trailer])</onfocus>
-		</control>
 	<include name="Multiplex_Content">
 	<viewtype label="31803">list</viewtype>
 	<left>0</left>
@@ -51,9 +47,9 @@
 	<width>1280</width>
 	<height>360</height>
 	<onup condition="StringCompare(skin.string(multiplexvideopanel),manual) + !StringCompare(ListItem.Label,..)">9961</onup>
-	<onup condition="![StringCompare(skin.string(multiplexvideopanel),manual) + !StringCompare(ListItem.Label,..)]">9900</onup>
+	<onup condition="![StringCompare(skin.string(multiplexvideopanel),manual) + !StringCompare(ListItem.Label,..)]+!StringCompare(skin.string(multiplexlayout),trailer)">9900</onup>
+	<onup condition="![StringCompare(skin.string(multiplexvideopanel),manual) + !StringCompare(ListItem.Label,..)]+StringCompare(skin.string(multiplexlayout),trailer)">87</onup>
 	<ondown>80</ondown>
-	<onfocus condition="StringCompare(skin.string(multiplexvideopanel),auto) + System.IdleTime(8)">12225</onfocus>
 	<orientation>horizontal</orientation>
 	<focusposition>4</focusposition>
 	<scrolltime>400</scrolltime>
@@ -361,7 +357,7 @@
 	<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<visible>Player.HasVideo</visible>
+	<visible>!Player.HasVideo</visible>
 	</control>
 	<control type="videowindow">
 	<left>790</left>
@@ -570,6 +566,35 @@
 	<ondown>9920</ondown>
 	<include>Animation_Fade</include>
 	<visible allowhiddenfocus="true">Control.IsVisible(61) + Control.HasFocus(80)</visible>
+	</control>
+		<control type="button" id="87">
+		<onleft>SetFocus(9900)</onleft>
+		<onright>SetFocus(9900)</onright>
+		<ondown>SetFocus(61)</ondown>
+		<onup>SetFocus(9900)</onup>
+		<left>810</left>
+		<top>310</top>
+		<width>100</width>
+		<height>46</height>
+		<textwidth>297</textwidth>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Font_15</font>
+		<textcolor>FF101010</textcolor>
+		<focusedcolor>FFFFFAF0</focusedcolor>
+		<disabledcolor>FF505050</disabledcolor>
+		<textoffsetx>10</textoffsetx>
+		<texturenofocus>topmenu_button_nofocus.png</texturenofocus>
+		<texturefocus>topmenu_button_focus.png</texturefocus>
+		<alttexturenofocus>topmenu_button_nofocus.png</alttexturenofocus>
+		<alttexturefocus>topmenu_button_focus.png</alttexturefocus>
+		<pulseonselect>false</pulseonselect>
+		<include>Animation_Fade</include>
+		<colordiffuse>FFFFFAF0</colordiffuse>
+		<label>Play Trailer</label>
+		<onfocus>PlayMedia($INFO[ListItem.Trailer],1)</onfocus>
+		<onclick>SetFocus(61)</onclick>
+		<visible allowhiddenfocus="true">Control.HasFocus(87)</visible>
 	</control>
 	</control>
 	</include>
