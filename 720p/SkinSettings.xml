@@ -5192,7 +5192,8 @@
 						<colordiffuse>FFDAA520</colordiffuse>
 						<onclick>Skin.SetString(discaudio,0)</onclick>
 						<onclick>Skin.SetString(discvideo,0)</onclick>
-						<onclick>Skin.SetString(cdart_seconds,1000)</onclick>
+						<onclick>Skin.SetString(newdisc,6)</onclick>
+						<onclick>Skin.SetString(cdart_seconds,20000)</onclick>
 						<onclick>SetFocus(9100)</onclick>
 						<onclick>Notification($LOCALIZE[31656],$LOCALIZE[31237])</onclick>
 					</control>
@@ -5215,6 +5216,13 @@
 						<label>$LOCALIZE[31828] - $LOCALIZE[31353]: [COLOR=$VAR[value_headercolor]]$INFO[Skin.String(customvideodisc)][/COLOR]</label>
 						<onclick>Skin.SetImage(customvideodisc)</onclick>
 						<visible>Container(12024).HasFocus(2)</visible>
+					</control>
+					<control type="button" id="1255">
+						<!-- Caminho do new disco -->
+						<!-- nao trocar id -->
+						<label>New Disc</label>
+						<onclick>ActivateWindow(6655)</onclick>
+						<visible>Container(12024).HasFocus(3)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -5257,6 +5265,7 @@
 						<onup>10020</onup>
 						<ondown condition="Container(12024).HasFocus(1)">Skin.SetString(custom_disc,discaudio)</ondown>
 						<ondown condition="Container(12024).HasFocus(2)">Skin.SetString(custom_disc,discvideo)</ondown>
+						<ondown condition="Container(12024).HasFocus(3)">Skin.SetString(custom_disc,newdisc)</ondown>
 						<ondown>10029</ondown>
 						<onleft>12024</onleft>
 						<onright>12024</onright>
@@ -5280,6 +5289,20 @@
 									<visible>Container(12024).HasFocus(1)</visible>
 								</control>
 							</control>
+							<control type="group">
+								<animation effect="slide" start="0,0" end="100,0" time="800" delay="300" tween="sine" easing="inout" condition="Control.Hasfocus(10029)">Conditional</animation>
+								<control type="image">
+									<include>Animation_CDart</include>
+									<left>350</left>
+									<top>55</top>
+									<width>170</width>
+									<height>170</height>
+									<texture>$INFO[ListItem.Icon]</texture>
+									<aspectratio align="center" aligny="center">keep</aspectratio>
+									<fadetime>FanartCrossFadeTime</fadetime>
+									<visible>Container(12024).HasFocus(3)</visible>
+								</control>
+							</control>
 							<control type="image">
 								<!-- reflexo -->
 								<left>240</left>
@@ -5289,7 +5312,7 @@
 								<aspectratio align="center" aligny="top">keep</aspectratio>
 								<texture flipy="true" diffuse="thumb_reflect.png">DefaultAudio.png</texture>
 								<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
-								<visible>Container(12024).HasFocus(1)</visible>
+								<visible>Container(12024).HasFocus(1)|Container(12024).HasFocus(3)</visible>
 							</control>
 							<control type="image">
 								<left>240</left>
@@ -5299,7 +5322,7 @@
 								<aspectratio align="center" aligny="bottom">keep</aspectratio>
 								<texture>DefaultAudio.png</texture>
 								<bordertexture border="-2">black.png</bordertexture>
-								<visible>Container(12024).HasFocus(1)</visible>
+								<visible>Container(12024).HasFocus(1)|Container(12024).HasFocus(3)</visible>
 							</control>
 							<control type="group">
 								<animation effect="slide" start="0,0" end="100,0" time="800" delay="300" tween="sine" easing="inout" condition="Control.Hasfocus(10029)">Conditional</animation>
@@ -5350,6 +5373,13 @@
 								<label>-</label>
 								<icon>$VAR[value_videodisc]</icon>
 								<onclick>Skin.SetString(custom_disc,discvideo)</onclick>
+								<onclick>SetFocus(12024)</onclick>
+							</item>
+							<item id="3">
+								<!-- New disc audio -->
+								<label>-</label>
+								<icon>$VAR[value_newdisc]</icon>
+								<onclick>Skin.SetString(custom_disc,newdisc)</onclick>
 								<onclick>SetFocus(12024)</onclick>
 							</item>
 						</content>
@@ -5475,12 +5505,15 @@
 									<onclick condition="Container(12024).HasFocus(1) + IsEmpty(Skin.String(customaudiodisc))">SetFocus(1253)</onclick>
 									<onclick condition="Container(12024).HasFocus(2) + !IsEmpty(Skin.String(customvideodisc))">Skin.SetString($INFO[skin.string(custom_disc)],5)</onclick>
 									<onclick condition="Container(12024).HasFocus(2) + IsEmpty(Skin.String(customvideodisc))">SetFocus(1254)</onclick>
+									<onclick condition="Container(12024).HasFocus(3) + !IsEmpty(Skin.String(customnewdisc))">Skin.SetString($INFO[skin.string(custom_disc)],6)</onclick>
+									<onclick condition="Container(12024).HasFocus(3) + IsEmpty(Skin.String(customnewdisc))">SetFocus(1254)</onclick>
 								</item>
 							</content>
 						</control>
 					</control>
 				</control>
 			</control>
+			
 			<!--#######################################################################   AJUSTES GERAIS   #######################################################################-->
 			<control type="grouplist" id="10021">
 				<visible>Container(9100).HasFocus(16)</visible>

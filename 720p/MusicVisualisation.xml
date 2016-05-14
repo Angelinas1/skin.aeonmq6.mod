@@ -4,20 +4,21 @@
 	<allowoverlay>no</allowoverlay>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<onload condition="Skin.HasSetting(nolyrics_on) + ![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onload>
- 	<onload>SetProperty(resetMusicArtCache,reset,home)</onload>
-    <onunload>SetProperty(resetMusicArtCache,reset,home)</onunload>
+	<onload>SetProperty(resetMusicArtCache,reset,home)</onload>
+	<onunload>SetProperty(resetMusicArtCache,reset,home)</onunload>
 	<onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
+	<onunload>ClearProperty(visualisation,home)</onunload>
 	<onunload>Dialog.Close(5600)</onunload>
 	<controls>
-			<control type="image">
-				<left>1280</left>
-				<top>720</top>
-				<width>0</width>
-				<height>0</height>
-				<fadetime>200</fadetime>
-				<texture>$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
-				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Thumb))</visible>
-			</control>
+		<control type="image">
+			<left>1280</left>
+			<top>720</top>
+			<width>0</width>
+			<height>0</height>
+			<fadetime>200</fadetime>
+			<texture>$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
+			<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Thumb))</visible>
+		</control>
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
@@ -43,18 +44,20 @@
 | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5045)) | [StringCompare(skin.string(vis_bg),slideshowmosaic) 
 | StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Control.GetLabel(5146))</visible>
 		</control>
-	<!-- 	<control type="multiimage" id="5043">
+		<!--
+		<control type="multiimage" id="5043">
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
-			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
+			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>	
 			<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] + SubString(skin.string(musicfanart),extra)</visible>
 		</control>
-		<control type="multiimage" id="5044">
+		<control type="multiimage" id="5044">	
 			<include>WindowBG</include>
-			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
-			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
+			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>		
+			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>		
 			<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] + SubString(skin.string(musicfanart),extra) + IsEmpty(Control.GetLabel(5043))</visible>
-		</control> -->
+		</control> 
+		-->
 		<control type="multiimage" id="5045">
 			<!-- Artist SlideShow -->
 			<aspectratio>keep</aspectratio>
@@ -113,35 +116,42 @@
 			<!-- Fanart -->
 			<include>WindowBG</include>
 			<texture background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.FanArt)]</texture>
-			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[StringCompare(skin.string(vis_bg),slideshow) | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5046))</visible>
+			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),slideshowmosaicmix)">Conditional</animation>
+			<visible>[StringCompare(skin.string(vis_bg),slideshowmosaic) | StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046))</visible>
 		</control>
 		<control type="image">
 			<!-- Fanart -->
 			<include>WindowBG</include>
 			<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</texture>
-			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[StringCompare(skin.string(vis_bg),slideshow) | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Window(Home).Property(SkinHelper.Player.Music.FanArt))</visible>		
+			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),slideshowmosaicmix)">Conditional</animation>
+			<visible>[StringCompare(skin.string(vis_bg),slideshowmosaic) | StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Window(Home).Property(SkinHelper.Player.Music.FanArt))+IsEmpty(Control.GetLabel(5046))</visible>
+		</control>
+		<control type="image">
+			<!-- Fanart -->
+			<include>WindowBG</include>
+			<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Title]</texture>
+			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),slideshowmosaicmix)">Conditional</animation>
+			<visible>Player.IsInternetStream + [StringCompare(skin.string(vis_bg),slideshowmosaic) | StringCompare(skin.string(vis_bg),slideshowmosaicmix)]+IsEmpty(Control.GetLabel(5046))</visible>
 		</control>
 		<control type="group">
 			<!-- layout estilo 1 -->
 			<left>0</left>
 			<top>473</top>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style1)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
 			<visible>StringCompare(skin.string(vis_layout),style1)</visible>
 			<control type="image">
 				<left>0</left>
@@ -165,27 +175,13 @@
 					<height>240</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5605),Empty.png)+stringcompare(Control.GetLabel(5606),Empty.png)</visible>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5605),Empty.png)+IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))+!Skin.HasSetting(newdisc_hide)</visible>
 				</control>
-				<control type="image" id="5605">
-					<include>Animation_CDart</include>
+				<control type="group">
 					<left>40</left>
 					<top>-20</top>
-					<width>240</width>
-					<height>240</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5606),Empty.png)</visible>
-				</control>
-				<control type="image" id="5606">
-					<include>Animation_CDart</include>
-					<left>40</left>
-					<top>-20</top>
-					<width>240</width>
-					<height>240</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<include>new_disc</include>
+					<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))+Skin.HasSetting(newdisc_hide)</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>
@@ -195,27 +191,39 @@
 					<height>240</height>
 					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 					<aspectratio align="left">stretch</aspectratio>
-					<visible>Player.IsInternetStream</visible>
-				</control> 
+					<visible>Player.IsInternetStream+!Skin.HasSetting(newdisc_hide)</visible>
+				</control>
+				<control type="image" id="5605">
+					<include>Animation_CDart</include>
+					<left>40</left>
+					<top>-20</top>
+					<width>240</width>
+					<height>240</height>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio+!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
+				</control>
 			</control>
 			<control type="image">
 				<!-- reflexo -->
 				<left>890</left>
 				<top>227</top>
-				<width>350</width>
+				<width>244</width>
 				<height>244</height>
 				<fadetime>200</fadetime>
-				<texture flipy="true" fallback="$INFO[MusicPlayer.Cover]" diffuse="thumb_reflect.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
-				<aspectratio align="left" aligny="top">keep</aspectratio>
+				<texture flipy="true" fallback="DefaultAudio.png" diffuse="thumb_reflect.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Title]</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Thumb))</visible>
 			</control>
 			<control type="image">
 				<left>890</left>
 				<top>-20</top>
-				<width>350</width>
+				<width>244</width>
 				<height>244</height>
 				<fadetime>200</fadetime>
-				<texture fallback="$INFO[MusicPlayer.Cover]" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Thumb)]</texture>
-				<aspectratio align="left">keep</aspectratio>
+				<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Title]</texture>
+				<aspectratio align="left">stretch</aspectratio>
+				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Thumb))</visible>
 			</control>
 			<control type="image">
 				<!-- reflexo -->
@@ -251,33 +259,20 @@
 				<height>240</height>
 				<timeperimage>5000</timeperimage>
 				<randomize>true</randomize>
-				<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</texture>
+				<texture fallback="DefaultAudio.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<visible>!Player.IsInternetStream + IsEmpty(Control.GetLabel(5046))</visible>
+				<visible>!Player.IsInternetStream + IsEmpty(Control.GetLabel(15649)) + IsEmpty(Control.GetLabel(5046))</visible>
 			</control>
-			<control type="multiimage">
+			<control type="image">
 				<left>29</left>
 				<top>-5</top>
 				<width>360</width>
 				<height>240</height>
-				<timeperimage>5000</timeperimage>
-				<randomize>true</randomize>
-				<imagepath fallback="http://localhost:52307/getthumb&amp;path=$INFO[MusicPlayer.Artist]" background="true">$VAR[value_playerthumb]</imagepath>
+				<texture fallback="http://localhost:52307/getthumb&amp;path=$INFO[MusicPlayer.Artist]" background="true">$VAR[value_playerthumb]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>!Player.IsInternetStream</visible>
-			</control>
-
-			<control type="image">
-				<left>0</left>
-				<top>-10</top>
-				<width>200</width>
-				<height>60</height>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
-				<fadetime>300</fadetime>
-				<aspectratio align="center">keep</aspectratio>
-				<animation effect="fade" end="60" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>29</left>
@@ -288,7 +283,43 @@
 				<fadetime>300</fadetime>
 				<aspectratio align="center">keep</aspectratio>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
-				<visible>Player.IsInternetStream</visible>
+				<visible>Player.IsInternetStream+IsEmpty(Control.GetLabel(15649))+IsEmpty(Control.GetLabel(5046))</visible>
+			</control>
+			<control type="multiimage" id="15649">
+				<left>29</left>
+				<top>-5</top>
+				<width>360</width>
+				<height>240</height>
+				<timeperimage>5000</timeperimage>
+				<randomize>true</randomize>
+				<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ExtraFanArt)]</imagepath>
+				<fadetime>300</fadetime>
+				<aspectratio align="center">keep</aspectratio>
+				<animation effect="fade" end="60" condition="true">Conditional</animation>
+				<visible>IsEmpty(Control.GetLabel(5046))</visible>
+			</control>
+			<control type="multiimage" id="15650">
+				<left>29</left>
+				<top>-5</top>
+				<width>360</width>
+				<height>240</height>
+				<timeperimage>5000</timeperimage>
+				<randomize>true</randomize>
+				<imagepath background="true">$VAR[value_playerthumb]</imagepath>
+				<fadetime>300</fadetime>
+				<aspectratio align="center">keep</aspectratio>
+				<animation effect="fade" end="60" condition="true">Conditional</animation>
+				<visible>!IsEmpty(Control.GetLabel(5046))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>-10</top>
+				<width>200</width>
+				<height>60</height>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
+				<fadetime>300</fadetime>
+				<aspectratio align="center">keep</aspectratio>
+				<animation effect="fade" end="60" condition="true">Conditional</animation>
 			</control>
 			<control type="label">
 				<left>415</left>
@@ -382,21 +413,21 @@
 			<!-- layout estilo 2 -->
 			<left>0</left>
 			<top>473</top>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style2)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
 			<visible>StringCompare(skin.string(vis_layout),style2)</visible>
 			<control type="image">
 				<left>0</left>
@@ -436,7 +467,7 @@
 					<top>-20</top>
 					<width>214</width>
 					<height>214</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5608),Empty.png)</visible>
 				</control>
@@ -459,7 +490,7 @@
 					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
 					<aspectratio align="left">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
-				</control>			
+				</control>
 			</control>
 			<control type="image">
 				<!-- reflexo -->
@@ -495,7 +526,7 @@
 				<top>10</top>
 				<width>220</width>
 				<height>95</height>
-				<texture  fallback="Empty.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+				<texture fallback="Empty.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
 				<fadetime>300</fadetime>
 				<aspectratio align="center">keep</aspectratio>
 				<animation effect="fade" end="100" condition="true">Conditional</animation>
@@ -605,21 +636,21 @@
 			<!-- Layout 3  -->
 			<left>0</left>
 			<top>473</top>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style3)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
 			<visible>StringCompare(skin.string(vis_layout),style3)</visible>
 			<control type="image">
 				<left>0</left>
@@ -651,7 +682,7 @@
 					<top>-53</top>
 					<width>290</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio+IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
@@ -674,7 +705,17 @@
 					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
 					<aspectratio align="right">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
-				</control> 
+				</control>
+				<control type="image">
+					<include>Animation_CDart</include>
+					<left>93</left>
+					<top>-53</top>
+					<width>290</width>
+					<height>290</height>
+					<texture fallback="Empty.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/disc.png]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!Pvr.IsPlayingRadio</visible>
+			</control>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -865,7 +906,7 @@
 				<top>80</top>
 				<width>153</width>
 				<height>65</height>
-				<texture colordiffuse="88DDDDDD">$VAR[value_recordlabel_path]$INFO[MusicPlayer.Property(Album_Label)].png</texture>
+				<texture fallback="." colordiffuse="88DDDDDD">$VAR[value_recordlabel_path]$INFO[MusicPlayer.Property(Album_Label)].png</texture>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<colordiffuse>88DDDDDD</colordiffuse>
 			</control>
@@ -909,26 +950,26 @@
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 			</control>
 		</control>
-        <control type="group">
-            <!-- Layout 4  -->
-            <left>0</left>
-            <top>473</top>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>			
+		<control type="group">
+			<!-- Layout 4  -->
+			<left>0</left>
+			<top>473</top>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,10)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,15)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,20)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-330" time="700" tween="cubic" easing="out" condition="!Player.IsInternetStream+!IntegerGreaterThan(MusicPlayer.Time,25)+!IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,330" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(120)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,10)+IntegerGreaterThan(MusicPlayer.TimeRemaining,10)+StringCompare(skin.string(vis_layout_time),10)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,15)+IntegerGreaterThan(MusicPlayer.TimeRemaining,15)+StringCompare(skin.string(vis_layout_time),15)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,20)+IntegerGreaterThan(MusicPlayer.TimeRemaining,20)+StringCompare(skin.string(vis_layout_time),20)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-780" time="400" tween="cubic" easing="inout" condition="!Player.IsInternetStream+Window.IsVisible(120)+Skin.HasSetting(hideinfomusic_style4)+IntegerGreaterThan(MusicPlayer.Time,25)+IntegerGreaterThan(MusicPlayer.TimeRemaining,25)+StringCompare(skin.string(vis_layout_time),25)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
-            <visible>StringCompare(skin.string(vis_layout),style4)</visible>
+			<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
+			<visible>StringCompare(skin.string(vis_layout),style4)</visible>
 			<control type="image">
 				<left>0</left>
 				<top>-40</top>
@@ -969,7 +1010,7 @@
 					<top>120</top>
 					<width>290</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
@@ -992,9 +1033,10 @@
 					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
-				</control> 
+				</control>
 			</control>
-			<control type="image" id="5644"><!-- Banner -->
+			<control type="image" id="5644">
+				<!-- Banner -->
 				<left>20</left>
 				<top>25</top>
 				<width>421</width>
@@ -1003,7 +1045,8 @@
 				<texture fallback="Empty.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.Banner)]</texture>
 				<aspectratio align="left">keep</aspectratio>
 			</control>
-			<control type="image" id="5645"><!-- Banner reflect -->
+			<control type="image" id="5645">
+				<!-- Banner reflect -->
 				<left>20</left>
 				<top>210</top>
 				<width>421</width>
@@ -1013,7 +1056,8 @@
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 				<visible>!StringCompare(Control.GetLabel(5644),Empty.png)</visible>
 			</control>
-			<control type="image" id="5646"><!-- Fake banner -->
+			<control type="image" id="5646">
+				<!-- Fake banner -->
 				<left>20</left>
 				<top>125</top>
 				<width>421</width>
@@ -1023,7 +1067,8 @@
 				<aspectratio align="left">scale</aspectratio>
 				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Banner))</visible>
 			</control>
-			<control type="image" id="5647"><!-- Fake banner reflect -->
+			<control type="image" id="5647">
+				<!-- Fake banner reflect -->
 				<!-- reflexo -->
 				<left>20</left>
 				<top>210</top>
@@ -1034,7 +1079,8 @@
 				<aspectratio align="left">scale</aspectratio>
 				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.Banner))</visible>
 			</control>
-			<control type="image" id="5648"><!-- logo artista -->
+			<control type="image" id="5648">
+				<!-- logo artista -->
 				<left>465</left>
 				<top>-80</top>
 				<width>795</width>
@@ -1044,7 +1090,8 @@
 				<aspectratio align="right" aligny="bottom">keep</aspectratio>
 				<visible>StringCompare(Control.GetLabel(5649),Empty.png)</visible>
 			</control>
-			<control type="image" id="5649"><!-- logo artista -->
+			<control type="image" id="5649">
+				<!-- logo artista -->
 				<left>465</left>
 				<top>-80</top>
 				<width>795</width>
@@ -1207,7 +1254,7 @@
 				<top>90</top>
 				<width>153</width>
 				<height>65</height>
-				<texture>$INFO[MusicPlayer.Property(Album_Label),flags/recordlabel/,.png]</texture>
+				<texture fallback=".">$INFO[MusicPlayer.Property(Album_Label),flags/recordlabel/,.png]</texture>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<colordiffuse>88DDDDDD</colordiffuse>
 			</control>

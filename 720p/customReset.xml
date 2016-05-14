@@ -149,7 +149,7 @@
 	<onfocus>Skin.SetString(homebg_seconds,5000)</onfocus>
 	<onfocus>Skin.SetString(discaudio,0)</onfocus>
 	<onfocus>Skin.SetString(discvideo,0)</onfocus>
-	<onfocus>Skin.SetString(cdart_seconds,4000)</onfocus>
+	<onfocus>Skin.SetString(cdart_seconds,20000)</onfocus>
 	<onfocus>Skin.SetString(mediaflags,on)</onfocus>
 	<onfocus>Skin.SetString(extrapack,special://userdata/addon_data/skin.aeonmq6.extrapack/)</onfocus>
 	<onfocus>Skin.SetString(extra_panel_layout,panel_layout_1)</onfocus>
@@ -162,9 +162,16 @@
 	<onfocus>Skin.SetBool(music_fakedisc)</onfocus>
 	<onfocus>Skin.SetBool(music_artlogo)</onfocus>
 	<onfocus>Skin.SetBool(music_case)</onfocus>
+	<onfocus>Skin.SetBool(newdisc_hide)</onfocus>
+	<onfocus>Skin.SetBool(newdisc_bg)</onfocus>	
+	<onfocus>Skin.SetBool(newdisc_codec)</onfocus>	
+	<onfocus>Skin.SetBool(newdisc_handwrite)</onfocus>
+	<onfocus>Skin.SetBool(newdisc_clearlogo)</onfocus>
+	<onfocus>Skin.SetString(customnewdisc,special://skin/backgrounds/red_metal.jpg)</onfocus>
 	<onfocus>Skin.SetBool(sextendsett_fakedisc)</onfocus>
 	<onfocus>Skin.SetBool(sextendsett_artlogo)</onfocus>
 	<onfocus>Skin.SetBool(sextendsett_case)</onfocus>
+	<onfocus>Skin.SetString(newdisc,6)</onfocus>	
 	<onfocus>Skin.SetString(vis_layout_time,10)</onfocus>
 	<onfocus>Skin.SetString(extra_panel_layout,panel_layout_case)</onfocus>
 	<onfocus>Skin.SetString(m_panel_layout,panel_layout_1)</onfocus>

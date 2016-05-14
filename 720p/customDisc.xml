@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="6655" type="dialog"><!-- Aeon MQ 6 -->
+	<defaultcontrol>1266</defaultcontrol>
+	<controls>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>720</height>
+	<texture>black.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	<include>Animation_Fade</include>
+	</control>
+	<control type="group" id="446">
+	<animation type="WindowOpen" reversible="false">
+	<effect type="slide" start="0,0" end="-1060,0" time="500" easing="inout" tween="sine"/>
+	<effect type="fade" start="0" end="100" time="500" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+	<effect type="slide" start="-1060,0" end="0,0" time="300" easing="inout" tween="cubic"/>
+	<effect type="fade" start="100" end="0" time="300" />
+	</animation>
+	<left>1280</left>
+	<top>0</top>
+	<control type="image">
+	<left>-10</left>
+	<top>0</top>
+	<width>30</width>
+	<height>720</height>
+	<texture flipx="true">shadow.png</texture>
+	<colordiffuse>C3FFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+	<left>20</left>
+	<top>0</top>
+	<width>1045</width>
+	<height>720</height>
+	<texture>darkgrey.png</texture>
+	</control>
+	<control type="image">
+	<left>20</left>
+	<top>0</top>
+	<width>1090</width>
+	<height>720</height>
+	<texture>menu_glass.png</texture>
+	<colordiffuse>blue</colordiffuse>
+	<animation effect="fade" start="100" end="60" time="300" delay="500" condition="!Skin.HasSetting(sdgnoviscdart)">Conditional</animation>
+	</control>
+	<control type="image">
+	<left>40</left>
+	<top>70</top>
+	<width>1000</width>
+	<height>2</height>
+	<texture>separator.png</texture>
+	</control>
+	</control>
+	<control type="grouplist" id="1251">
+	<left>240</left>
+	<top>20</top>
+	<width>1040</width>
+	<height>594</height>
+	<onleft>Back</onleft>
+	<onright>Back</onright>
+	<onup>9100</onup>
+	<ondown>12024</ondown>
+	<itemgap>0</itemgap>
+	<pagecontrol>-</pagecontrol>
+	<control type="button" id="1264">
+	<left>20</left>
+	<label>$LOCALIZE[31828] - $LOCALIZE[31355]: [COLOR=$VAR[value_headercolor]]$INFO[Skin.String(customnewdisc)][/COLOR]</label>
+	<onclick>Skin.SetImage(customnewdisc)</onclick>
+	</control>
+	<control type="radiobutton" id="1266">
+	<left>20</left>
+	<label>Show New Disc in Visualisation</label>
+	<onclick>Skin.ToggleSetting(newdisc_hide)</onclick>
+	<selected>Skin.HasSetting(newdisc_hide)</selected>
+	</control>
+	<control type="radiobutton" id="1267">
+	<left>20</left>
+	<label>Background</label>
+	<onclick>Skin.ToggleSetting(newdisc_bg)</onclick>
+	<selected>Skin.HasSetting(newdisc_bg)</selected>
+	</control>
+	<control type="radiobutton" id="1268">
+	<left>20</left>
+	<label>Codec</label>
+	<onclick>Skin.ToggleSetting(newdisc_codec)</onclick>
+	<selected>Skin.HasSetting(newdisc_codec)</selected>
+	</control>
+	<control type="radiobutton" id="1269">
+	<left>20</left>
+	<label>Title Handwrite</label>
+	<onclick>Skin.ToggleSetting(newdisc_handwrite)</onclick>
+	<selected>Skin.HasSetting(newdisc_handwrite)</selected>
+	</control>
+	<control type="radiobutton" id="1270">
+	<label>ClearLogo</label>
+	<onclick>Skin.ToggleSetting(newdisc_clearlogo)</onclick>
+	<selected>Skin.HasSetting(newdisc_clearlogo)</selected>
+	</control>
+	</control>
+	<control type="wraplist" id="1280">
+	<left>140</left>
+	<top>220</top>
+	<height>500</height>
+	<width>800</width>
+	<onup>10020</onup>
+	<ondown>10029</ondown>
+	<onleft>Close</onleft>
+	<onright>Close</onright>
+	<viewtype>list</viewtype>
+	<orientation>horizontal</orientation>
+	<scrolltime tween="back" easing="out">500</scrolltime>
+	<focusposition>0</focusposition>
+	<itemlayout width="600" height="300"/>
+	<focusedlayout width="600" height="300">
+	<control type="group">
+	<animation effect="slide" start="0,0" end="120,0" time="800" delay="300" tween="sine" easing="inout" condition="Control.Hasfocus(10029)">Conditional</animation>
+	<control type="image">
+	<left>155</left>
+	<top>57</top>
+	<width>410</width>
+	<height>410</height>
+	<texture diffuse="cdart_diffuse.png" background="true">metallic_4977.jpg</texture>
+	<aspectratio align="center" aligny="center">stretch</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<visible>Skin.HasSetting(newdisc_bg)</visible>
+	</control>
+	<control type="image">
+	<left>155</left>
+	<top>57</top>
+	<width>410</width>
+	<height>410</height>
+	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+	<aspectratio align="center" aligny="center">stretch</aspectratio>
+	<animation effect="fade" start="100" end="50" time="300" delay="500" condition="!Skin.HasSetting(sdgnoviscdart)">Conditional</animation>
+	</control>
+	<control type="image">
+	<left>155</left>
+	<top>57</top>
+	<width>410</width>
+	<height>410</height>
+	<texture>CDart_Master_2.png</texture>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	</control>
+	<control type="image">
+	<left>485</left>
+	<top>210</top>
+	<width>70</width>
+	<height>100</height>
+	<texture>flags\audiocodec\flac.png</texture>
+	<aspectratio align="right" aligny="center">keep</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<visible>Skin.HasSetting(newdisc_codec)</visible>
+	</control>
+	<control type="image">
+	<left>280</left>
+	<top>287</top>
+	<width>160</width>
+	<height>200</height>
+	<texture>clearart.png</texture>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<visible>Skin.HasSetting(newdisc_clearlogo)</visible>
+	</control>
+	<control type="label"><!-- Title -->
+	<left>230</left>
+	<top>80</top>
+	<width min="169" max="260">auto</width>
+	<height min="80" max="170">auto</height>
+	<wrapmultiline>true</wrapmultiline>
+	<font>Font_102</font>
+	<label>[B]Sting Live[/B]</label>
+	<align>center</align>
+	<aligny>center</aligny>
+	<textcolor>red</textcolor>
+	<visible>Skin.HasSetting(newdisc_handwrite)</visible>
+	</control>
+	</control>
+	</focusedlayout>
+	<content>
+	<item id="1">
+	<!-- New disc -->
+	<label>-</label>
+	<icon>$VAR[value_newdisc]</icon>
+	<onclick>Skin.SetString(custom_disc,newdisc)</onclick>
+	</item>
+	</content>
+	</control>
+	</controls>
+</window>

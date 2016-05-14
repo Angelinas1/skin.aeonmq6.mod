@@ -209,6 +209,11 @@
 	<filename>Windsong.ttf</filename>
 	<size>28</size>
 	</font>
+	<font>
+	<name>Font_102</name>
+	<filename>Windsong.ttf</filename>
+	<size>24</size>
+	</font>
 	</fontset>
 	
 	<fontset id="Arial" unicode="true"><!-- ########################################### ARIAL ########################################### -->

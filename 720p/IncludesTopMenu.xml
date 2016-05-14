@@ -932,6 +932,13 @@
 					<selected>SubString(skin.string(multiplexlayout),extrathumbs)</selected>
 					<visible>Control.IsVisible(61)</visible>
 				</control>
+				<control type="radiobutton" id="9289">
+					<include>TopMenuRadioButton</include>
+					<label>Trailer Style</label>
+					<onclick>Skin.SetString(multiplexlayout,trailer)</onclick>
+					<selected>SubString(skin.string(multiplexlayout),trailer)</selected>
+					<visible>Control.IsVisible(61)</visible>
+				</control>
 				<!-- Panel -->
 				<control type="radiobutton" id="9290">
 					<include>TopMenuRadioButton</include>
