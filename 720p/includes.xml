@@ -1717,7 +1717,7 @@
 		<control type="image">
 			<!-- Subtitle 0 -->
 			<left>0</left>
-			<top>0</top>
+			<top>30</top>
 			<width>30</width>
 			<height>25</height>
 			<aspectratio>keep</aspectratio>
@@ -1728,7 +1728,7 @@
 		<control type="image">
 			<!-- Subtitle 0 -->
 			<left>0</left>
-			<top>0</top>
+			<top>30</top>
 			<width>26</width>
 			<height>25</height>
 			<aspectratio>keep</aspectratio>
@@ -1739,7 +1739,7 @@
 		<control type="image">
 			<!-- Subtitle 2 -->
 			<left>0</left>
-			<top>0</top>
+			<top>30</top>
 			<width>26</width>
 			<height>25</height>
 			<aspectratio>keep</aspectratio>
@@ -1750,7 +1750,7 @@
 		<control type="image">
 			<!-- Subtitle 3 -->
 			<left>0</left>
-			<top>0</top>
+			<top>30</top>
 			<width>26</width>
 			<height>25</height>
 			<aspectratio>keep</aspectratio>
@@ -1761,7 +1761,7 @@
 		<control type="image">
 			<!-- Subtitle 4 -->
 			<left>0</left>
-			<top>0</top>
+			<top>30</top>
 			<width>26</width>
 			<height>25</height>
 			<aspectratio>keep</aspectratio>

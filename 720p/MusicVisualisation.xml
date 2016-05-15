@@ -467,19 +467,9 @@
 					<top>-20</top>
 					<width>214</width>
 					<height>214</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5608),Empty.png)</visible>
-				</control>
-				<control type="image" id="5608">
-					<include>Animation_CDart</include>
-					<left>0</left>
-					<top>-20</top>
-					<width>214</width>
-					<height>214</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>
@@ -682,19 +672,9 @@
 					<top>-53</top>
 					<width>290</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
-				</control>
-				<control type="image" id="5610">
-					<include>Animation_CDart</include>
-					<left>93</left>
-					<top>-53</top>
-					<width>290</width>
-					<height>290</height>
-					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[MusicPlayer.Artist]&amp;track=$VAR[value_playertitle]&amp;album=$INFO[MusicPlayer.Album]&amp;type=discart</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>
@@ -1010,7 +990,7 @@
 					<top>120</top>
 					<width>290</width>
 					<height>290</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>

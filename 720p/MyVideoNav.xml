@@ -482,10 +482,29 @@
 				<animation effect="slide" end="-450,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="150,0" time="0" condition="Control.IsVisible(71)">Conditional</animation>
 				<animation effect="slide" end="0,-20" time="500" tween="sine" easing="out" condition="![Skin.HasSetting(videoinfobar) | Skin.HasSetting(videodate)]">Conditional</animation>
-				<visible>![Skin.HasSetting(nolanguageflags) | StringCompare(ListItem.Label,..) | IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language)) + IsEmpty(Window(Home).Property(SkinHelper.ListItemSubtitles.0)) | Control.IsVisible(59) | Control.IsVisible(77)| Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(2003) | Window.IsVisible(6621) | Window.IsVisible(6625)]</visible>
+				<visible>!Skin.HasSetting(flagsaudiosub)+![Skin.HasSetting(nolanguageflags) | StringCompare(ListItem.Label,..) | IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language)) + IsEmpty(Window(Home).Property(SkinHelper.ListItemSubtitles.0)) | Control.IsVisible(59) | Control.IsVisible(77)| Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(2003) | Window.IsVisible(6621) | Window.IsVisible(6625)]</visible>
 				<left>810</left>
 				<top>35</top>
-				<include>AudioandSub</include>
+				<include condition="!Skin.HasSetting(flagsaudiosub)">AudioandSub</include>
+			</control>
+			<control type="grouplist">
+				<!-- Linguagem de audio e legendas -->
+				<animation effect="slide" time="400" start="0,-250" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
+				<animation effect="slide" time="400" start="0,-250" end="0,0" easing="inout" tween="cubic">Visible</animation>
+				<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">WindowClose</animation>
+				<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">Hidden</animation>
+				<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(51)+![Skin.HasSetting(noartrightlisttitle) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
+				<animation effect="slide" end="-780,80" time="0" condition="Control.IsVisible(51)+[Skin.HasSetting(noartrightlisttitle) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
+				<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(55)+!Skin.HasSetting(noartlowlisttitle)">Conditional</animation>
+				<animation effect="slide" end="-780,80" time="0" condition="Control.IsVisible(55)+Skin.HasSetting(noartlowlisttitle)">Conditional</animation>
+				<animation effect="slide" end="-450,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
+				<animation effect="slide" end="150,0" time="0" condition="Control.IsVisible(71)">Conditional</animation>
+				<animation effect="slide" end="0,-20" time="500" tween="sine" easing="out" condition="![Skin.HasSetting(videoinfobar) | Skin.HasSetting(videodate)]">Conditional</animation>
+				<visible>Skin.HasSetting(flagsaudiosub)+![Skin.HasSetting(nolanguageflags) | StringCompare(ListItem.Label,..) | IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language)) + IsEmpty(Window(Home).Property(SkinHelper.ListItemSubtitles.0)) | Control.IsVisible(59) | Control.IsVisible(77)| Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(2003) | Window.IsVisible(6621) | Window.IsVisible(6625)]</visible>
+				<left>810</left>
+				<top>35</top>
+				<orientation>horizontal</orientation>
+                <include condition="Skin.HasSetting(flagsaudiosub)">AudioandSubImage</include>
 			</control>
 			<control type="group">
 				<!-- Grupo vistas -->

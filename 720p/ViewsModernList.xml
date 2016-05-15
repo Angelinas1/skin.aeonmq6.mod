@@ -374,7 +374,7 @@
     <visible>Control.HasFocus(9914) | Control.HasFocus(9915)</visible>
     </control>
     <control type="image">
-    <left>570</left>
+    <left>340</left>
     <top>3</top>
     <width>25</width>
     <height>25</height>
@@ -570,7 +570,7 @@
     <aspectratio align="left" aligny="center">keep</aspectratio>
     </control>
     <control type="image">
-    <left>565</left>
+    <left>555</left>
     <top>10</top>
     <width>30</width>
     <height>30</height>

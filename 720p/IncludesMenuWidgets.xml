@@ -2054,7 +2054,6 @@ tween="back" easing="out" />
 					<height>191</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture>modern_right_ram.png</texture>
-					<visible>!Skin.HasSetting(sextendsett_case)</visible>
 				</control>
 			</control>
 		</focusedlayout>
@@ -2187,7 +2186,6 @@ tween="back" easing="out" />
 					<height>191</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture>modern_right_ram.png</texture>
-					<visible>!Skin.HasSetting(sextendsett_case)</visible>
 				</control>
 			</control>
 		</focusedlayout>

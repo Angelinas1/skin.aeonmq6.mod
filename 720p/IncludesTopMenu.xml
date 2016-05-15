@@ -1408,6 +1408,13 @@
 					<label>31192</label>
 					<onclick>ActivateWindowAndFocus(SkinSettings, 9100,5)</onclick>
 				</control>
+				<control type="radiobutton" id="9311">
+					<!-- Flags for SUB/Audio -->
+					<include>TopMenuRadioButton</include>
+					<label>Flags for SUB/Audio</label>
+					<onclick>Skin.ToggleSetting(flagsaudiosub)</onclick>
+					<selected>!Skin.HasSetting(flagsaudiosub)</selected>
+				</control>
 				<control type="radiobutton" id="9312">
 					<include>TopMenuRadioButton</include>
 					<label>31535</label>
