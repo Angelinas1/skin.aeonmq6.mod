@@ -284,7 +284,6 @@
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="center">stretch</aspectratio>
-
 	</control>
 	<control type="image">
 	<left>15</left>
@@ -399,7 +398,7 @@
 	</include>
 	<include name="contents69list">
 	<viewtype label="PosterLite">list</viewtype>
-	<left>-230</left>
+	<left>-280</left>
 	<top>-41</top>
 	<width>1920</width>
 	<height>1080</height>
@@ -413,19 +412,19 @@
 	<pagecontrol>80</pagecontrol>
 	<visible>![Container.Content(years) | Container.Content(genres) | Container.Content(actors) | Container.Content(countries) | Container.Content(studios)]</visible>
 	<animation effect="slide" start="0,0" end="0,-20" time="300" tween="sine" easing="out" condition="Control.HasFocus(80)">Conditional</animation>
-	<itemlayout width="127" height="667" condition="StringCompare(Control.GetLabel(92132),poster)+!Control.IsVisible(69196)">
+	<itemlayout width="133" height="667" condition="StringCompare(Control.GetLabel(92132),poster)+!Control.IsVisible(69196)">
 	<control type="group">
-	<left>-50</left>
-	<top>432</top>
-	<animation effect="zoom" center="auto" start="39" end="39" condition="true">Conditional</animation>
+	<left>-40</left>
+	<top>423</top>
+	<animation effect="zoom" center="auto" start="41" end="41" condition="true">Conditional</animation>
 	<include>PosFade</include>
 	<include>PLPoster</include>
 	</control>
 	</itemlayout>
-	<focusedlayout width="325" height="512" condition="StringCompare(Control.GetLabel(92132),poster)"></focusedlayout>
+	<focusedlayout width="355" height="522" condition="StringCompare(Control.GetLabel(92132),poster)"></focusedlayout>
 	<itemlayout width="280" height="667" condition="[StringCompare(Control.GetLabel(92132),noicon)|Control.IsVisible(69196)]"></itemlayout>
 	<focusedlayout width="380" height="512" condition="[StringCompare(Control.GetLabel(92132),noicon)|Control.IsVisible(69196)]"></focusedlayout>
-	<itemlayout width="280" height="109" condition="StringCompare(Control.GetLabel(92132),landscape)+!Control.IsVisible(69196)">
+	<itemlayout width="300" height="109" condition="StringCompare(Control.GetLabel(92132),landscape)+!Control.IsVisible(69196)">
 	<control type="group">
 	<left>-400</left>
 	<top>550</top>
@@ -434,7 +433,7 @@
 	<include>PLLand</include>
 	</control>
 	</itemlayout>
-	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(92132),landscape)">
+	<focusedlayout width="400" height="149" condition="StringCompare(Control.GetLabel(92132),landscape)">
 	<control type="group">
 	<left>-305</left>
 	<top>505</top>
@@ -447,7 +446,7 @@
 	<include>PLLand</include>
 	</control>
 	</focusedlayout>
-	<itemlayout width="280" height="109" condition="StringCompare(Control.GetLabel(92132),logo)+!Control.IsVisible(69196)">
+	<itemlayout width="300" height="109" condition="StringCompare(Control.GetLabel(92132),logo)+!Control.IsVisible(69196)">
 	<control type="group">
 	<left>-400</left>
 	<top>586</top>
@@ -456,7 +455,7 @@
 	<include>PLLogo</include>
 	</control>
 	</itemlayout>
-	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(92132),logo)">
+	<focusedlayout width="400" height="149" condition="StringCompare(Control.GetLabel(92132),logo)">
 	<control type="group">
 	<left>-305</left>
 	<top>558</top>
@@ -469,7 +468,7 @@
 	<include>PLLogo</include>
 	</control>
 	</focusedlayout>
-	<itemlayout width="280" height="109" condition="StringCompare(Control.GetLabel(92132),clearart)+!Control.IsVisible(69196)">
+	<itemlayout width="300" height="109" condition="StringCompare(Control.GetLabel(92132),clearart)+!Control.IsVisible(69196)">
 	<control type="group">
 	<left>-400</left>
 	<top>586</top>
@@ -478,7 +477,7 @@
 	<include>PLClear</include>
 	</control>
 	</itemlayout>
-	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(92132),clearart)">
+	<focusedlayout width="400" height="149" condition="StringCompare(Control.GetLabel(92132),clearart)">
 	<control type="group">
 	<left>-305</left>
 	<top>558</top>
@@ -491,7 +490,7 @@
 	<include>PLClear</include>
 	</control>
 	</focusedlayout>
-	<itemlayout width="187" height="109" condition="StringCompare(Control.GetLabel(92132),characterart)+!Control.IsVisible(69196)">
+	<itemlayout width="192" height="109" condition="StringCompare(Control.GetLabel(92132),characterart)+!Control.IsVisible(69196)">
 	<control type="group">
 	<left>-280</left>
 	<top>544</top>
@@ -502,7 +501,7 @@
 	</itemlayout>
 	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(92132),characterart)">
 	<control type="group">
-	<left>-119</left>
+	<left>-99</left>
 	<top>366</top>
 	<animation effect="zoom" center="75,684" start="44" end="100" time="480" tween="quadratic" reversible="false" condition="Container.OnNext">Focus</animation>
 	<animation effect="zoom" center="-150,684" start="100" end="44" time="240" tween="quadratic" reversible="false" condition="Container.OnNext">Unfocus</animation>
@@ -514,7 +513,7 @@
 	<include>PLCharacter</include>
 	</control>
 	</focusedlayout>
-	<itemlayout width="280" height="109" condition="StringCompare(Control.GetLabel(92132),banner)+!Control.IsVisible(69196)">
+	<itemlayout width="300" height="109" condition="StringCompare(Control.GetLabel(92132),banner)+!Control.IsVisible(69196)">
 	<control type="group">
 	<left>-400</left>
 	<top>610</top>
@@ -525,7 +524,7 @@
 	<include>PLBannerWatched</include>
 	</control>
 	</itemlayout>
-	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(92132),banner)">
+	<focusedlayout width="400" height="149" condition="StringCompare(Control.GetLabel(92132),banner)">
 	<control type="group">
 	<left>-321</left>
 	<top>601</top>
@@ -779,7 +778,7 @@
 	</include>
 	<include name="PLClearValue">
 	<left>350</left>
-	<top>-190</top>
+	<top>-200</top>
 	<width>540</width>
 	<height>210</height>
 	<fadetime>FanartCrossFadeTime</fadetime>
@@ -806,23 +805,15 @@
 	</include>
 	<include name="PLcdART">
 	<control type="group">
-	<left>65</left>
+	<left>75</left>
 	<top>-57</top>
 	<include>PLcdAn</include>
 	<visible>![IsEmpty(ListItem.Art(discart))|SubString(ListItem.Path,videodb://movies/sets,left)]</visible>
 	<control type="image">
 	<left>112</left>
 	<top>55</top>
-	<width>270</width>
-	<height>270</height>
-	<texture>cdart.png</texture>
-	<include>PLDisc</include>
-	</control>
-	<control type="image">
-	<left>112</left>
-	<top>55</top>
-	<width>270</width>
-	<height>270</height>
+	<width>260</width>
+	<height>260</height>
 	<aligny>center</aligny>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
@@ -831,8 +822,8 @@
 	<control type="image">
 	<left>112</left>
 	<top>55</top>
-	<width>270</width>
-	<height>270</height>
+	<width>260</width>
+	<height>260</height>
 	<aligny>center</aligny>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[ListItem.Label]</texture>
