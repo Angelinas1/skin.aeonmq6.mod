@@ -124,22 +124,27 @@
 	<control type="button" id="150"><!-- Previous -->
 	<include>InvisibleButton</include>
 	<onfocus>PlayerControl(Previous)</onfocus>
+	<onfocus>SetFocus(23)</onfocus>
 	</control>	
 	<control type="button" id="151"><!-- Next -->
 	<include>InvisibleButton</include>
 	<onfocus>PlayerControl(Next)</onfocus>
+	<onfocus>SetFocus(17)</onfocus>
 	</control>		
 	<control type="button" id="152"><!-- VolumeUp -->
 	<include>InvisibleButton</include>
 	<onfocus>VolumeUp</onfocus>
+	<onfocus>SetFocus(13)</onfocus>
 	</control>	
 	<control type="button" id="153"><!-- VolumeDown -->
 	<include>InvisibleButton</include>
 	<onfocus>VolumeDown</onfocus>
+	<onfocus>SetFocus(14)</onfocus>
 	</control>
 	<control type="button" id="154"><!-- VolumeDown -->
 	<include>InvisibleButton</include>
 	<onfocus>Mute</onfocus>
+	<onfocus>SetFocus(15)</onfocus>
 	</control>
 	
 	<control type="progress">

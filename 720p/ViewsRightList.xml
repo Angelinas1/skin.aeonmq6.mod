@@ -344,7 +344,7 @@
 				<control type="group">
 				<left>920</left>
 				<top>420</top>
-				<visible>Control.HasFocus(9915) +[Container.Content(albums) | Container.Content(artist) | Container.Content(song)]</visible>
+				<visible>Control.HasFocus(9915) +[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 				<control type="image">
 					<left>10</left>
 					<top>-10</top>
@@ -352,6 +352,7 @@
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
 					<texture>rotten.png</texture>
+					<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 				</control>
 					<control type="list" id="49">
 					<itemlayout height="20">
@@ -422,7 +423,7 @@
 					</control>
 				</focusedlayout>
 			<content>
-			<visible>Container.Content(albums)</visible>
+			<visible>Container.Content(albums)|Container.Content(artists)|Container.Content(songs)</visible>
 					<item>
 						<label>TrackList</label>
 						<!-- Rating -->
@@ -670,7 +671,7 @@
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 	<include>Animation_ViewsCDart</include>
-					</control>
+	</control>
 				</control>
 				<control type="grouplist">
 					<left>260</left>
@@ -960,6 +961,18 @@
 					<include>Animation_Fade</include>
 					<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + [Skin.HasSetting(norightlistaudiocase) | Container.Content(genres)]</visible>
 					<control type="image">
+						<left>112</left>
+						<top>45</top>
+						<width>250</width>
+						<height>250</height>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+						<include>Animation_ViewsCDart</include>
+						<visible>Container.Content(artists)|Container.Content(albums)|Container.Content(songs)</visible>
+					</control>
+					<control type="image">
 						<!-- Musica reflexo -->
 						<left>-5</left>
 						<top>420</top>
@@ -986,6 +999,18 @@
 					<!-- MUSICA ESTOJO -->
 					<include>Animation_Fade</include>
 					<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + ![Skin.HasSetting(norightlistaudiocase) | Container.Content(genres)]</visible>
+					<control type="image">
+						<left>120</left>
+						<top>70</top>
+						<width>250</width>
+						<height>250</height>
+						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+						<include>Animation_ViewsCDart</include>
+						<visible>Container.Content(artists)|Container.Content(albums)|Container.Content(songs)</visible>
+					</control>
 					<control type="image">
 						<!-- Musica/Estojo reflexo-->
 						<left>18</left>
