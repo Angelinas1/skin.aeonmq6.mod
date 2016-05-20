@@ -581,27 +581,17 @@
 				<include condition="!Skin.HasSetting(music_case)">LeftMusicADiscNoCase</include>
 				<texture diffuse="cdart_diffuse.png" background="true">$INFO[Listitem.Icon]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasAudio">Conditional</animation>
 				<include>Animation_ViewsCDart</include>
-				<visible>Skin.HasSetting(music_fakedisc)</visible>
+				<visible>Skin.HasSetting(music_fakedisc)+IsEmpty(Window(Home).Property(SkinHelper.Music.DiscArt))</visible>
 			</control>
 			<control type="image">
 				<!-- Thumb cd from helper-->
 				<include condition="Skin.HasSetting(music_case)">LeftMusicDiscCase</include>
 				<include condition="!Skin.HasSetting(music_case)">LeftMusicADiscNoCase</include>
-				<texture background="true">http://localhost:52307/getmusicart&amp;artist=$INFO[Listitem.Artist]&amp;album=$INFO[Listitem.Album]&amp;type=discart</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
-				<include>Animation_ViewsCDart</include>
-			</control>
-			<control type="image">
-				<!-- Thumb cd -->
-				<include condition="Skin.HasSetting(music_case)">LeftMusicDiscCase</include>
-				<include condition="!Skin.HasSetting(music_case)">LeftMusicADiscNoCase</include>
-				<texture diffuse="cdart_diffuse.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/cd.png]</texture>
-				<fadetime>FanartCrossFadeTime</fadetime>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+				<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="6000" loop="true" reversible="false" condition="!Player.HasAudio">Conditional</animation>
 				<include>Animation_ViewsCDart</include>
 			</control>
 			<control type="image">
