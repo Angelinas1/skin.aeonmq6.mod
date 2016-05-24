@@ -2519,7 +2519,7 @@ tween="back" easing="out" />
 			<top>375</top>
 			<height>120</height>
 			<aspectratio align="left">keep</aspectratio>
-			<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=poster</texture>
+			<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.Poster)]</texture>
 			<fadetime>FanartCrossFadeTime</fadetime>
 		</control>
 		<control type="panel" id="510">

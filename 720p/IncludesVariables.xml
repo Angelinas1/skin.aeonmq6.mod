@@ -195,7 +195,8 @@
 	<!--############################################################################### TOP MENU - IR PARA ############################################################################# -->
 	<variable name="Top_GoTo">
 		<value condition="![StringCompare(Container(9000).ListItem.Property(widgets),settings) | IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + [!SubString(Container(9000).ListItem.Property(id),extras) | !Skin.HasSetting(extra_extra)] + !Skin.HasSetting(widget_one)">510</value>
-		<value condition="![StringCompare(Container(9000).ListItem.Property(widgets),settings) | IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + [!SubString(Container(9000).ListItem.Property(id),extras) | !Skin.HasSetting(extra_extra)] + Skin.HasSetting(widget_one)">9224</value>
+		<value condition="![StringCompare(Container(9000).ListItem.Property(widgets),settings) | StringCompare(Container(9000).ListItem.Property(widgets),plus.pvrhelper) | IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + [!SubString(Container(9000).ListItem.Property(id),extras) | !Skin.HasSetting(extra_extra)] + Skin.HasSetting(widget_one)">9224</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),plus.pvrhelper)">9224</value>
 		<value condition="SubString(Container(9000).ListItem.Property(id),extras) + Skin.HasSetting(extra_extra)">2517</value>
 		<value condition="[IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + ![StringCompare(Container(9000).ListItem.Property(widgets),settings) | Skin.HasSetting(kioskcode)]">5100</value>
 		<value condition="[IsEmpty(Container(9000).ListItem.Property(widgets)) | IsEmpty(Container(510).ListItem(1).Label)] + !StringCompare(Container(9000).ListItem.Property(widgets),settings) + Skin.HasSetting(kioskcode)">8004</value>
@@ -4175,6 +4176,7 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.moviesforgenre)">Movies for Genre (Script.helper)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.showsforgenre)">TVShows for Genre (Script.helper)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.favouritemedia)">Favourite Media (Script.helper)</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.favourites)">Favourites (Script.helper)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.inprogressmedia)">InProgress Media (Script.helper)</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),extras.helper.nextairedtvshows)">NextAired TVShows (Script.helper)</value>
 	</variable>
@@ -6291,6 +6293,7 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 	<variable name="value_widgetsfanart">
 		<value condition="!IsEmpty(Container(510).ListItem.Art(fanart))">$INFO[Container(510).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(510).ListItem.Property(fanart))">$INFO[Container(510).ListItem.Property(fanart)]</value>
+		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),genre) + !Skin.HasSetting(externalvideogenrefanart)">$INFO[Skin.String(extrapack)]backgrounds_videogenre/$INFO[Container(510).ListItem.Label,,.jpg]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),genre) + Skin.HasSetting(externalvideogenrefanart)">$INFO[Skin.String(CustomVideoGenreFanart)]$INFO[Container(510).ListItem.Label,,.jpg]</value>
 		<value condition="SubString(Container(9000).ListItem.Property(widgets),music) + !Skin.HasSetting(externalmusicgenrefanart)">$INFO[Skin.String(extrapack)]backgrounds_musicgenre/$INFO[Container(510).ListItem.Label,,.jpg]</value>

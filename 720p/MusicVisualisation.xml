@@ -1012,7 +1012,7 @@
 					<height>290</height>
 					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<visible>Player.IsInternetStream</visible>
+					<visible>Player.IsInternetStream + IsEmpty(Window(Home).Property(SkinHelper.Player.Music.DiscArt))</visible>
 				</control>
 			</control>
 			<control type="image" id="5644">

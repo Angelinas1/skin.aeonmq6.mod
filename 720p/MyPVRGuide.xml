@@ -10,6 +10,18 @@
 	<include>WindowBG</include>
 	<imagepath background="true">$VAR[value_menutheme_livetv]</imagepath>
 	</control>
+	<control type="image">
+	<!-- Fanart -->
+	<include>WindowBG</include>
+	<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</texture>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	</control>
+	<control type="multiimage">
+	<!-- ExtraFanart -->
+	<include>WindowBG</include>
+	<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.PVR.ExtraFanArt)]</imagepath>
+	<visible>!IsEmpty(Window(Home).Property(SkinHelper.PVR.ExtraFanArt))</visible>
+	</control>
 	<control type="group"><!-- Visualizacao de fundo -->
 	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 	<control type="image">
