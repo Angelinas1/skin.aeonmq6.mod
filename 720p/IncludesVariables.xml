@@ -5650,6 +5650,27 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Art(banner)) + !SubString(ListItem.FolderPath,videodb://movies/) + IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Path,,../season]$INFO[ListItem.Season,,-banner.jpg]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
+	<variable name="value_extrathumbs1">
+		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.FanArt)]</value>
+	</variable>
+	<variable name="value_extrathumbs2">
+		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + !IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.FanArt))">$INFO[Window(Home).Property(SkinHelper.MovieSet.1.FanArt)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.FanArt))">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.Landscape)]</value>
+	</variable>
+	<variable name="value_extrathumbs3">
+		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + !IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.FanArt))">$INFO[Window(Home).Property(SkinHelper.MovieSet.2.FanArt)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.FanArt))">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.Landscape)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.FanArt)) + IsEmpty(Window(Home).Property(SkinHelper.MovieSet.0.Landscape))">$INFO[Window(Home).Property(SkinHelper.MovieSet.1.Landscape)]</value>
+	</variable>
+	<variable name="value_extrathumbs4">
+		<value condition="!SubString(ListItem.Path,videodb://movies/sets,left)">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + !IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.FanArt))">$INFO[Window(Home).Property(SkinHelper.MovieSet.3.FanArt)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.FanArt)) + !IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.Landscape))">$INFO[Window(Home).Property(SkinHelper.MovieSet.1.Landscape)]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.FanArt)) + IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.Landscape))">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.Landscape)]</value>
+	</variable>	
 	<variable name="value_plot">
 		<value condition="![Container.Content(files) | Container.Content(addons) | Window.IsActive(pictures) | SubString(ListItem.Path,videodb://movies/sets,left) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) + [Container.Content(albums) | Container.Content(artists)]]">$INFO[ListItem.Plot]</value>
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left) + !Control.HasFocus(5801)">$INFO[Window(Home).Property(SkinHelper.MovieSet.Plot)]</value>

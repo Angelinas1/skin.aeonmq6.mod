@@ -407,7 +407,7 @@
 	<height>130</height>
 	<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+	<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_extrathumbs1]</texture>
 	<bordersize>5</bordersize>
 	</control>
 	<control type="image"><!-- Thumb 2 fundo -->
@@ -426,7 +426,7 @@
 	<height>130</height>
 	<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+	<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_extrathumbs2]</texture>
 	<bordersize>5</bordersize>
 	</control>
 	<control type="image"><!-- Thumb 3 fundo -->
@@ -445,7 +445,7 @@
 	<height>130</height>
 	<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
+	<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_extrathumbs3]</texture>
 	<bordersize>5</bordersize>
 	</control>
 	<control type="image"><!-- Thumb 4 fundo -->
@@ -464,7 +464,7 @@
 	<height>130</height>
 	<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
+	<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_extrathumbs4]</texture>
 	<bordersize>5</bordersize>
 	</control>
 	<control type="label">

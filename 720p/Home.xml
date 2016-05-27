@@ -2586,8 +2586,8 @@
 			</control>
 			<!-- Seletor dos Widgets -->
 			<control type="group">
-				<animation effect="slide" start="0,0" end="0,385" time="600" tween="sine" easing="inout" condition="Control.HasFocus(5100)+![!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,450" time="600" tween="sine" easing="inout" condition="Control.HasFocus(5100)+[!Skin.HasSetting(extra_extra) | SubString(Container(9000).ListItem.Property(id),extras)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,385" time="600" tween="sine" easing="inout" condition="Control.HasFocus(5100)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,65" time="600" tween="sine" easing="inout" condition="Control.HasFocus(5100)+Skin.HasSetting(extra_extra) + SubString(Container(9000).ListItem.Property(id),extras)">Conditional</animation>
 				<control type="panel" id="5100">
 					<left>0</left>
 					<top>-350</top>
