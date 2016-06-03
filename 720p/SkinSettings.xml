@@ -853,7 +853,7 @@
 						<colordiffuse>80FFFAF0</colordiffuse>
 						<animation effect="fade" start="20" end="50" time="700" condition="true" pulse="true">Conditional</animation>
 						<include>Animation_Fade</include>
-						<visible>Control.Hasfocus(10025) | ControlGroup(10024).HasFocus | ControlGroup(10025).HasFocus | ControlGroup(10030).HasFocus</visible>
+						<visible>Control.Hasfocus(10025) | ControlGroup(10004).HasFocus | ControlGroup(10025).HasFocus | ControlGroup(10030).HasFocus</visible>
 					</control>
 					<control type="label">
 						<left>880</left>
@@ -866,7 +866,7 @@
 						<font>Font_20</font>
 						<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31117][/COLOR][CR]$VAR[value_caseauxtitle]</label>
 						<include>Animation_Fade</include>
-						<visible>Control.Hasfocus(10025) | ControlGroup(10024).HasFocus | ControlGroup(10025).HasFocus | ControlGroup(10030).HasFocus</visible>
+						<visible>Control.Hasfocus(10025) | ControlGroup(10004).HasFocus | ControlGroup(10025).HasFocus | ControlGroup(10030).HasFocus</visible>
 					</control>
 					<control type="wraplist" id="10023">
 						<left>660</left>
@@ -881,7 +881,7 @@
 						<orientation>horizontal</orientation>
 						<scrolltime tween="back" easing="out">500</scrolltime>
 						<focusposition>0</focusposition>
-						<visible allowhiddenfocus="true">![Control.Hasfocus(10025) | ControlGroup(10024).HasFocus]</visible>
+						<visible allowhiddenfocus="true">![Control.Hasfocus(10025) | ControlGroup(10004).HasFocus]</visible>
 						<itemlayout width="200" height="300"/>
 						<focusedlayout width="200" height="300">
 							<control type="image">
@@ -1097,7 +1097,7 @@
 						<top>265</top>
 						<animation effect="fade" time="200">Visible</animation>
 						<animation effect="fade" time="200">Hidden</animation>
-						<visible>Control.Hasfocus(10025) | ControlGroup(10024).HasFocus</visible>
+						<visible>Control.Hasfocus(10025) | ControlGroup(10004).HasFocus</visible>
 						<control type="image">
 							<!-- reflexo -->
 							<left>15</left>
@@ -1199,9 +1199,9 @@
 							<textcolor>FFFFFAF0</textcolor>
 							<label>$VAR[value_skinstatus_casepreviewcolors]</label>
 							<scroll>true</scroll>
-							<visible>ControlGroup(10024).HasFocus</visible>
+							<visible>ControlGroup(10004).HasFocus</visible>
 						</control>
-						<control type="grouplist" id="10024">
+						<control type="grouplist" id="10004">
 							<!-- Seletor de cores do estojo -->
 							<left>50</left>
 							<top>37</top>

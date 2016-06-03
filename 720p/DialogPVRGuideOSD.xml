@@ -242,7 +242,7 @@
 <posy>28</posy>
 <width>370</width>
 <height>230</height>
-<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(11).ListItem.Title]&amp;type=fanart</texture>
+<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(11).ListItem.Title]&amp;type=fanart</texture>
 <bordertexture border="-5">darkgrey.png</bordertexture>
 <fadetime>FanartCrossFadeTime</fadetime>
 <aspectratio>stretch</aspectratio>

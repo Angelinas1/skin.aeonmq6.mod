@@ -81,7 +81,7 @@
 	<animation effect="slide" time="500" start="0,400" end="0,0" tween="cubic" easing="out">Visible</animation>
 	<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 	<control type="group">
-	<animation effect="slide" time="600" start="0,0" end="400,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)] + !IsEmpty(Control.GetLabel(5501))">Conditional</animation>
+	<animation effect="slide" time="600" start="0,0" end="400,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsVisible(6621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)] + !IsEmpty(Control.GetLabel(5501))">Conditional</animation>
 	<animation effect="slide" time="400" start="400,0" end="0,0" tween="cubic" easing="inout">Hidden</animation>
 	<control type="image"><!-- clearlogo e clearart -->
 	<left>905</left>
@@ -207,7 +207,7 @@
 	<control type="group"><!-- Painel de Info -->
 	<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 	<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
-	<visible>Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) + !IsEmpty(Control.GetLabel(5501)) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio) + !IsEmpty(Control.GetLabel(5501))</visible>
+	<visible>Control.HasFocus(9915) | Window.IsVisible(6621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) + !IsEmpty(Control.GetLabel(5501)) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio) + !IsEmpty(Control.GetLabel(5501))</visible>
 	<control type="image">
 	<left>871</left>
 	<top>-70</top>
@@ -239,7 +239,7 @@
 	<control type="grouplist"><!-- Painel de info -->
 	<left>280</left>
 	<top>114</top>
-	<animation effect="slide" time="600" start="0,0" end="-1000,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
+	<animation effect="slide" time="600" start="0,0" end="-1000,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsVisible(6621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
 	<control type="videowindow">
 	<left>0</left>
 	<top>0</top>
@@ -254,7 +254,7 @@
 	<top>514</top>
 	<orientation>vertical</orientation>
 	<itemgap>0</itemgap>
-	<animation effect="slide" time="600" start="0,0" end="-360,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
+	<animation effect="slide" time="600" start="0,0" end="-360,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsVisible(6621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
 	<control type="label">
 	<include>MiddleListLabel</include>
 	<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
@@ -439,7 +439,7 @@
 	<orientation>vertical</orientation>
 	<scrolltime>450</scrolltime>
 	<preloaditems>2</preloaditems>
-	<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(621)">Conditional</animation>
+	<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(6621)">Conditional</animation>
 	<itemlayout condition="[Window.IsActive(25) + !Skin.HasSetting(slimmidlistvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(slimlowlistmusic)]" height="30">
 	<control type="image">
 	<left>0</left>
@@ -629,7 +629,7 @@
 	<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
 	<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 	<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
-	<visible>![Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)]</visible>
+	<visible>![Control.HasFocus(9915) | Window.IsVisible(6621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)]</visible>
 	</control>
 	<control type="label" id="5501"><!-- Plot -->
 	<include>InvisibleButton</include>
@@ -806,7 +806,7 @@
 	</control>
 	</control>
 	<control type="group">
-	<animation effect="slide" time="600" start="0,0" end="400,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsVisible(621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)] + !IsEmpty(Control.GetLabel(5501))">Conditional</animation>
+	<animation effect="slide" time="600" start="0,0" end="400,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsVisible(6621) | Window.IsActive(25) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(lowlistplotaudio)] + !IsEmpty(Control.GetLabel(5501))">Conditional</animation>
 	<left>884</left>
 	<top>-60</top>
 	<control type="image"><!-- Nota -->

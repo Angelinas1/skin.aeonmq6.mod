@@ -672,7 +672,7 @@
 				<top>650</top>
 				<width>1280</width>
 				<height>70</height>
-				<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+				<colordiffuse>$VAR[value_flagscolor]</colordiffuse>
 				<texture>shadow_mask.png</texture>
 			</control>
 			<control type="label">
@@ -757,18 +757,6 @@
 				<aligny>center</aligny>
 				<font>Font_24</font>
 				<label>$INFO[Container(7010).ListItem.Year,, : ]$INFO[Container(7010).ListItem.Label]</label>
-				<textcolor>$VAR[value_flagscolor]</textcolor>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<visible>SubString(skin.string(sextendalbum_list),8010)</visible>
-				<left>315</left>
-				<top>692</top>
-				<width>650</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>Font_24</font>
-				<label>$INFO[Container(8010).ListItem.Label2] $INFO[Container(8010).ListItem.Property(City)]  : $INFO[Container(8010).ListItem.Property(Name)]</label>
 				<textcolor>$VAR[value_flagscolor]</textcolor>
 				<scroll>true</scroll>
 			</control>
@@ -1195,12 +1183,6 @@
 							<label>MostLoved Track</label>
 							<onclick>Skin.SetString(sextendalbum_list,7010)</onclick>
 							<visible>IntegerGreaterThan(Container(7010).NumItems,0)</visible>
-						</item>
-						<item id="2">
-							<!-- Concerts -->
-							<label>Concerts</label>
-							<onclick>Skin.SetString(sextendalbum_list,8010)</onclick>
-							<visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
 						</item>
 						<item id="3">
 							<!-- Simular -->

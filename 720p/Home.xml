@@ -815,7 +815,7 @@
 					<top>635</top>
 					<width>170</width>
 					<height>170</height>
-					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<visible>Player.HasAudio+stringcompare(Control.GetLabel(5604),Empty.png)+stringcompare(Control.GetLabel(5605),Empty.png)</visible>
 				</control>
@@ -855,7 +855,7 @@
 					<top>635</top>
 					<width>170</width>
 					<height>170</height>
-					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&title=$INFO[VideoPlayer.Title]</texture>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[VideoPlayer.Title]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<visible>VideoPlayer.Content(LiveTV) | VideoPlayer.Content(Radio)</visible>
 				</control>
@@ -1569,13 +1569,13 @@
 						<control type="image" id="554">
 							<!-- Clearart extra widget -->
 							<include>HomeFlagImage</include>
-							<texture>http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=clearart</texture>
+							<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(510).ListItem.Title]&amp;type=clearart</texture>
 							<visible>!IsEmpty(Container(510).ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image" id="554">
 							<!-- Clearart extra widget -->
 							<include>HomeFlagImage</include>
-							<texture>http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.TVShowTitle]&type=characterart</texture>
+							<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(510).ListItem.TVShowTitle]&amp;type=characterart</texture>
 							<visible>!IsEmpty(Container(510).ListItem.VideoCodec)</visible>
 						</control>
 					</control>
@@ -2134,7 +2134,7 @@
 							<timeperimage>5000</timeperimage>
 							<randomize>true</randomize>
 							<aspectratio align="left">keep</aspectratio>
-							<texture fallback="new_pvr/separator3.png">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=fanart</texture>
+							<texture fallback="new_pvr/separator3.png">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(510).ListItem.Title]&amp;type=fanart</texture>
 							<fadetime>FanartCrossFadeTime</fadetime>
 						</control>
 					</control>

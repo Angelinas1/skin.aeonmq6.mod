@@ -79,7 +79,7 @@
 							<top>2</top>
 							<width>94</width>
 							<height>134</height>
-							<imagepath>http://localhost:52307/getthumb&title=$INFO[ListItem.Label]IMDB</imagepath>
+							<imagepath>http://localhost:52307/getthumb&amp;title=$INFO[ListItem.Label]IMDB</imagepath>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 							<visible>Container.Content(directors)</visible>
@@ -114,7 +114,7 @@
 							<top>2</top>
 							<width>124</width>
 							<height>175</height>
-							<imagepath>http://localhost:52307/getthumb&title=$INFO[ListItem.Label]IMDB</imagepath>
+							<imagepath>http://localhost:52307/getthumb&amp;title=$INFO[ListItem.Label]IMDB</imagepath>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 							<visible>Container.Content(directors)</visible>

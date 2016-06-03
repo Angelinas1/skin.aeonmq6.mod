@@ -308,16 +308,6 @@
 					<onclick condition="!Skin.HasSetting(viewcoverback_video) + Skin.HasSetting(clickactivateview_video)">back</onclick>
 					<selected>Skin.HasSetting(viewcoverback_video)</selected>
 				</control>
-				<control type="radiobutton" id="19279">
-					<!-- CowerFlowSide -->
-					<!-- 81 -->
-					<radioposx>894</radioposx>
-					<label>Cover Side</label>
-					<onclick>Skin.ToggleSetting(viewcoverside_video)</onclick>
-					<onclick condition="!Skin.HasSetting(viewcoverside_video)">Skin.SetString(setviewvideo,81)</onclick>
-					<onclick condition="!Skin.HasSetting(viewcoverside_video) + Skin.HasSetting(clickactivateview_video)">back</onclick>
-					<selected>Skin.HasSetting(viewcoverside_video)</selected>
-				</control>
 				<control type="radiobutton" id="19281">
 					<!-- MidList967 -->
 					<!-- 83 -->

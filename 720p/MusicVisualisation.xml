@@ -42,7 +42,7 @@
 			<animation effect="fade" start="100" end="50" time="400" condition="StringCompare(skin.string(vis_bg),fanartmix)">Conditional</animation>
 			<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] | [StringCompare(skin.string(vis_bg),slideshow) 
 | StringCompare(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5045)) | [StringCompare(skin.string(vis_bg),slideshowmosaic) 
-| StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Control.GetLabel(5146))</visible>
+| StringCompare(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046))</visible>
 		</control>
 		<!--
 		<control type="multiimage" id="5043">
@@ -262,7 +262,7 @@
 				<texture fallback="DefaultAudio.png" background="true">http://localhost:52307/getthumb&amp;title=$INFO[MusicPlayer.Artist]</texture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<visible>!Player.IsInternetStream + IsEmpty(Control.GetLabel(15649)) + IsEmpty(Control.GetLabel(5046))</visible>
+				<visible>!Player.IsInternetStream + IsEmpty(Control.GetLabel(5046))</visible>
 			</control>
 			<control type="image">
 				<left>29</left>
@@ -296,7 +296,7 @@
 				<fadetime>300</fadetime>
 				<aspectratio align="center">keep</aspectratio>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
-				<visible>IsEmpty(Control.GetLabel(5046))</visible>
+				<visible>IsEmpty(Control.GetLabel(5046))+!IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ExtraFanArt))</visible>
 			</control>
 			<control type="multiimage" id="15650">
 				<left>29</left>
@@ -459,7 +459,7 @@
 					<height>214</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5607),Empty.png)+stringcompare(Control.GetLabel(5608),Empty.png)</visible>
+					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5607),Empty.png)</visible>
 				</control>
 				<control type="image" id="5607">
 					<include>Animation_CDart</include>
@@ -469,7 +469,7 @@
 					<height>214</height>
 					<texture fallback="Empty.png" diffuse="cdart_diffuse.png" background="true">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!Pvr.IsPlayingRadio+stringcompare(Control.GetLabel(5608),Empty.png)</visible>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CDart</include>
@@ -477,7 +477,7 @@
 					<top>-20</top>
 					<width>214</width>
 					<height>214</height>
-					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 					<aspectratio align="left">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
 				</control>
@@ -682,7 +682,7 @@
 					<top>-53</top>
 					<width>290</width>
 					<height>290</height>
-					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&title=$VAR[value_playertitle]</texture>
+					<texture diffuse="cdart_diffuse.png">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
 					<aspectratio align="right">stretch</aspectratio>
 					<visible>Player.IsInternetStream</visible>
 				</control>

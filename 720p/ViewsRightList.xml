@@ -893,7 +893,7 @@
 						<height>350</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<imagepath>http://localhost:52307/getthumb&title=$INFO[ListItem.Label]IMDB</imagepath>
+						<imagepath>http://localhost:52307/getthumb&amp;title=$INFO[ListItem.Label]IMDB</imagepath>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Container.Content(directors)</visible>
 					</control>

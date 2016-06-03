@@ -1352,7 +1352,7 @@
 					<label>31620</label>
 					<onclick>Skin.ToggleSetting(nolanguageflags)</onclick>
 					<selected>!Skin.HasSetting(nolanguageflags)</selected>
-					<visible>![Control.IsVisible(69) + StringCompare(Control.GetLabel(92134),titleoff)]</visible>
+					<visible>!Control.IsVisible(69)</visible>
 				</control>
 				<control type="radiobutton" id="9303">
 					<include>TopMenuRadioButton</include>

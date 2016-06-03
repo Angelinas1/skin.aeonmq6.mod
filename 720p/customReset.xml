@@ -151,6 +151,7 @@
 	<onfocus>Skin.SetString(discvideo,0)</onfocus>
 	<onfocus>Skin.SetString(cdart_seconds,20000)</onfocus>
 	<onfocus>Skin.SetString(mediaflags,on)</onfocus>
+	<onfocus>Skin.SetString(button_widget_info,youtube)</onfocus>
 	<onfocus>Skin.SetString(extrapack,special://userdata/addon_data/skin.aeonmq6.extrapack/)</onfocus>
 	<onfocus>Skin.SetString(extra_panel_layout,panel_layout_1)</onfocus>
 	<onfocus>Skin.SetString(m_panel_layout,panel_layout_1)</onfocus>

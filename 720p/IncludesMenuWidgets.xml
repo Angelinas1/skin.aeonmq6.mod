@@ -987,7 +987,7 @@
 				<top>140</top>
 				<width>114</width>
 				<height>140</height>
-				<texture>$VAR[value_videocase8]‚</texture>
+				<texture>$VAR[value_videocase8]</texture>
 				<colordiffuse>97FFFFFF</colordiffuse>
 				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 				<animation type="Focus" reversible="false">
@@ -1559,7 +1559,7 @@
 				<top>140</top>
 				<width>114</width>
 				<height>140</height>
-				<texture>$VAR[value_videocase8]‚</texture>
+				<texture>$VAR[value_videocase8]</texture>
 				<colordiffuse>97FFFFFF</colordiffuse>
 				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 				<animation type="Focus" reversible="false">
@@ -1680,89 +1680,6 @@
 					<info>ListItem.PercentPlayed</info>
 				</control>
 			</control>
-		</focusedlayout>
-	</include>
-	<include name="panel_gallery">
-		<left>0</left>
-		<top>270</top>
-		<width>510</width>
-		<height>300</height>
-		<onup>512</onup>
-		<ondown>9000</ondown>
-		<orientation>horizontal</orientation>
-		<pagecontrol>-</pagecontrol>
-		<animation condition="true" effect="rotatey" center="110" start="-125" end="-90" time="0">Conditional</animation>
-		<itemlayout width="130" height="210">
-			<!--
- 	<control type="image"><!-- reflexo video
-	<left>4</left>
-	<top>148</top>
-	<width>99</width>
-	<height>140</height>
-	<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_wposter0]</texture>
-	<colordiffuse>97FFFFFF</colordiffuse>
-	<aspectratio align="center" aligny="top">stretch</aspectratio>
-	<animation effect="fade" start="100" end="45" condition="IntegerGreaterThan(ListItem.Playcount,0)">Conditional</animation>
-	</control> 
-			-->
-			<control type="image">
-				<!-- poster -->
-				<left>4</left>
-				<top>8</top>
-				<width>99</width>
-				<height>250</height>
-				<animation condition="true" effect="rotatey" center="auto" start="-5" end="-5" time="0">Conditional</animation>
-				<texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_wposter0]</texture>
-				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-				<visible>!IntegerGreaterThan(ListItem.Playcount,0)</visible>
-			</control>
-		</itemlayout>
-		<focusedlayout width="201" height="290">
-			<!--
- 	<control type="image"><!-- reflexo
-	<left>4</left>
-	<top>148</top>
-	<width>199</width>
-	<height>240</height>
-	
-
-<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_wposter1]</texture>
-	
-
-<colordiffuse>97FFFFFF</colordiffuse>
-	<aspectratio align="center" aligny="top">stretch</aspectratio>
-	
-
-<animation type="Focus" reversible="false">
-	<effect type="zoom" center="auto" start="80" end="100" 
-time="400" 
-tween="back" easing="out" />
-	<effect type="fade" start="80" end="100" time="400" />
-	</animation>
-	
-</control>
-	
-<control type="image"><!-- poster 
-	<left>4</left>
-	<top>8</top>
-	<width>199</width>
-	<height>240</height>
-	
-
-<texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_wposter1]</texture>
-	
-
-<colordiffuse>FF333333</colordiffuse>
-	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-	
-
-<animation type="Focus" reversible="false">
-	<effect type="zoom" center="auto" start="80" end="100" 
-time="400" 
-tween="back" easing="out" />
-	</animation>
-	</control> 
-			-->
 		</focusedlayout>
 	</include>
 	<include name="panel_layout_epgposter">
@@ -1975,7 +1892,7 @@ tween="back" easing="out" />
 				</control>
 				<control type="group">
 					<!-- modern case left -->
-					<animation type="Focus" reversible="false" condition="!ControlGroup(7512).HasFocus">
+					<animation type="Focus" reversible="false" condition="true">
 						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
 						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
 						<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
@@ -2006,7 +1923,7 @@ tween="back" easing="out" />
 						<height>184</height>
 						<aspectratio align="right">stretch</aspectratio>
 						<texture diffuse="modern_left_poster.png">$VAR[value_widgetsposter]</texture>
-						<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="65" start="0" end="-45" time="0">Conditional</animation>
+						<animation condition="true" effect="rotatey" center="65" start="0" end="-45" time="0">Conditional</animation>
 					</control>
 					<control type="image">
 						<!-- left ram -->
@@ -2024,7 +1941,7 @@ tween="back" easing="out" />
 						<width>15</width>
 						<height>36</height>
 						<texture>modern/$INFO[Container(510).ListItem.VideoCodec].png</texture>
-						<animation condition="!ControlGroup(7512).HasFocus" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+						<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
 					</control>
 				</control>
 				<control type="image">
@@ -2044,7 +1961,7 @@ tween="back" easing="out" />
 					<height>184</height>
 					<aspectratio align="left">stretch</aspectratio>
 					<texture diffuse="modern_right_poster.png">$VAR[value_widgetsposter]</texture>
-					<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="65" start="0" end="-45" time="0">Conditional</animation>
+					<animation condition="true" effect="rotatey" center="65" start="0" end="-45" time="0">Conditional</animation>
 				</control>
 				<control type="image">
 					<!-- right -->
@@ -2107,7 +2024,7 @@ tween="back" easing="out" />
 				</control>
 				<control type="group">
 					<!-- modern case left -->
-					<animation type="Focus" reversible="false" condition="!ControlGroup(7512).HasFocus">
+					<animation type="Focus" reversible="false" condition="true">
 						<effect type="slide" start="0,0" end="-5,0" time="8000" delay="9000" tween="cubic" easing="out"/>
 						<effect type="slide" start="0,0" end="0,-1" time="8000" delay="9000" tween="cubic" easing="out"/>
 						<effect type="zoom" start="100" end="101" time="8000" delay="9000" tween="cubic" easing="out"/>
@@ -2138,7 +2055,7 @@ tween="back" easing="out" />
 						<height>184</height>
 						<aspectratio align="left">stretch</aspectratio>
 						<texture diffuse="modern_left_poster.png">$VAR[value_widgetsposter]</texture>
-						<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+						<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
 					</control>
 					<control type="image">
 						<!-- left ram -->
@@ -2156,7 +2073,7 @@ tween="back" easing="out" />
 						<width>15</width>
 						<height>36</height>
 						<texture>modern/$INFO[Container(510).ListItem.VideoCodec].png</texture>
-						<animation condition="!ControlGroup(7512).HasFocus" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
+						<animation condition="true" effect="rotate" center="auto" start="4" end="4" time="0">Conditional</animation>
 					</control>
 				</control>
 				<control type="image">
@@ -2176,7 +2093,7 @@ tween="back" easing="out" />
 					<height>184</height>
 					<aspectratio align="right">stretch</aspectratio>
 					<texture diffuse="modern_right_poster.png">$VAR[value_widgetsposter]</texture>
-					<animation condition="!ControlGroup(7512).HasFocus" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
+					<animation condition="true" effect="rotatey" center="70" start="0" end="-45" time="0">Conditional</animation>
 				</control>
 				<control type="image">
 					<!-- right -->
@@ -2510,7 +2427,7 @@ tween="back" easing="out" />
 			<height>80</height>
 			<aspectratio align="center">keep</aspectratio>
 			<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="false" condition="System.IdleTime(6)">Conditional</animation>
-			<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Container(510).ListItem.Title]&type=discart</texture>
+			<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(510).ListItem.Title]&amp;type=discart</texture>
 			<fadetime>FanartCrossFadeTime</fadetime>
 		</control>
 		<control type="image" id="6079">

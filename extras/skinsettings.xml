@@ -735,6 +735,7 @@
         <option id="viewmultiplex_video" label="viewmultiplex_video" condition="" default="true"/>
         <option id="viewpanel_video" label="viewpanel_video" condition="" default="true"/>
         <option id="viewshelf_video" label="viewshelf_video" condition="" default="true"/>
+        <option id="view3dwall_video" label="view3dwall_video" condition="" default="true"/>
         <option id="viewlandscapex_video" label="viewlandscapex_video" condition="" default="true"/>
         <option id="viewsets_video" label="viewsets_video" condition="" default="true"/>
         <option id="viewshowcase_video" label="viewshowcase_video" condition="" default="true"/>

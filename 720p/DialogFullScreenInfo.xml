@@ -200,7 +200,7 @@
 	<top>682</top>
 	<height>35</height>
 	<width>620</width>
-	<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+	<colordiffuse>$VAR[value_flagscolor]</colordiffuse>
 	<texture>details_back.png</texture>
 	</control>
 	<control type="grouplist"><!-- Etiquetas -->
@@ -295,7 +295,7 @@
 	<top>451</top>
 	<width>190</width>
 	<height>268</height>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	</control>
 	<control type="image"><!-- Poster com estojo -->
@@ -303,7 +303,7 @@
 	<top>451</top>
 	<width>190</width>
 	<height>268</height>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	<visible>Player.HasMedia  + SubString(ListItem.FolderPath,pvr://)</visible>
 	</control>
@@ -343,7 +343,7 @@
 	<posy>480</posy>
 	<width>380</width>
 	<height>230</height>
-	<texture background="true">http://localhost:52307/getthumb&title=$INFO[VideoPlayer.Title]</texture>
+	<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[VideoPlayer.Title]</texture>
 	<bordertexture border="-12">musicframe.png</bordertexture>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio>keep</aspectratio>
@@ -761,7 +761,7 @@
 	<top>520</top>
 	<width>100</width>
 	<height>100</height>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[VideoPlayer.Title]&amp;type=discart</texture>
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.Title]&amp;type=discart</texture>
 	<aspectratio align="center" aligny="center">stretch</aspectratio>
 	</control> 
 	<control type="image"><!-- Poster com estojo -->
@@ -769,7 +769,7 @@
 	<top>500</top>
 	<width>130</width>
 	<height>190</height>
-	<texture>http://localhost:52307/getthumb&title=$INFO[VideoPlayer.Title]</texture> 
+	<texture>http://localhost:52307/getthumb&amp;title=$INFO[VideoPlayer.Title]</texture> 
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	</control>
 	<control type="image"><!-- Poster com estojo -->
@@ -777,7 +777,7 @@
 	<top>153</top>
 	<width>180</width>
 	<height>340</height>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[VideoPlayer.Title]&amp;type=clearart</texture>
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.Title]&amp;type=clearart</texture>
 	<aspectratio align="center" aligny="bottom">keep</aspectratio>
 	</control>
 	<control type="image"><!-- Poster com estojo -->
@@ -785,7 +785,7 @@
 	<top>500</top>
 	<width>130</width>
 	<height>190</height>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	</control>
 	<control type="image"><!-- Poster com estojo -->
@@ -793,7 +793,7 @@
 	<top>500</top>
 	<width>130</width>
 	<height>190</height>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[VideoPlayer.Title]&amp;type=poster</texture> 
 	<colordiffuse>FF909090</colordiffuse>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	</control>
@@ -841,10 +841,6 @@
 	<height>28</height>
 	<texture flipy="true">osd_button_reverse.png</texture>
 	</control>
-	<control type="label">
-	<include>Objects_OSDSeekForward</include>
-	<label>$VAR[value_seekforward]</label>
-	</control>
 	</control>
 	<control type="group">
 	<left>1280</left>
@@ -862,10 +858,6 @@
 	<width>499</width>
 	<height>28</height>
 	<texture flipy="true" flipx="true">osd_button_reverse.png</texture>
-	</control>
-	<control type="label">
-	<include>Objects_OSDSeekReverse</include>
-	<label>$VAR[value_seekreverse]</label>
 	</control>
 	</control>
 	</control>

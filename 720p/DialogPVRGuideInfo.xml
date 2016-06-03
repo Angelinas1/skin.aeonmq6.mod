@@ -387,7 +387,7 @@
 	<top>650</top>
 	<width>1280</width>
 	<height>70</height>
-	<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+	<colordiffuse>$VAR[value_flagscolor]</colordiffuse>
 	<texture>shadow_mask.png</texture>
 	</control>
 	<control type="image">

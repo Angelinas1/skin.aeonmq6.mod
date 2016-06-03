@@ -28,7 +28,6 @@
 	<include>Weather.Weekend</include>
 	<include>Weather.Daily</include>
 	<include>Weather.Maps</include>
-	<include>Weather.Alerts</include>
 	</control>
 	<control type="image">
 	<left>-820</left>

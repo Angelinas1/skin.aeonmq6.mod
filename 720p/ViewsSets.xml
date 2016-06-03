@@ -231,7 +231,7 @@
 	<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_thumbmoviesets]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
 	<animation effect="fade" start="0" end="100" time="350" tween="sine" easing="out" condition="true">Visible</animation>
-	<visible>Control.HasFocus(5801)+(IsEmpty(Container(5801).ListItem.Property(Banner))|IsEmpty(Container(5801).ListItem.Property(ClearArt)))</visible>
+	<visible>Control.HasFocus(5801)+[IsEmpty(Container(5801).ListItem.Property(Banner))|IsEmpty(Container(5801).ListItem.Property(ClearArt))]</visible>
 	</control>
 
 	<control type="group">

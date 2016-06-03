@@ -5,7 +5,7 @@
 	<controls>
 	<control type="group"><!-- default group -->
 	<include>Animation_Window</include>
-	<animation effect="fade" start="100" end="0" time="300">true</animation>
+	<animation effect="fade" start="100" end="0" time="300" condition="false">Conditional</animation>
 	<control type="multiimage"><!-- Multi Fanart -->
     <include>WindowBG</include>
 	<imagepath background="true">flags/black.png</imagepath>
@@ -62,7 +62,23 @@
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	</control>
-
+	<control type="image">
+	<left>0</left>
+	<top>80</top>
+	<width>1280</width>
+	<height>386</height>
+	<texture>darkgrey.png</texture>
+	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+	<include>Animation_DefaultGlass</include>
+	</control>
+	<control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>80</height>
+	<texture>gradient_small.png</texture>
+	<colordiffuse>80FFFAF0</colordiffuse>
+	</control>
 	<control type="image"><!-- Image -->
 	<left>755</left>
 	<top>55</top>
@@ -87,7 +103,7 @@
 	<aspectratio align="left">keep</aspectratio>
 	<texture background="true">$INFO[Window.Property(thumb)]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
-	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	<animation effect="slide" end="-266,0" time="0" condition="false">Conditional</animation>
 	</control>
 	<control type="label"><!-- Age -->
 	<left>220</left>
@@ -106,8 +122,9 @@
 	<align>left</align>
 	<aligny>center</aligny>
 	<font>Font_24A</font>
-	<label>$INFO[Window.Property(Age)]</label>
+	<label>$INFO[Window.Property(Deathday)]</label>
 	<textcolor>FFFFFAF0</textcolor>
+	<visible>!IsEmpty(Window.Property(Deathday))</visible>
 	</control>
 	<control type="list" id="49"><!-- Lista de botoes/info -->
 	<left>20</left>
@@ -306,7 +323,7 @@
 	<width>2</width>
 	<height>384</height>
 	<texture>separator_v.png</texture>
-	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	<animation effect="slide" end="-266,0" time="0" condition="false">Conditional</animation>
 	</control>
 	<control type="image">
 	<left>0</left>

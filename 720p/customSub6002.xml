@@ -215,7 +215,7 @@
 	</item>
 	</content>
 	</control>
-	<include condition="Window.IsVisible(6000)">Glass</include>
+
 	</control>
 	</control>
 	</controls>

@@ -1098,7 +1098,7 @@
 	<top>1</top>
 	<width>180</width>
 	<height>38</height>
-	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&channel=$INFO[ListItem.ChannelName]&type=banner</texture>
+	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=banner</texture>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<colordiffuse>20FFFFFF</colordiffuse>
 	</control>
@@ -1192,7 +1192,7 @@
 	<top>1</top>
 	<width>180</width>
 	<height>38</height>
-	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&channel=$INFO[ListItem.ChannelName]&type=banner</texture>
+	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=banner</texture>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	</control>
 	</focusedlayout>
@@ -1332,7 +1332,7 @@
 	<top>1</top>
 	<width>180</width>
 	<height>38</height>
-	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&channel=$INFO[ListItem.ChannelName]&type=banner</texture>
+	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=banner</texture>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<colordiffuse>20FFFFFF</colordiffuse>
 	</control>
@@ -1426,7 +1426,7 @@
 	<top>1</top>
 	<width>180</width>
 	<height>38</height>
-	<texture background="true">http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&channel=$INFO[ListItem.ChannelName]&type=banner</texture>
+	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;channel=$INFO[ListItem.ChannelName]&amp;type=banner</texture>
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	</control>
 	</focusedlayout>
@@ -1686,7 +1686,7 @@
     <top>0</top>
     <orientation>horizontal</orientation>
     <itemgap>17</itemgap>
-    <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(621)">Conditional</animation>
+    <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(6621)">Conditional</animation>
     <control type="image"><!-- Mpaa -->
     <include>FlagImage</include>
     <texture>$VAR[value_mpaa]</texture>
@@ -2821,7 +2821,8 @@
 	</control>
 	</control>
 
-	<control type="group"id="9395"><!-- Grupo das poster -->
+	<control type="group" id="9395">
+	<!-- Grupo das poster -->
 	<animation effect="slide" delay="1000" time="400" start="0,0" end="300,0" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(9)">Conditional</animation>	
 	<animation effect="slide" delay="14000" time="400" start="0,0" end="0,300" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>	
 	<left>-300</left>
@@ -2964,7 +2965,7 @@
 	<top>15</top>
 	<width>162</width>
 	<height>162</height>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&amp;type=discart</texture> 
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;type=discart</texture> 
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<aspectratio align="center" aligny="center">stretch</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
@@ -2985,7 +2986,7 @@
 	<width>162</width>
 	<height>120</height>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-	<texture>http://localhost:52307/getthumb&title=$INFO[Listitem.Title]</texture> 
+	<texture>http://localhost:52307/getthumb&amp;title=$INFO[Listitem.Title]</texture> 
 	<bordertexture border="-2">darkgrey.png</bordertexture>
 	</control>
 	<control type="image"><!-- landscape -->
@@ -2994,7 +2995,7 @@
 	<width>162</width>
 	<height>120</height>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&amp;type=fanart</texture> 
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;type=fanart</texture> 
 	<bordertexture border="-2">darkgrey.png</bordertexture>
 	</control>
 	<control type="image"><!-- landscape -->
@@ -3003,7 +3004,7 @@
 	<width>162</width>
 	<height>120</height>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-	<texture>http://localhost:52307/getpvrthumb&title=$INFO[Listitem.Title]&amp;type=landscape</texture> 
+	<texture>http://localhost:52307/getpvrthumb&amp;title=$INFO[Listitem.Title]&amp;type=landscape</texture> 
 	<bordertexture border="-2">darkgrey.png</bordertexture>
 	</control>
 	<control type="image">

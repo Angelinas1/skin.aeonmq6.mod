@@ -6,7 +6,11 @@
 	<controls>
 	<control type="group"><!-- default group -->
 	<include>Animation_Window</include>
-	<animation effect="fade" start="100" end="0" time="300">Conditional</animation>
+	<animation effect="fade" start="100" end="0" time="300" condition="false">Conditional</animation>
+	<control type="multiimage"><!-- Multi Fanart -->
+    <include>WindowBG</include>
+	<imagepath background="true">flags/black.png</imagepath>
+	</control>
 	<control type="multiimage"><!-- Multi Fanart -->
 	<left>0</left>
 	<top>0</top>
@@ -528,7 +532,7 @@
 	<aspectratio align="left">keep</aspectratio>
 	<texture background="true">$INFO[Window.Property(Poster)]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
-	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	<animation effect="slide" end="-266,0" time="0" condition="false">Conditional</animation>
 	<visible>!Skin.HasSetting(sextendsett_case)</visible>
 	</control>
 	<control type="group"><!-- DVD Case -->
@@ -579,7 +583,7 @@
 	<width>2</width>
 	<height>384</height>
 	<texture>separator_v.png</texture>
-	<animation effect="slide" end="-266,0" time="0">Conditional</animation>
+	<animation effect="slide" end="-266,0" time="0" condition="false">Conditional</animation>
 	</control>
 	<control type="image">
 	<left>0</left>

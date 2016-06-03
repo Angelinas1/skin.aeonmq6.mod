@@ -3,7 +3,7 @@
 	<!-- Aeon MQ 6 -->
 	<!--############################################################################### SUBMENU  - IR PARA ###############################################################################-->
 	<variable name="SkinVersion">
-		<value>6.0.1 MOD[COLOR=80FFFFFF] | [/COLOR]15/2/2016</value>
+		<value>6.0.2 MOD[COLOR=80FFFFFF] | [/COLOR]02/6/2016</value>
 	</variable>
 	<variable name="service_library">
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgets),dualwidget1)">plugin://service.library.data.provider?type=$INFO[Skin.String(widget1a)]+$INFO[Skin.String(widget1b)]&amp;reload=$INFO[Window(0).Property($INFO[Skin.String(widget1a)])]$INFO[Window(0).Property($INFO[Skin.String(widget1b)])]</value>
@@ -2713,19 +2713,8 @@ SubString(ListItem.Filenameandpath,.3dbd.)
 	<variable name="value_ksar3">
 		<value>flags/aspectratio/$INFO[Window(Home).Property(SkinHelper.MovieSet.3.AspectRatio)].png</value>
 	</variable>
-	<variable name="value_videoresolution_fs">
-		<value>$INFO[Videoplayer.VideoResolution,flags/resolution/,.png]</value>
-	</variable>
 	<variable name="value_audiochannels">
 		<value>$INFO[ListItem.AudioChannels,flags/audiochannels/,.png]</value>
-	</variable>
-	<variable name="value_audiochannels_fs">
-		<value condition="SubString(Videoplayer.AudioChannels,1)">1.0</value>
-		<value condition="SubString(Videoplayer.AudioChannels,2)">2.0</value>
-		<value condition="SubString(Videoplayer.AudioChannels,5)">5.0</value>
-		<value condition="SubString(Videoplayer.AudioChannels,6)">5.1</value>
-		<value condition="SubString(Videoplayer.AudioChannels,7)">6.1</value>
-		<value condition="SubString(Videoplayer.AudioChannels,8)">7.1</value>
 	</variable>
 	<variable name="value_drive">
 		<value condition="SubString(ListItem.Path,hd01) | SubString(ListItem.Path,ext01) | SubString(ListItem.Path,volume01)">HD 1</value>
@@ -2787,22 +2776,6 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">modern/set.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,4k)">modern/4k.png</value>
 		<value condition="![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) | SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hdtv) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.) | SubString(ListItem.Filenameandpath,.iso,Right) | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Path,videodb://movies/sets,left) | SubString(ListItem.Filenameandpath,4k)]">$INFO[ListItem.VideoCodec,modern/,.png]</value>
-	</variable>
-	<variable name="value_videocodec_helper">
-		<value condition="[SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bluray) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),blu-ray) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bdrip)] + ![SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.)]">flags/casecodec/bluray.png</value>
-		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),web)">flags/casecodec/webtv.png</value>
-		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),hdtv)">flags/casecodec/hdtv.png</value>
-		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),dvd) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.ifo,Right) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.iso,Right) + ![SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bluray) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.)]">flags/casecodec/dvd.png</value>
-		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.)">flags/casecodec/3dbd.png</value>
-		<value condition="SubString(ListItem.Filenameandpath,4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
-		<value condition="SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),4k)">flags/casecodec/4k.png</value>
-		<value condition="![SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bluray) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),blu-ray) 
-| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),bdrip) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),hdtv) 
-| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),web) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),dvd) 
-| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3dbd.) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.3d.) 
-| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.iso,Right) | SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),.ifo,Right) 
-| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),web) | SubString(ListItem.Path,videodb://movies/sets,left) 
-| SubString(Window(Home).Property(SkinHelper.MovieSet.0.Codec),4k)|SubString(ListItem.Filenameandpath,4k Ultra)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_videocodechome">
 		<value condition="[SubString(Container(510).ListItem.Filenameandpath,bluray) | SubString(Container(510).ListItem.Filenameandpath,blu-ray) | SubString(Container(510).ListItem.Filenameandpath,bdrip)] + ![SubString(Container(510).ListItem.Filenameandpath,.3dbd.) | SubString(Container(510).ListItem.Filenameandpath,.3d.)]">flags/casecodec/bluray.png</value>
@@ -4310,9 +4283,9 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="SubString(skin.string(newdisc),6)">$INFO[Skin.String(customnewdisc)]</value>
 	</variable>
 	<variable name="value_mydisc">
-		<value condition="Container(10024).HasFocus(1)">$INFO[Skin.String(customaudiodisc)]</value>
-		<value condition="Container(10024).HasFocus(2)">$INFO[Skin.String(customvideodisc)]</value>
-		<value condition="Container(10024).HasFocus(3)">$INFO[Skin.String(customnewdisc)]</value>
+		<value condition="Container(10004).HasFocus(1)">$INFO[Skin.String(customaudiodisc)]</value>
+		<value condition="Container(10004).HasFocus(2)">$INFO[Skin.String(customvideodisc)]</value>
+		<value condition="Container(10004).HasFocus(3)">$INFO[Skin.String(customnewdisc)]</value>
 	</variable>
 	<variable name="value_art">
 		<value condition="StringCompare(skin.string(fullscreen_icon_seek),noicon) + VideoPlayer.Content(movies)"/>
@@ -4658,9 +4631,9 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="Control.HasFocus(10023) + Container(10023).HasFocus(6)">$LOCALIZE[31276] $LOCALIZE[31272]</value>
 		<value condition="Control.HasFocus(10023) + Container(10023).HasFocus(7)">$LOCALIZE[31276] $LOCALIZE[31274]</value>
 		<value condition="Control.HasFocus(10023) + Container(10023).HasFocus(8)">$LOCALIZE[31276] $LOCALIZE[31275]</value>
-		<value condition="Control.HasFocus(10024) + Container(10024).HasFocus(1) | Container(10024).HasFocus(1) + Control.Hasfocus(10024)">$LOCALIZE[31978]</value>
+		<value condition="Control.HasFocus(10004) + Container(10004).HasFocus(1) | Container(10004).HasFocus(1) + Control.Hasfocus(10004)">$LOCALIZE[31978]</value>
 		<!-- Disco -->
-		<value condition="Control.HasFocus(10024) + Container(10024).HasFocus(2) | Container(10024).HasFocus(2) + Control.Hasfocus(10024)">$LOCALIZE[31979]</value>
+		<value condition="Control.HasFocus(10004) + Container(10004).HasFocus(2) | Container(10004).HasFocus(2) + Control.Hasfocus(10004)">$LOCALIZE[31979]</value>
 		<value condition="Control.Hasfocus(10025)">$LOCALIZE[31296] - $LOCALIZE[31287]</value>
 		<!-- Etiqueta do estojo -->
 		<value condition="Control.Hasfocus(10027)">$LOCALIZE[31296] - $LOCALIZE[31485]</value>
@@ -5292,15 +5265,16 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="Control.HasFocus(2518)">$INFO[Container(2518).ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="value_widgetsinfopanelgallaeryfanart">
-		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2510).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2511)">$INFO[Container(2511).ListItem.Art(fanart)]</value>
-		<value condition="Control.HasFocus(2512)">$INFO[Container(2512).ListItem.Art(fanart)]</value>
-		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2513).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2514).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2515).ListItem.Title]&type=fanart</value>
+		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2510).ListItem.Title]&amp;type=fanart</value>
+		<value condition="Control.HasFocus(2511)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2511).ListItem.Title]&amp;type=fanart</value>
+		<value condition="Control.HasFocus(2512)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2512).ListItem.Title]&amp;type=fanart</value>
+		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2513).ListItem.Title]&amp;type=fanart</value>
+		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2514).ListItem.Title]&amp;type=fanart</value>
+		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2515).ListItem.Title]&amp;type=fanart</value>
+		<value condition="Control.HasFocus(2516) + !IsEmpty(Container(2516).ListItem.Art(tvshow.fanart))">$INFO[Container(2516).ListItem.Art(tvshow.fanart)]</value>
 		<value condition="Control.HasFocus(2516)">$INFO[Container(2516).ListItem.Art(fanart)]</value>
-		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2517).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2518)">$INFO[Container(2518).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2517).ListItem.Title]&amp;type=fanart</value>
+		<value condition="Control.HasFocus(2518)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2518).ListItem.Title]&amp;type=fanart</value>
 	</variable>
 	<variable name="value_widgetsinfopanelvideo1">
 		<value condition="!IsEmpty(Container(510).ListItem.Art(poster)) + !SubString(skin.string(m_panel_layout),panel_layout_cd) + !SubString(skin.string(m_panel_layout),panel_layout_clearart) + !SubString(skin.string(m_panel_layout),panel_layout_clearlogo)">$INFO[Container(510).ListItem.Art(poster)]</value>
@@ -5349,7 +5323,7 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="Window.IsActive(25) + Container.Content(genres) + Skin.HasSetting(externalvideogenreicon)">$INFO[Skin.String(CustomVideoGenreIcon)]$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(genres) + !Skin.HasSetting(externalmusicgenreicon)">genres/music/$INFO[ListItem.Label,,.jpg]</value>
 		<value condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(genres) + Skin.HasSetting(externalmusicgenreicon)">$INFO[Skin.String(CustomMusicGenreIcon)]$INFO[ListItem.Label,,.jpg]</value>
-		<value condition="Container.Content(directors)">http://localhost:52307/getthumb&title=$INFO[ListItem.Label] IMDB</value>
+		<value condition="Container.Content(directors)">http://localhost:52307/getthumb&amp;title=$INFO[ListItem.Label] IMDB</value>
 		<value condition="Container.Content(countries)">icons/countries/$INFO[ListItem.Label].png</value>
 		<value condition="Container.Content(studios)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="Container.Content(years)">icons/years/$INFO[ListItem.Label].png</value>
@@ -5851,40 +5825,28 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="Control.HasFocus(2518)">$INFO[Container(2518).ListItem.Studio,resource://resource.images.studios.coloured/,.png]</value>
 	</variable>
 	<variable name="value_extra_clearart">
-		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2510).ListItem.Title]&type=clearart</value>
-		<value condition="Control.HasFocus(2511)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2511).ListItem.Title]&type=clearart</value>
-		<value condition="Control.HasFocus(2512)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2512).ListItem.Title]&type=clearart</value>
-		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2513).ListItem.Title]&type=clearart</value>
-		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2514).ListItem.Title]&type=clearart</value>
-		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2515).ListItem.Title]&type=clearart</value>
+		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2510).ListItem.Title]&amp;type=clearart</value>
+		<value condition="Control.HasFocus(2511)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2511).ListItem.Title]&amp;type=clearart</value>
+		<value condition="Control.HasFocus(2512)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2512).ListItem.Title]&amp;type=clearart</value>
+		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2513).ListItem.Title]&amp;type=clearart</value>
+		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2514).ListItem.Title]&amp;type=clearart</value>
+		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2515).ListItem.Title]&amp;type=clearart</value>
 		<value condition="Control.HasFocus(2516) + !IsEmpty(Container(2516).ListItem.Art(tvshow.clearart))">$INFO[Container(2516).ListItem.Art(tvshow.clearart)]</value>
 		<value condition="Control.HasFocus(2516)">$INFO[Container(2516).ListItem.Art(clearart)]</value>
-		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2517).ListItem.Title]&type=clearart</value>
-		<value condition="Control.HasFocus(2518)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2518).ListItem.Title]&type=clearart</value>
+		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2517).ListItem.Title]&amp;type=clearart</value>
+		<value condition="Control.HasFocus(2518)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2518).ListItem.Title]&amp;type=clearart</value>
 	</variable>
 	<variable name="value_extra_discart">
-		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2510).ListItem.Title]&type=discart</value>
-		<value condition="Control.HasFocus(2511)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2511).ListItem.Title]&type=discart</value>
-		<value condition="Control.HasFocus(2512)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2512).ListItem.Title]&type=discart</value>
-		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2513).ListItem.Title]&type=discart</value>
-		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2514).ListItem.Title]&type=discart</value>
-		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2515).ListItem.Title]&type=discart</value>
+		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2510).ListItem.Title]&amp;type=discart</value>
+		<value condition="Control.HasFocus(2511)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2511).ListItem.Title]&amp;type=discart</value>
+		<value condition="Control.HasFocus(2512)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2512).ListItem.Title]&amp;type=discart</value>
+		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2513).ListItem.Title]&amp;type=discart</value>
+		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2514).ListItem.Title]&amp;type=discart</value>
+		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2515).ListItem.Title]&amp;type=discart</value>
 		<value condition="Control.HasFocus(2516) + !IsEmpty(Container(2516).ListItem.Art(tvshow.characterart))">$INFO[Container(2516).ListItem.Art(tvshow.characterart)]</value>
 		<value condition="Control.HasFocus(2516)">$INFO[Container(2516).ListItem.Art(characterart)]</value>
-		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2517).ListItem.Title]&type=discart</value>
-		<value condition="Control.HasFocus(2518)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2518).ListItem.Title]&type=discart</value>
-	</variable>
-	<variable name="value_extra_fanart">
-		<value condition="Control.HasFocus(2510)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2510).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2511)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2511).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2512)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2512).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2513)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2513).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2514)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2514).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2515)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2515).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2516) + !IsEmpty(Container(2516).ListItem.Art(tvshow.fanart))">$INFO[Container(2516).ListItem.Art(tvshow.fanart)]</value>
-		<value condition="Control.HasFocus(2516)">$INFO[Container(2516).ListItem.Art(fanart)]</value>
-		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2517).ListItem.Title]&type=fanart</value>
-		<value condition="Control.HasFocus(2518)">http://localhost:52307/getpvrthumb&title=$INFO[Container(2518).ListItem.Title]&type=fanart</value>
+		<value condition="Control.HasFocus(2517)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2517).ListItem.Title]&amp;type=discart</value>
+		<value condition="Control.HasFocus(2518)">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(2518).ListItem.Title]&amp;type=discart</value>
 	</variable>
 	<variable name="value_extra_year">
 		<value condition="Control.HasFocus(2510)">$INFO[Container(2510).ListItem.Year]</value>
@@ -6063,7 +6025,7 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="!IsEmpty(Container(510).Player.Art(poster))">$INFO[Container(510).Player.Art(poster)]</value>
 		<value condition="!IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
 		<value condition="!IsEmpty(Window.Property(movie.Poster))">$INFO[Window.Property(movie.Poster)]</value>
-		<value condition="IsEmpty(Player.Art(poster))+IsEmpty(Container(510).Player.Art(poster))+IsEmpty(Player.Art(tvshow.poster))+IsEmpty(Window.Property(movie.Poster))">http://localhost:52307/getthumb&title=$INFO[VideoPlayer.Title]</value>
+		<value condition="IsEmpty(Player.Art(poster))+IsEmpty(Container(510).Player.Art(poster))+IsEmpty(Player.Art(tvshow.poster))+IsEmpty(Window.Property(movie.Poster))">http://localhost:52307/getthumb&amp;title=$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="value_dialogselect_icon">
         <value condition="Control.IsVisible(3)+IsEmpty(Container(3).ListItem.Icon)+[Container.Content(movies)|Container.Content(tvshows)|Container.Content(episodes)​]">http://localhost:52307/getthumb&amp;title=$INFO[Container(3).Listitem.Label]</value> 
@@ -6245,9 +6207,6 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 	<variable name="value_songinfo_channels">
 		<value condition="!Player.HasAudio">$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.AudioChannels,flags/audiochannels/,ch.png]</value>
-	</variable>
-	<variable name="value_songinfo_thumb">
-		<value>$INFO[Listitem.Icon]</value>
 	</variable>
 	<variable name="value_albumsong_items">
 		<value condition="Container.Content(artists)">$LOCALIZE[21888]: $INFO[Container(50).NumItems] $LOCALIZE[31040]</value>
