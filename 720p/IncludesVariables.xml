@@ -3199,6 +3199,28 @@ SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ult
 		<value condition="SubString(ListItem.Filename,.wma)">flags/musiccodec/wma.png</value>
 		<value condition="SubString(ListItem.Filename,.wv)">flags/musiccodec/wv.png</value>
 	</variable>
+	<variable name="value_audiocodec">
+		<value condition="SubString(ListItem.Filenameandpath,.atmos.)">flags/audiocodec/atmos.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,.atmos-)">flags/audiocodec/atmos.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,.dts-x.)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,.dts.x.)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,.dtsx.)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,.dts-x-)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,.dts.x-)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,.dtsx-)">flags/audiocodec/dts-x.png</value>
+		<value>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</value>
+	</variable>
+	<variable name="value_510audiocodec">
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.atmos.)">flags/audiocodec/atmos.png</value>
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.atmos-)">flags/audiocodec/atmos.png</value>
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.dts-x.)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.dts.x.)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.dtsx.)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.dts-x-)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.dts.x-)">flags/audiocodec/dts-x.png</value>
+		<value condition="SubString(Container(510).ListItem.Filenameandpath,.dtsx-)">flags/audiocodec/dts-x.png</value>
+		<value>$VAR[value_mediaicons_path]audiocodec/$INFO[Container(510).ListItem.AudioCodec,,.png]</value>
+	</variable>
 	<variable name="value_codecdefault-7">
 		<value condition="!SubString(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
 		<value condition="SubString(skin.string(codec_default),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
