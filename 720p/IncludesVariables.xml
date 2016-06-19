@@ -2751,21 +2751,19 @@ SubString(ListItem.Filenameandpath,.3dbd.)
 	<!-- ######################################################################### Variable Video Codec ######################################################################### -->
 	<variable name="value_videocodec">
 		<value condition="[SubString(ListItem(0).Filenameandpath,bluray) | SubString(ListItem(0).Filenameandpath,blu-ray) | SubString(ListItem(0).Filenameandpath,bdrip)] + ![SubString(ListItem(0).Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)]">flags/casecodec/bluray.png</value>
-		<value condition="SubString(ListItem.Filenameandpath,web)">flags/casecodec/webtv.png</value>
-		<value condition="SubString(ListItem.Filenameandpath,hdtv)">flags/casecodec/hdtv.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,web)+!SubString(ListItem.Filenameandpath,web.dl.hevc)">flags/casecodec/webtv.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,hdtv)+![SubString(ListItem.Filenameandpath,hdtv.x264) | SubString(ListItem.Filenameandpath,hdtv.x265) | SubString(ListItem.Filenameandpath,hdtv.h264) | SubString(ListItem.Filenameandpath,hdtv.atmos)]">flags/casecodec/hdtv.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,.iso,Right) + ![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)]">flags/casecodec/dvd.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)">flags/casecodec/3dbd.png</value>
 		<value condition="SubString(ListItem.Path,videodb://movies/sets,left)">flags/casecodec/set.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,4k Ultra)">flags/casecodec/4k_ultraHD.png</value>
 		<value condition="SubString(ListItem.Filenameandpath,4k)">flags/casecodec/4k.png</value>
-		<value condition="![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) 
-| SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hdtv) | SubString(ListItem.Filenameandpath,web) 
-| SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.) 
-| SubString(ListItem.Filenameandpath,.iso,Right) | SubString(ListItem.Filenameandpath,.ifo,Right) 
-| 
-SubString(ListItem.Filenameandpath,web) 
-| SubString(ListItem.Path,videodb://movies/sets,left) | 
-SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ultra)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="SubString(ListItem.Filenameandpath,hdtv.x264)">flags/casecodec/x264.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,hdtv.x265)">flags/casecodec/x265.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,h264)">flags/casecodec/h264.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,hdtv.hevc)">flags/casecodec/hevc.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,web.dl.hevc)">flags/casecodec/hevc.png</value>
+		<value condition="![SubString(ListItem.Filenameandpath,hevc) | SubString(ListItem.Filenameandpath,x264) | SubString(ListItem.Filenameandpath,h264) | SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) | SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hdtv) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.) | SubString(ListItem.Filenameandpath,.iso,Right) | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Path,videodb://movies/sets,left) | SubString(ListItem.Filenameandpath,4k)|SubString(ListItem.Filenameandpath,4k Ultra)]">$INFO[ListItem.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_videocodec_modern">
 		<value condition="[SubString(ListItem(0).Filenameandpath,bluray) | SubString(ListItem(0).Filenameandpath,blu-ray) | SubString(ListItem(0).Filenameandpath,bdrip)] + ![SubString(ListItem(0).Filenameandpath,.3dbd.) | SubString(ListItem(0).Filenameandpath,.3d.)]">modern/bluray.png</value>
