@@ -1186,6 +1186,51 @@
 			<label>$INFO[ListItem.Episode] / $INFO[ListItem.Property(UnwatchedEpisodes)]</label>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
+		<control type="group">
+		<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter))+Skin.HasSetting(extrarating)</visible>
+			<control type="image">
+				<top>-10</top>
+						<left>0</left>
+				<include>FlagImageHelper</include>
+				<texture>flags/fli.png</texture>
+			</control>
+			<control type="label">
+					<left>0</left>
+				<top>15</top>
+				<include>FlagLabelHelperRating</include>
+				<label>[B]$INFO[Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter)] %[/B]</label>
+				</control>	
+		</control>
+		<control type="group">
+		<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))+Skin.HasSetting(extrarating)</visible>
+			<control type="image">
+				<top>-10</top>
+						<left>50</left>
+				<include>FlagImageHelper</include>
+				<texture>flags/rot.png</texture>
+			</control>
+			<control type="label">
+				<top>15</top>
+						<left>50</left>
+						<include>FlagLabelHelperRating</include>
+				<label>[B]$INFO[Window(Home).Property(SkinHelper.RottenTomatoesMeter)] %[/B]</label>
+				</control>	
+		</control>
+		<control type="group">
+		<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))+Skin.HasSetting(extrarating)</visible>
+			<control type="image">
+				<top>-10</top>
+						<left>100</left>
+				<include>FlagImageHelper</include>
+				<texture>flags/met.png</texture>
+			</control>
+			<control type="label">
+				<top>15</top>
+						<left>100</left>
+				<include>FlagLabelHelperRating</include>
+				<label>[B]$INFO[Window(Home).Property(SkinHelper.MetaCritic.Rating)] %[/B]</label>
+				</control>	
+		</control>
 	</include>
 	<include name="FlagsHelperContent_1">
 		<!-- Helper sets 1-->
@@ -1466,6 +1511,17 @@
 		<aspectratio>keep</aspectratio>
 		<colordiffuse>$VAR[value_flagscolor]</colordiffuse>
 		<fadetime>FanartCrossFadeTime</fadetime>
+	</include>
+	<include name="FlagLabelHelperRating">
+		<left>0</left>
+		<top>0</top>
+		<width>54</width>
+		<height>41</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Font_20A</font>
+		<textcolor>FF66CCC4</textcolor>
+		<shadowcolor>F9000000</shadowcolor>
 	</include>
 	<include name="FlagLabelHelper">
 		<left>0</left>
@@ -2694,7 +2750,6 @@
 		<ondown>Close</ondown>
 		<orientation>horizontal</orientation>
 		<scrolltime>300</scrolltime>
-		<preloaditems>2</preloaditems>
 		<focusposition>6</focusposition>
 		<itemlayout width="75" height="80">
 			<control type="image">
@@ -3086,7 +3141,6 @@
 		<ondown>Close</ondown>
 		<orientation>horizontal</orientation>
 		<scrolltime>300</scrolltime>
-		<preloaditems>2</preloaditems>
 		<focusposition>6</focusposition>
 		<itemlayout width="75" height="80">
 			<control type="image">

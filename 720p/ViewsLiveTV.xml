@@ -1686,7 +1686,7 @@
     <top>0</top>
     <orientation>horizontal</orientation>
     <itemgap>17</itemgap>
-    <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(6621)">Conditional</animation>
+    <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(621)">Conditional</animation>
     <control type="image"><!-- Mpaa -->
     <include>FlagImage</include>
     <texture>$VAR[value_mpaa]</texture>
@@ -2154,7 +2154,7 @@
 	<orientation>vertical</orientation>
 	<scrolltime>300</scrolltime>
 	<focusposition>2</focusposition>
-	<preloaditems>2</preloaditems>
+	
 	<itemlayout condition="Control.IsVisible(5735)" width="300" height="165">
 	<control type="image">
 	<posx>0</posx>
@@ -2396,7 +2396,7 @@
 	<onup>5800</onup>
 	<ondown>5800</ondown>
 	<pagecontrol>71</pagecontrol>
-	<preloaditems>2</preloaditems>
+	
 	<viewtype label="AeonNox">icons</viewtype>
 	<scrolltime tween="quadratic" easing="out">300</scrolltime>
 	<itemlayout height="103" width="297">
@@ -2821,8 +2821,7 @@
 	</control>
 	</control>
 
-	<control type="group" id="9395">
-	<!-- Grupo das poster -->
+	<control type="group" id="9395"><!-- Grupo das poster -->
 	<animation effect="slide" delay="1000" time="400" start="0,0" end="300,0" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(9)">Conditional</animation>	
 	<animation effect="slide" delay="14000" time="400" start="0,0" end="0,300" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>	
 	<left>-300</left>
@@ -2847,13 +2846,13 @@
 	</control> 
 	<control type="image"><!-- Poster com estojo -->
 	<left>15</left>
-	<top>490</top>
+	<top>500</top>
 	<width>130</width>
-	<height>200</height>
-	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+	<height>190</height>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[Window(Home).Property(SkinHelper.PVR.Poster)]</texture>
 	<colordiffuse>FF909090</colordiffuse>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-	<visible>Player.HasMedia + !IsEmpty(ListItem.PlotOutline)</visible>
+	<visible>Player.HasMedia</visible>
 	</control>
 	<control type="image"><!-- Poster com estojo -->
 	<left>15</left>
@@ -2862,7 +2861,7 @@
 	<height>190</height>
 	<texture>$INFO[Window(Home).Property(SkinHelper.PVR.Thumb)]</texture> 
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-	<visible>IsEmpty(Window(Home).Property(SkinHelper.PVR.Landscape))</visible>
+	<visible>IsEmpty(Window(Home).Property(SkinHelper.PVR.Landscape))+IsEmpty(Window(Home).Property(SkinHelper.PVR.Poster))</visible>
 	</control>
 	<control type="image"><!-- Poster com estojo -->
 	<left>15</left>
@@ -2871,6 +2870,7 @@
 	<height>190</height>
 	<texture>$INFO[Window(Home).Property(SkinHelper.PVR.Landscape)]</texture> 
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+	<visible>IsEmpty(Window(Home).Property(SkinHelper.PVR.Poster))</visible>
 	</control>
 	<control type="image"><!-- Estojo -->
 	<left>5</left>
@@ -2902,8 +2902,8 @@
 	<onright>562</onright>
 	<focusposition>4</focusposition>
 	<orientation>vertical</orientation>
-	<scrolltime>450</scrolltime>
-	<preloaditems>2</preloaditems>
+	<scrolltime>350</scrolltime>
+	
 	<itemlayout width="164" height="120">
 	<control type="image"><!-- poster -->
 	<left>2</left>

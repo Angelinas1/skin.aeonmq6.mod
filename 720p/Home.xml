@@ -264,7 +264,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2518)</autoscroll>
 					<scrolltime tween="elastic" easing="inout">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="115" height="350">
 						<control type="image">
 							<width>115</width>
@@ -313,7 +312,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2510)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="50" height="360">
 						<control type="image">
 							<width>50</width>
@@ -370,7 +368,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2511)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="50" height="360">
 						<control type="image">
 							<width>40</width>
@@ -431,7 +428,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2512)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="50" height="440">
 						<control type="image">
 							<width>25</width>
@@ -487,7 +483,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2513)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="85" height="306">
 						<control type="image">
 							<width>85</width>
@@ -565,7 +560,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2517)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="85" height="306">
 						<control type="image">
 							<width>85</width>
@@ -644,7 +638,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2514)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="53" height="145">
 						<control type="image">
 							<width>53</width>
@@ -687,7 +680,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(2515)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="70" height="233">
 						<control type="image">
 							<width>70</width>
@@ -721,7 +713,6 @@
 					<focusposition>0</focusposition>
 					<autoscroll time="10000">StringCompare(skin.string(extra_seconds),10000) + !Control.HasFocus(25168)</autoscroll>
 					<scrolltime tween="quadratic">0</scrolltime>
-					<preloaditems>2</preloaditems>
 					<itemlayout width="53" height="150">
 						<control type="image">
 							<width>53</width>
@@ -2058,15 +2049,6 @@
 						<font>Font_18A</font>
 						<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Years)][/B]</label>
 						<scroll>true</scroll>
-					</control>
-					<control type="multiimage">
-						<left>880</left>
-						<top>75</top>
-						<width>60</width>
-						<height>80</height>
-						<align>left</align>
-						<imagepath>plugin://script.skin.helper.service/?action=getthumb&amp;path=$INFO[Container(510).ListItem.Director] IMDB</imagepath>
-						<visible>!IsEmpty(Container(510).ListItem.Director) + IsEmpty(Container(510).ListItem.Property(ChannelName))</visible>
 					</control>
 					<control type="image">
 						<left>580</left>
@@ -3781,7 +3763,7 @@
 			<include>TrailerWindow</include>
 			<control type="group" id="616">
 				<visible>Skin.HasSetting(widget_cast)</visible>
-				<left>285</left>
+				<left>280</left>
 				<top>600</top>
 				<include condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(517) | Control.HasFocus(1000)">Animation_HomePanel</include>
 				<animation effect="slide" start="0,150" end="0,0" condition="Control.HasFocus(510) | Control.HasFocus(513) | Control.HasFocus(514) | Control.HasFocus(515) | Control.HasFocus(517) | Control.HasFocus(1000)">Conditional</animation>
@@ -3791,7 +3773,7 @@
 					<viewtype label="List">List Info</viewtype>
 					<top>0</top>
 					<left>0</left>
-					<width>700</width>
+					<width>705</width>
 					<height>220</height>
 					<onleft>1000</onleft>
 					<onright>1000</onright>
@@ -3800,29 +3782,29 @@
 					<orientation>horizontal</orientation>
 					<scrolltime>400</scrolltime>
 					<focusposition>3</focusposition>
-					<itemlayout height="85" width="90">
+					<itemlayout height="115" width="90">
 						<control type="image">
 							<left>0</left>
 							<top>5</top>
-							<width>65</width>
-							<height>90</height>
+							<width>85</width>
+							<height>110</height>
 							<aligny>center</aligny>
 							<align>center</align>
-							<aspectratio>keep</aspectratio>
+							<aspectratio>stretch</aspectratio>
 							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<colordiffuse>FF909090</colordiffuse>
 						</control>
 					</itemlayout>
-					<focusedlayout height="85" width="90">
+					<focusedlayout height="115" width="90">
 						<control type="image">
 							<left>0</left>
 							<top>5</top>
-							<width>65</width>
-							<height>90</height>
+							<width>85</width>
+							<height>110</height>
 							<aligny>center</aligny>
 							<align>center</align>
-							<aspectratio>keep</aspectratio>
+							<aspectratio>stretch</aspectratio>
 							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<colordiffuse>FF909090</colordiffuse>
@@ -3832,11 +3814,11 @@
 						<control type="image">
 							<left>0</left>
 							<top>5</top>
-							<width>65</width>
-							<height>90</height>
+							<width>85</width>
+							<height>110</height>
 							<aligny>center</aligny>
 							<align>center</align>
-							<aspectratio>keep</aspectratio>
+							<aspectratio>stretch</aspectratio>
 							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-2">grey.png</bordertexture>
 							<include>Animation_Fade</include>

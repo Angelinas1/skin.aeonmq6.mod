@@ -2436,7 +2436,7 @@
 			<top>375</top>
 			<height>120</height>
 			<aspectratio align="left">keep</aspectratio>
-			<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.Poster)]</texture>
+			<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$INFO[Container(510).ListItem.Title]&amp;type=poster</texture>
 			<fadetime>FanartCrossFadeTime</fadetime>
 		</control>
 		<control type="panel" id="510">
@@ -3593,7 +3593,7 @@
 					<onleft>SetFocus(9000)</onleft>
 					<onright>522</onright>
 					<onup>520</onup>
-					<ondown>513</ondown>
+					<ondown condition="!Skin.HasSetting(kioskcode)">SetFocus(513)</ondown>
 					<itemgap>0</itemgap>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>

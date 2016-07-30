@@ -2104,15 +2104,14 @@
 						<onclick>SetFocus(9100)</onclick>
 						<onclick>Notification($LOCALIZE[31656],$LOCALIZE[31237])</onclick>
 					</control>
-					<control type="button" id="1223">
+					<control type="radiobutton" id="1223">
 						<left>240</left>
 						<top>140</top>
 						<width>1040</width>
 						<height>20</height>
-						<label>Set: Studio Custom Path</label>
-						<onclick condition="Skin.String(CustomStudioImagesPath)">Skin.Reset(CustomStudioImagesPath)</onclick>
-						<onclick condition="!Skin.String(CustomStudioImagesPath)">Skin.SetPath(CustomStudioImagesPath)</onclick>
-						<selected>Skin.String(CustomStudioImagesPath)</selected>
+						<label>Helper script rating extra</label>
+						<onclick>Skin.ToggleSetting(extrarating)</onclick>
+						<selected>Skin.HasSetting(extrarating)</selected>
 					</control>
 				</control>
 				<control type="group">
