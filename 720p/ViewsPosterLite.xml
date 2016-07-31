@@ -408,7 +408,6 @@
 	<orientation>horizontal</orientation>
 	<focusposition>2</focusposition>
 	<scrolltime>400</scrolltime>
-	<preloaditems>3</preloaditems>
 	<pagecontrol>80</pagecontrol>
 	<visible>![Container.Content(years) | Container.Content(genres) | Container.Content(actors) | Container.Content(countries) | Container.Content(studios)]</visible>
 	<animation effect="slide" start="0,0" end="0,-20" time="300" tween="sine" easing="out" condition="Control.HasFocus(80)">Conditional</animation>

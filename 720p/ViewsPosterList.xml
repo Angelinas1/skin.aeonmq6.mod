@@ -205,7 +205,6 @@
 	<focusposition>2</focusposition>
 	<orientation>vertical</orientation>
 	<scrolltime>450</scrolltime>
-	<preloaditems>2</preloaditems>
 	<visible>Container.Content(movies)</visible>
 	<itemlayout width="164" height="240">
 	<control type="image"><!-- poster -->

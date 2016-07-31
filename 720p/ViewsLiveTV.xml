@@ -200,6 +200,16 @@
 	<visible>Control.IsVisible(10)</visible>
 	</control>
 	<control type="image">
+	<posx>150</posx>
+	<posy>60</posy>
+	<width>80</width>
+	<height>80</height>
+	<texture>$INFO[Window(Home).Property(SkinHelper.PVR.DiscArt)]</texture>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<aspectratio>keep</aspectratio>
+	<visible>Control.IsVisible(10)</visible>
+	</control>
+	<control type="image">
 	<posx>900</posx>
 	<posy>565</posy>
 	<width>160</width>

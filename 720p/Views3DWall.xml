@@ -599,7 +599,6 @@
 	<itemgap>0</itemgap>
 	<orientation>horizontal</orientation>
 	<scrolltime>250</scrolltime>
-	<preloaditems>2</preloaditems>
 	<focusposition>3</focusposition>
 	<hitrect x="410" y="176" w="248" h="362"/>
 	<itemlayout width="248" height="362"/>
@@ -1218,7 +1217,6 @@
 	<itemgap>0</itemgap>
 	<orientation>horizontal</orientation>
 	<scrolltime>250</scrolltime>
-	<preloaditems>2</preloaditems>
 	<focusposition>3</focusposition>
 	<hitrect x="380" y="100" w="450" h="250"/>
 	<itemlayout width="320" height="178"/>

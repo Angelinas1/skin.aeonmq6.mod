@@ -1214,7 +1214,6 @@
 	<orientation>horizontal</orientation>
 	<scrolltime>250</scrolltime>
 	<focusposition>3</focusposition>
-	<preloaditems>2</preloaditems>
 	<hitrect x="510" y="300" w="260" h="380"/>
 	<animation effect="slide" start="0,0" end="0,-20" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(nocoverflowvideocase)">Conditional</animation>
 	<visible>![Container.Content(episodes) | Container.Content(years) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios)]</visible>
@@ -2122,7 +2121,6 @@
 	<orientation>horizontal</orientation>
 	<scrolltime>250</scrolltime>
 	<focusposition>3</focusposition>
-	<preloaditems>2</preloaditems>
 	<hitrect x="490" y="370" w="318" h="318"/>
 	<animation effect="slide" start="0,0" end="0,-20" time="300" tween="sine" easing="out" condition="Control.HasFocus(80)">Conditional</animation>
 	<visible>![Container.Content(episodes) | Container.Content(years) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios)]</visible>

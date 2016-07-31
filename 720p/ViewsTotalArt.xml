@@ -17,7 +17,6 @@
 	<focusposition>4</focusposition>
 	<orientation>vertical</orientation>
 	<scrolltime>450</scrolltime>
-	<preloaditems>2</preloaditems>
 	<visible>Container.Content(movies)</visible>
 	<itemlayout width="640" height="27">
 	<control type="label">

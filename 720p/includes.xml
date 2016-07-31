@@ -1187,49 +1187,49 @@
 			<visible>Container.Content(tvshows)</visible>
 		</control>
 		<control type="group">
-		<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter))+Skin.HasSetting(extrarating)</visible>
+			<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter))+Skin.HasSetting(extrarating)</visible>
 			<control type="image">
 				<top>-10</top>
-						<left>0</left>
+				<left>0</left>
 				<include>FlagImageHelper</include>
 				<texture>flags/fli.png</texture>
 			</control>
 			<control type="label">
-					<left>0</left>
+				<left>0</left>
 				<top>15</top>
 				<include>FlagLabelHelperRating</include>
 				<label>[B]$INFO[Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter)] %[/B]</label>
-				</control>	
+			</control>
 		</control>
 		<control type="group">
-		<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))+Skin.HasSetting(extrarating)</visible>
+			<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))+Skin.HasSetting(extrarating)</visible>
 			<control type="image">
 				<top>-10</top>
-						<left>50</left>
+				<left>50</left>
 				<include>FlagImageHelper</include>
 				<texture>flags/rot.png</texture>
 			</control>
 			<control type="label">
 				<top>15</top>
-						<left>50</left>
-						<include>FlagLabelHelperRating</include>
+				<left>50</left>
+				<include>FlagLabelHelperRating</include>
 				<label>[B]$INFO[Window(Home).Property(SkinHelper.RottenTomatoesMeter)] %[/B]</label>
-				</control>	
+			</control>
 		</control>
 		<control type="group">
-		<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))+Skin.HasSetting(extrarating)</visible>
+			<visible>Container.Content(movies)+!IsEmpty(Window(Home).Property(SkinHelper.MetaCritic.Rating))+Skin.HasSetting(extrarating)</visible>
 			<control type="image">
 				<top>-10</top>
-						<left>100</left>
+				<left>100</left>
 				<include>FlagImageHelper</include>
 				<texture>flags/met.png</texture>
 			</control>
 			<control type="label">
 				<top>15</top>
-						<left>100</left>
+				<left>100</left>
 				<include>FlagLabelHelperRating</include>
 				<label>[B]$INFO[Window(Home).Property(SkinHelper.MetaCritic.Rating)] %[/B]</label>
-				</control>	
+			</control>
 		</control>
 	</include>
 	<include name="FlagsHelperContent_1">
@@ -4101,90 +4101,90 @@
 	</include>
 	<include name="new_disc">
 		<control type="group">
-		<animation effect="rotate" end="-360" center="120,120" time="20000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>240</width>
-			<height>240</height>
-			<texture diffuse="cdart_diffuse.png" background="true">metallic_4977.jpg</texture>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
-			<fadetime>FanartCrossFadeTime</fadetime>
-			<visible>Skin.HasSetting(newdisc_bg)</visible>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>240</width>
-			<height>240</height>
-			<texture diffuse="cdart_diffuse.png" background="true">$INFO[skin.string(customnewdisc)]</texture>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
-			<animation effect="fade" start="100" end="50" time="300" delay="500" condition="Skin.HasSetting(newdisc_bg)">Conditional</animation>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>240</width>
-			<height>240</height>
-			<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
-			<animation effect="fade" start="100" end="50" time="300" delay="500" condition="!Skin.HasSetting(newdisc_bg)">Conditional</animation>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>240</width>
-			<height>240</height>
-			<texture>CDart_Master_2.png</texture>
-			<aspectratio align="center" aligny="center">keep</aspectratio>
-			<fadetime>FanartCrossFadeTime</fadetime>
-		</control>
-		<control type="group">
+			<animation effect="rotate" end="-360" center="120,120" time="20000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 			<control type="image">
 				<left>0</left>
-				<top>40</top>
+				<top>0</top>
 				<width>240</width>
 				<height>240</height>
-				<texture/>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<texture diffuse="cdart_diffuse.png" background="true">metallic_4977.jpg</texture>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<fadetime>FanartCrossFadeTime</fadetime>
+				<visible>Skin.HasSetting(newdisc_bg)</visible>
 			</control>
 			<control type="image">
-				<left>195</left>
-				<top>90</top>
-				<width>40</width>
-				<height>60</height>
-				<texture>$INFO[MusicPlayer.Codec,flags/musiccodec/,.png]</texture>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<fadetime>FanartCrossFadeTime</fadetime>
-				<visible>Skin.HasSetting(newdisc_codec)</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>240</width>
+				<height>240</height>
+				<texture diffuse="cdart_diffuse.png" background="true">$INFO[skin.string(customnewdisc)]</texture>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<animation effect="fade" start="100" end="50" time="300" delay="500" condition="Skin.HasSetting(newdisc_bg)">Conditional</animation>
 			</control>
 			<control type="image">
-				<left>60</left>
-				<top>150</top>
-				<width>130</width>
-				<height>70</height>
-				<texture>$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
+				<left>0</left>
+				<top>0</top>
+				<width>240</width>
+				<height>240</height>
+				<texture diffuse="cdart_diffuse.png" background="true">http://localhost:52307/getthumb&amp;title=$VAR[value_playertitle]</texture>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<animation effect="fade" start="100" end="50" time="300" delay="500" condition="!Skin.HasSetting(newdisc_bg)">Conditional</animation>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>240</width>
+				<height>240</height>
+				<texture>CDart_Master_2.png</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<fadetime>FanartCrossFadeTime</fadetime>
-				<visible>Skin.HasSetting(newdisc_clearlogo)</visible>
 			</control>
-			<control type="label">
-				<!-- Title -->
-				<animation effect="zoom" start="100" end="70" center="auto" easing="out" tween="sine" time="700">Visible</animation>
-				<left>50</left>
-				<top>45</top>
-				<width>150</width>
-				<height>50</height>
-				<wrapmultiline>true</wrapmultiline>
-				<font>Font_102</font>
-				<label>[B]$INFO[MusicPlayer.Title][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>red</textcolor>
-				<visible>Skin.HasSetting(newdisc_handwrite)</visible>
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>40</top>
+					<width>240</width>
+					<height>240</height>
+					<texture/>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<fadetime>FanartCrossFadeTime</fadetime>
+				</control>
+				<control type="image">
+					<left>195</left>
+					<top>90</top>
+					<width>40</width>
+					<height>60</height>
+					<texture>$INFO[MusicPlayer.Codec,flags/musiccodec/,.png]</texture>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<visible>Skin.HasSetting(newdisc_codec)</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>150</top>
+					<width>130</width>
+					<height>70</height>
+					<texture>$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<visible>Skin.HasSetting(newdisc_clearlogo)</visible>
+				</control>
+				<control type="label">
+					<!-- Title -->
+					<animation effect="zoom" start="100" end="70" center="auto" easing="out" tween="sine" time="700">Visible</animation>
+					<left>50</left>
+					<top>45</top>
+					<width>150</width>
+					<height>50</height>
+					<wrapmultiline>true</wrapmultiline>
+					<font>Font_102</font>
+					<label>[B]$INFO[MusicPlayer.Title][/B]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<visible>Skin.HasSetting(newdisc_handwrite)</visible>
+				</control>
 			</control>
-		</control>
 		</control>
 	</include>
 </includes>

@@ -36,7 +36,6 @@
 	<orientation>horizontal</orientation>
 	<focusposition>2</focusposition>
 	<scrolltime>400</scrolltime>
-	<preloaditems>2</preloaditems>
 	<pagecontrol>80</pagecontrol>
 	<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(6621)">Conditional</animation>
 	<visible>!Container.Content(years)</visible>
